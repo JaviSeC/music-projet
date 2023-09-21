@@ -6,6 +6,7 @@ import {
   Button,
 } from "@nextui-org/react";
 import HeartIcon from "../IconsNextUI/HeartIcon";
+import "./Tops.css"
 
 export default function Tops() {
   const [liked, setLiked] = useState<boolean>(false);
@@ -15,7 +16,7 @@ export default function Tops() {
       {/* Tarjeta 1 */}
       <Card
         isBlurred
-        className="border-none bg-background/60 dark:bg-default-100/50 max-w-[610px]"
+        className="card1 border-none bg-background/60 dark:bg-default-100/50 max-w-[610px]"
         shadow="sm"
       >
         <CardBody>
@@ -34,8 +35,8 @@ export default function Tops() {
             <div className="flex flex-col col-span-6 md:col-span-8">
               <div className="flex justify-between items-start">
                 <div className="flex flex-col gap-0">
-                  <h3 className="font-semibold text-foreground/90">Daily Mix</h3>
-                  <p className="text-small text-foreground/80">12 Tracks</p>
+                  <h3 className="font-semibold text-foreground/90">Smooth Criminal</h3>
+                  <p className="text-small text-foreground/80">4:13</p>
                 </div>
                 <Button
                   isIconOnly
@@ -58,7 +59,7 @@ export default function Tops() {
       {/* Tarjeta 2 */}
       <Card
         isBlurred
-        className="border-none bg-background/60 dark:bg-default-100/50 max-w-[610px]"
+        className="card2 border-none bg-background/60 dark:bg-default-100/50 max-w-[610px]"
         shadow="sm"
       >
         <CardBody>
@@ -77,8 +78,8 @@ export default function Tops() {
             <div className="flex flex-col col-span-6 md:col-span-8">
               <div className="flex justify-between items-start">
                 <div className="flex flex-col gap-0">
-                  <h3 className="font-semibold text-foreground/90">Título Tarjeta 2</h3>
-                  <p className="text-small text-foreground/80">12 Tracks</p>
+                  <h3 className="font-semibold text-foreground/90">A Change Is Gonna Come</h3>
+                  <p className="text-small text-foreground/80">3:55</p>
                 </div>
                 <Button
                   isIconOnly
@@ -101,7 +102,7 @@ export default function Tops() {
       {/* Tarjeta 3 */}
       <Card
         isBlurred
-        className="border-none bg-background/60 dark:bg-default-100/50 max-w-[610px]"
+        className="card3 border-none bg-background/60 dark:bg-default-100/50 max-w-[610px]"
         shadow="sm"
       >
         <CardBody>
@@ -120,8 +121,8 @@ export default function Tops() {
             <div className="flex flex-col col-span-6 md:col-span-8">
               <div className="flex justify-between items-start">
                 <div className="flex flex-col gap-0">
-                  <h3 className="font-semibold text-foreground/90">Título Tarjeta 3</h3>
-                  <p className="text-small text-foreground/80">12 Tracks</p>
+                  <h3 className="font-semibold text-foreground/90">In the Air Tonight</h3>
+                  <p className="text-small text-foreground/80">4:26</p>
                 </div>
                 <Button
                   isIconOnly
