@@ -1,0 +1,44 @@
+.Container{
+    width: 5%;
+    height: 300px;
+    margin-top: 4%;
+}
+.boxSong{
+    border: 1px black solid;
+    background-color: rgba(26, 30, 31, 1);
+    border-radius: 10px;
+    width: 100%;
+    height: 150px;
+    margin-top: 8%;
+}
+.loginbutton{
+    width: 100%;
+    height: 40%;
+    /* border: none; */
+    margin-top: 10%;
+    background-color: rgba(26, 30, 31, 1);
+    border-radius: 60px;
+}
+.login{
+    width: 80%;
+}
+.boxuser{
+    border: 1px black solid;
+    background-color: rgba(26, 30, 31, 1);
+    border-radius: 10px;
+    width: 100%;
+    height: 170px;
+    margin-top: 15%;
+}
+.registro{
+    margin-left: 10%;
+    width: 165%;
+}
+.registrobutton{
+    width: 100%;
+    height: 40%;
+    /* border: none; */
+    margin-top: 20%;
+    background-color: rgba(26, 30, 31, 1);
+    border-radius: 60px;
+}
