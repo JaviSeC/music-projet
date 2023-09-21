@@ -17,7 +17,7 @@ export default function Footer() {
 
         <div className='groupIcon'>
           <img className="footer-icon" src="https://res.cloudinary.com/dhme3c8ll/image/upload/v1693214972/email_k3vpey.png" alt="Mail" />
-          <p>SoundTrackMagin@gmail.com</p>
+          <p>SoundTrackMagic@magicsound.es</p>
         </div>
 
       </div>
