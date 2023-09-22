@@ -1,9 +1,11 @@
-import React from 'react'
-import ReactDOM from 'react-dom/client'
-import './index.css'
+import React from 'react';
+import ReactDOM from 'react-dom';
+import BodyClassic from './Components/ClassicBody/BodyClassic'; // Asegúrate de que la ruta sea correcta
 
-/*ReactDOM.createRoot(document.getElementById('root')!).render(
+ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <BodyClassic />
   </React.StrictMode>,
-)*/
+  document.getElementById('root')
+);
+
