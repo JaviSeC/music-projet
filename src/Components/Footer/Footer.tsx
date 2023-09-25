@@ -25,9 +25,11 @@ export default function Footer() {
             </div>
           </div>
 
-          <h2 className="nameh2">
-            <strong>Sound Tracks Magic</strong>
-          </h2>
+          <div className="nameh2">
+            <h2>
+              <strong>Sound Tracks Magic</strong>
+            </h2>
+          </div>
 
           <div className="redessociales">
             <p className="footer-red">
