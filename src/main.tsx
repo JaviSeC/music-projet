@@ -7,13 +7,13 @@
 import SignUp from './Components/SingUp/SingUp'
 
 
-/*ReactDOM.createRoot(document.getElementById('root')!).render(
+ReactDOM.createRoot(document.getElementById('root')!).render(
   <React.StrictMode>
     <Header />
     <Menu />
     <Carousel />
   </React.StrictMode>,
-)*/
+)
 
 /*ReactDOM.createRoot(document.getElementById('root')!).render(
   <React.StrictMode>
@@ -21,8 +21,8 @@ import SignUp from './Components/SingUp/SingUp'
   </React.StrictMode>,
 )*/
 
-ReactDOM.createRoot(document.getElementById('root')!).render(
+/*ReactDOM.createRoot(document.getElementById('root')!).render(
   <React.StrictMode>
     <SignUp />
   </React.StrictMode>,
-)
+)*/
