@@ -9,7 +9,17 @@ import HeartIcon from "../IconsNextUI/HeartIcon";
 import "./Tops.css"
 
 export default function Tops() {
-  const [liked, setLiked] = useState<boolean>(false);
+  // Crear un arreglo de estados, uno por cada tarjeta
+  const [likedStates, setLikedStates] = useState([false, false, false]);
+
+  // Función para cambiar el estado de una tarjeta específica
+  const toggleLiked = (index) => {
+    setLikedStates((prevLikedStates) => {
+      const newLikedStates = [...prevLikedStates];
+      newLikedStates[index] = !newLikedStates[index];
+      return newLikedStates;
+    });
+  };
 
   return (
     <div style={{ width: "20%" }}>
@@ -25,7 +35,7 @@ export default function Tops() {
               <Image
                 alt="Album cover"
                 className="object-cover"
-                height={50}
+                height={40}
                 shadow="md"
                 src="https://res.cloudinary.com/duwenv0yr/image/upload/v1695296030/pexels-clem-onojeghuo-111287_x8cozm.jpg"
                 width="100%"
@@ -43,11 +53,11 @@ export default function Tops() {
                   className="text-default-900/60 data-[hover]:bg-foreground/10 -translate-y-2 translate-x-2"
                   radius="full"
                   variant="light"
-                  onPress={() => setLiked((v) => !v)}
+                  onPress={() => toggleLiked(0)} // Cambia el estado de la tarjeta 1
                 >
                   <HeartIcon
-                    className={liked ? "[&>path]:stroke-transparent" : ""}
-                    fill={liked ? "currentColor" : "none"}
+                    className={likedStates[0] ? "[&>path]:stroke-transparent" : ""}
+                    fill={likedStates[0] ? "currentColor" : "none"}
                   />
                 </Button>
               </div>
@@ -68,7 +78,7 @@ export default function Tops() {
               <Image
                 alt="Album cover"
                 className="object-cover"
-                height={50}
+                height={40}
                 shadow="md"
                 src="https://res.cloudinary.com/duwenv0yr/image/upload/v1695296030/pexels-papa-yaw-2531728_dpiwz4.jpg"
                 width="100%"
@@ -86,11 +96,11 @@ export default function Tops() {
                   className="text-default-900/60 data-[hover]:bg-foreground/10 -translate-y-2 translate-x-2"
                   radius="full"
                   variant="light"
-                  onPress={() => setLiked((v) => !v)}
+                  onPress={() => toggleLiked(1)} // Cambia el estado de la tarjeta 2
                 >
                   <HeartIcon
-                    className={liked ? "[&>path]:stroke-transparent" : ""}
-                    fill={liked ? "currentColor" : "none"}
+                    className={likedStates[1] ? "[&>path]:stroke-transparent" : ""}
+                    fill={likedStates[1] ? "currentColor" : "none"}
                   />
                 </Button>
               </div>
@@ -111,7 +121,7 @@ export default function Tops() {
               <Image
                 alt="Album cover"
                 className="object-cover"
-                height={50}
+                height={40}
                 shadow="md"
                 src="https://res.cloudinary.com/duwenv0yr/image/upload/v1695296030/pexels-josh-sorenson-995301_gsuk6t.jpg"
                 width="100%"
@@ -129,11 +139,11 @@ export default function Tops() {
                   className="text-default-900/60 data-[hover]:bg-foreground/10 -translate-y-2 translate-x-2"
                   radius="full"
                   variant="light"
-                  onPress={() => setLiked((v) => !v)}
+                  onPress={() => toggleLiked(2)} // Cambia el estado de la tarjeta 3
                 >
                   <HeartIcon
-                    className={liked ? "[&>path]:stroke-transparent" : ""}
-                    fill={liked ? "currentColor" : "none"}
+                    className={likedStates[2] ? "[&>path]:stroke-transparent" : ""}
+                    fill={likedStates[2] ? "currentColor" : "none"}
                   />
                 </Button>
               </div>
