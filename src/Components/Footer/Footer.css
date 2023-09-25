@@ -1,0 +1,41 @@
+.footer {
+    background-color:darkslategrey;
+    display: flex;
+    justify-content: end;
+    margin-top: 3%;
+    color:antiquewhite;
+}
+
+.footer-div-icon{
+    width: 80%;
+    padding:10px 60px;
+    color:antiquewhite;
+   
+}
+
+.footer-div-icon{
+    padding:30px 20px;
+    width: 80%;
+    text-align: center;
+    color:antiquewhite;
+}
+
+.footer-icon{
+    width: 30px;
+    height: 30px;
+    margin-right: 10px;
+    color:antiquewhite;
+}
+
+.groupIcon{
+    display: flex;
+    
+}
+
+.footer-name-company{
+    text-align: center;
+    color:antiquewhite;
+    font-size: 30px;
+    margin-left: 10px;
+    
+}

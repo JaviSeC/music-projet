@@ -5,7 +5,8 @@
  import Menu from './Components/Menu/Menu'
  import Login from './Components/Login/Login'
 import SignUp from './Components/SingUp/SingUp'
-
+import './index.css'
+import Footer from './Components/Footer/Footer'
 
 /*ReactDOM.createRoot(document.getElementById('root')!).render(
   <React.StrictMode>
@@ -24,5 +25,9 @@ import SignUp from './Components/SingUp/SingUp'
 ReactDOM.createRoot(document.getElementById('root')!).render(
   <React.StrictMode>
     <SignUp />
-  </React.StrictMode>,
+
+
+    <Footer />
+
+  </React.StrictMode>
 )
