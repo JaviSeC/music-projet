@@ -13,7 +13,7 @@ export default function Tops() {
   const [likedStates, setLikedStates] = useState([false, false, false]);
 
   // Función para cambiar el estado de una tarjeta específica
-  const toggleLiked = (index) => {
+  const toggleLiked = (index: number) => {
     setLikedStates((prevLikedStates) => {
       const newLikedStates = [...prevLikedStates];
       newLikedStates[index] = !newLikedStates[index];
