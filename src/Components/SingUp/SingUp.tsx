@@ -58,9 +58,9 @@ export default function SignUp() {
           <Typography component="h1" variant="h5">
             Sign up
           </Typography>
-          <Box component="form" noValidate onSubmit={handleSubmit} sx={{ mt: 3 }}>
+          <Box  component="form" noValidate onSubmit={handleSubmit} sx={{ mt: 3 }}>
             <Grid container spacing={2}>
-              <Grid item xs={12} sm={6}>
+              <Grid item xs={12} sm={6} >
                 <TextField
                   autoComplete="given-name"
                   name="firstName"
@@ -69,6 +69,7 @@ export default function SignUp() {
                   id="firstName"
                   label="First Name"
                   autoFocus
+                  className='Boxes'
                 />
               </Grid>
               <Grid item xs={12} sm={6}>
@@ -79,6 +80,7 @@ export default function SignUp() {
                   label="Last Name"
                   name="lastName"
                   autoComplete="family-name"
+                  className='Boxes'
                 />
               </Grid>
               <Grid item xs={12}>
@@ -89,6 +91,7 @@ export default function SignUp() {
                   label="UserName"
                   name="User"
                   autoComplete="User"
+                  className='Boxes'
                 />
               </Grid>
               <Grid item xs={12}>
@@ -99,6 +102,7 @@ export default function SignUp() {
                   label="Email Address"
                   name="email"
                   autoComplete="email"
+                  className='Boxes'
                 />
               </Grid>
               <Grid item xs={12}>
@@ -110,6 +114,7 @@ export default function SignUp() {
                   type="password"
                   id="password"
                   autoComplete="new-password"
+                  className='Boxes'
                 />
               </Grid>
               <Grid item xs={12}>
