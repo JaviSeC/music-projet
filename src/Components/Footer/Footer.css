@@ -1,41 +1,49 @@
-.footer {
-    background-color:darkslategrey;
-    display: flex;
-    justify-content: end;
-    margin-top: 3%;
-    color:antiquewhite;
-}
+footer{
+     background-color: rgb(220, 221, 221);
+     /* padding-top: 8px;  */
+     margin-top: 10px; 
+    }
 
-.footer-div-icon{
-    width: 80%;
-    padding:10px 60px;
-    color:antiquewhite;
-   
-}
 
-.footer-div-icon{
-    padding:30px 20px;
-    width: 80%;
+.nameh2{
+    align-items: center;  
     text-align: center;
-    color:antiquewhite;
+    justify-content: center;
+}
+
+.footer-container {
+   
+    display: flex;
+    /* justify-content: end; */
+ 
+}
+
+.contacts{
+    width: 50%;
+    padding: 20px 60px;
+    /* color:antiquewhite; */
+    /* background-color: rgb(220, 221, 221); */
+
+}
+
+.groupIcon{
+    display: flex;
+    align-items: center;
+    /* text-align: center; */  
+    justify-content: center;
 }
 
 .footer-icon{
     width: 30px;
     height: 30px;
-    margin-right: 10px;
-    color:antiquewhite;
+    margin-right: 20px;
+
 }
 
-.groupIcon{
-    display: flex;
-    
-}
-
-.footer-name-company{
+.redessociales{
+    padding:20px 60px;
+    width: 50%;
     text-align: center;
-    color:antiquewhite;
-    font-size: 30px;
-    margin-left: 10px;
-    
+    font-size: 20px;
+    /* background-color: rgb(220, 221, 221); */
 }
