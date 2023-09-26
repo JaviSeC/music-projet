@@ -6,3 +6,14 @@
   background-repeat: no-repeat;
   margin-bottom: 3%;
 }
+
+.Home{
+  width: 10%;
+  background-color: rgb(33, 22, 22);
+  text-decoration: none;
+  font-size: larger;
+  border: none;
+}
+.casa{
+  width: 100%;
+}

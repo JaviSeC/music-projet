@@ -1,11 +1,20 @@
 .body {
-  margin-top: -4.5%;
+  height: 745px;
   margin-bottom: -1%;
-  height: 650px;
   background-image: url("https://res.cloudinary.com/da7ffijqs/image/upload/v1695497506/20818_kldrhd.jpg");
   background-position-x: 25%;
   background-position-y: 50%;
 }
 .Boxes {
   background-color: rgba(255, 255, 255, 0.701);
+}
+.Casita{
+  width: 15%;
+  margin-top: 2%;
+  margin-left: -140%;
+  background-color: rgb(221, 221, 221);
+  border: none;
+}
+.casitas{
+  width: 100%;
 }
