@@ -1,3 +1,4 @@
+import './Login.css'
 import * as React from "react";
 import Avatar from "@mui/material/Avatar";
 import Button from "@mui/material/Button";
@@ -45,6 +46,7 @@ export default function Login() {
   };
 
   return (
+  <div className="bodys">
     <ThemeProvider theme={defaultTheme}>
       <Grid container component="main" sx={{ height: "100vh" }}>
         <CssBaseline />
@@ -137,5 +139,6 @@ export default function Login() {
         </Grid>
       </Grid>
     </ThemeProvider>
+    </div>
   );
 }

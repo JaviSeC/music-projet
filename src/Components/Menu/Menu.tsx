@@ -1,5 +1,6 @@
 import "./Menu.css";
 import { useState } from "react";
+import { Link } from "react-router-dom";
 
 export default function Menu() {
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
@@ -18,6 +19,7 @@ export default function Menu() {
             alt=""
           />
         </button>
+
         <button className="registrobutton" onClick={toggleDropdown}>
           <img
             className="categorie"
@@ -35,22 +37,25 @@ export default function Menu() {
         )}
       </div>
       <div className="boxuser">
-        <button className="loginbutton">
-          <img
-            className="login"
-            src="https://res.cloudinary.com/da7ffijqs/image/upload/v1695319832/_8aeb1ec2-ba3a-4b6d-a850-a142ccb46b8a-removebg-preview_cfwx19.png"
-            alt=""
-          />
-        </button>
-        <button className="registrobutton">
-          <img
-            className="registro"
-            src="https://res.cloudinary.com/da7ffijqs/image/upload/v1695321417/grid_landscape-removebg-preview_smbjbe.png"
-            alt=""
-          />
-        </button>
+        <Link to="/PageLogin">
+          <button className="loginbutton">
+            <img
+              className="login"
+              src="https://res.cloudinary.com/da7ffijqs/image/upload/v1695319832/_8aeb1ec2-ba3a-4b6d-a850-a142ccb46b8a-removebg-preview_cfwx19.png"
+              alt=""
+            />
+          </button>
+        </Link>
+        <Link to="/PageSingUp">
+          <button className="registrobutton">
+            <img
+              className="registro"
+              src="https://res.cloudinary.com/da7ffijqs/image/upload/v1695321417/grid_landscape-removebg-preview_smbjbe.png"
+              alt=""
+            />
+          </button>
+        </Link>
       </div>
     </div>
   );
 }
-
