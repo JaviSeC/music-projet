@@ -12,14 +12,15 @@ export default function Menu() {
   return (
     <div className="Container">
       <div className="boxSong">
-        <button className="loginbutton">
-          <img
-            className="home"
-            src="https://res.cloudinary.com/da7ffijqs/image/upload/v1695323366/images-removebg-preview_1_xuayhf.png"
-            alt=""
-          />
-        </button>
-
+        <Link to="/">
+          <button className="loginbutton">
+            <img
+              className="home"
+              src="https://res.cloudinary.com/da7ffijqs/image/upload/v1695323366/images-removebg-preview_1_xuayhf.png"
+              alt=""
+            />
+          </button>
+        </Link>
         <button className="registrobutton" onClick={toggleDropdown}>
           <img
             className="categorie"
