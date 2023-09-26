@@ -18,3 +18,21 @@
 .casitas{
   width: 100%;
 }
+
+@media screen and (max-width: 360px) {
+  .body {
+    height: auto; 
+    margin-bottom: -10px; 
+    background-position-x: center; 
+    background-position-y: top;
+  }
+
+  .Casita {
+    width: 20%; 
+    margin: 0 auto; 
+  }
+
+  .casitas {
+    width: 100%; /* Cambia el ancho de .casitas al 100% */
+  }
+}

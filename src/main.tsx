@@ -10,18 +10,6 @@
 //import SignUp from './Components/SingUp/SingUp'
 // import Footer from "./Components/Footer/Footer";
 
-// ReactDOM.createRoot(document.getElementById('root')!).render(
-//   <React.StrictMode>
-//     <SignUp />
-//   </React.StrictMode>,
-// )
-
-// ReactDOM.createRoot(document.getElementById('root')!).render(
-//   <React.StrictMode>
-//     <Login />
-//   </React.StrictMode>,
-// )
-
 
 import ReactDOM from "react-dom/client";
 import { BrowserRouter, Route, Routes } from 'react-router-dom';

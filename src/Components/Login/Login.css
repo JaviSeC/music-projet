@@ -11,9 +11,20 @@
   width: 10%;
   background-color: rgb(33, 22, 22);
   text-decoration: none;
-  font-size: larger;
   border: none;
 }
 .casa{
   width: 100%;
+}
+
+@media screen and (max-width: 360px) {
+  .bodys {
+    height: auto; 
+    margin-bottom: 0; 
+  }
+
+  .Home {
+    background-color: rgba(120, 120, 120, 0.626);
+    width: 15%;  
+  }
 }
