@@ -59,10 +59,10 @@ const BodyClassic: React.FC = () => {
       </div>
 
       <div className="song-list">
-        <h2>Lista de Canciones</h2>
         <ul>
           {songs.map((song) => (
             <li key={song.id}>
+              <img src=''/>
               <button onClick={() => changeSong(song)}>
                 {song.title} - {song.artist}
               </button>

@@ -104,29 +104,26 @@ body{
   margin-top: 20px;
 }
 
-.song-list h2 {
-  font-size: 18px;
-  font-weight: bold;
-  color: #333333; /* Texto negro */
-  margin-bottom: 10px;
-}
 
-.playlist ul {
+.song-list ul {
+  border: 1px solid white;
+  width: 85%;
+  margin-left: 3%;
   list-style: none;
-  padding: 0;
-  margin: 0; /* Elimina el margen predeterminado de la lista */
+  /* padding: 0; */
+ /* Elimina el margen predeterminado de la lista */
 }
 
-.playlist li {
+.song-list li {
   display: flex; /* Muestra los elementos de la lista en línea */
   align-items: center; /* Centra verticalmente los elementos */
   margin-bottom: 8px;
   padding: 8px; /* Espacio entre cada canción */
  /* Fondo gris oscuro */
-  color: #fff; /* Texto blanco */
+  color: #ffffff; /* Texto blanco */
 }
 
-.playlist li img {
+.song-list li img {
   max-width: 64px;
   height: auto;
   margin-right: 10px; /* Espacio entre la imagen y el texto */
