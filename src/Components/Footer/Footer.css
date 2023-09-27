@@ -7,7 +7,7 @@
 }
 
 .footer-div-icon{
-    width: 80%;
+    max-width: ;
     padding:10px 60px;
     color:antiquewhite;
    
@@ -35,7 +35,7 @@
 .footer-name-company{
     text-align: center;
     color:antiquewhite;
-    font-size: 30px;
+    font-size: 80%;
     margin-left: 10px;
     
 }
