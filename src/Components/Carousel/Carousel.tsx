@@ -11,9 +11,9 @@ const [isPlaying, setIsPlaying] = useState(false);
 
 const toggleAudio = () => {
     if (isPlaying) {
-      //audioRef.current.pause();
+      audioRef.current.pause();
     } else {
-      //audioRef.current.play();
+      audioRef.current.play();
     }
     setIsPlaying(!isPlaying);
   };

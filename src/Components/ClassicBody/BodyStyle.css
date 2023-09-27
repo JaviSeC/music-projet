@@ -7,7 +7,7 @@ body{
   margin: 0;
 }
 .music-player {
-    background-color: #00000034; /* Fondo gris oscuro */
+    background-color: #00000067; /* Fondo gris oscuro */
     color: #ffffff; /* Texto blanco */
     display: flex;
     justify-content: space-around;
