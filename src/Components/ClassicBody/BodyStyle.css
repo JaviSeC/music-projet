@@ -20,6 +20,9 @@ body{
     z-index: 999; /* Asegura que esté sobre otros elementos */
     width: 100%;
   }
+.music-player button{
+  height: 30px;
+}
   
   .album-cover img {
     max-width: 120px;
