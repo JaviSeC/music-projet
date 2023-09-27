@@ -7,7 +7,7 @@ body{
   margin: 0;
 }
 .music-player {
-    background-color: #00000067; /* Fondo gris oscuro */
+    background-color: #000000be; /* Fondo gris oscuro */
     color: #ffffff; /* Texto blanco */
     display: flex;
     justify-content: space-around;
@@ -19,7 +19,6 @@ body{
     right: 0;
     z-index: 999; /* Asegura que esté sobre otros elementos */
     width: 100%;
-    border: 1px solid black;
   }
   
   .album-cover img {
@@ -59,15 +58,6 @@ body{
     background-color: #1ed760; /* Color de fondo verde más claro al pasar el mouse */
   }
   
-  /* Estilos para la lista de canciones */
-  /* .playlist ul {
-    list-style: none;
-    padding: 0;
-  } */
-  
-  /* .playlist li {
-    margin-bottom: 8px;
-  } */
   
   .playlist button {
     background: none;
@@ -116,7 +106,6 @@ body{
 
 .song-list li {
   display: flex; /* Muestra los elementos de la lista en línea */
-  
   align-items: center; /* Centra verticalmente los elementos */
   margin-bottom: 8px;
   padding: 1px; /* Espacio entre cada canción */
@@ -126,7 +115,7 @@ body{
 }
 
 .song-list li img {
-  max-width: 64px;
+  max-width: 62px;
   height: auto;
   margin-right: 10px; /* Espacio entre la imagen y el texto */
   border-radius: 4px;
