@@ -109,9 +109,9 @@ body{
 
 .song-list li {
   display: flex; /* Muestra los elementos de la lista en línea */
-  align-items: center; /* Centra verticalmente los elementos */
+  /* align-items: center; */
   margin-bottom: 8px;
-  padding: 1px; /* Espacio entre cada canción */
+  padding: 2px; /* Espacio entre cada canción */
  /* Fondo gris oscuro */
   color: #ffffff; /* Texto blanco */
   
@@ -125,6 +125,11 @@ body{
 }
 
 .song-list button{
+  display: flex;
+  align-items: center;
+  flex-wrap: nowrap;
+  justify-content: space-around;
+  text-align: justify;
   width: 100%;
   height: 40px;
   color: white;

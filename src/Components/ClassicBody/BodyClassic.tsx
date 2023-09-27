@@ -196,7 +196,7 @@ const BodyClassic: React.FC = () => {
             <li key={song.id}>
               <img src={song.albumCover} alt={song.title} />
               <button onClick={() => changeSong(song)}>
-                {song.title} - {song.artist} - {song.duration}
+                <div>{song.title}</div> - <div>{song.artist}</div> - <div>{song.duration}</div>
               </button>
             </li>
           ))}
