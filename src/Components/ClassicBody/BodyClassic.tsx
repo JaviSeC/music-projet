@@ -110,6 +110,7 @@ const songs = [
     id: 1,
     artist: 'Enio Morricone',
     title: 'El bueno, el feo y el malo',
+    duration: '2:42',
     albumCover:
       'https://img2.rtve.es/i/?w=1600&i=1667821299474.jpg',
     audioSource: 'https://res.cloudinary.com/dhme3c8ll/video/upload/v1695724729/El_Bueno_El_Feo_Y_El_Malo_-_II_Buono_II_Brutto_Il_Cattivo_zSDZQeIEqlM_x78lfm.mp3',
@@ -118,6 +119,7 @@ const songs = [
     id: 2,
     artist: 'Marvin Hamlisch',
     title: 'El golpe',
+    duration: '3:58',
     albumCover:
       'https://lavozenoffdotnet.files.wordpress.com/2017/02/cartel.jpg',
     audioSource: 'https://res.cloudinary.com/dhme3c8ll/video/upload/v1695724919/El_Golpe_BSO_-_M%C3%BAsica_Scott_Joplin_en_piano_vVmfZjCwER8_qjiagf.mp3',
@@ -126,6 +128,7 @@ const songs = [
     id: 3,
     artist: 'Artista 3',
     title: 'El Padrino',
+    duration: '2:43',
     albumCover: 'https://www.race.es/revista-autoclub/wp-content/uploads/sites/4/2022/05/el-padrino-el-clasico-de-los-clasicos-759x500.jpg',
     audioSource: 'https://res.cloudinary.com/dhme3c8ll/video/upload/v1695724973/El_Padrino_Tema_Original__The_Godfather_Original_Theme__qIFQwnsotss_edoje7.mp3',
   },
@@ -169,7 +172,7 @@ const BodyClassic: React.FC = () => {
             <li key={song.id}>
               <img src={song.albumCover} alt={song.title} />
               <button onClick={() => changeSong(song)}>
-                {song.title} - {song.artist}
+                {song.title} - {song.artist} - {song.duration}
               </button>
             </li>
           ))}

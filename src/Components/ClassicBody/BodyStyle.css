@@ -87,6 +87,7 @@ body{
   }
 
   #playlist-cover{
+    margin-left: 5%;
     width: 23%;
     height: 200px;
     border-radius: 15px;
@@ -106,9 +107,8 @@ body{
 
 
 .song-list ul {
-  border: 1px solid white;
   width: 85%;
-  margin-left: 3%;
+  margin-left: 5%;
   list-style: none;
   /* padding: 0; */
  /* Elimina el margen predeterminado de la lista */
@@ -116,11 +116,13 @@ body{
 
 .song-list li {
   display: flex; /* Muestra los elementos de la lista en línea */
+  
   align-items: center; /* Centra verticalmente los elementos */
   margin-bottom: 8px;
-  padding: 8px; /* Espacio entre cada canción */
+  padding: 1px; /* Espacio entre cada canción */
  /* Fondo gris oscuro */
   color: #ffffff; /* Texto blanco */
+  
 }
 
 .song-list li img {
@@ -128,4 +130,18 @@ body{
   height: auto;
   margin-right: 10px; /* Espacio entre la imagen y el texto */
   border-radius: 4px;
+}
+
+.song-list button{
+  width: 100%;
+  height: 40px;
+  color: white;
+  background-color: #0000006d;
+  border-style: none;
+  cursor: pointer;
+  border-radius: 10px;
+  font-size: 18px;
+}
+.song-list button:hover{
+  background-color: #000000;
 }
