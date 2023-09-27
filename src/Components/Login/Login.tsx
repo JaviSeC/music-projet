@@ -1,5 +1,4 @@
 import "./Login.css";
-import * as React from "react";
 import { Link } from "react-router-dom";
 import Avatar from "@mui/material/Avatar";
 import Button from "@mui/material/Button";
@@ -15,25 +14,6 @@ import LockOutlinedIcon from "@mui/icons-material/LockOutlined";
 import Typography from "@mui/material/Typography";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
 
-function Copyright(props: any) {
-  return (
-    <Typography
-      variant="body2"
-      color="text.secondary"
-      align="center"
-      {...props}
-    >
-      {"Copyright © "}
-      <Links color="inherit" href="https://mui.com/">
-        Your Website
-      </Links>{" "}
-      {new Date().getFullYear()}
-      {"."}
-    </Typography>
-  );
-}
-
-// TODO remove, this demo shouldn't need to reset the theme.
 const defaultTheme = createTheme();
 
 export default function Login() {
@@ -154,7 +134,6 @@ export default function Login() {
                     </Links>
                   </Grid>
                 </Grid>
-                <Copyright sx={{ mt: 5 }} />
               </Box>
             </Box>
           </Grid>
