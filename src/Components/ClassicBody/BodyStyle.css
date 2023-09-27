@@ -125,11 +125,7 @@ body{
 }
 
 .song-list button{
-  display: flex;
   align-items: center;
-  flex-wrap: nowrap;
-  justify-content: space-around;
-  text-align: justify;
   width: 100%;
   height: 40px;
   color: white;
