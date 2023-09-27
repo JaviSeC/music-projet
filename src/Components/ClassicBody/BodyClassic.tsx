@@ -132,6 +132,30 @@ const songs = [
     albumCover: 'https://www.race.es/revista-autoclub/wp-content/uploads/sites/4/2022/05/el-padrino-el-clasico-de-los-clasicos-759x500.jpg',
     audioSource: 'https://res.cloudinary.com/dhme3c8ll/video/upload/v1695724973/El_Padrino_Tema_Original__The_Godfather_Original_Theme__qIFQwnsotss_edoje7.mp3',
   },
+  {
+    id: 4,
+    artist: 'Vangelis',
+    title: 'Carros de fuego',
+    duration: '3:20',
+    albumCover: 'https://img2.rtve.es/i/?w=1600&i=1673619861549.jpg',
+    audioSource: 'https://res.cloudinary.com/dhme3c8ll/video/upload/v1695801278/Carros_de_Fuego_-_B.S.O._MkS1SBPHN44_pcrwyp.mp3',
+  },
+  {
+    id: 5,
+    artist: 'John Williams',
+    title: 'Tiburón',
+    duration: '2:20',
+    albumCover: 'https://cdn.mos.cms.futurecdn.net/QfpYiWt35GZfU2Gd7pztQ8.png',
+    audioSource: 'https://res.cloudinary.com/dhme3c8ll/video/upload/v1695801629/Main_Title_John_Williams_Jaws_From_The__Jaws__Soundtrack__BePfzCOMRZQ_cqnbb1.mp3',
+  },
+  {
+    id: 6,
+    artist: 'Carmine Coppola',
+    title: 'Apocalypse Now',
+    duration: '4:44',
+    albumCover: 'https://hips.hearstapps.com/hmg-prod/images/apocalypse-now-donald-trump-1534867844.jpg',
+    audioSource: 'https://res.cloudinary.com/dhme3c8ll/video/upload/v1695801970/BSO_-_Apocalipsys_Now_3VywjmyNYDs_q69djb.mp3',
+  },
 ];
 
 const BodyClassic: React.FC = () => {
