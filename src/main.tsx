@@ -18,6 +18,7 @@ import PageInitial from './Views/PageInitial/PageInitial';
 import PageLogin from './Views/PageLogin/PageLogin';
 import PageSingUp from './Views/PageSingUp/PageSingUp';
 
+
 ReactDOM.createRoot(document.getElementById('root')!).render(
   <>
   <BrowserRouter>

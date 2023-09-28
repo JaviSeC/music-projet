@@ -78,7 +78,7 @@ function CardComponent(props: CardProps) {
   );
 }
 
-export default function MultipleInteractionCards() {
+export default function Tops() {
   return (
     <div>
       <CardComponent
