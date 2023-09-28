@@ -18,7 +18,9 @@ body{
     left: 0;
     right: 0;
     z-index: 999; /* Asegura que esté sobre otros elementos */
-    width: 100%;
+    width: 90%;
+    margin-left: 5%;
+    border-radius: 10px 10px 0px 0px;
   }
 .music-player button{
   height: 30px;
@@ -81,8 +83,8 @@ body{
 
   #playlist-cover{
     margin-left: 5%;
-    width: 23%;
-    height: 200px;
+    width: 20%;
+    height: auto;
     border-radius: 15px;
   }
 
@@ -137,4 +139,9 @@ body{
 }
 .song-list button:hover{
   background-color: #000000;
+}
+
+#like-button{
+  width: 5%;
+  margin-left: 1%;
 }
