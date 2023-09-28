@@ -40,7 +40,7 @@ const toggleAudio = () => {
       >
         <SwiperSlide><img src="https://res.cloudinary.com/da7ffijqs/image/upload/v1695111816/perro_720_vkxv7u.jpg" alt="perrito" onClick={toggleAudio} /></SwiperSlide>
         <SwiperSlide><img src="https://res.cloudinary.com/da7ffijqs/image/upload/v1695111811/gato_720_gmcfcw.jpg" alt="gatico" onClick={toggleAudio} /></SwiperSlide>
-        <SwiperSlide><img src="https://res.cloudinary.com/da7ffijqs/image/upload/v1695111808/dos_720_u5ou10.jpg" alt="parejanegra" onClick={toggleAudio}/></SwiperSlide>
+        <SwiperSlide><img src="https://res.cloudinary.com/duwenv0yr/image/upload/v1695893709/exorci.png" alt="parejanegra" onClick={toggleAudio}/></SwiperSlide>
         <SwiperSlide><img src="https://res.cloudinary.com/da7ffijqs/image/upload/v1695111773/chika3_720_qixxnk.jpg" alt="chika" onClick={toggleAudio} /></SwiperSlide>
         <SwiperSlide><img src="https://res.cloudinary.com/da7ffijqs/image/upload/v1695111804/chiko4_720_f6ufja.jpg" alt="negro" onClick={toggleAudio}/></SwiperSlide>
         <SwiperSlide><img src="https://res.cloudinary.com/da7ffijqs/image/upload/v1695111800/chiko3_720_zybcnp.jpg" alt="colores" onClick={toggleAudio}/></SwiperSlide>
