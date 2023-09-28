@@ -8,6 +8,7 @@
 // import SignUp from './Components/SingUp/SingUp'
 import './index.css'
 import Footer from './Components/Footer/Footer'
+import Tops from './Components/Tops/Tops'
 
 
 
@@ -32,8 +33,8 @@ ReactDOM.createRoot(document.getElementById('root')!).render(
       <Header /> 
       <Menu />
       <Body />
-     <Carousel />
-   
+      <Tops />
+     <Carousel />   
       <Footer />
     </React.StrictMode>,
   )
