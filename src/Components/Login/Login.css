@@ -1,9 +1,30 @@
-body {
+.bodys {
   background-image: url("https://res.cloudinary.com/da7ffijqs/image/upload/v1695380423/5240d4c9fc9a18de6d58e1c264f7a6a8_gqmqcw.jpg");
   width: auto;
   height: 675px;
-  margin-top: -20%;
   background-size: cover; 
   background-repeat: no-repeat;
-  margin: 0;
+  margin-bottom: 3%;
+}
+
+.Home{
+  width: 10%;
+  background-color: rgb(33, 22, 22);
+  text-decoration: none;
+  border: none;
+}
+.casa{
+  width: 100%;
+}
+
+@media screen and (max-width: 360px) {
+  .bodys {
+    height: auto; 
+    margin-bottom: 0; 
+  }
+
+  .Home {
+    background-color: rgba(120, 120, 120, 0.626);
+    width: 15%;  
+  }
 }
