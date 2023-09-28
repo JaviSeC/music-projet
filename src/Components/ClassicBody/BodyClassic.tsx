@@ -126,7 +126,7 @@ const songs = [
   },
   {
     id: 3,
-    artist: 'Artista 3',
+    artist: 'Nino Rota',
     title: 'El Padrino',
     duration: '2:43',
     albumCover: 'https://www.race.es/revista-autoclub/wp-content/uploads/sites/4/2022/05/el-padrino-el-clasico-de-los-clasicos-759x500.jpg',
@@ -209,7 +209,7 @@ const BodyClassic: React.FC = () => {
               <button onClick={() => changeSong(song)}>
               {song.title} - {song.artist} - {song.duration} 
               </button>
-              <button id='like-button' onClick={() => toggleLike(song.id)}>
+              <button id='like-button' onClick={() => toggleLike(song.id)} className={likedSongs.has(song.id) ? 'liked' : ''}>
                 {likedSongs.has(song.id) ? '💜' : '🤍'}
               </button>
             </li>
