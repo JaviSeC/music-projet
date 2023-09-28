@@ -52,7 +52,7 @@ export default function Header() {
           />
         </div>
         <div className="box2">
-          <div className="Name">SoundTracksMagic</div>
+          <div className="Name">SoundTracks Magic</div>
           <div className="Search">
             <div>
               <SearchBox onSearch={handleSearch} />

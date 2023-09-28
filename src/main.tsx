@@ -20,7 +20,7 @@ ReactDOM.createRoot(document.getElementById("root")!).render(
       <Menu />
       <Body />
       <Carousel />
-      <BodyClassic />
+      {/* <BodyClassic /> */}
       <Footer />
     </NextUIProvider>
   </React.StrictMode>
