@@ -1,9 +1,9 @@
-.footer {
+.div-footer {
     background-color:darkslategrey;
     display: flex;
     font-size: 80%;
-    justify-content: end;
-    margin-top: 3%;
+    /* justify-content: end; */
+    margin-top: 10px;
     color:antiquewhite;
 }
 
@@ -15,7 +15,7 @@
    
 }
 
-.footer-div-icon{
+.footer-div-icons{
     padding:30px 20px;
     width: 100%;
     text-align: center;

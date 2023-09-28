@@ -9,6 +9,7 @@
  import Menu from './Components/Menu/Menu'
  import BodyClassic from './Components/ClassicBody/BodyClassic'; // Asegúrate de que la ruta sea correcta
  import './index.css'
+import Footer from './Components/Footer/Footer';
 
 
 //  import Login from './Components/Login/Login'
@@ -23,7 +24,7 @@ ReactDOM.createRoot(document.getElementById('root')!).render(
     <Body/>
     <Carousel />
      <BodyClassic />
-      
+      <Footer/>
       </NextUIProvider>
   </React.StrictMode>,
 )
