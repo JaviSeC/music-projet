@@ -23,26 +23,26 @@ import Admin from './Components/Adminview/Admin';
 // )
 
 //____________________________________________________________________________________________________
-// ReactDOM.createRoot(document.getElementById('root')!).render(
-//     <React.StrictMode>
-//       <NextUIProvider>
-//       <Header /> 
-//       <Menu />
-//       <Body />
-//      <Tops/>
-//      <Carousel />
-   
-//       <Footer />
-//       </NextUIProvider>
-//     </React.StrictMode>,
-//   )
-
-
 ReactDOM.createRoot(document.getElementById('root')!).render(
     <React.StrictMode>
       <NextUIProvider>
-      <Admin />
+      <Header /> 
+      <Menu />
+      <Body />
+     <Tops/>
+     <Carousel />
+   
       <Footer />
       </NextUIProvider>
     </React.StrictMode>,
   )
+
+
+// ReactDOM.createRoot(document.getElementById('root')!).render(
+//     <React.StrictMode>
+//       <NextUIProvider>
+//       <Admin />
+//       <Footer />
+//       </NextUIProvider>
+//     </React.StrictMode>,
+//   )
