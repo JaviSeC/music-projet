@@ -9,7 +9,7 @@ import Visibility from '@mui/icons-material/Visibility';
 
 export default function Body() {
   return (
-    <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: '100vh' }}>
+    <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: '120vh', marginTop:'-80px' }}>
       <Card
         variant="plain"
         sx={{
