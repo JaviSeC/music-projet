@@ -1,4 +1,3 @@
-import * as React from 'react';
 import AspectRatio from '@mui/joy/AspectRatio';
 import Avatar from '@mui/joy/Avatar';
 import Card from '@mui/joy/Card';
@@ -29,9 +28,9 @@ export default function Body() {
             }}
           >
             <img
-              src="https://res.cloudinary.com/duwenv0yr/image/upload/v1695284502/piano.jpg"
-              srcSet="https://res.cloudinary.com/duwenv0yr/image/upload/v1695284502/piano.jpg"
-              alt="Música Clásica"
+              src="https://res.cloudinary.com/duwenv0yr/image/upload/v1695888871/guardian_iobu69.jpg"
+              srcSet="https://res.cloudinary.com/duwenv0yr/image/upload/v1695888871/guardian_iobu69.jpg"
+              alt="Guardians of the Galaxy"
               style={{ width: '100%', height: '100%', objectFit: 'cover' }}
             />
 
@@ -39,17 +38,18 @@ export default function Body() {
             <div
               style={{
                 position: 'absolute',
-                top: '60%', // Ajusta la posición vertical según tus necesidades
+                top: '70%', // Ajusta la posición vertical según tus necesidades
                 left: '35%', // Ajusta la posición horizontal según tus necesidades
                 transform: 'translate(-50%, -50%)', // Centra el contenido
                 textAlign: 'center', // Centra el texto horizontalmente
                 background: 'rgba(0, 0, 0, 0.5)',
                 padding: '16px',
                 color: 'white',
+                fontSize: '14px', // Tamaño de fuente más pequeño
               }}
             >
-              <h3>CLÁSICOS INMORTALES</h3>
-              <p>Embárcate en un viaje sublime a través de las eras con 'Ecos de la Eternidad: Clásicos Inmortales'. Este álbum te sumergirá en la majestuosidad de la música clásica, donde cada nota es un puente hacia la grandeza atemporal. De los movimientos apasionados de Beethoven a las melodías serenas de Mozart, este álbum celebra la belleza eterna de la música que ha perdurado a lo largo de los siglos. Deja que la armonía te transporte a un mundo donde el tiempo se detiene y la emoción se entrelaza con la perfección musical.</p>
+              <h2>Guardianes de la Galaxia: La Banda Sonora Intergaláctica</h2>
+              <p>¡Viaja a través de las estrellas con la banda sonora que te llevará al límite del espacio! Descubre la épica música que dio vida a las aventuras de los Guardianes de la Galaxia en su emocionante videojuego.</p>
               {/* Puedes reemplazar el texto fijo con el contenido dinámico si lo deseas */}
             </div>
 

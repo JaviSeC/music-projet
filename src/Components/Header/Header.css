@@ -50,6 +50,7 @@ body{
     height: 60px;
     font-size: larger;
     text-align: center;
+    color: white;
     background-color: rgba(29, 33, 35, 1);
     margin-left: -182%
 }
