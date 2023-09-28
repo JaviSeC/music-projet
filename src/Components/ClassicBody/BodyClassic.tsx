@@ -161,6 +161,7 @@ const songs = [
 const BodyClassic: React.FC = () => {
   const [currentSong, setCurrentSong] = useState(songs[0]);
   const [isPlaying, setIsPlaying] = useState(false);
+  const [likedSongs, setLikedSongs] = useState<Set<number>>(new Set<number>());
   const audioRef = useRef<HTMLAudioElement | null>(null);
 
   const togglePlayPause = () => {
@@ -177,6 +178,16 @@ const BodyClassic: React.FC = () => {
   const changeSong = (song: any) => {
     setCurrentSong(song);
     setIsPlaying(true);
+  };
+
+  const toggleLike = (songId: number) => {
+    const updatedLikedSongs = new Set<number>(likedSongs); // Asegura que el tipo sea Set<number>
+    if (likedSongs.has(songId)) {
+      updatedLikedSongs.delete(songId);
+    } else {
+      updatedLikedSongs.add(songId);
+    }
+    setLikedSongs(updatedLikedSongs);
   };
 
   return (
@@ -196,7 +207,10 @@ const BodyClassic: React.FC = () => {
             <li key={song.id}>
               <img src={song.albumCover} alt={song.title} />
               <button onClick={() => changeSong(song)}>
-                {song.title} - {song.artist} - {song.duration}
+              {song.title} - {song.artist} - {song.duration} 
+              </button>
+              <button id='like-button' onClick={() => toggleLike(song.id)}>
+                {likedSongs.has(song.id) ? '💜' : '🤍'}
               </button>
             </li>
           ))}
