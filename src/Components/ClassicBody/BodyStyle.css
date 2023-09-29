@@ -13,13 +13,12 @@ body{
     justify-content: space-around;
     align-items: center;
     /* padding: 10px; */
-    position: fixed; /* Fijar el reproductor en la parte inferior */
+    /* Fijar el reproductor en la parte inferior */
     bottom: 0;
     left: 0;
     right: 0;
-    z-index: 999; /* Asegura que esté sobre otros elementos */
-    width: 90%;
-    margin-left: 5%;
+    width: 85%;
+    margin-left: 10.2%;
     border-radius: 10px 10px 0px 0px;
   }
 .music-player button{
@@ -64,25 +63,26 @@ body{
   }
   
   
-  .playlist button {
-    background: none;
+  /* .playlist button {
+    background-color: #e90c0c;
     border: none;
     color: #e90c0c;
     cursor: pointer;
     font-size: 14px;
     text-align: left;
-  }
+  } */
   .playlist-header{
-    width: 90%;
-    height: 200px;
-    /* border: solid 1px black; */
+    width: 75%;
+    height: 25vh;
+    border: solid 1px black;
     display: flex;
-    margin: 3%;
+    margin: 2%;
+    margin-left: 15%;
 
   }
 
   #playlist-cover{
-    margin-left: 5%;
+    margin-left: 10%;
     width: 20%;
     height: auto;
     border-radius: 15px;
@@ -97,13 +97,13 @@ body{
 .song-list {
   width: 100%; /* Ocupa todo el ancho de la pantalla */
   overflow-x: hidden; /* Oculta la barra de desplazamiento horizontal si es necesario */
-  margin-top: 20px;
+  margin-top: 3%;
 }
 
 
 .song-list ul {
   width: 85%;
-  margin-left: 5%;
+  margin-left: 8%;
   list-style: none;
   /* padding: 0; */
  /* Elimina el margen predeterminado de la lista */
@@ -112,7 +112,7 @@ body{
 .song-list li {
   display: flex; /* Muestra los elementos de la lista en línea */
   /* align-items: center; */
-  margin-bottom: 8px;
+  margin-bottom: 1%;
   padding: 2px; /* Espacio entre cada canción */
  /* Fondo gris oscuro */
   color: #ffffff; /* Texto blanco */
