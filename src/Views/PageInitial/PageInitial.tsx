@@ -8,8 +8,7 @@ import "./PageInitial.css";
 export default function PageInitial() {
   return (
     <>
-      {/* <Headerunico/> */}
-    
+       
         <Header />
         <div className="home">
           <Menu />

@@ -79,6 +79,8 @@ function CardComponent(props: CardProps) {
 }
 export default function Tops() {
   return (
+
+    <div className="topssongs"> Top Songs
     <div className='Cards-top'>
       <CardComponent
         imageUrl="https://res.cloudinary.com/duwenv0yr/image/upload/v1695888871/StarLord_omsbw0.jpg"
@@ -95,8 +97,8 @@ export default function Tops() {
           views="Views: 145K"
           duration="6:02 min"
         />
-
-     
-    </div>
+         
+        </div>
+        </div>
   );
 }

@@ -92,3 +92,37 @@
 .icon:hover::before {
   opacity: 1; /* Hace que el nombre de la red social aparezca cuando se pasa el mouse */
 }
+
+
+/* Media query para pantallas con un ancho máximo de 360px (responsive) */
+@media screen and (max-width: 360px) {
+  .div-footer {
+    flex-direction: column; /* Coloca las cajas una debajo de la otra */
+    align-items: center; /* Centra las cajas verticalmente */
+    text-align: center; /* Centra el texto en las cajas */
+    background-color: blueviolet;
+    height: auto;
+    width: 360px;;
+  }
+
+  .div-contactos {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    /* margin-top: 25%; */
+    /* padding-top: 5px; */
+    /* Elimina el margen izquierdo */
+  }
+
+  .contactos {
+    margin-left: 0; /* Elimina el margen izquierdo */
+  }
+
+  .div-titulo {
+    margin-left: 0; /* Elimina el margen izquierdo */
+  }
+
+  .div-redes-sociales{
+    margin-bottom: 5px;
+  }
+}
