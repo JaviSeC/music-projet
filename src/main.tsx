@@ -17,6 +17,7 @@ import Footer from './Components/Footer/Footer'
 import PageInitial from './Views/PageInitial/PageInitial';
 import PageLogin from './Views/PageLogin/PageLogin';
 import PageSingUp from './Views/PageSingUp/PageSingUp';
+import BodyClassic from "./Components/ClassicBody/BodyClassic";
 
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
@@ -27,6 +28,7 @@ ReactDOM.createRoot(document.getElementById('root')!).render(
   <Route path="/" element={<PageInitial />} />
   <Route path="/PageLogin" element={<PageLogin />} />
   <Route path="/PageSingUp" element={<PageSingUp />} />
+  <Route path="/ClassicView" element={<BodyClassic/>}/> 
   </Routes>
 
   <Footer />
