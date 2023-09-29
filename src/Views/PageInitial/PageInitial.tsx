@@ -9,14 +9,12 @@ export default function PageInitial() {
   return (
     <>
       <Header />
-      {/* <Headerunico/> */}
       <div className="home">
       <Menu />
       <Body />
       <Tops />
       </div>
       <Carousel />
-      {/* <BodyClassic/> */}
     </>
   );
 }

@@ -22,8 +22,8 @@ export default function SignUp() {
     event.preventDefault();
     const data = new FormData(event.currentTarget);
     console.log({
-      email: data.get("email"),
-      password: data.get("password"),
+      email: data.get("eEmail"),
+      password: data.get("Password"),
     });
   };
 
@@ -67,10 +67,10 @@ export default function SignUp() {
                 <Grid item xs={12} sm={6}>
                   <TextField
                     autoComplete="given-name"
-                    name="firstName"
+                    name="FirstName"
                     required
                     fullWidth
-                    id="firstName"
+                    id="FirstName"
                     label="First Name"
                     autoFocus
                     className="Boxes"
@@ -80,9 +80,9 @@ export default function SignUp() {
                   <TextField
                     required
                     fullWidth
-                    id="lastName"
+                    id="LastName"
                     label="Last Name"
-                    name="lastName"
+                    name="LastName"
                     autoComplete="family-name"
                     className="Boxes"
                   />
@@ -93,8 +93,8 @@ export default function SignUp() {
                     fullWidth
                     id="UserName"
                     label="UserName"
-                    name="User"
-                    autoComplete="User"
+                    name="UserName"
+                    autoComplete="UserName"
                     className="Boxes"
                   />
                 </Grid>
@@ -102,10 +102,10 @@ export default function SignUp() {
                   <TextField
                     required
                     fullWidth
-                    id="email"
+                    id="Email"
                     label="Email Address"
-                    name="email"
-                    autoComplete="email"
+                    name="Email"
+                    autoComplete="Email"
                     className="Boxes"
                   />
                 </Grid>
@@ -113,10 +113,10 @@ export default function SignUp() {
                   <TextField
                     required
                     fullWidth
-                    name="password"
+                    name="Password"
                     label="Password"
-                    type="password"
-                    id="password"
+                    type="Password"
+                    id="Password"
                     autoComplete="new-password"
                     className="Boxes"
                   />
