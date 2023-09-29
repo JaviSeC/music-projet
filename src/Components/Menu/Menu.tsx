@@ -32,7 +32,7 @@ export default function Menu() {
           <div className="dropdown-content">
             <a href="#">SoundTracks</a>
             <a href="#">Peliculas Animadas</a>
-            <a href="#">Clasicas</a>
+            <a href="/ClassicView">Clasicas</a>
             <a href="#">Actuales</a>
           </div>
         )}
