@@ -1,5 +1,5 @@
-.Card{
-    /* /* margin-top: 10px; */
+.Card-top{
+    margin-top: 10px; 
     margin-bottom: 30px;
     margin-right: 10px;
     
@@ -7,4 +7,5 @@
 
 .Cards-top{
 /* margin: 20px 20px; */
+/* text-decoration: none; */
 }
