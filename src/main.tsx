@@ -19,8 +19,8 @@ ReactDOM.createRoot(document.getElementById('root')!).render(
   <React.StrictMode>
     <Header />
     <Menu />
-    <Body/>
-    <Carousel />
+    {/* <Body/>
+    <Carousel /> */}
      <BodyClassic />
       <Footer />
   </React.StrictMode>,
