@@ -169,3 +169,26 @@ body{
     transform: scale(1); /* Volver al tamaño normal al final de la animación */
   }
 }
+
+@media (max-width: 360px) {
+  .music-player {
+    width: 90%; /* Ancho completo en pantallas pequeñas */
+    border-radius: 0;
+  }
+  .song-list button{
+    font-size: 12px;
+  }
+  #like-button {
+    width: 20%; /* Aumentar el tamaño del botón "like" en pantallas pequeñas */
+  }
+
+  .playlist-header {
+    width: 100%; /* Ancho completo en pantallas pequeñas */
+    height: auto; /* Altura automática en pantallas pequeñas */
+  }
+
+  #playlist-cover {
+    width: 80%; /* Ancho más grande en pantallas pequeñas */
+    margin-bottom: 5px; /* Espacio inferior más pequeño en pantallas pequeñas */
+  }
+}
