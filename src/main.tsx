@@ -32,7 +32,7 @@ ReactDOM.createRoot(document.getElementById('root')!).render(
   <Route path="/ClassicView" element={<PageBodyClassic/>}/> 
   </Routes>
 
-  {/* <Footer /> */}
+  <Footer />
 
   </BrowserRouter>
   </>
