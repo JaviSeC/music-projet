@@ -1,13 +1,9 @@
 #Carousel {
     height: 100%;
   }
- 
-  body {
-    background: #AFB7BB;
-  }
-  
+   
   .swiper {
-    margin-top: 10%;
+    /* margin-top: 10%; */
     width: 90rem;
     height: 200px;
   }
@@ -15,7 +11,7 @@
   .swiper-slide {
     text-align: center;
     font-size: 15px;
-    background: #0075B4;
+    /* background: #0075B4; */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -31,3 +27,13 @@
     border-radius: 25px;
   }
   
+/* .audioplayer{
+
+
+} */
+
+  .audioboton{
+    width: 100%;
+    margin-top: 15px;
+    /* height: 100px; */
+  }

@@ -1,0 +1,171 @@
+/* Estilos para el reproductor de música */
+body{
+  background-color: #000000;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.79), rgba(67, 65, 65, 0.53)), url('tu-imagen-de-fondo.jpg');
+  background-size: cover;
+  background-attachment: fixed;
+  margin: 0;
+}
+.music-player {
+    background-color: #000000be; /* Fondo gris oscuro */
+    color: #ffffff; /* Texto blanco */
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    /* padding: 10px; */
+    position: fixed; /* Fijar el reproductor en la parte inferior */
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 999; /* Asegura que esté sobre otros elementos */
+    width: 90%;
+    margin-left: 5%;
+    border-radius: 10px 10px 0px 0px;
+  }
+.music-player button{
+  height: 30px;
+}
+  
+  .album-cover img {
+    max-width: 120px;
+    height: 60px;
+    border-radius: 4px;
+  }
+  
+  .song-info {
+    /* flex: 1; */
+    text-align: center; /* Centrar el texto */
+  }
+  
+  .song-title {
+    font-size: 25px;
+    font-weight: bold;
+  }
+  
+  .artist {
+    display: flex;
+    flex-direction: row;
+    font-size: 14px;
+  }
+  
+  .controls button {
+ /* Color de fondo verde similar a Spotify */
+    color: #b12020; /* Texto blanco */
+    border: none;
+    border-radius: 4px;
+    padding: 8px 16px;
+    cursor: pointer;
+    font-size: 14px;
+    margin-left: 10px;
+  }
+  
+  .controls button:hover {
+    background-color: #1ed760; /* Color de fondo verde más claro al pasar el mouse */
+  }
+  
+  
+  .playlist button {
+    background: none;
+    border: none;
+    color: #e90c0c;
+    cursor: pointer;
+    font-size: 14px;
+    text-align: left;
+  }
+  .playlist-header{
+    width: 90%;
+    height: 200px;
+    /* border: solid 1px black; */
+    display: flex;
+    margin: 3%;
+
+  }
+
+  #playlist-cover{
+    margin-left: 5%;
+    width: 20%;
+    height: auto;
+    border-radius: 15px;
+  }
+
+  .playlist-header h1{
+    margin-left: 6.5%;
+    margin-top: 3%;
+  }
+  /* ... (otros estilos) */
+  /* Estilos para la lista de canciones */
+.song-list {
+  width: 100%; /* Ocupa todo el ancho de la pantalla */
+  overflow-x: hidden; /* Oculta la barra de desplazamiento horizontal si es necesario */
+  margin-top: 20px;
+}
+
+
+.song-list ul {
+  width: 85%;
+  margin-left: 5%;
+  list-style: none;
+  /* padding: 0; */
+ /* Elimina el margen predeterminado de la lista */
+}
+
+.song-list li {
+  display: flex; /* Muestra los elementos de la lista en línea */
+  /* align-items: center; */
+  margin-bottom: 8px;
+  padding: 2px; /* Espacio entre cada canción */
+ /* Fondo gris oscuro */
+  color: #ffffff; /* Texto blanco */
+  
+}
+
+.song-list li img {
+  max-width: 62px;
+  height: auto;
+  margin-right: 10px; /* Espacio entre la imagen y el texto */
+  border-radius: 4px;
+}
+
+.song-list button{
+  align-items: center;
+  width: 100%;
+  height: 40px;
+  color: white;
+  background-color: #0000006d;
+  border-style: none;
+  cursor: pointer;
+  border-radius: 10px;
+  font-size: 18px;
+}
+.song-list button:hover{
+  background-color: #000000;
+}
+
+#like-button{
+  width: 5%;
+  margin-left: 1%;
+  /* background-color:transparent; */
+}
+#like-button.liked {
+  color: purple; /* Color de texto morado */
+  transition: color 0.3s ease;
+  animation: heartBeat 0.8s ease;
+}
+
+@keyframes heartBeat {
+  0% {
+    transform: scale(1); /* Tamaño normal */
+  }
+  25% {
+    transform: scale(1.3); /* Aumentar tamaño al 25% de la animación */
+  }
+  50% {
+    transform: scale(1); /* Volver al tamaño normal al 50% de la animación */
+  }
+  75% {
+    transform: scale(1.3); /* Aumentar tamaño al 75% de la animación */
+  }
+  100% {
+    transform: scale(1); /* Volver al tamaño normal al final de la animación */
+  }
+}

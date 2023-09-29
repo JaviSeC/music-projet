@@ -1,156 +1,102 @@
-import { useState } from "react";
-import {
-  Card,
-  CardBody,
-  Image,
-  Button,
-} from "@nextui-org/react";
-import HeartIcon from "../IconsNextUI/HeartIcon";
-import "./Tops.css"
+import * as React from 'react';
+import AspectRatio from '@mui/joy/AspectRatio';
+import Card from '@mui/joy/Card';
+import CardContent from '@mui/joy/CardContent';
+import CardOverflow from '@mui/joy/CardOverflow';
+import Divider from '@mui/joy/Divider';
+import Typography from '@mui/joy/Typography';
+import IconButton from '@mui/joy/IconButton';
+import Link from '@mui/joy/Link';
+import Favorite from '@mui/icons-material/Favorite';
+import "./Tops.css";
 
-export default function Tops() {
-  // Crear un arreglo de estados, uno por cada tarjeta
-  const [likedStates, setLikedStates] = useState([false, false, false]);
-
-  // Función para cambiar el estado de una tarjeta específica
-  const toggleLiked = (index: number) => {
-    setLikedStates((prevLikedStates) => {
-      const newLikedStates = [...prevLikedStates];
-      newLikedStates[index] = !newLikedStates[index];
-      return newLikedStates;
-    });
+interface CardProps {
+  imageUrl: string;
+  title: string;
+  artist: string;
+  views: string;
+  duration: string; // Nueva propiedad para la duración de la canción
+}
+function CardComponent(props: CardProps) {
+  const { imageUrl, title, artist, views, duration } = props;
+  const [liked, setLiked] = React.useState(false); // Estado para el botón "me gusta"
+  const handleLikeClick = () => {
+    setLiked(!liked); // Cambia el estado al hacer clic en el botón
   };
-
   return (
-    <div style={{ width: "20%" }}>
-      {/* Tarjeta 1 */}
-      <Card
-        isBlurred
-        className="card1 border-none bg-background/60 dark:bg-default-100/50 max-w-[610px]"
-        shadow="sm"
-      >
-        <CardBody>
-          <div className="grid grid-cols-6 md:grid-cols-12 gap-6 md:gap-4 items-center justify-center">
-            <div className="relative col-span-6 md:col-span-4">
-              <Image
-                alt="Album cover"
-                className="object-cover"
-                height={40}
-                shadow="md"
-                src="https://res.cloudinary.com/duwenv0yr/image/upload/v1695296030/pexels-clem-onojeghuo-111287_x8cozm.jpg"
-                width="100%"
-              />
-            </div>
 
-            <div className="flex flex-col col-span-6 md:col-span-8">
-              <div className="flex justify-between items-start">
-                <div className="flex flex-col gap-0">
-                  <h3 className="font-semibold text-foreground/90">Smooth Criminal</h3>
-                  <p className="text-small text-foreground/80">4:13</p>
-                </div>
-                <Button
-                  isIconOnly
-                  className="text-default-900/60 data-[hover]:bg-foreground/10 -translate-y-2 translate-x-2"
-                  radius="full"
-                  variant="light"
-                  onPress={() => toggleLiked(0)} // Cambia el estado de la tarjeta 1
-                >
-                  <HeartIcon
-                    className={likedStates[0] ? "[&>path]:stroke-transparent" : ""}
-                    fill={likedStates[0] ? "currentColor" : "none"}
-                  />
-                </Button>
-              </div>
-            </div>
-          </div>
-        </CardBody>
-      </Card>
+    <div className='Card'>
+<Card variant="outlined" sx={{ width: 320, backgroundColor: '#1A1E1F'}}>
+      <CardOverflow>
+        <AspectRatio ratio="2">
+          <img
+            src={imageUrl}
+            srcSet={imageUrl}
+            loading="lazy"
+            alt=""
+            style={{ height: '165%' }}
+          />
+        </AspectRatio>
+        <IconButton
+          aria-label={`Like ${artist}`}
+          size="md"
+          variant="solid"
+          color={liked ? "primary" : "danger"}
+          sx={{
+            position: 'absolute',
+            zIndex: 2,
+            borderRadius: '50%',
+            right: '1rem',
+            bottom: 0,
+            transform: 'translateY(50%)',
+          }}
+          onClick={handleLikeClick}
+        >
+          <Favorite />
+        </IconButton>
+      </CardOverflow>
+      <CardContent>
+        <Typography level="title-md">
+          <Link href="#multiple-actions" overlay underline="none">
+            {title}
+          </Link>
+        </Typography>
+        <Typography level="body-sm">
+          <Link href="#multiple-actions">{artist}</Link>
+        </Typography>
+      </CardContent>
+      <CardOverflow variant="soft" sx={{ backgroundColor: '#1A1E1F'}}>
+        <Divider inset="context" />
+        <CardContent orientation="horizontal">
+          <Typography level="body-xs">{views}</Typography>
+          <Divider orientation="vertical" />
+          <Typography level="body-xs">{duration}</Typography> {/* Muestra la duración de la canción */}
+        </CardContent>
+      </CardOverflow>
+    </Card>
+    </div>
+  );
+}
+export default function Tops() {
+  return (
+    <div className='Cards-top'>
+      <CardComponent
+        imageUrl="https://res.cloudinary.com/duwenv0yr/image/upload/v1695888871/StarLord_omsbw0.jpg"
+        title="Zero to Hero"
+        artist="Star-Lord Band, Steve Szczepkowski, Yohann Boudreault"
+        views="Views: 23K"
+        duration="3:45"
+      />
+     
+        <CardComponent
+          imageUrl="https://res.cloudinary.com/duwenv0yr/image/upload/v1695893709/exorci.png"
+          title="Tubular Bells"
+          artist="Mike Oldfield"
+          views="Views: 145K"
+          duration="6:02"
+        />
 
-      {/* Tarjeta 2 */}
-      <Card
-        isBlurred
-        className="card2 border-none bg-background/60 dark:bg-default-100/50 max-w-[610px]"
-        shadow="sm"
-      >
-        <CardBody>
-          <div className="grid grid-cols-6 md:grid-cols-12 gap-6 md:gap-4 items-center justify-center">
-            <div className="relative col-span-6 md:col-span-4">
-              <Image
-                alt="Album cover"
-                className="object-cover"
-                height={40}
-                shadow="md"
-                src="https://res.cloudinary.com/duwenv0yr/image/upload/v1695296030/pexels-papa-yaw-2531728_dpiwz4.jpg"
-                width="100%"
-              />
-            </div>
-
-            <div className="flex flex-col col-span-6 md:col-span-8">
-              <div className="flex justify-between items-start">
-                <div className="flex flex-col gap-0">
-                  <h3 className="font-semibold text-foreground/90">A Change Is Gonna Come</h3>
-                  <p className="text-small text-foreground/80">3:55</p>
-                </div>
-                <Button
-                  isIconOnly
-                  className="text-default-900/60 data-[hover]:bg-foreground/10 -translate-y-2 translate-x-2"
-                  radius="full"
-                  variant="light"
-                  onPress={() => toggleLiked(1)} // Cambia el estado de la tarjeta 2
-                >
-                  <HeartIcon
-                    className={likedStates[1] ? "[&>path]:stroke-transparent" : ""}
-                    fill={likedStates[1] ? "currentColor" : "none"}
-                  />
-                </Button>
-              </div>
-            </div>
-          </div>
-        </CardBody>
-      </Card>
-
-      {/* Tarjeta 3 */}
-      <Card
-        isBlurred
-        className="card3 border-none bg-background/60 dark:bg-default-100/50 max-w-[610px]"
-        shadow="sm"
-      >
-        <CardBody>
-          <div className="grid grid-cols-6 md:grid-cols-12 gap-6 md:gap-4 items-center justify-center">
-            <div className="relative col-span-6 md:col-span-4">
-              <Image
-                alt="Album cover"
-                className="object-cover"
-                height={40}
-                shadow="md"
-                src="https://res.cloudinary.com/duwenv0yr/image/upload/v1695296030/pexels-josh-sorenson-995301_gsuk6t.jpg"
-                width="100%"
-              />
-            </div>
-
-            <div className="flex flex-col col-span-6 md:col-span-8">
-              <div className="flex justify-between items-start">
-                <div className="flex flex-col gap-0">
-                  <h3 className="font-semibold text-foreground/90">In the Air Tonight</h3>
-                  <p className="text-small text-foreground/80">4:26</p>
-                </div>
-                <Button
-                  isIconOnly
-                  className="text-default-900/60 data-[hover]:bg-foreground/10 -translate-y-2 translate-x-2"
-                  radius="full"
-                  variant="light"
-                  onPress={() => toggleLiked(2)} // Cambia el estado de la tarjeta 3
-                >
-                  <HeartIcon
-                    className={likedStates[2] ? "[&>path]:stroke-transparent" : ""}
-                    fill={likedStates[2] ? "currentColor" : "none"}
-                  />
-                </Button>
-              </div>
-            </div>
-          </div>
-        </CardBody>
-      </Card>
+     
     </div>
   );
 }
