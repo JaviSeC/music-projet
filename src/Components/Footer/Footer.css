@@ -58,3 +58,30 @@
   /* margin: 5px; */
 }
 
+/* Agrega estilos cuando el mouse pasa sobre los iconos */
+.icon:hover {
+  background-color: #f3b021; /* Cambia el color a azul pastel al pasar el mouse */
+  transform: scale(1.1); /* Escala el icono ligeramente al pasar el mouse */
+  position: relative; /* Hace que el contenido adicional sea relativo a este icono */
+}
+
+/* Estilo para mostrar el nombre de la red social encima del icono */
+.icon:hover::before {
+  content: attr(alt); /* Muestra el atributo 'alt' como contenido */
+  position: absolute;
+  top: -20px; /* Ajusta la posición vertical según tu diseño */
+  left: 50%;
+  transform: translateX(-50%); /* Centra horizontalmente */
+  background-color: rgba(0, 0, 0, 0.7); /* Fondo semi-transparente */
+  color: white; /* Color del texto */
+  padding: 5px 10px; /* Espaciado interno */
+  border-radius: 5px; /* Bordes redondeados */
+  font-size: 12px; /* Tamaño de fuente */
+  white-space: nowrap; /* Evita el desbordamiento de texto */
+  opacity: 0; /* Inicialmente oculto */
+  transition: opacity 0.3s ease; /* Transición suave para la aparición */
+}
+
+.icon:hover::before {
+  opacity: 1; /* Hace que el nombre de la red social aparezca cuando se pasa el mouse */
+}
