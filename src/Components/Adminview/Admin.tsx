@@ -80,6 +80,8 @@
 import React, { ChangeEvent } from "react";
 import Headerunico from "../Headerunico/Headerunico";
 import "./Admin.css";
+import { Link } from "react-router-dom";
+
 
 interface State {
   favoriteSongs: string[];
@@ -124,7 +126,8 @@ class Admin extends React.Component<{}, State> {
     return (
       <>
         <Headerunico />
-
+            
+        <div className="adminbody">
         <div>
               <Link to="/">
                 <button className="Home">
@@ -136,8 +139,6 @@ class Admin extends React.Component<{}, State> {
                 </button>
               </Link>
             </div>
-            
-        <div className="adminbody">
           <div className="box-1">
             <h2>Lista de usuarios</h2>
             <ul>

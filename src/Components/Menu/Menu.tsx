@@ -56,6 +56,12 @@ export default function Menu() {
             />
           </button>
         </Link>
+
+        <Link to="/PageAdmin">
+          <button>
+           <strong> Admin </strong>
+          </button>
+        </Link>
       </div>
     </div>
   );

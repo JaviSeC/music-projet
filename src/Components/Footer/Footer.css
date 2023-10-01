@@ -100,7 +100,7 @@
     flex-direction: column; /* Coloca las cajas una debajo de la otra */
     align-items: center; /* Centra las cajas verticalmente */
     text-align: center; /* Centra el texto en las cajas */
-    background-color: blueviolet;
+    /* background-color: blueviolet; */
     height: auto;
     width: 360px;;
   }

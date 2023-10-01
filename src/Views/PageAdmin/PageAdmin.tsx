@@ -1,4 +1,4 @@
-import Admin from "../../Components/Adminview/Admin";
+import Admin from "../../Components/Adminview/Admin.tsx";
 
 
 export default function PageAdmin() {

@@ -7,10 +7,15 @@
 .Logo{
     width: 10%;
     height: 120px;
+    text-align: center;
 }
 .img{
-    margin-right: -10%;
-    width: 120%;
+    /* margin-right: -10%; */
+    width: 20%;
+}
+
+.box2{
+    width: 90%;
 }
 
 .Name{
@@ -28,11 +33,10 @@
 .Search{
     width: 1200px;
     height: 55px;
-    margin-left: 50px; 
+    margin-left: 10px; 
     
 }
 .button-search{
-    
     width: 15%;
     height: 65px;
     background-color: rgba(29, 33, 35, 0.648);
@@ -69,15 +73,19 @@
         width: 100%; 
     }
 
+    .box2{
+        margin-top: -15%;
+    }
+
     .Name{
         width: auto;
         height: auto;
-        font-size: larger;
+        font-size:30px;
         margin-left: 15%;
         margin-top: -3%;
     }
     .search-box{
-        margin-top: 18%;
+        margin-top: 30%;
     }
     .Search{
         width: 50%;
@@ -99,7 +107,5 @@
         font-size: large;
     }
 
-    .box2{
-        margin-top: -15%;
-    }
+  
 }
