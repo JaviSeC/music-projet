@@ -6,10 +6,34 @@ import AvatarGroup from '@mui/joy/AvatarGroup';
 import Link from '@mui/joy/Link';
 import Favorite from '@mui/icons-material/Favorite';
 import Visibility from '@mui/icons-material/Visibility';
+import { useEffect, useState } from 'react';
+
 
 export default function Body() {
+  const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+
+  useEffect(() => {
+    // Actualiza el valor de windowWidth cuando cambia el tamaño de la ventana
+    const handleResize = () => {
+      setWindowWidth(window.innerWidth);
+    };
+
+    window.addEventListener('resize', handleResize);
+
+    // Limpia el evento del oyente cuando se desmonta el componente
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    };
+  }, []);
+
+  // Comprueba si el ancho de la ventana es menor de 450px
+  const isSmallScreen = windowWidth < 600;
+
+  // Define un objeto de estilo para controlar la visibilidad
+  const cardStyle = isSmallScreen ? { display: 'none' } : {};
+
   return (
-    <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: '100%', marginTop:'-20px'}}>
+    <div style={{ ...cardStyle, justifyContent: 'center', alignItems: 'center', height: '100%', marginTop: '-20px' }}>
       <Card
         variant="plain"
         sx={{
@@ -107,5 +131,3 @@ export default function Body() {
   );
 }
 
-
-//___________________________________________________________________________
