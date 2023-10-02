@@ -79,7 +79,7 @@ export default function Body() {
                   startDecorator={<Favorite />}
                   sx={{
                     fontWeight: 'md',
-                    color: 'text.secondary',
+                    color: 'grey',
                     '&:hover': { color: 'danger.plainColor' },
                   }}
                 >
@@ -92,7 +92,7 @@ export default function Body() {
                   startDecorator={<Visibility />}
                   sx={{
                     fontWeight: 'md',
-                    color: 'text.secondary',
+                    color: 'grey',
                     '&:hover': { color: 'primary.plainColor' },
                   }}
                 >
@@ -106,3 +106,6 @@ export default function Body() {
     </div>
   );
 }
+
+
+//___________________________________________________________________________
