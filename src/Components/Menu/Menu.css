@@ -86,15 +86,21 @@ button:hover{
 
 }
 
+.Container {
+  width: 8%; /* Ajusta el ancho del contenedor principal */
+  height: 200px; /* Ajusta la altura del contenedor principal */
+  margin-top: 10px;
+}
+
 @media screen and (max-width: 360px) {
   .Container {
-    width: 15%;
-    margin-top: 10px;
+    width: 15%; /* Ancho más pequeño para pantallas de hasta 360px */
+    margin-top: -300px;
   }
 
   .boxSong {
     width: 100%;
-    margin-top: 5%;
+    margin-top: 0;
   }
 
   .home,
