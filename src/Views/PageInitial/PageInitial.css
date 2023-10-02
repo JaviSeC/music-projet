@@ -1,0 +1,11 @@
+body{
+    background-color: rgba(175, 183, 187, 1);
+}
+
+.home{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    /* margin-top: 0px; */
+    width: 100%;
+}

@@ -1,5 +1,8 @@
 import React, { useState, useRef } from 'react';
 import './Sound.css'; // Asegúrate de que el nombre del archivo CSS sea correcto y coincide con tu proyecto
+import { Link } from "react-router-dom";
+
+
 
 const songs = [
   {
@@ -70,92 +73,7 @@ const songs = [
     ];
     
 
-// const SoundTrack: React.FC = () => {
-//     const [currentSong, setCurrentSong] = useState(songs[0]);
-//     const [isPlaying, setIsPlaying] = useState(false);
-//     const [likedSongs, setLikedSongs] = useState<number[]>([]); // Array de canciones marcadas como favoritas
-//     const audioRef = useRef<HTMLAudioElement | null>(null);
-  
-//     const togglePlayPause = () => {
-//       if (audioRef.current) {
-//         if (isPlaying) {
-//           audioRef.current.pause();
-//         } else {
-//           audioRef.current.play();
-//         }
-//         setIsPlaying(!isPlaying);
-//       }
-//     };
-  
-//     const changeSong = (song: any) => {
-//       setCurrentSong(song);
-//       setIsPlaying(true);
-//     };
-  
-//     const handleLikeClick = (songId: number) => {
-//       if (likedSongs.includes(songId)) {
-//         // Si la canción ya fue marcada como favorita, quita el "Me gusta"
-//         setLikedSongs(likedSongs.filter((likedSongId) => likedSongId !== songId));
-//       } else {
-//         // Si la canción no estaba marcada como favorita, agrégale "Me gusta"
-//         setLikedSongs([...likedSongs, songId]);
-//       }
-//     };
-  
-//     return (
-//       <div className="sound-container">
-//         <div className="playlist-header">
-//           <img
-//             id="playlist-cover"
-//             src="https://res.cloudinary.com/doft9ylq1/image/upload/v1695892864/tocadiscos-retro-que-gira-ia-generativa-variacion-banda-sonora-acanalada-antigua_jdmcql.jpg"
-//             alt="Portada de la playlist"
-//             className="image-left image-moved-right"
-//           />
-//           <div className="title-container">
-//             <h1>Sound Tracks</h1>
-//             <p>Colección de SoundTracks de las películas más taquilleras</p>
-//           </div>
-//         </div>
-  
-//         <div className="song-list">
-//           <ul>
-//             {songs.map((song) => (
-//               <li key={song.id}>
-//                 <img src={song.albumCover} alt={song.title} />
-//                 <button onClick={() => changeSong(song)}>
-//                   <div>{song.title}</div> - <div>{song.artist}</div> - <div>{song.duration}</div>
-//                 </button>
-//                 <span
-//                   className={`like-button ${likedSongs.includes(song.id) ? 'liked' : ''}`}
-//                   onClick={() => handleLikeClick(song.id)}
-//                 >
-//                   {likedSongs.includes(song.id) ? '❤️' : '🤍'}
-//                 </span>
-//               </li>
-//             ))}
-//           </ul>
-//         </div>
-  
-//         <div className="music-player">
-//           <div className="album-cover">
-//             <img src={currentSong.albumCover} alt="Portada del álbum" />
-//           </div>
-//           <div className="song-info">
-//             <p className="artist">{currentSong.artist}</p>
-//             <p className="song-title">{currentSong.title}</p>
-//           </div>
-//           <audio id="audio" controls ref={audioRef} key={currentSong.id}>
-//             <source src={currentSong.audioSource} type="audio/mpeg" />
-//           </audio>
-//           <button onClick={togglePlayPause}>
-//             {isPlaying ? 'Pausar' : 'Reproducir'}
-//           </button>
-//         </div>
-//       </div>
-//     );
-//   };
-  
-//   export default SoundTrack;
+
 
 const SoundTrack: React.FC = () => {
     const [currentSongIndex, setCurrentSongIndex] = useState(0);
