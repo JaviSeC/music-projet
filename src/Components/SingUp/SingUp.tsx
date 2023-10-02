@@ -1,7 +1,6 @@
 import "./SingUp.css";
 import { useState } from "react";
 import Swal from "sweetalert2";
-//import { useNavigate } from "react-router-dom";
 import { Link } from "react-router-dom";
 import Avatar from "@mui/material/Avatar";
 import Button from "@mui/material/Button";
@@ -20,89 +19,102 @@ import { createTheme, ThemeProvider } from "@mui/material/styles";
 const defaultTheme = createTheme();
 
 export const SignUp = () => {
-    const [userData, setUserData] = useState({
-      FirstName: "",
-      LastName: "",
-      UserName: "",
-      Email: "",
-      Password: "",
-    });
-    const [errorMessages, setErrorMessages] = useState({
-      FirstName: "",
-      LastName: "",
-      UserName: "",
-      Email: "",
-      Password: "",
-    });
+      const [userData, setUserData] = useState({
+        FirstName: "",
+        LastName: "",
+        UserName: "",
+        Email: "",
+        Password: "",
+      });
 
-    const handleSignUp = () => {
-      // Verificar si los campos están vacíos
-      const { FirstName,LastName,UserName, Email, Password } = userData;
-      const newErrorMessages = {
-        FirstName: !FirstName ? "Name is required" : "",
-        LastName: !LastName ? "Last Name is required" : "",
-        UserName: !UserName ? "UserName is required" : "",
-        Email: !Email ? "Email is required" : "",
-        Password: !Password ? "Password is required" : "",
-      };
-      // Si algún campo está vacío, no procedemos con el registro
-      if (!FirstName || !LastName || !UserName || !Email || !Password) {
-        setErrorMessages(newErrorMessages);
-        return;
-      }
-      // Crear un nuevo usuario con los datos ingresados
-      const newUser = {
-        // Id_user : '',
-        FirstName: userData.FirstName,
-        LastName: userData.LastName,
-        UserName: userData.UserName,
-        Email: userData.Email,
-        Password: userData.Password,
-        // Id_rol: ''
-      };
-      // Simular el envío de datos a la "API" falsa (en este caso, al archivo register.json)
-      fetch("https://localhost:7110/UsersControllers/Post", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(newUser),
-      })
-        .then((response) => response.json())
-        .then((data) => {
-          console.log("Usuario registrado:", data);
-          // Mostrar SweetAlert cuando la cuenta se crea exitosamente
-          Swal.fire("Cuenta creada exitosamente", "", "success");
-        })
-        .catch((error) => {
-          console.error("Error al registrar el usuario:", error);
-        });
-      // Limpiar los campos después de registrar al usuario y restablecer los mensajes de error
-      setUserData({
+      const [errorMessages, setErrorMessages] = useState({
         FirstName: "",
         LastName: "",
         UserName: "",
         Email: "",
         Password: "",
       });
-      
-      setErrorMessages({
-        FirstName: "",
-        LastName: "",
-        UserName: "",
-        Email: "",
-        Password: "",
-      });
-    };
     
-      const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+
+      const handleSignUp = async () => {  
+        event.preventDefault();
+        console.log("Entrando en handleSignUp"); // Verifica si esta función se ejecuta
+        // Verificar si los campos están vacíos
+        const { FirstName,LastName,UserName, Email, Password } = userData;
+        const newErrorMessages = {
+          FirstName: !FirstName ? "Name is required" : "",
+          LastName: !LastName ? "Last Name is required" : "",
+          UserName: !UserName ? "UserName is required" : "",
+          Email: !Email ? "Email is required" : "",
+          Password: !Password ? "Password is required" : "",
+        };
+        // Si algún campo está vacío, no procedemos con el registro
+        if (!FirstName || !LastName || !UserName || !Email || !Password) {
+          setErrorMessages(newErrorMessages);
+          return;
+        }
+        // Crear un nuevo usuario con los datos ingresados
+        const newUser = {
+          // Id_Users : '',
+          FirstName: userData.FirstName,
+          LastName: userData.LastName,
+          UserName: userData.UserName,
+          Email: userData.Email,
+          Password: userData.Password,
+          // Id_rol: ''
+        };
+        // Simular el envío de datos a la "API" falsa (en este caso, al archivo register.json)
+        console.log("Datos que se envían:", newUser);
+        try {
+          const url = "https://localhost:7110/UsersControllers/Post";
+          const response = await fetch(url, {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/json",
+            },
+            body: JSON.stringify({ FirstName, LastName, UserName,Email,Password }),
+          });
+
+
+          if (response.ok) {
+            console.log("Registro exitoso");
+            Swal.fire("Cuenta creada exitosamente", "", "success");
+          } else {
+            console.error("Error en la solicitud:", response);
+            Swal.fire("Error", "No se pudo crear la cuenta", "error");
+          }
+        } catch (error) {
+          console.error("Error en la solicitud:", error);
+          Swal.fire("Error", "Ha ocurrido un error en el servidor", "error");
+          }
+
+        // Limpiar los campos después de registrar al usuario y restablecer los mensajes de error
+
+        setUserData({
+          FirstName: "",
+          LastName: "",
+          UserName: "",
+          Email: "",
+          Password: "",
+        });
+        
+        setErrorMessages({
+          FirstName: "",
+          LastName: "",
+          UserName: "",
+          Email: "",
+          Password: "",
+        });
+      };
+
+
+      const handleInputChange = (e) => {
         const { name, value } = e.target; 
-        setUserData((prevUserData) => ({
-          ...prevUserData,
+        setUserData({
+          ...userData,
           [name]: value,
-        }));
-      
-    };
+        });
+      };
 
     return (
       <div className="body">
