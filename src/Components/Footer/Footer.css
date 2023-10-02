@@ -46,10 +46,10 @@
   /* margin-left: 10px; */
 }
 
-/* .div-redes-sociales{
-  border-bottom: 1px rgb(73, 134, 134) solid;
+.div-redes-sociales{
+  display: flex;
 
-} */
+}
 
 .icon {
   background-color: white;
