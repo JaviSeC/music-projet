@@ -35,13 +35,17 @@
   .audioboton{
     width: 100%;
     margin-top: 15px;
-    /* height: 100px; */
   }
 
   /* Estilos para pantallas con un ancho máximo de 360px */
-@media (max-width: 360px) {
-  .carousel-container {
-    max-width: 360px;
-    margin: 0 auto; /* Centra el carrusel en la pantalla */
+  @media screen and (max-width: 360px) {
+    .mySwiper {
+      width: 360px;
+      height: 285px;
+
+    }
+    .swiper-slide {
+      min-width: 360px;
+      flex: 0 0 auto; /* Evita que las tarjetas cambien de tamaño */
+    }
   }
-}

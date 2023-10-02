@@ -94,62 +94,30 @@
 }
 
 
-/* Media query para pantallas con un ancho máximo de 360px (responsive) */
-/* @media screen and (max-width: 360px) {
+@media screen and (max-width: 360px) {
   .div-footer {
-    flex-direction: column; 
-    align-items: center; 
-    text-align: center; 
+    flex-direction: column; /* Coloca las cajas una debajo de la otra */
+    align-items: center; /* Centra las cajas verticalmente */
+    text-align: center; /* Centra el texto en las cajas */
+    /* background-color: blueviolet; */
     height: auto;
     width: 360px;;
-  } */
-/* 
+  }
   .div-contactos {
     display: flex;
     align-items: center;
     flex-direction: column;
-  } */
-
-  /* .contactos {
-    margin-left: 0; 
-  } */
-
-  /* .div-titulo {
-    margin-left: 0; 
-  } */
-
-  /* .div-redes-sociales{
-    margin-bottom: 5px;
-  } */
-
-  /* Estilos para pantallas con un ancho máximo de 360px */
-@media (max-width: 360px) {
-  .div-footer {
-    flex-direction: column; /* Cambia a disposición vertical para pantallas pequeñas */
-    align-items: center; /* Centra los elementos horizontalmente */
-    text-align: center; /* Centra el texto horizontalmente */
+    /* margin-top: 25%; */
+    /* padding-top: 5px; */
+    /* Elimina el margen izquierdo */
   }
-
-  .div-contactos {
-    flex-direction: column; /* Cambia a disposición vertical para pantallas pequeñas */
-    align-items: center; /* Centra los elementos horizontalmente */
-  }
-
   .contactos {
-    margin-bottom: 10px; /* Agrega espacio entre los elementos de contacto */
+    margin-left: 0; /* Elimina el margen izquierdo */
   }
-
-  .titulo {
-    margin-top: 10px; /* Agrega espacio entre el título y los otros elementos */
+  .div-titulo {
+    margin-left: 0; /* Elimina el margen izquierdo */
   }
-
-  .div-redes-sociales {
-    margin-top: 10px; /* Agrega espacio entre las redes sociales y los otros elementos */
-  }
-
-  .icon {
-    width: 24px; /* Redimensiona los íconos para pantallas pequeñas */
-    height: 24px; /* Redimensiona los íconos para pantallas pequeñas */
-    margin-right: 5px; /* Agrega espacio entre los íconos */
+  .div-redes-sociales{
+    margin-bottom: 5px;
   }
 }

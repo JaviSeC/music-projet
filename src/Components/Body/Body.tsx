@@ -13,23 +13,16 @@ export default function Body() {
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
 
   useEffect(() => {
-    // Actualiza el valor de windowWidth cuando cambia el tamaño de la ventana
     const handleResize = () => {
       setWindowWidth(window.innerWidth);
     };
 
     window.addEventListener('resize', handleResize);
-
-    // Limpia el evento del oyente cuando se desmonta el componente
     return () => {
       window.removeEventListener('resize', handleResize);
     };
   }, []);
-
-  // Comprueba si el ancho de la ventana es menor de 450px
   const isSmallScreen = windowWidth < 600;
-
-  // Define un objeto de estilo para controlar la visibilidad
   const cardStyle = isSmallScreen ? { display: 'none' } : {};
 
   return (
