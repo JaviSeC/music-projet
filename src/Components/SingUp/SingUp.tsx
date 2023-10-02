@@ -58,35 +58,27 @@ export const SignUp = () => {
 
     // Validar la contraseña
     if (!isPasswordValid(Password)) {
-      setErrorMessages({
-        ...errorMessages,
-        Password: "Password solo puede tener numeros.",
-      });
+      Swal.fire("Error", "La contraseña solo puede contener números.", "error");
       return;
     }
 
     if (Password.length < 8) {
-      setErrorMessages({
-        ...errorMessages,
-        Password: "La contraseña debe tener al menos 8 caracteres.",
-      });
+      Swal.fire("Error", "La contraseña debe tener al menos 8 caracteres.", "error");
       return;
     }
 
     // Validar el correo electrónico
     if (!isEmailValid(Email)) {
-      setErrorMessages({ ...errorMessages, Email: "Email invalido." });
+      Swal.fire("Error", "Email inválido.", "error");
       return;
     }
 
     // Validar el nombre de usuario
     if (!isUsernameValid(UserName)) {
-      setErrorMessages({
-        ...errorMessages,
-        UserName: "Username debe tener numeros y letras.",
-      });
+      Swal.fire("Error", "El nombre de usuario debe contener letras y números.", "error");
       return;
     }
+    
     const newErrorMessages = {
       FirstName: !FirstName ? "Name is required" : "",
       LastName: !LastName ? "Last Name is required" : "",
