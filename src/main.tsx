@@ -35,6 +35,8 @@ import PageSingUp from "./Views/PageSingUp/PageSingUp";
 import PageBodyClassic from "./Views/Classic/ClassicView";
 import PageAdmin from "./Views/PageAdmin/PageAdmin";
 import PageSound from "./Views/SoundTracks/SoundView";
+// import MusicaAnimada from "./Views/MusicaAnimada/MusicaAnimada";
+import PeliculasAnimadas from "./Components/MusicaAnimada/MusicaAnimada";
 
 ReactDOM.createRoot(document.getElementById("root")!).render(
   <>
@@ -46,6 +48,8 @@ ReactDOM.createRoot(document.getElementById("root")!).render(
         <Route path="/PageAdmin" element={<PageAdmin />} />
         <Route path="/ClassicView" element={<PageBodyClassic />} /> 
         <Route path="/SoundTracksView" element={<PageSound/>}/> 
+        <Route path="/PeliculasAnimadasView" element={<PeliculasAnimadas/>}/> 
+
       </Routes>
 
       <Footer />
