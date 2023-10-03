@@ -25,7 +25,7 @@ function CardComponent(props: CardProps) {
   };
   return (
 
-    <div className='Card'>
+    <div className='Card-top'>
 <Card variant="outlined" sx={{ width: 320, backgroundColor: '#1A1E1F'}}>
       <CardOverflow>
         <AspectRatio ratio="2">
@@ -79,24 +79,26 @@ function CardComponent(props: CardProps) {
 }
 export default function Tops() {
   return (
+
+    <div className="topssongs"> Top Songs
     <div className='Cards-top'>
       <CardComponent
         imageUrl="https://res.cloudinary.com/duwenv0yr/image/upload/v1695888871/StarLord_omsbw0.jpg"
         title="Zero to Hero"
         artist="Star-Lord Band, Steve Szczepkowski, Yohann Boudreault"
         views="Views: 23K"
-        duration="3:45"
+        duration="3:45 min"
       />
      
-        <CardComponent
+        <CardComponent 
           imageUrl="https://res.cloudinary.com/duwenv0yr/image/upload/v1695893709/exorci.png"
           title="Tubular Bells"
           artist="Mike Oldfield"
           views="Views: 145K"
-          duration="6:02"
+          duration="6:02 min"
         />
-
-     
-    </div>
+         
+        </div>
+        </div>
   );
 }

@@ -9,7 +9,7 @@ import Visibility from '@mui/icons-material/Visibility';
 
 export default function Body() {
   return (
-    <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: '120vh', marginTop:'-80px' }}>
+    <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: '100%', marginTop:'-20px'}}>
       <Card
         variant="plain"
         sx={{
@@ -79,7 +79,7 @@ export default function Body() {
                   startDecorator={<Favorite />}
                   sx={{
                     fontWeight: 'md',
-                    color: 'text.secondary',
+                    color: 'grey',
                     '&:hover': { color: 'danger.plainColor' },
                   }}
                 >
@@ -92,7 +92,7 @@ export default function Body() {
                   startDecorator={<Visibility />}
                   sx={{
                     fontWeight: 'md',
-                    color: 'text.secondary',
+                    color: 'grey',
                     '&:hover': { color: 'primary.plainColor' },
                   }}
                 >
@@ -106,3 +106,6 @@ export default function Body() {
     </div>
   );
 }
+
+
+//___________________________________________________________________________

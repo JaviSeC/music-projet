@@ -1,7 +1,3 @@
-body{
-    background-color: rgba(175, 183, 187, 1);
-}
-
 .BOX{
     width: 100%;
     height: 120px;
@@ -11,10 +7,15 @@ body{
 .Logo{
     width: 10%;
     height: 120px;
+    text-align: center;
 }
 .img{
-    margin-left: -10%;
-    width: 120%;
+    /* margin-right: -10%; */
+    width: 20%;
+}
+
+.box2{
+    width: 90%;
 }
 
 .Name{
@@ -30,13 +31,15 @@ body{
     justify-content: left;
 }
 .Search{
-    width: 1405px;
+    width: 1200px;
     height: 55px;
+    margin-left: 10px; 
+    
 }
 .button-search{
     width: 15%;
     height: 65px;
-    background-color: rgba(29, 33, 35, 1);
+    background-color: rgba(29, 33, 35, 0.648);
 }
 .lupa{
     margin-left: 1%;
@@ -46,12 +49,12 @@ body{
 }
 
 .busqueda{
-    width: 552%;
+    width: 500%;
     height: 60px;
     font-size: larger;
     text-align: center;
-    color: white;
-    background-color: rgba(29, 33, 35, 1);
+    color: rgb(251, 251, 251);
+    background-color: rgba(0, 0, 0, 0.645);
     margin-left: -182%
 }
 
@@ -70,15 +73,19 @@ body{
         width: 100%; 
     }
 
+    .box2{
+        margin-top: -15%;
+    }
+
     .Name{
         width: auto;
         height: auto;
-        font-size: larger;
+        font-size:30px;
         margin-left: 15%;
         margin-top: -3%;
     }
     .search-box{
-        margin-top: 18%;
+        margin-top: 30%;
     }
     .Search{
         width: 50%;
@@ -100,7 +107,5 @@ body{
         font-size: large;
     }
 
-    .box2{
-        margin-top: -15%;
-    }
+  
 }

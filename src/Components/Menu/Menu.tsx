@@ -32,7 +32,7 @@ export default function Menu() {
           <div className="dropdown-content">
             <a href="#">SoundTracks</a>
             <a href="#">Peliculas Animadas</a>
-            <a href="#">Clasicas</a>
+            <a href="/ClassicView">Clasicas</a>
             <a href="#">Actuales</a>
           </div>
         )}
@@ -54,6 +54,12 @@ export default function Menu() {
               src="https://res.cloudinary.com/da7ffijqs/image/upload/v1695321417/grid_landscape-removebg-preview_smbjbe.png"
               alt=""
             />
+          </button>
+        </Link>
+
+        <Link to="/PageAdmin">
+          <button>
+           <strong> Admin </strong>
           </button>
         </Link>
       </div>

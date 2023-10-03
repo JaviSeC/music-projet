@@ -1,6 +1,5 @@
 // import React, { useState } from 'react';
 // import './BodyStyle.css';
-
 // const songs = [
 //   {
 //     id: 1,
@@ -26,12 +25,9 @@
 //     audioSource: 'https://res.cloudinary.com/dhme3c8ll/video/upload/v1695724973/El_Padrino_Tema_Original__The_Godfather_Original_Theme__qIFQwnsotss_edoje7.mp3',
 //   },
 // ];
-
 // const BodyClassic: React.FC = () => {
 //   const [currentSong, setCurrentSong] = useState(songs[0]);
 //   const [isPlaying, setIsPlaying] = useState(false);
-  
-
 //   const togglePlayPause = () => {
 //     const audioPlayer = document.getElementById('audio') as HTMLAudioElement;
 //     if (audioPlayer) {
@@ -43,12 +39,10 @@
 //       setIsPlaying(!isPlaying);
 //     }
 //   };
-
 //   const changeSong = (song: any) => {
 //     setCurrentSong(song);
 //     setIsPlaying(false);
 //   };
-
 //   return (
 //     <div className="body-container">
 //       <div className="playlist-header">
@@ -58,7 +52,6 @@
 //         />
 //         <h1>CINE CLÁSICO</h1>
 //       </div>
-
 //       <div className="song-list">
 //         <ul>
 //           {songs.map((song) => (
@@ -71,7 +64,6 @@
 //           ))}
 //         </ul>
 //       </div>
-
 //       <div className="music-player">
 //         <div className="album-cover">
 //           <img
@@ -96,15 +88,10 @@
 //     </div>
 //   );
 // };
-
 // export default BodyClassic;
-
-
 //_____________________________________________________
-
 import React, { useState, useRef } from 'react';
 import './BodyStyle.css';
-
 const songs = [
   {
     id: 1,
@@ -157,13 +144,11 @@ const songs = [
     audioSource: 'https://res.cloudinary.com/dhme3c8ll/video/upload/v1695801970/BSO_-_Apocalipsys_Now_3VywjmyNYDs_q69djb.mp3',
   },
 ];
-
 const BodyClassic: React.FC = () => {
   const [currentSong, setCurrentSong] = useState(songs[0]);
   const [isPlaying, setIsPlaying] = useState(false);
   const [likedSongs, setLikedSongs] = useState<Set<number>>(new Set<number>());
   const audioRef = useRef<HTMLAudioElement | null>(null);
-
   const togglePlayPause = () => {
     if (audioRef.current) {
       if (isPlaying) {
@@ -174,12 +159,10 @@ const BodyClassic: React.FC = () => {
       setIsPlaying(!isPlaying);
     }
   };
-
   const changeSong = (song: any) => {
     setCurrentSong(song);
     setIsPlaying(true);
   };
-
   const toggleLike = (songId: number) => {
     const updatedLikedSongs = new Set<number>(likedSongs); // Asegura que el tipo sea Set<number>
     if (likedSongs.has(songId)) {
@@ -189,7 +172,6 @@ const BodyClassic: React.FC = () => {
     }
     setLikedSongs(updatedLikedSongs);
   };
-
   return (
     <div className="body-container">
       <div className="playlist-header">
@@ -200,14 +182,13 @@ const BodyClassic: React.FC = () => {
         />
         <h1>CINE CLÁSICO</h1>
       </div>
-
       <div className="song-list">
         <ul>
           {songs.map((song) => (
             <li key={song.id}>
               <img src={song.albumCover} alt={song.title} />
               <button onClick={() => changeSong(song)}>
-              {song.title} - {song.artist} - {song.duration} 
+              {song.title} - {song.artist} - {song.duration}
               </button>
               <button id='like-button' onClick={() => toggleLike(song.id)} className={likedSongs.has(song.id) ? 'liked' : ''}>
                 {likedSongs.has(song.id) ? '💜' : '🤍'}
@@ -216,7 +197,6 @@ const BodyClassic: React.FC = () => {
           ))}
         </ul>
       </div>
-
       <div className="music-player">
         <div className="album-cover">
           <img
@@ -246,6 +226,4 @@ const BodyClassic: React.FC = () => {
     </div>
   );
 };
-
 export default BodyClassic;
-

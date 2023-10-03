@@ -1,56 +1,43 @@
-/* Estilos para el reproductor de música */
-body{
-  background-color: #000000;
-  background: linear-gradient(to top, rgba(0, 0, 0, 0.79), rgba(67, 65, 65, 0.53)), url('tu-imagen-de-fondo.jpg');
-  background-size: cover;
-  background-attachment: fixed;
-  margin: 0;
-}
 .music-player {
-    background-color: #000000be; /* Fondo gris oscuro */
-    color: #ffffff; /* Texto blanco */
+    background-color: #000000be;
+    color: #FFFFFF; 
     display: flex;
     justify-content: space-around;
     align-items: center;
     /* padding: 10px; */
-    position: fixed; /* Fijar el reproductor en la parte inferior */
+    /* Fijar el reproductor en la parte inferior */
     bottom: 0;
     left: 0;
     right: 0;
-    z-index: 999; /* Asegura que esté sobre otros elementos */
-    width: 90%;
-    margin-left: 5%;
+    width: 85%;
+    margin-left: 10.2%;
     border-radius: 10px 10px 0px 0px;
   }
+  
 .music-player button{
   height: 30px;
 }
-  
   .album-cover img {
     max-width: 120px;
     height: 60px;
     border-radius: 4px;
   }
-  
   .song-info {
     /* flex: 1; */
     text-align: center; /* Centrar el texto */
   }
-  
   .song-title {
     font-size: 25px;
     font-weight: bold;
   }
-  
   .artist {
     display: flex;
     flex-direction: row;
     font-size: 14px;
   }
-  
   .controls button {
  /* Color de fondo verde similar a Spotify */
-    color: #b12020; /* Texto blanco */
+    color: #B12020; /* Texto blanco */
     border: none;
     border-radius: 4px;
     padding: 8px 16px;
@@ -58,36 +45,32 @@ body{
     font-size: 14px;
     margin-left: 10px;
   }
-  
   .controls button:hover {
-    background-color: #1ed760; /* Color de fondo verde más claro al pasar el mouse */
+    background-color: #1ED760; /* Color de fondo verde más claro al pasar el mouse */
   }
-  
-  
-  .playlist button {
-    background: none;
+  /* .playlist button {
+    background-color: #E90C0C;
     border: none;
-    color: #e90c0c;
+    color: #E90C0C;
     cursor: pointer;
     font-size: 14px;
     text-align: left;
-  }
+  } */
   .playlist-header{
-    width: 90%;
-    height: 200px;
-    /* border: solid 1px black; */
+    /* width: 75%; */
+    height: 300px;
     display: flex;
-    margin: 3%;
-
+    margin: 2%;
+    margin-left: 15%;
+    color: white;
   }
-
   #playlist-cover{
-    margin-left: 5%;
-    width: 20%;
-    height: auto;
+    margin-right: 50px;
+    max-height: 100%;
+    max-width: 100%;
     border-radius: 15px;
+    margin-top: 2%
   }
-
   .playlist-header h1{
     margin-left: 6.5%;
     margin-top: 3%;
@@ -97,53 +80,46 @@ body{
 .song-list {
   width: 100%; /* Ocupa todo el ancho de la pantalla */
   overflow-x: hidden; /* Oculta la barra de desplazamiento horizontal si es necesario */
-  margin-top: 20px;
+  margin-top: 3%;
 }
-
-
 .song-list ul {
   width: 85%;
-  margin-left: 5%;
+  margin-left: 8%;
   list-style: none;
   /* padding: 0; */
  /* Elimina el margen predeterminado de la lista */
 }
-
 .song-list li {
   display: flex; /* Muestra los elementos de la lista en línea */
   /* align-items: center; */
-  margin-bottom: 8px;
+  margin-bottom: 1%;
   padding: 2px; /* Espacio entre cada canción */
  /* Fondo gris oscuro */
-  color: #ffffff; /* Texto blanco */
-  
+  color: #FFFFFF; /* Texto blanco */
 }
-
 .song-list li img {
   max-width: 62px;
   height: auto;
   margin-right: 10px; /* Espacio entre la imagen y el texto */
   border-radius: 4px;
 }
-
 .song-list button{
   align-items: center;
   width: 100%;
   height: 40px;
   color: white;
-  background-color: #0000006d;
+  background-color: #000000b0;
   border-style: none;
   cursor: pointer;
   border-radius: 10px;
   font-size: 18px;
 }
 .song-list button:hover{
-  background-color: #000000;
+  /* background-color: #000000; */
 }
-
 #like-button{
   width: 5%;
-  margin-left: 1%;
+  margin-left: 2%;
   /* background-color:transparent; */
 }
 #like-button.liked {
@@ -151,7 +127,6 @@ body{
   transition: color 0.3s ease;
   animation: heartBeat 0.8s ease;
 }
-
 @keyframes heartBeat {
   0% {
     transform: scale(1); /* Tamaño normal */
@@ -167,5 +142,37 @@ body{
   }
   100% {
     transform: scale(1); /* Volver al tamaño normal al final de la animación */
+  }
+}
+@media (max-width: 360px) {
+  .music-player {
+    width: 90%; /* Ancho completo en pantallas pequeñas */
+    border-radius: 0;
+  }
+.song-list{
+  justify-content: center;
+  align-items: center;
+  margin-top: 30px;
+  margin-left: -40px;
+
+}
+
+
+  .song-list button{
+    font-size: 12px;
+  }
+  #like-button {
+    width: 20%; /* Aumentar el tamaño del botón "like" en pantallas pequeñas */
+  }
+  .playlist-header {
+    width: 360px;
+    justify-content: center;
+    flex-direction: column;
+    
+  }
+  #playlist-cover {
+    width: 100%;
+    height: auto; /* Ancho más grande en pantallas pequeñas */
+    margin-bottom: 10px; /* Espacio inferior más pequeño en pantallas pequeñas */
   }
 }

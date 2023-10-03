@@ -9,7 +9,12 @@
   color: antiquewhite;
   height: 30px;
   align-items: center;
-  border-radius: 20px;
+  /* border-radius: 20px; */
+  border-left: 1px rgb(255, 255, 255) solid;
+  border-right: 1px rgb(255, 255, 255) solid;
+
+
+
 }
 
 .div-contactos {
@@ -18,6 +23,8 @@
   /* padding: 10px 20px; */
   display: flex;
   margin-left: -30px;
+
+
   /* justify-content:space-around; */
   /* align-items: center; */
   /* text-align: center; */
@@ -27,24 +34,22 @@
 .contactos {
   display: flex;
   margin-left: 10px;
-  align-items: center;
+  align-items: center; 
+   /* border-bottom: 1px rgb(73, 134, 134) solid; */
 }
 
 .div-titulo {
     margin-left: -80px;
   text-align: center;
-  color: antiquewhite;
+  color: rgb(81, 76, 69);
   font-size: 20px;
   /* margin-left: 10px; */
 }
 
-.div-redes-sociales {
-  /* padding: 30px 20px; */
-  /* width: auto; */
-  /* text-align: center; */
-  /* font-size: 80%; */
-  /* color: antiquewhite; */
-}
+/* .div-redes-sociales{
+  border-bottom: 1px rgb(73, 134, 134) solid;
+
+} */
 
 .icon {
   background-color: white;
@@ -56,6 +61,8 @@
   border-radius: 100%;
   padding: 3px;
   /* margin: 5px; */
+  border-bottom: 1px rgb(125, 122, 122) solid;
+
 }
 
 /* Agrega estilos cuando el mouse pasa sobre los iconos */
@@ -84,4 +91,38 @@
 
 .icon:hover::before {
   opacity: 1; /* Hace que el nombre de la red social aparezca cuando se pasa el mouse */
+}
+
+
+/* Media query para pantallas con un ancho máximo de 360px (responsive) */
+@media screen and (max-width: 360px) {
+  .div-footer {
+    flex-direction: column; /* Coloca las cajas una debajo de la otra */
+    align-items: center; /* Centra las cajas verticalmente */
+    text-align: center; /* Centra el texto en las cajas */
+    /* background-color: blueviolet; */
+    height: auto;
+    width: 360px;;
+  }
+
+  .div-contactos {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    /* margin-top: 25%; */
+    /* padding-top: 5px; */
+    /* Elimina el margen izquierdo */
+  }
+
+  .contactos {
+    margin-left: 0; /* Elimina el margen izquierdo */
+  }
+
+  .div-titulo {
+    margin-left: 0; /* Elimina el margen izquierdo */
+  }
+
+  .div-redes-sociales{
+    margin-bottom: 5px;
+  }
 }

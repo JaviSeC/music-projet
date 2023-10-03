@@ -1,10 +1,21 @@
-.Card{
-    /* /* margin-top: 10px; */
+.Card-top{
+    margin-top: 10px; 
     margin-bottom: 30px;
     margin-right: 10px;
-    
 }
 
 .Cards-top{
 /* margin: 20px 20px; */
+/* text-decoration: none; */ 
+
+}
+
+
+.topssongs{
+    /* justify-content: center; */
+    /* align-items: center; */
+    text-align: center;
+    color: white;
+    font-size: 25px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
