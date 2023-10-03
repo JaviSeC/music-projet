@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="" width="200" height="auto">
+  <img src="images/Logo.png" width="200" height="auto">
 </p>
 
 
@@ -9,7 +9,7 @@ This project aims to create a highly functional and secure audio playback web pl
 
 ## Screenshots 📷
 
-<img src="images/Home.png" width="auto" height="150"><img src="images/Home2.jpeg" width="auto" height="150"><img src="images/Home3.jpeg" width="auto" height="150"><img src="images/FigAcc.jpeg" width="auto" height="150"><img src="images/Funko.jpeg" width="auto" height="150"><img src="images/Poster.jpeg" width="auto" height="150"><img src="images/Shirts.jpeg" width="auto" height="150"><img src="images/Login.jpeg" width="auto" height="150"><img src="images/Chart.jpeg" width="auto" height="150">
+<img src="images/Front1" width="auto" height="150"><img src="images/Front2.png" width="auto" height="150"><img src="images/Front3.png" width="auto" height="150"><img src="images/Front4.png" width="auto" height="150"><img src="images/Front5.png" width="auto" height="150"><img src="images/Front6.png" width="auto" height="150"><img src="images/Front7.png" width="auto" height="150">
 
 
 ## Stacks 🖥️
@@ -49,7 +49,7 @@ This project aims to create a highly functional and secure audio playback web pl
 ● Mob, pair and solo programming <br>
 ● Agile with Scrum & Trello <br>
 ● Testing <br>
-● We work with branches: 6 working branches were used on GitHub to manage the workflow: <br>
+● We work with branches: 7 working branches were used on GitHub to manage the workflow: <br>
 - Main: This branch contains functional and stable code. It is the main and/or final branch. <br>
 - Dev: It's the branch where different working codes are integrated into one and where preliminary testing is done before production. It's an intermediate and/or safety branch. <br>
 - Independents: These are different branches where each team member develops their code according to assigned tasks for later merging into the Dev branch. It's an independent and/or testing branch. <br>
