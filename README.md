@@ -9,7 +9,7 @@ This project aims to create a highly functional and secure audio playback web pl
 
 ## Screenshots 📷
 
-<img src="images/Front1" width="auto" height="150"><img src="images/Front2.png" width="auto" height="150"><img src="images/Front3.png" width="auto" height="150"><img src="images/Front4.png" width="auto" height="150"><img src="images/Front5.png" width="auto" height="150"><img src="images/Front6.png" width="auto" height="150"><img src="images/Front7.png" width="auto" height="150">
+<img src="images/Front1.png" width="auto" height="150"><img src="images/Front2.png" width="auto" height="150"><img src="images/Front3.png" width="auto" height="150"><img src="images/Front4.png" width="auto" height="150"><img src="images/Front5.png" width="auto" height="150"><img src="images/Front6.png" width="auto" height="150"><img src="images/Front7.png" width="auto" height="150">
 
 
 ## Stacks 🖥️
@@ -26,10 +26,6 @@ This project aims to create a highly functional and secure audio playback web pl
 ● Figma <br>
 ● Slack <br>
 ● Zoom
-
-## Libraries 📚
-
-<img src="images/ReactBoostrap.png" width="100" height="auto"><img src="images/Formik.png" width="100" height="30"><img src="images/PrimeReact.png" width="100" height="auto"><img src="images/React Hook Form.png" width="100" height="25"><img src="images/React Router.png" width="100" height="25"><img src="images/Sweet Alert.png" width="100" height="30"><img src="images/Swiper.png" width="100" height="auto"><img src="images/YUP.png" width="100" height="30"><img src="images/Cloudinary.png" width="100" height="auto">
 
 ## Technologies and Tools 🔨
 <div>  
