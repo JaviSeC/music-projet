@@ -30,7 +30,7 @@ export default function Menu() {
         </button>
         {isDropdownOpen && (
           <div className="dropdown-content">
-            <a href="#">SoundTracks</a>
+            <a href="/SoundTracksView">SoundTracks</a>
             <a href="#">Peliculas Animadas</a>
             <a href="/ClassicView">Clasicas</a>
             <a href="#">Actuales</a>
