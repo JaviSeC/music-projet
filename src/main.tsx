@@ -8,6 +8,9 @@
 // import Login from './Components/Login/Login'
 // import SignUp from './Components/SingUp/SingUp'
 
+
+
+
 // import Admin from "./Components/Adminview/Admin";
 // import Footer from "./Components/Footer/Footer";
 // import "./index.css"
@@ -21,6 +24,7 @@
 
 //________________________________________________________________________________________________________
 
+import "./index.css";
 import ReactDOM from "react-dom/client";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Footer from "./Components/Footer/Footer";
@@ -29,6 +33,9 @@ import PageLogin from "./Views/PageLogin/PageLogin";
 import PageSingUp from "./Views/PageSingUp/PageSingUp";
 import PageBodyClassic from "./Views/Classic/ClassicView";
 import PageAdmin from "./Views/PageAdmin/PageAdmin";
+import PageSound from "./Views/SoundTracks/SoundView";
+import PeliculasAnimadas from "./Components/MusicaAnimada/MusicaAnimada";
+
 
 ReactDOM.createRoot(document.getElementById("root")!).render(
   <>
@@ -38,7 +45,10 @@ ReactDOM.createRoot(document.getElementById("root")!).render(
         <Route path="/PageLogin" element={<PageLogin />} />
         <Route path="/PageSingUp" element={<PageSingUp />} />
         <Route path="/PageAdmin" element={<PageAdmin />} />
-        <Route path="/ClassicView" element={<PageBodyClassic />} />
+        <Route path="/ClassicView" element={<PageBodyClassic />} /> 
+        <Route path="/SoundTracksView" element={<PageSound/>}/> 
+        <Route path="/PeliculasAnimadasView" element={<PeliculasAnimadas/>}/> 
+
       </Routes>
 
       <Footer />
