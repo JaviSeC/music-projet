@@ -1,5 +1,8 @@
 import "./Login.css";
 import { Link } from "react-router-dom";
+import { useState } from "react";
+import { useNavigate } from 'react-router-dom';
+import Swal from "sweetalert2";
 import Avatar from "@mui/material/Avatar";
 import Button from "@mui/material/Button";
 import CssBaseline from "@mui/material/CssBaseline";
@@ -16,13 +19,85 @@ import { createTheme, ThemeProvider } from "@mui/material/styles";
 
 const defaultTheme = createTheme();
 
-export default function Login() {
-  const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
-    event.preventDefault();
-    const data = new FormData(event.currentTarget);
-    console.log({
-      email: data.get("email"),
-      password: data.get("password"),
+export const Login = () =>{
+  const [isLoginFormSubmitted, setIsLoginFormSubmitted] = useState(false);
+  const [userData, setUserData] = useState({
+    UserName: "",
+    Password: "",
+  });
+
+  const [errorMessages, setErrorMessages] = useState({
+    UserName: "",
+    Password: "",
+  });
+
+  const navigate = useNavigate(); // Inicializa la función de navegación
+
+  const handleLoginClick = async () => {
+    setIsLoginFormSubmitted(true);
+
+    const { UserName, Password } = userData;
+    
+    const newErrorMessages = {
+      UserName: !UserName ? "UserName is required" : "",
+      Password: !Password ? "Password is required" : "",
+    };
+    // Si algún campo está vacío, no procedemos con el registro
+    if (!UserName || !Password) {
+      setErrorMessages(newErrorMessages);
+      return;
+    }
+
+    try {
+      const url = "https://localhost:7110/UsersControllers/Login";
+      const response = await fetch(url, {
+        method: "LOGIN",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          UserName,
+          Password
+        }),
+      });
+
+      if (response.ok) {
+        const data = await response.json(); // Parsea la respuesta JSON
+        localStorage.setItem('authToken', data.Token); // Almacena el token JWT en el localStorage
+        console.log('Inicio de sesión exitoso');
+        // Redirige al usuario según su rol
+        if (data.Role === 'Admin') {
+          navigate('/PageAdmin'); // Redirección para administradores
+        } else {
+          navigate('/'); // Redirección para otros roles
+        }
+      } else {
+        console.error('Error en la solicitud:', response);
+        Swal.fire('Error', 'No se pudo iniciar sesión', 'error');
+      }
+    } catch (error) {
+      console.error('Error en la solicitud:', error);
+      Swal.fire('Error', 'Ha ocurrido un error en el servidor', 'error');
+    }
+
+    // Limpiar los campos después de registrar al usuario y restablecer los mensajes de error
+
+    setUserData({
+      UserName: "",
+      Password: ""
+    });
+
+    setErrorMessages({
+      UserName: "",
+      Password: ""
+    });
+  };
+
+  const handleInputChange = (e) => {
+    const { name, value } = e.target;
+    setUserData({
+      ...userData,
+      [name]: value,
     });
   };
 
@@ -87,41 +162,55 @@ export default function Login() {
               <Box
                 component="form"
                 noValidate
-                onSubmit={handleSubmit}
                 sx={{ mt: 1 }}
               >
                 <TextField
                   margin="normal"
                   required
                   fullWidth
-                  id="User"
+                  id="UserName"
                   label="UserName"
-                  name="User"
-                  autoComplete="User"
+                  name="UserName"
+                  value={userData.UserName}
+                  onChange={handleInputChange}
+                  autoComplete="UserName"
                   autoFocus
                 />
+                <span className="error-message">
+                    {errorMessages.UserName}
+                </span>
                 <TextField
                   margin="normal"
                   required
                   fullWidth
-                  name="password"
+                  name="Password"
                   label="Password"
-                  type="password"
-                  id="password"
+                  type="Password"
+                  id="Password"
+                  value={userData.Password}
+                  onChange={handleInputChange}
                   autoComplete="current-password"
                 />
+                <span className="error-message">
+                    {errorMessages.Password}
+                </span>
                 <FormControlLabel
                   control={<Checkbox value="remember" color="primary" />}
                   label="Remember me"
                 />
+                {isLoginFormSubmitted ? (
+                <input type="button" value="Login" className="custom-color" />
+                ) : (
                 <Button
                   type="submit"
                   fullWidth
                   variant="contained"
+                  onClick={handleLoginClick}
                   sx={{ mt: 3, mb: 2 }}
                 >
                   Login
-                </Button>
+                </Button>   
+                )}
                 <Grid container>
                   <Grid item xs>
                     <Links href="#" variant="body2">
@@ -141,4 +230,5 @@ export default function Login() {
       </ThemeProvider>
     </div>
   );
-}
+};
+export default Login;

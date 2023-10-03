@@ -14,12 +14,6 @@ export default function PageInitial() {
       <Body />
       <Tops />
       </div>
-        <Header />
-        <div className="home">
-          <Menu />
-          <Body />
-          <Tops />
-        </div>
       <Carousel />
     </>
   );

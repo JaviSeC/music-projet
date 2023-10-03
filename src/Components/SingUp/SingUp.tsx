@@ -62,10 +62,10 @@ export const SignUp = () => {
       return;
     }
 
-    if (Password.length < 8) {
-      Swal.fire("Error", "La contraseña debe tener al menos 8 caracteres.", "error");
-      return;
-    }
+    // if (Password.length < 8) {
+    //   Swal.fire("Error", "La contraseña debe tener al menos 8 caracteres.", "error");
+    //   return;
+    // }
 
     // Validar el correo electrónico
     if (!isEmailValid(Email)) {
@@ -122,6 +122,10 @@ export const SignUp = () => {
       if (response.ok) {
         console.log("Registro exitoso");
         Swal.fire("Cuenta creada exitosamente", "", "success");
+      } else if (response.status === 400) {
+        // Error de solicitud inválida
+        console.error("Error en la solicitud:", response);
+        Swal.fire("Error", "La contraseña debe tener al menos 8 caracteres.", "error");
       } else {
         console.error("Error en la solicitud:", response);
         Swal.fire("Error", "No se pudo crear la cuenta", "error");

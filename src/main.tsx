@@ -27,7 +27,6 @@ import Footer from "./Components/Footer/Footer";
 import PageInitial from "./Views/PageInitial/PageInitial";
 import PageLogin from "./Views/PageLogin/PageLogin";
 import PageSingUp from "./Views/PageSingUp/PageSingUp";
-// import BodyClassic from "./Components/ClassicBody/BodyClassic";
 import PageBodyClassic from "./Views/Classic/ClassicView";
 import PageAdmin from "./Views/PageAdmin/PageAdmin";
 
