@@ -7,6 +7,14 @@ import { Link } from "react-router-dom";
 const songs = [
   {
     id: 1,
+    artist: 'Harry Potter',
+    title: 'Hedwing Theme',
+    duration: '5:09 min',
+    albumCover: 'https://res.cloudinary.com/dq2tfglqq/image/upload/v1696364637/serie-no-universo-harry-potter-pode-ser-realidade-confira-reproducao-hbo-max_nsvmxv.jpg',
+    audioSource: 'https://res.cloudinary.com/dq2tfglqq/video/upload/v1696364407/Hedwig_s_Theme_wtHra9tFISY_140_wlb7q5.mp3',
+  },
+  {
+    id: 2,
     artist: 'James Horner',
     title: 'Apollo 13',
     duration: '2:42',
@@ -14,7 +22,7 @@ const songs = [
     audioSource: 'https://res.cloudinary.com/doft9ylq1/video/upload/v1695885293/01_-_Main_Title_-_James_Horner_-_Apollo_13_WTSmtKDvnWQ_cpaipp.mp3',
   },
   {
-    id: 2,
+    id: 3,
     artist: 'John Williams',
     title: 'Jurassic Park',
     duration: '2:49',  
@@ -23,7 +31,7 @@ const songs = [
   },
 
       {
-        id: 3,
+        id: 4,
         artist: ' Michael Giacchino',
         title: 'Up',
         duration: '4:10',
@@ -31,7 +39,7 @@ const songs = [
         audioSource: 'https://res.cloudinary.com/doft9ylq1/video/upload/v1695886760/UP_OST_-_03_-_Married_Life_gvQB7tMB-jI_1_incfac.mp3',
       },
       {
-        id: 4,
+        id: 5,
         artist: 'Hans Zimmer',
         title: 'Origen',
         duration: '4:34',
@@ -39,7 +47,7 @@ const songs = [
         audioSource: 'https://res.cloudinary.com/doft9ylq1/video/upload/v1695887972/Hans_Zimmer_-_Time_Inception__RxabLA7UQ9k_ycrlah.mp3',
       },
       {
-        id: 5,
+        id: 6,
         artist: 'Alexandre Desplat',
         title: 'El escritor',
         duration: '1:43',
@@ -47,7 +55,7 @@ const songs = [
         audioSource: 'https://res.cloudinary.com/doft9ylq1/video/upload/v1695888225/The_Ghost_Writer_H9G1Eok4zRk_pevqef.mp3',
       },
       {
-        id: 6,
+        id: 7,
         artist: 'Daft Punks',
         title: 'Tron: Legacy',
         duration: '1:36',
@@ -55,7 +63,7 @@ const songs = [
         audioSource: 'https://res.cloudinary.com/doft9ylq1/video/upload/v1695888427/The_Son_of_Flynn_From__TRON__Legacy__Score__mqgEYRtWMJU_ntm5g4.mp3',
       },
       {
-        id: 7,
+        id: 8,
         artist: 'John Williams',
         title: 'Las aventuras de Tintín: El secreto del unicornio',
         duration: '3:08',
