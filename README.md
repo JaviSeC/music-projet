@@ -17,6 +17,7 @@ This project aims to create a highly functional and secure audio playback web pl
 ● React <br>
 ● Frameworks <br>
 ● Bootstrap <br>
+● Material UI <br>
 ● JavaScript <br>
 ● CSS <br>
 ● HTML <br>
