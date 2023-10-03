@@ -70,6 +70,6 @@ Coming soon, we will continue developing the Full Stack project with the reposit
 
 ## Authors 👨‍💻👩‍💻
 
-| [<img src="https://avatars.githubusercontent.com/u/133955831?v=4" width=100><br><sub>Isabel Lozano</sub>](https://github.com/isabellozano37) | [<img src="https://avatars.githubusercontent.com/u/132651253?v=4" width=100><br><sub>Rodrigo Muñoz</sub>](https://github.com/Rodrialemu) | [<img src="https://avatars.githubusercontent.com/u/132766257?v=4" width=100><br><sub>Javier Serrano</sub>](https://github.com/JaviSeC) | [<img src="https://avatars.githubusercontent.com/u/132567398?v=4" width=100><br><sub>Miguel Cidoncha</sub>](https://github.com/miguelcidoncha) |
-| :---: | :---: | :---: | :---: |
+| [<img src="https://avatars.githubusercontent.com/u/133955831?v=4" width=100><br><sub>Isabel Lozano</sub>](https://github.com/isabellozano37) | [<img src="https://avatars.githubusercontent.com/u/132651253?v=4" width=100><br><sub>Rodrigo Muñoz</sub>](https://github.com/Rodrialemu) | [<img src="https://avatars.githubusercontent.com/u/132766257?v=4" width=100><br><sub>Javier Serrano</sub>](https://github.com/JaviSeC) | [<img src="https://avatars.githubusercontent.com/u/132567398?v=4" width=100><br><sub>Miguel Cidoncha</sub>](https://github.com/miguelcidoncha) | [<img src="https://avatars.githubusercontent.com/u/132898611?v=4" width=100><br><sub>Ángel Serrano</sub>](https://github.com/angelserranocorrea) | [<img src="https://avatars.githubusercontent.com/u/132655532?v=4" width=100><br><sub>Raúl Muñoz</sub>](https://github.com/raulmunozrayo) |
+| :---: | :---: | :---: | :---: | :---: | :---: |
 
