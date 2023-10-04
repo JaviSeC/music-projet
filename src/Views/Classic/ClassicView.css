@@ -1,0 +1,28 @@
+.CineClasico{
+    background-image: url(https://img.freepik.com/foto-gratis/gramofono-antiguo-hace-girar-banda-sonora-antigua-club-nocturno-generado-ia_188544-37147.jpg?size=626&ext=jpg&ga=GA1.2.239001381.1695985032&semt=sph);
+    background-size: cover;
+    background-attachment: fixed;
+    margin: 0;
+    min-height: 100vh;
+    width: 100%;
+    
+}
+.homeClassic{
+    height: 2px;
+    margin-top: 18%;
+    width: 100%;
+}
+
+
+@media screen and (max-width:360px) {
+    .CineClasico{
+        background-image: url(https://img.freepik.com/foto-gratis/gramofono-antiguo-hace-girar-banda-sonora-antigua-club-nocturno-generado-ia_188544-37147.jpg?size=626&ext=jpg&ga=GA1.2.239001381.1695985032&semt=sph);
+        background-size: cover;
+        /* background-attachment: fixed; */
+        /* margin: 0; */
+        /* min-height: 100vh; */
+        width: 100%;
+
+
+    }
+}

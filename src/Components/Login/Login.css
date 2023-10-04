@@ -1,0 +1,30 @@
+.bodys {
+  background-image: url("https://res.cloudinary.com/da7ffijqs/image/upload/v1695380423/5240d4c9fc9a18de6d58e1c264f7a6a8_gqmqcw.jpg");
+  width: auto;
+  height: 675px;
+  background-size: cover; 
+  background-repeat: no-repeat;
+  margin-bottom: 3%;
+}
+
+.Home{
+  width: 10%;
+  background-color: rgb(22, 33, 33);
+  text-decoration: none;
+  border: none;
+}
+.casa{
+  width: 100%;
+}
+
+@media screen and (max-width: 360px) {
+  .bodys {
+    height: auto; 
+    margin-bottom: 0; 
+  }
+
+  .Home {
+    background-color: rgba(120, 120, 120, 0.626);
+    width: 15%;  
+  }
+}
