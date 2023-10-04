@@ -1,0 +1,108 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "firstName": "John",
+      "lastName": "Doe",
+      "username": "johndoe",
+      "email": "john@example.com",
+      "password": "password123"
+    },
+    {
+      "id": 2,
+      "firstName": "Jane",
+      "lastName": "Smith",
+      "username": "janesmith",
+      "email": "jane@example.com",
+      "password": "mypassword"
+    },
+    {
+      "firstName": "Macu",
+      "lastName": "Prieto",
+      "userName": null,
+      "email": "Macu@gmail.com",
+      "password": "ftzM9CBz3idggHY",
+      "id": 3
+    },
+    {
+      "firstName": "Macu",
+      "lastName": "Prieto",
+      "userName": null,
+      "email": "Macu@gmail.com",
+      "password": "ftzM9CBz3idggHY",
+      "id": 4
+    },
+    {
+      "firstName": "Macu",
+      "lastName": "Prieto",
+      "userName": null,
+      "email": "Macu@gmail.com",
+      "password": "ftzM9CBz3idggHY",
+      "id": 5
+    },
+    {
+      "firstName": "Macu",
+      "lastName": "Prieto",
+      "userName": null,
+      "email": "Macu@gmail.com",
+      "password": "ftzM9CBz3idggHY",
+      "id": 6
+    },
+    {
+      "firstName": "Macu",
+      "lastName": "Prieto",
+      "userName": null,
+      "email": "Macu@gmail.com",
+      "password": "ftzM9CBz3idggHY",
+      "id": 7
+    },
+    {
+      "firstName": "Macu",
+      "lastName": "Prieto",
+      "userName": null,
+      "email": "Macu@gmail.com",
+      "password": "ftzM9CBz3idggHY",
+      "id": 8
+    },
+    {
+      "firstName": "Macu",
+      "lastName": "Prieto",
+      "userName": null,
+      "email": "Macu@gmail.com",
+      "password": "ftzM9CBz3idggHY",
+      "id": 9
+    },
+    {
+      "firstName": "Macu",
+      "lastName": "Prieto",
+      "userName": null,
+      "email": "Macu@gmail.com",
+      "password": "ftzM9CBz3idggHY",
+      "id": 10
+    },
+    {
+      "firstName": "Macu",
+      "lastName": "Prieto",
+      "userName": null,
+      "email": "Macu@gmail.com",
+      "password": "ftzM9CBz3idggHY",
+      "id": 11
+    },
+    {
+      "firstName": "Macu",
+      "lastName": "Prieto",
+      "userName": null,
+      "email": "Macu@gmail.com",
+      "password": "ftzM9CBz3idggHY",
+      "id": 12
+    },
+    {
+      "firstName": "Macu",
+      "lastName": "Prieto",
+      "userName": null,
+      "email": "Macu@gmail.com",
+      "password": "ftzM9CBz3idggHY",
+      "id": 13
+    }
+  ]
+}

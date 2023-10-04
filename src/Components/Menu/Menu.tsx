@@ -56,12 +56,11 @@ export default function Menu() {
             />
           </button>
         </Link>
-
-        <Link to="/PageAdmin">
+        {/* <Link to="/PageAdmin">
           <button>
            <strong> Admin </strong>
           </button>
-        </Link>
+        </Link> */}
       </div>
     </div>
   );

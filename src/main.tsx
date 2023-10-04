@@ -7,7 +7,7 @@
 // import Menu from "./Components/Menu/Menu";
 // import Login from './Components/Login/Login'
 // import SignUp from './Components/SingUp/SingUp'
-import "./index.css";
+
 
 
 
@@ -24,19 +24,18 @@ import "./index.css";
 
 //________________________________________________________________________________________________________
 
+import "./index.css";
 import ReactDOM from "react-dom/client";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Footer from "./Components/Footer/Footer";
 import PageInitial from "./Views/PageInitial/PageInitial";
 import PageLogin from "./Views/PageLogin/PageLogin";
 import PageSingUp from "./Views/PageSingUp/PageSingUp";
-// import BodyClassic from "./Components/ClassicBody/BodyClassic";
-// import PageSound from "./Views/SoundTracks/SoundView";
 import PageBodyClassic from "./Views/Classic/ClassicView";
 import PageAdmin from "./Views/PageAdmin/PageAdmin";
 import PageSound from "./Views/SoundTracks/SoundView";
-// import MusicaAnimada from "./Views/MusicaAnimada/MusicaAnimada";
 import PeliculasAnimadas from "./Components/MusicaAnimada/MusicaAnimada";
+
 
 ReactDOM.createRoot(document.getElementById("root")!).render(
   <>
