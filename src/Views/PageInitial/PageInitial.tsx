@@ -9,7 +9,7 @@ export default function PageInitial() {
   return (
     <>
       <Header />
-      <div className="home">
+      <div className="homes">
       <Menu />
       <Body />
       <Tops />
