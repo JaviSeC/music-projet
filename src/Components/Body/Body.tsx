@@ -153,8 +153,8 @@ export default function Body() {
             }}
           >
             <img
-              src="https://res.cloudinary.com/duwenv0yr/image/upload/v1695888871/guardian_iobu69.jpg"
-              srcSet="https://res.cloudinary.com/duwenv0yr/image/upload/v1695888871/guardian_iobu69.jpg"
+              src="https://res.cloudinary.com/dq2tfglqq/image/upload/v1696407521/marvel-guardians-of-the-galaxy-videojuego-6-1635158546_ro0xuz.jpg"
+              srcSet="https://res.cloudinary.com/dq2tfglqq/image/upload/v1696407521/marvel-guardians-of-the-galaxy-videojuego-6-1635158546_ro0xuz.jpg"
               alt="Guardians of the Galaxy"
               style={{ width: '100%', height: '100%', objectFit: 'cover' }}
             />
