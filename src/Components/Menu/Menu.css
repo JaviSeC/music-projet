@@ -81,7 +81,7 @@ button:hover{
 }
 
 .dropdown-content a:hover{
-  background: rgb(49, 136, 228);
+  background: rgb(154, 157, 160);
   border-radius: 15px;
 
 }
@@ -94,8 +94,10 @@ button:hover{
 
 @media screen and (max-width: 360px) {
   .Container {
-    width: 15%; /* Ancho más pequeño para pantallas de hasta 360px */
-    margin-top: -300px;
+    /* display: flex; */
+    width: 15%;
+    margin-top: 10px;
+    /* height: auto; */
   }
 
   .boxSong {

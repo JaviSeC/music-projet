@@ -1,51 +1,59 @@
 #Carousel {
-    height: 100%;
-  }
-   
-  .swiper {
-    /* margin-top: 10%; */
-    width: 90rem;
-    height: 200px;
-  }
-  
-  .swiper-slide {
-    text-align: center;
-    font-size: 15px;
-    /* background: #0075B4; */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 25px;
-   
-  }
-  
-  .swiper-slide img {
-    display: block;
-    width: 100%;
-    height: 100%;
-    object-fit: cover; 
-    border-radius: 25px;
-  }
-  
+  height: 100%;
+}
+
+.swiper {
+  /* margin-top: 10%; */
+  width: 90rem; 
+  height: 200px;
+  overflow: hidden; /* Oculta el desbordamiento del carrusel */
+}
+
+.swiper-slide {
+  width: 90rem;
+  text-align: center;
+  font-size: 15px;
+  /* background: #0075B4; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 25px;
+}
+
+.swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 25px;
+}
+
 /* .audioplayer{
 
 
 } */
 
-  .audioboton{
-    width: 100%;
-    margin-top: 15px;
+.audioboton {
+  width: 100%;
+  margin-top: 15px;
+  /* height: 100px; */
+}
+/* 
+@media screen and (max-width: 360px) {
+  .mySwiper {
+    width: 360px;
+    
+  }
+} */
+
+
+@media screen and (max-width: 360px) {
+  .mySwiper {
+    width: 360px;
   }
 
-  /* Estilos para pantallas con un ancho máximo de 360px */
-  @media screen and (max-width: 360px) {
-    .mySwiper {
-      width: 360px;
-      height: 285px;
-
-    }
-    .swiper-slide {
-      min-width: 360px;
-      flex: 0 0 auto; /* Evita que las tarjetas cambien de tamaño */
-    }
+  .swiper-slide {
+    min-width: 360px;
+    flex: 0 0 auto; /* Evita que las tarjetas cambien de tamaño */
   }
+}

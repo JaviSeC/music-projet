@@ -7,16 +7,12 @@ import Link from '@mui/joy/Link';
 import Favorite from '@mui/icons-material/Favorite';
 import Visibility from '@mui/icons-material/Visibility';
 import { useEffect, useState } from 'react';
-
-
 export default function Body() {
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
-
   useEffect(() => {
     const handleResize = () => {
       setWindowWidth(window.innerWidth);
     };
-
     window.addEventListener('resize', handleResize);
     return () => {
       window.removeEventListener('resize', handleResize);
@@ -24,7 +20,6 @@ export default function Body() {
   }, []);
   const isSmallScreen = windowWidth < 600;
   const cardStyle = isSmallScreen ? { display: 'none' } : {};
-
   return (
     <div style={{ ...cardStyle, justifyContent: 'center', alignItems: 'center', height: '100%', marginTop: '-20px' }}>
       <Card
@@ -45,12 +40,11 @@ export default function Body() {
             }}
           >
             <img
-              src="https://res.cloudinary.com/duwenv0yr/image/upload/v1695888871/guardian_iobu69.jpg"
-              srcSet="https://res.cloudinary.com/duwenv0yr/image/upload/v1695888871/guardian_iobu69.jpg"
+              src="https://res.cloudinary.com/dq2tfglqq/image/upload/v1696407521/marvel-guardians-of-the-galaxy-videojuego-6-1635158546_ro0xuz.jpg"
+              srcSet="https://res.cloudinary.com/dq2tfglqq/image/upload/v1696407521/marvel-guardians-of-the-galaxy-videojuego-6-1635158546_ro0xuz.jpg"
               alt="Guardians of the Galaxy"
               style={{ width: '100%', height: '100%', objectFit: 'cover' }}
             />
-
             {/* Contenedor para el texto superpuesto */}
             <div
               style={{
@@ -69,7 +63,6 @@ export default function Body() {
               <p>¡Viaja a través de las estrellas con la banda sonora que te llevará al límite del espacio! Descubre la épica música que dio vida a las aventuras de los Guardianes de la Galaxia en su emocionante videojuego.</p>
               {/* Puedes reemplazar el texto fijo con el contenido dinámico si lo deseas */}
             </div>
-
             <div
               style={{
                 position: 'absolute',
@@ -123,4 +116,3 @@ export default function Body() {
     </div>
   );
 }
-
