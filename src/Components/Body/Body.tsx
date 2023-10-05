@@ -77,7 +77,7 @@ export default function Body() {
               <img
                 src={images[currentImageIndex]}
                 alt="Guardians of the Galaxy"
-                style={{ width: '100%', height: '100%', objectFit: 'cover' }}
+                style={{ width: '100%', height: '100%', objectFit: 'revert' }}
               />
               <div
                 style={{
