@@ -39,33 +39,33 @@ const toggleAudio = () => {
         spaceBetween={20}
          
       >
-        <SwiperSlide><img src="https://res.cloudinary.com/da7ffijqs/image/upload/v1695111816/perro_720_vkxv7u.jpg" alt="perrito" onClick={toggleAudio} /></SwiperSlide>
-        <SwiperSlide><img src="https://res.cloudinary.com/da7ffijqs/image/upload/v1695111811/gato_720_gmcfcw.jpg" alt="gatico" onClick={toggleAudio} /></SwiperSlide>
-        <SwiperSlide><img src="https://res.cloudinary.com/duwenv0yr/image/upload/v1695893709/exorci.png" alt="parejanegra" onClick={toggleAudio}/></SwiperSlide>
-        <SwiperSlide><img src="https://res.cloudinary.com/dq2tfglqq/image/upload/v1696270345/Rectangle_14_tb1yim.png" alt="chika" onClick={toggleAudio} /></SwiperSlide>
-        <SwiperSlide><img src="https://res.cloudinary.com/dq2tfglqq/image/upload/v1696008540/music-producer-studio-actor-audio-instrument_gatur6.jpg" alt="negro" onClick={toggleAudio}/></SwiperSlide>
-        <SwiperSlide><img src="https://res.cloudinary.com/dq2tfglqq/image/upload/v1695986554/cerca-microfono-escenario-conciertos-hermosa-iluminacion_tnnqr5.jpg" alt="colores" onClick={toggleAudio}/></SwiperSlide>
-        <SwiperSlide><img src="https://res.cloudinary.com/dq2tfglqq/image/upload/v1695986554/hombre-toca-primer-plano-guitarra-acustica_u8mem2.jpg" alt="colores1" onClick={toggleAudio}/></SwiperSlide>
-        <SwiperSlide><img src="https://res.cloudinary.com/dq2tfglqq/image/upload/v1696008505/16653-sound-close_up-tech-technology-music-3597x2474_ai6khm.jpg" alt="chico" onClick={toggleAudio}/></SwiperSlide>
-        <SwiperSlide><img src="https://res.cloudinary.com/dq2tfglqq/image/upload/v1696008417/colorful-glowing-music-equalizer-animation-on-black-background-audio-spectrum-music-background-loop-animation-of-equalizer-multicolored-sound-equalizer-animation-nightclub-and-disco-background-free-video_nnltqt.jpg" alt="chica" onClick={toggleAudio}/></SwiperSlide>
-        <SwiperSlide><img src="https://res.cloudinary.com/da7ffijqs/image/upload/v1695111816/perro_720_vkxv7u.jpg" alt="perrito" onClick={toggleAudio}/></SwiperSlide>
-        <SwiperSlide><img src="https://res.cloudinary.com/da7ffijqs/image/upload/v1695111811/gato_720_gmcfcw.jpg" alt="gatico" onClick={toggleAudio}/></SwiperSlide>
-        <SwiperSlide><img src="https://res.cloudinary.com/dq2tfglqq/image/upload/v1696270345/Rectangle_14_1_xkgpdf.png" alt="parejanegra" onClick={toggleAudio}/></SwiperSlide>
-        <SwiperSlide><img src="https://res.cloudinary.com/dq2tfglqq/image/upload/v1696008475/pexels-photo-3784566_kkk4g3.jpg" alt="chika" onClick={toggleAudio}/></SwiperSlide>
-        <SwiperSlide><img src="https://res.cloudinary.com/da7ffijqs/image/upload/v1695111804/chiko4_720_f6ufja.jpg" alt="negro" onClick={toggleAudio}/></SwiperSlide>
-        <SwiperSlide><img src="https://res.cloudinary.com/da7ffijqs/image/upload/v1695111800/chiko3_720_zybcnp.jpg" alt="colores" onClick={toggleAudio}/></SwiperSlide>
-        <SwiperSlide><img src="https://res.cloudinary.com/dq2tfglqq/image/upload/v1696270339/Rectangle_26_q0ogot.png" alt="colores1" onClick={toggleAudio}/></SwiperSlide>
-        <SwiperSlide><img src="https://res.cloudinary.com/da7ffijqs/image/upload/v1695111791/chiko_720_dzufiv.jpg" alt="chico" onClick={toggleAudio}/></SwiperSlide>
-        <SwiperSlide><img src="https://res.cloudinary.com/da7ffijqs/image/upload/v1695111784/chika4_720_nqgfvl.jpg" alt="chica" onClick={toggleAudio}/></SwiperSlide>
-        <SwiperSlide><img src="https://res.cloudinary.com/da7ffijqs/image/upload/v1695111816/perro_720_vkxv7u.jpg" alt="perrito" onClick={toggleAudio}/></SwiperSlide>
-        <SwiperSlide><img src="https://res.cloudinary.com/da7ffijqs/image/upload/v1695111811/gato_720_gmcfcw.jpg" alt="gatico" onClick={toggleAudio}/></SwiperSlide>
-        <SwiperSlide><img src="https://res.cloudinary.com/da7ffijqs/image/upload/v1695111808/dos_720_u5ou10.jpg" alt="parejanegra" onClick={toggleAudio}/></SwiperSlide>
-        <SwiperSlide><img src="https://res.cloudinary.com/da7ffijqs/image/upload/v1695111773/chika3_720_qixxnk.jpg" alt="chika" onClick={toggleAudio}/></SwiperSlide>
-        <SwiperSlide><img src="https://res.cloudinary.com/da7ffijqs/image/upload/v1695111804/chiko4_720_f6ufja.jpg" alt="negro" onClick={toggleAudio}/></SwiperSlide>
-        <SwiperSlide><img src="https://res.cloudinary.com/da7ffijqs/image/upload/v1695111800/chiko3_720_zybcnp.jpg" alt="colores" onClick={toggleAudio}/></SwiperSlide>
-        <SwiperSlide><img src="https://res.cloudinary.com/da7ffijqs/image/upload/v1695111795/chiko2_720_ylp4ou.jpg" alt="colores1" onClick={toggleAudio}/></SwiperSlide>
-        <SwiperSlide><img src="https://res.cloudinary.com/da7ffijqs/image/upload/v1695111791/chiko_720_dzufiv.jpg" alt="chico" onClick={toggleAudio}/></SwiperSlide>
-        <SwiperSlide><img src="https://res.cloudinary.com/da7ffijqs/image/upload/v1695111784/chika4_720_nqgfvl.jpg" alt="chica" onClick={toggleAudio}/></SwiperSlide>
+        <SwiperSlide><img src="https://res.cloudinary.com/duwenv0yr/image/upload/v1695894206/attachment_70800989_izqygn.jpg" alt="TopGun" onClick={toggleAudio} /></SwiperSlide>
+        <SwiperSlide><img src="https://res.cloudinary.com/duwenv0yr/image/upload/v1695888871/StarLord_omsbw0.jpg" alt="StarLord" onClick={toggleAudio} /></SwiperSlide>
+        <SwiperSlide><img src="https://res.cloudinary.com/duwenv0yr/image/upload/v1695893709/exorci.png" alt="Exorcista" onClick={toggleAudio}/></SwiperSlide>
+        <SwiperSlide><img src="https://res.cloudinary.com/duwenv0yr/image/upload/v1696523637/HP_gbbmb3.jpg" alt="Harry Potter" onClick={toggleAudio} /></SwiperSlide>
+        <SwiperSlide><img src="https://res.cloudinary.com/duwenv0yr/image/upload/v1696523637/up_bbgq9s.jpg" alt="Up" onClick={toggleAudio}/></SwiperSlide>
+        <SwiperSlide><img src="https://res.cloudinary.com/duwenv0yr/image/upload/v1696523637/Jurassicpark-1-_vfvlkn.jpg" alt="Jurassic Park" onClick={toggleAudio}/></SwiperSlide>
+        <SwiperSlide><img src="https://res.cloudinary.com/duwenv0yr/image/upload/v1696523636/padrino_b6yhn4.jpg" alt="El Padrino" onClick={toggleAudio}/></SwiperSlide>
+        <SwiperSlide><img src="https://res.cloudinary.com/duwenv0yr/image/upload/v1696523636/bfm_p1jyaf.jpg" alt="El bueno, el feo y el malo" onClick={toggleAudio}/></SwiperSlide>
+        <SwiperSlide><img src="https://res.cloudinary.com/duwenv0yr/image/upload/v1696523636/apn_hw7y5j.jpg" alt="Apocalypse Now" onClick={toggleAudio}/></SwiperSlide>
+        <SwiperSlide><img src="https://res.cloudinary.com/duwenv0yr/image/upload/v1696523636/sirenita_wgpbjk.jpg" alt="La Sirenita" onClick={toggleAudio}/></SwiperSlide>
+        <SwiperSlide><img src="https://res.cloudinary.com/duwenv0yr/image/upload/v1696523636/tib_mkqqmt.jpg" alt="Tiburón" onClick={toggleAudio}/></SwiperSlide>
+        <SwiperSlide><img src="https://res.cloudinary.com/duwenv0yr/image/upload/v1696524115/Mibsoundtrack_zmkc7k.jpg" alt="Men In Balck" onClick={toggleAudio}/></SwiperSlide>
+        <SwiperSlide><img src="https://res.cloudinary.com/duwenv0yr/image/upload/v1696524115/gla_dhknok.jpg" alt="Gladiator" onClick={toggleAudio}/></SwiperSlide>
+        <SwiperSlide><img src="https://res.cloudinary.com/duwenv0yr/image/upload/v1696524115/iro_n0r3el.png" alt="Iron Man 2" onClick={toggleAudio}/></SwiperSlide>
+        <SwiperSlide><img src="https://res.cloudinary.com/duwenv0yr/image/upload/v1696524115/shr_zalpru.jpg" alt="Shrek" onClick={toggleAudio}/></SwiperSlide>
+        <SwiperSlide><img src="https://res.cloudinary.com/duwenv0yr/image/upload/v1696524115/mula_pnqm0j.jpg" alt="Mulan" onClick={toggleAudio}/></SwiperSlide>
+        <SwiperSlide><img src="https://res.cloudinary.com/duwenv0yr/image/upload/v1696524116/Cars_Soundtrack_sxvqep.jpg" alt="Cars" onClick={toggleAudio}/></SwiperSlide>
+        <SwiperSlide><img src="https://res.cloudinary.com/duwenv0yr/image/upload/v1696524116/esla_t2yfoo.jpg" alt="El Señor de los Anillos" onClick={toggleAudio}/></SwiperSlide>
+        <SwiperSlide><img src="https://res.cloudinary.com/duwenv0yr/image/upload/v1696524116/coco_j7kks5.jpg" alt="Coco" onClick={toggleAudio}/></SwiperSlide>
+        <SwiperSlide><img src="https://res.cloudinary.com/duwenv0yr/image/upload/v1696524116/la_grn_d2xiw9.jpg" alt="La Gran Evasión" onClick={toggleAudio}/></SwiperSlide>
+        <SwiperSlide><img src="https://res.cloudinary.com/duwenv0yr/image/upload/v1696524116/pir_j1gorb.jpg" alt="Piratas del Caribe" onClick={toggleAudio}/></SwiperSlide>
+        <SwiperSlide><img src="https://res.cloudinary.com/duwenv0yr/image/upload/v1696524511/tron_vmjgsj.jpg" alt="Tron Legacy" onClick={toggleAudio}/></SwiperSlide>
+        <SwiperSlide><img src="https://res.cloudinary.com/duwenv0yr/image/upload/v1696524537/StarWarsOST_rr3fyw.jpg" alt="Star Wars" onClick={toggleAudio}/></SwiperSlide>
+        <SwiperSlide><img src="https://res.cloudinary.com/duwenv0yr/image/upload/v1696524511/ap_kpygcf.jpg" alt="Apollo 13" onClick={toggleAudio}/></SwiperSlide>
+        <SwiperSlide><img src="https://res.cloudinary.com/duwenv0yr/image/upload/v1696524511/pant_etoy4r.png" alt="Pantera Rosa" onClick={toggleAudio}/></SwiperSlide>
+        <SwiperSlide><img src="https://res.cloudinary.com/duwenv0yr/image/upload/v1696524511/orig_ylsaod.jpg" alt="Origen" onClick={toggleAudio}/></SwiperSlide>
+        <SwiperSlide><img src="https://res.cloudinary.com/duwenv0yr/image/upload/v1696524511/maxresdefault_oqewrv.jpg" alt="El Golpe" onClick={toggleAudio}/></SwiperSlide>
       </Swiper> 
       
       {/* Agrega un elemento de audio  */}
