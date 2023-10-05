@@ -3,12 +3,11 @@
 } */
 
 .animada-container {
-    background-image: url('https://res.cloudinary.com/dq2tfglqq/image/upload/v1696321499/Pixar_Animation_Studios_Toy_Story_A_Bug_s_Life_Toy_Story_2_Monsters_Inc_Ratatouille_WALL_E_Up_movie-1357895_rrzmhy.png'); /* Ruta de tu imagen de fondo con transparencia */
+/* 
     background-size: cover;
-    background-attachment: fixed;
-    margin: 0;
-    min-height: 100vh; /* Asegura que el fondo ocupe al menos toda la altura de la pantalla */
-    background-color: rgba(0, 0, 0, 0.5); /* Color de fondo con transparencia */
+    background-attachment: fixed; */
+
+    background-color: rgba(0, 0, 0, 0.5); 
     width: 100%;
   }
   .music-player {

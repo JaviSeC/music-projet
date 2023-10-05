@@ -114,9 +114,7 @@
   border-radius: 10px;
   font-size: 18px;
 }
-.song-list button:hover{
-  /* background-color: #000000; */
-}
+
 #like-button{
   width: 5%;
   margin-left: 2%;
