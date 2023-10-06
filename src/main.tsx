@@ -49,7 +49,7 @@ ReactDOM.createRoot(document.getElementById('root')!).render(
   <Route path="/SoundTracksView" element={<PageSound/>}/> 
   </Routes>
 
-  {/* <Footer /> */}
+  <Footer />
 
   </BrowserRouter>
   </>
