@@ -45,9 +45,7 @@
     font-size: 14px;
     margin-left: 10px;
   }
-  .controls button:hover {
-    background-color: #1ED760; /* Color de fondo verde más claro al pasar el mouse */
-  }
+ 
   /* .playlist button {
     background-color: #E90C0C;
     border: none;
