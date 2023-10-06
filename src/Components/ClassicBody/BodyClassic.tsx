@@ -53,6 +53,7 @@ const songs = [
   },
 ];
 const BodyClassic: React.FC = () => {
+  const [currentSongIndex, setCurrentSongIndex] = useState(0);
   const [currentSong, setCurrentSong] = useState(songs[0]);
   const [isPlaying, setIsPlaying] = useState(false);
   const [likedSongs, setLikedSongs] = useState<Set<number>>(new Set<number>());
@@ -80,6 +81,16 @@ const BodyClassic: React.FC = () => {
     }
     setLikedSongs(updatedLikedSongs);
   };
+  const playAllSongs = () => {
+    if (isPlaying) {
+      audioRef.current?.pause();
+    } else {
+      audioRef.current?.play().then(() => {
+        setCurrentSongIndex(0);
+      });
+    }
+    setIsPlaying(!isPlaying);
+  };
   return (
     <div className="body-container">
       <div className="playlist-header">
@@ -88,7 +99,18 @@ const BodyClassic: React.FC = () => {
           src="https://hips.hearstapps.com/es.h-cdn.co/fotoes/images/cinefilia/peliculas-clasicas-que-hay-que-ver/peliculas_clasicas_que_hay_que_ver_cantando_bajo_la_lluvia/138151151-1-esl-ES/peliculas_clasicas_que_hay_que_ver_cantando_bajo_la_lluvia.jpg?resize=980:*"
           alt="Portada de la playlist"
         />
-        <h1>CINE CLÁSICO</h1>
+                  <div className="title-container">
+            <h1>Cine Clásico</h1>
+            <p>Colección de las películas más míticas del cine</p>
+            <div className="buttons-container">
+              <button className="play-all-button" onClick={playAllSongs}>
+                {isPlaying ? 'Pausar' : 'Play all'}
+              </button>
+              <button className="add-to-collection-button">
+                <span role="img" aria-label="Corazón">❤️</span> Add to collection
+              </button>
+            </div>
+          </div>
       </div>
       <div className="song-list">
         <ul>
