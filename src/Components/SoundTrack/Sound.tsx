@@ -3,7 +3,6 @@ import './Sound.css'; // Asegúrate de que el nombre del archivo CSS sea correct
 import { Link } from "react-router-dom";
 
 
-
 const songs = [
   {
     id: 1,
@@ -70,111 +69,260 @@ const songs = [
         albumCover: 'https://res.cloudinary.com/doft9ylq1/image/upload/v1695892437/Tintin_gvvex4.jpg',
         audioSource: 'https://res.cloudinary.com/doft9ylq1/video/upload/v1695888607/The_Adventures_of_Tintin_eEGx6zGnju4_pntelt.mp3',
       },
-    //   {
-    //     id: 8,
-    //     artist: 'Patrick Doyle',
-    //     title: 'La Ligne Droite',
-    //     duration: '1:41',
-    //     albumCover: 'https://hips.hearstapps.com/hmg-prod/images/apocalypse-now-donald-trump-1534867844.jpg',
-    //     audioSource: 'https://res.cloudinary.com/dhme3c8ll/video/upload/v1695801970/BSO_-_Apocalipsys_Now_3VywjmyNYDs_q69djb.mp3',
-    //   },
+      {
+        id: 9,
+        artist: 'Patrick Doyle',
+        title: 'La Ligne Droite',
+        duration: '1:41',
+        albumCover: 'https://hips.hearstapps.com/hmg-prod/images/apocalypse-now-donald-trump-1534867844.jpg',
+        audioSource: 'https://res.cloudinary.com/dhme3c8ll/video/upload/v1695801970/BSO_-_Apocalipsys_Now_3VywjmyNYDs_q69djb.mp3',
+      },
+
+      {
+        id: 10,
+        artist: 'Patrick Doyle',
+        title: 'La Ligne Droite',
+        duration: '1:41',
+        albumCover: 'https://hips.hearstapps.com/hmg-prod/images/apocalypse-now-donald-trump-1534867844.jpg',
+        audioSource: 'https://res.cloudinary.com/dhme3c8ll/video/upload/v1695801970/BSO_-_Apocalipsys_Now_3VywjmyNYDs_q69djb.mp3',
+      },
+
+      {
+        id: 11,
+        artist: 'Patrick Doyle',
+        title: 'La Ligne Droite',
+        duration: '1:41',
+        albumCover: 'https://hips.hearstapps.com/hmg-prod/images/apocalypse-now-donald-trump-1534867844.jpg',
+        audioSource: 'https://res.cloudinary.com/dhme3c8ll/video/upload/v1695801970/BSO_-_Apocalipsys_Now_3VywjmyNYDs_q69djb.mp3',
+      }
     ];
+   
+
+    // const SoundTrack: React.FC = () => {
+    //   const [currentSongIndex, setCurrentSongIndex] = useState(0);
+    //   const [isPlaying, setIsPlaying] = useState(false);
+    //   const [likedSongs, setLikedSongs] = useState<Set<number>>(new Set<number>());
+    //   const audioRef = useRef<HTMLAudioElement | null>(null);
     
+    //   const togglePlayPause = () => {
+    //     if (audioRef.current) {
+    //       if (isPlaying) {
+    //         audioRef.current.pause();
+    //       } else {
+    //         audioRef.current.play().then(() => {
+    //           setCurrentSongIndex((prevIndex) => (prevIndex + 1) % songs.length);
+    //         });
+    //       }
+    //       setIsPlaying(!isPlaying);
+    //     }
+    //   };
+    
+    //   const playAllSongs = () => {
+    //     if (isPlaying) {
+    //       audioRef.current?.pause();
+    //     } else {
+    //       audioRef.current?.play().then(() => {
+    //         setCurrentSongIndex(0);
+    //       });
+    //     }
+    //     setIsPlaying(!isPlaying);
+    //   };
+    
+    //   const changeSong = (song: any) => {
+    //     setCurrentSongIndex(songs.findIndex((s) => s.id === song.id));
+    //     setIsPlaying(true);
+    //   };
+    
+    //   const toggleLike = (songId: number) => {
+    //     const updatedLikedSongs = new Set<number>(likedSongs); // Asegura que el tipo sea Set<number>
+    //     if (likedSongs.has(songId)) {
+    //       updatedLikedSongs.delete(songId);
+    //     } else {
+    //       updatedLikedSongs.add(songId);
+    //     }
+    //     setLikedSongs(updatedLikedSongs);
+    //   };
+    
+    //   return (
+    //     <div className="sound-container">
+    //       <div className="playlist-header">
+    //         <img
+    //           id="playlist-cover"
+    //           src="https://res.cloudinary.com/doft9ylq1/image/upload/v1696403613/2002.i123.004_film_stripes_reels_realistic_1_o5gt6x.jpg"
+    //           alt="Portada de la playlist"
+    //           className="image-left image-moved-right"
+    //         />
+    //         <div className="title-container">
+    //           <h1>SoundTracks ganadoras de Oscar</h1>
+    //           <p>Colección de SoundTracks ganadores de Oscar</p>
+    //           <div className="buttons-container">
+    //             <button className="play-all-button" onClick={playAllSongs}>
+    //               {isPlaying ? 'Pausar' : 'Play all'}
+    //             </button>
+    //             <button className="add-to-collection-button">
+    //               <span role="img" aria-label="Corazón">❤️</span> Add to collection
+    //             </button>
+    //           </div>
+    //         </div>
+    //       </div>
+    
+    //       <div className="song-list">
+    //         <ul>
+    //           {songs.map((song) => (
+    //             <li key={song.id}>
+    //               <img src={song.albumCover} alt={song.title} />
+    //               <button onClick={() => changeSong(song)}>
+    //                 <div>{song.title}</div> - <div>{song.artist}</div> - <div>{song.duration}</div>
+    //               </button>
+    //               {/* Contenedor adicional para el botón de "Me gusta" */}
+    //               <div className="like-container">
+    //                 <button
+    //                   className={`like-button ${likedSongs.has(song.id) ? 'liked' : ''}`}
+    //                   onClick={() => toggleLike(song.id)}
+    //                 >
+    //                   {likedSongs.has(song.id) ? '❤️' : '🤍'}
+    //                 </button>
+    //               </div>
+    //             </li>
+    //           ))}
+    //         </ul>
+    //       </div>
+    
+    //       <div className="music-player">
+    //         <div className="album-cover">
+    //           <img src={songs[currentSongIndex].albumCover} alt="Portada del álbum" />
+    //         </div>
+    //         <div className="song-info">
+    //           <p className="artist">{songs[currentSongIndex].artist}</p>
+    //           <p className="song-title">{songs[currentSongIndex].title}</p>
+    //         </div>
+    //         <audio
+    //           id="audio"
+    //           controls
+    //           ref={audioRef}
+    //           key={songs[currentSongIndex].id}
+    //           src={songs[currentSongIndex].audioSource}
+    //           onEnded={togglePlayPause}
+    //         />
+    //         <button onClick={togglePlayPause}>
+    //           {isPlaying ? 'Pausar' : 'Reproducir'}
+    //         </button>
+    //       </div>
+    //     </div>
+    //   );
+    // };
 
-
-
-const SoundTrack: React.FC = () => {
-    const [currentSongIndex, setCurrentSongIndex] = useState(0);
-    const [isPlaying, setIsPlaying] = useState(false);
-    const audioRef = useRef<HTMLAudioElement | null>(null);
-  
-    const togglePlayPause = () => {
-      if (audioRef.current) {
+    const SoundTrack: React.FC = () => {
+      const [currentSongIndex, setCurrentSongIndex] = useState(0);
+      const [isPlaying, setIsPlaying] = useState(false);
+      const [likedSongs, setLikedSongs] = useState<Set<number>>(new Set<number>());
+      const audioRef = useRef<HTMLAudioElement | null>(null);
+    
+      const togglePlayPause = () => {
+        if (audioRef.current) {
+          if (isPlaying) {
+            audioRef.current.pause();
+          } else {
+            audioRef.current.play().then(() => {
+              setCurrentSongIndex((prevIndex) => (prevIndex + 1) % songs.length);
+            });
+          }
+          setIsPlaying(!isPlaying);
+        }
+      };
+    
+      const playAllSongs = () => {
         if (isPlaying) {
-          audioRef.current.pause();
+          audioRef.current?.pause();
         } else {
-          audioRef.current.play().then(() => {
-            setCurrentSongIndex((prevIndex) => (prevIndex + 1) % songs.length);
+          audioRef.current?.play().then(() => {
+            setCurrentSongIndex(0);
           });
         }
         setIsPlaying(!isPlaying);
-      }
-    };
-  
-    const playAllSongs = () => {
-      if (isPlaying) {
-        audioRef.current?.pause();
-      } else {
-        audioRef.current?.play().then(() => {
-          setCurrentSongIndex(0);
-        });
-      }
-      setIsPlaying(!isPlaying);
-    };
-  
-    const changeSong = (song: any) => {
-      setCurrentSongIndex(songs.findIndex((s) => s.id === song.id));
-      setIsPlaying(true);
-    };
-  
-    return (
-      <div className="sound-container">
-        <div className="playlist-header">
-          <img
-            id="playlist-cover"
-            src="https://res.cloudinary.com/doft9ylq1/image/upload/v1695892864/tocadiscos-retro-que-gira-ia-generativa-variacion-banda-sonora-acanalada-antigua_jdmcql.jpg"
-            alt="Portada de la playlist"
-            className="image-left image-moved-right"
-          />
-          <div className="title-container">
-            <h1>Sound Tracks</h1>
-            <p>Colección de SoundTracks de las películas más taquilleras</p>
-            <div className="buttons-container">
-              <button className="play-all-button" onClick={playAllSongs}>
-                {isPlaying ? 'Pausar' : 'Play all'}
-              </button>
-              <button className="add-to-collection-button">
-                <span role="img" aria-label="Corazón">❤️</span> Add to collection
-              </button>
+      };
+    
+      const changeSong = (song: any) => {
+        setCurrentSongIndex(songs.findIndex((s) => s.id === song.id));
+        setIsPlaying(true);
+      };
+    
+      const toggleLike = (songId: number) => {
+        const updatedLikedSongs = new Set<number>(likedSongs);
+        if (likedSongs.has(songId)) {
+          updatedLikedSongs.delete(songId);
+        } else {
+          updatedLikedSongs.add(songId);
+        }
+        setLikedSongs(updatedLikedSongs);
+      };
+    
+      return (
+        <div className="sound-container">
+          <div className="playlist-header">
+            <img
+              id="playlist-cover"
+              src="https://res.cloudinary.com/doft9ylq1/image/upload/v1696403613/2002.i123.004_film_stripes_reels_realistic_1_o5gt6x.jpg"
+              alt="Portada de la playlist"
+              className="image-left image-moved-right"
+            />
+            <div className="title-container">
+              <h1>SoundTracks ganadoras de Oscar</h1>
+              <p>Colección de SoundTracks ganadores de Oscar</p>
+              <div className="buttons-container">
+                <button className="play-all-button" onClick={playAllSongs}>
+                  {isPlaying ? 'Pausar' : 'Play all'}
+                </button>
+                <button className="add-to-collection-button">
+                  <span role="img" aria-label="Corazón">❤️</span> Add to collection
+                </button>
+              </div>
             </div>
           </div>
-        </div>
-  
-        <div className="song-list">
-          <ul>
-            {songs.map((song) => (
-              <li key={song.id}>
-                <img src={song.albumCover} alt={song.title} />
-                <button onClick={() => changeSong(song)}>
-                  <div>{song.title}</div> - <div>{song.artist}</div> - <div>{song.duration}</div>
-                </button>
-              </li>
-            ))}
-          </ul>
-        </div>
-  
-        <div className="music-player">
-          <div className="album-cover">
-            <img src={songs[currentSongIndex].albumCover} alt="Portada del álbum" />
+    
+          <div className="song-list">
+            <ul>
+              {songs.map((song) => (
+                <li key={song.id}>
+                  <img src={song.albumCover} alt={song.title} />
+                  <button onClick={() => changeSong(song)}>
+                    <div>{song.title}</div> - <div>{song.artist}</div> - <div>{song.duration}</div>
+                  </button>
+                  <div className="like-container">
+                    <button
+                      className={`like-button ${likedSongs.has(song.id) ? 'liked' : ''}`}
+                      onClick={() => toggleLike(song.id)}
+                    >
+                      {likedSongs.has(song.id) ? '❤️' : '🤍'}
+                    </button>
+                  </div>
+                </li>
+              ))}
+            </ul>
           </div>
-          <div className="song-info">
-            <p className="artist">{songs[currentSongIndex].artist}</p>
-            <p className="song-title">{songs[currentSongIndex].title}</p>
+    
+          <div className="music-player">
+            <div className="album-cover">
+              <img src={songs[currentSongIndex].albumCover} alt="Portada del álbum" />
+            </div>
+            <div className="song-info">
+              <p className="artist">{songs[currentSongIndex].artist}</p>
+              <p className="song-title">{songs[currentSongIndex].title}</p>
+            </div>
+            <audio
+              id="audio"
+              controls
+              ref={audioRef}
+              key={songs[currentSongIndex].id}
+              src={songs[currentSongIndex].audioSource}
+              onEnded={togglePlayPause}
+            />
+            <button onClick={togglePlayPause}>
+              {isPlaying ? 'Pausar' : 'Reproducir'}
+            </button>
           </div>
-          <audio
-            id="audio"
-            controls
-            ref={audioRef}
-            key={songs[currentSongIndex].id}
-            src={songs[currentSongIndex].audioSource}
-            onEnded={togglePlayPause}
-          />
-          <button onClick={togglePlayPause}>
-            {isPlaying ? 'Pausar' : 'Reproducir'}
-          </button>
         </div>
-      </div>
-    );
-  };
-  
-  export default SoundTrack;
+      );
+    };
+    
+    export default SoundTrack;
