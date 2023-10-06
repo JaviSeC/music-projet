@@ -7,7 +7,6 @@ import PageSingUp from "./Views/PageSingUp/PageSingUp";
 import PageBodyClassic from "./Views/Classic/ClassicView";
 import PageAdmin from "./Views/PageAdmin/PageAdmin";
 import PageSound from "./Views/SoundTracks/SoundView";
-// import PeliculasAnimadas from "./Components/MusicaAnimada/MusicaAnimada";
 import Animadas from "./Views/MusicaAnimada/MusicaAnimada";
 import "./index.css";
 
