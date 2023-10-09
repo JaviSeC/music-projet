@@ -10,7 +10,7 @@ export default function Footer() {
               src="https://res.cloudinary.com/dhme3c8ll/image/upload/v1693214972/llamada_pkntz4.png"
               alt="Whatsapp"
             />
-            <p>665 58 59 45</p>
+            <p>€€€ €€ €€ €€</p>
           </div>
           <div className="contactos">
             <img

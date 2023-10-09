@@ -79,9 +79,11 @@ function CardComponent(props: CardProps) {
 }
 export default function Tops() {
   return (
+
+    <div className="topssongs"> Top Songs
     <div className='Cards-top'>
       <CardComponent
-        imageUrl="https://res.cloudinary.com/duwenv0yr/image/upload/v1695888871/StarLord_omsbw0.jpg"
+        imageUrl="https://res.cloudinary.com/dq2tfglqq/image/upload/v1696407322/c6c3520124a60f245040125401fd536e_qc1p46.gif"
         title="Zero to Hero"
         artist="Star-Lord Band, Steve Szczepkowski, Yohann Boudreault"
         views="Views: 23K"
@@ -95,8 +97,8 @@ export default function Tops() {
           views="Views: 145K"
           duration="6:02 min"
         />
-
-     
-    </div>
+         
+        </div>
+        </div>
   );
 }

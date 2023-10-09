@@ -7,9 +7,9 @@ export default function PageBodyClassic() {
   return (
     <><div className="CineClasico">
     <Header/>
-    <div className="homeClassic">
+    {/* <div className="homeClassic">
       <Menu />
-      </div>
+      </div> */}
     <BodyClassic />
     </div>
     </>

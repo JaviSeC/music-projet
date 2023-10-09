@@ -30,10 +30,10 @@ export default function Menu() {
         </button>
         {isDropdownOpen && (
           <div className="dropdown-content">
-            <a href="/SoundTracksView">SoundTracks</a>
-            <a href="#">Peliculas Animadas</a>
-            <a href="/ClassicView">Clasicas</a>
-            <a href="#">Actuales</a>
+            <a href="/SoundTracksView">Ganadores Oscar🏆</a>
+            <a href="/PeliculasAnimadasView">Animadas🧸</a>
+            <a href="/ClassicView">Clasicas📀</a>
+            <a href="#">Terror👻</a>
           </div>
         )}
       </div>
@@ -54,6 +54,12 @@ export default function Menu() {
               src="https://res.cloudinary.com/da7ffijqs/image/upload/v1695321417/grid_landscape-removebg-preview_smbjbe.png"
               alt=""
             />
+          </button>
+        </Link>
+
+        <Link to="/PageAdmin">
+          <button>
+           <strong> Admin </strong>
           </button>
         </Link>
       </div>

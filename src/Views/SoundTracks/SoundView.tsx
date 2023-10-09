@@ -5,10 +5,11 @@ import "./SoundView.css";
 
 export default function PageSound() {
   return (
-    <><div className="SoundTracks">
+    <>
+    <div className="SoundTracks">
     <Header/>
     <div className="homeSoundTracks">
-      <Menu />
+      {/* <Menu /> */}
       </div>
     <Sound />
     </div>

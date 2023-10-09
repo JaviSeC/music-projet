@@ -6,14 +6,22 @@ import { Link } from "react-router-dom";
 const songs = [
   {
     id: 1,
-    artist: 'James Horner',
-    title: 'Apollo 13',
-    duration: '2:42',
-    albumCover: 'https://res.cloudinary.com/doft9ylq1/image/upload/v1695815023/Apollo_13_Soundtrack_ooas1d.jpg',
-    audioSource: 'https://res.cloudinary.com/doft9ylq1/video/upload/v1695885293/01_-_Main_Title_-_James_Horner_-_Apollo_13_WTSmtKDvnWQ_cpaipp.mp3',
+    artist: 'Harry Potter',
+    title: 'Hedwing Theme',
+    duration: '5:09 min',
+    albumCover: 'https://res.cloudinary.com/dq2tfglqq/image/upload/v1696364637/serie-no-universo-harry-potter-pode-ser-realidade-confira-reproducao-hbo-max_nsvmxv.jpg',
+    audioSource: 'https://res.cloudinary.com/dq2tfglqq/video/upload/v1696364407/Hedwig_s_Theme_wtHra9tFISY_140_wlb7q5.mp3',
   },
   {
     id: 2,
+    artist: 'Alexandre Desplat',
+    title: 'The Shape Of Water',
+    duration: '3:44',
+    albumCover: 'https://res.cloudinary.com/doft9ylq1/image/upload/v1696846437/2010_m9yeey.webp',
+    audioSource: 'https://res.cloudinary.com/doft9ylq1/video/upload/v1696846344/Alexandre_Desplat_-_The_Shape_Of_Water_Audio__HA8dDFFvOUw_npcypi.mp3',
+  },
+  {
+    id: 3,
     artist: 'John Williams',
     title: 'Jurassic Park',
     duration: '2:49',  
@@ -22,7 +30,7 @@ const songs = [
   },
 
       {
-        id: 3,
+        id: 4,
         artist: ' Michael Giacchino',
         title: 'Up',
         duration: '4:10',
@@ -30,7 +38,7 @@ const songs = [
         audioSource: 'https://res.cloudinary.com/doft9ylq1/video/upload/v1695886760/UP_OST_-_03_-_Married_Life_gvQB7tMB-jI_1_incfac.mp3',
       },
       {
-        id: 4,
+        id: 5,
         artist: 'Hans Zimmer',
         title: 'Origen',
         duration: '4:34',
@@ -38,7 +46,7 @@ const songs = [
         audioSource: 'https://res.cloudinary.com/doft9ylq1/video/upload/v1695887972/Hans_Zimmer_-_Time_Inception__RxabLA7UQ9k_ycrlah.mp3',
       },
       {
-        id: 5,
+        id: 6,
         artist: 'Alexandre Desplat',
         title: 'El escritor',
         duration: '1:43',
@@ -46,46 +54,46 @@ const songs = [
         audioSource: 'https://res.cloudinary.com/doft9ylq1/video/upload/v1695888225/The_Ghost_Writer_H9G1Eok4zRk_pevqef.mp3',
       },
       {
-        id: 6,
-        artist: 'Daft Punks',
-        title: 'Tron: Legacy',
-        duration: '1:36',
-        albumCover: 'https://res.cloudinary.com/doft9ylq1/image/upload/v1695892437/Tron_yrj5tt.jpg',
-        audioSource: 'https://res.cloudinary.com/doft9ylq1/video/upload/v1695888427/The_Son_of_Flynn_From__TRON__Legacy__Score__mqgEYRtWMJU_ntm5g4.mp3',
-      },
-      {
         id: 7,
-        artist: 'John Williams',
-        title: 'Las aventuras de Tintín: El secreto del unicornio',
-        duration: '3:08',
-        albumCover: 'https://res.cloudinary.com/doft9ylq1/image/upload/v1695892437/Tintin_gvvex4.jpg',
-        audioSource: 'https://res.cloudinary.com/doft9ylq1/video/upload/v1695888607/The_Adventures_of_Tintin_eEGx6zGnju4_pntelt.mp3',
+        artist: 'Hans Zimmer',
+        title: 'Lion King',
+        duration: '3:13',
+        albumCover: 'https://res.cloudinary.com/doft9ylq1/image/upload/v1696799589/lionkinds_vzub3q.webp',
+        audioSource: 'https://res.cloudinary.com/doft9ylq1/video/upload/v1696799413/Hans_Zimmer_-_Remember_From__The_Lion_King__Audio_Only__RakhywpkY-k_fcbhfa.mp3',
       },
       {
         id: 8,
-        artist: 'Patrick Doyle',
-        title: 'La Ligne Droite',
-        duration: '1:41',
-        albumCover: 'https://hips.hearstapps.com/hmg-prod/images/apocalypse-now-donald-trump-1534867844.jpg',
-        audioSource: 'https://res.cloudinary.com/dhme3c8ll/video/upload/v1695801970/BSO_-_Apocalipsys_Now_3VywjmyNYDs_q69djb.mp3',
+        artist: 'Hildur Guðnadóttir',
+        title: 'Joker',
+        duration: '2:39',
+        albumCover: 'https://res.cloudinary.com/doft9ylq1/image/upload/v1696798648/1200x1200bf-60_o4ayfc.jpg',
+        audioSource: 'https://res.cloudinary.com/doft9ylq1/video/upload/v1696798363/Joker_Official_Soundtrack___Defeated_Clown_-_Hildur_Gu%C3%B0nad%C3%B3ttir___WaterTower_DlQ-XU2PV7s_uw6g4w.mp3',
       },
-
       {
         id: 9,
-        artist: 'Patrick Doyle',
-        title: 'La Ligne Droite',
-        duration: '1:41',
-        albumCover: 'https://hips.hearstapps.com/hmg-prod/images/apocalypse-now-donald-trump-1534867844.jpg',
-        audioSource: 'https://res.cloudinary.com/dhme3c8ll/video/upload/v1695801970/BSO_-_Apocalipsys_Now_3VywjmyNYDs_q69djb.mp3',
+        artist: 'Ludovic Bource',
+        title: 'The Artist',
+        duration: '3:35',
+        albumCover: 'https://res.cloudinary.com/doft9ylq1/image/upload/v1696796172/the-artist_aa5fif.webp',
+        audioSource: 'https://res.cloudinary.com/doft9ylq1/video/upload/v1696795752/The_Artist_-_01_-_The_Artist_Ouverture_skvwSqNI6BE_wjpzni.mp3',
       },
 
       {
         id: 10,
-        artist: 'Patrick Doyle',
-        title: 'La Ligne Droite',
-        duration: '1:41',
-        albumCover: 'https://hips.hearstapps.com/hmg-prod/images/apocalypse-now-donald-trump-1534867844.jpg',
-        audioSource: 'https://res.cloudinary.com/dhme3c8ll/video/upload/v1695801970/BSO_-_Apocalipsys_Now_3VywjmyNYDs_q69djb.mp3',
+        artist: 'Trent Reznor, Atticus Ross',
+        title: 'The social network',
+        duration: '5:00',
+        albumCover: 'https://res.cloudinary.com/doft9ylq1/image/upload/v1696796754/thesocialnetwork-film_sffmv4.webp',
+        audioSource: 'https://res.cloudinary.com/doft9ylq1/video/upload/v1696796379/In_Motion_-_Trent_Reznor_and_Atticus_Ross_The_Social_Network__Yczul_609Gg_lwuiwb.mp3',
+      },
+
+      {
+        id: 11,
+        artist: 'Howard Shore',
+        title: 'The Lord of the Rings: The Return of the King CR',
+        duration: '6:34',
+        albumCover: 'https://res.cloudinary.com/doft9ylq1/image/upload/v1696797822/el-senor-de-los-anillos-el-retorno-del-rey-67427_SPA-47_tjytje.jpg',
+        audioSource: 'https://res.cloudinary.com/dhme3c8ll/video/upload/v1695801970/BSO_-_Apocalipsys_Now_3VywjmyNYDs_q69djb.mp3https://res.cloudinary.com/doft9ylq1/video/upload/v1696797582/The_Lord_of_the_Rings__The_Return_of_the_King_CR_-_01._Roots_and_Beginnings_MFsO9weqLLE_tdrn9c.mp3',
       },
 
     ];
@@ -259,20 +267,21 @@ const songs = [
               alt="Portada de la playlist"
               className="image-left image-moved-right"
             />
-            <div className="title-container">
-              <h1>SoundTracks ganadoras de Oscar</h1>
-              <p>Colección de SoundTracks ganadores de Oscar</p>
-              <div className="buttons-container">
-                <button className="play-all-button" onClick={playAllSongs}>
-                  {isPlaying ? 'Pausar' : 'Play all'}
-                </button>
-                <button className="add-to-collection-button">
-                  <span role="img" aria-label="Corazón">❤️</span> Add to collection
-                </button>
-              </div>
+             
+             <div className="title-container">
+            <h1>Soundtracks</h1>
+            <p>Colección de los SoundTracks ganadores de Oscar</p>
+            <div className="buttons-container">
+              <button className="play-all-button" onClick={playAllSongs}>
+                {isPlaying ? 'Pausar' : 'Play all'}
+              </button>
+              <button className="add-to-collection-button">
+                <span role="img" aria-label="Corazón">❤️</span> Add to collection
+              </button>
             </div>
           </div>
-    
+      </div>
+ 
           <div className="song-list">
             <ul>
               {songs.map((song) => (
