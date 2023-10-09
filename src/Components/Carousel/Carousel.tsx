@@ -87,6 +87,27 @@ export default function Carousel() {
   const audioRef = useRef(null);
   const [currentSong, setCurrentSong] = useState(null);
 
+  // Función para generar un valor aleatorio entre -5 y 5
+  function getRandomValue() {
+    return Math.random() * 20 - 5;
+  }
+
+  // Función para aplicar una animación de flotación aleatoria a las tarjetas
+  function applyRandomFloatAnimation() {
+    const cards = document.querySelectorAll(".swiper-slide");
+
+    cards.forEach((card) => {
+      const offsetX = getRandomValue() + "px";
+      const offsetY = getRandomValue() + "px";
+
+      card.style.animation = `floatAnimation 1s ease-in-out infinite alternate, moveAnimation 10s linear infinite`;
+      card.style.animationDelay = Math.random() * 2 + "s";
+      card.style.transform = `translate(${offsetX}, ${offsetY})`;
+    });
+  }
+
+  applyRandomFloatAnimation(); // Aplica la animación cuando se carga la página
+
   const songs = [
     {
       image:
@@ -95,12 +116,14 @@ export default function Carousel() {
         "https://res.cloudinary.com/dq2tfglqq/video/upload/v1695233712/Piano_Wp_zu8uuu.mp3",
     },
     {
-      image: "https://res.cloudinary.com/duwenv0yr/image/upload/v1696524511/maxresdefault_oqewrv.jpg",
+      image:
+        "https://res.cloudinary.com/duwenv0yr/image/upload/v1696524511/maxresdefault_oqewrv.jpg",
       audio:
         "https://res.cloudinary.com/dq2tfglqq/video/upload/v1696318837/The_Incredits_voLQroAnoLI_140_f7r7ck.mp3",
     },
     {
-      image: "https://res.cloudinary.com/duwenv0yr/image/upload/v1696524537/StarWarsOST_rr3fyw.jpg",
+      image:
+        "https://res.cloudinary.com/duwenv0yr/image/upload/v1696524537/StarWarsOST_rr3fyw.jpg",
       audio:
         "https://res.cloudinary.com/dq2tfglqq/video/upload/v1696318835/Toy_Story_You_ve_Got_a_Friend_in_Me_Instrumental__ustrOyrmLOA_140_erte1l.mp3",
     },
@@ -116,11 +139,13 @@ export default function Carousel() {
         "https://res.cloudinary.com/doft9ylq1/video/upload/v1695886760/UP_OST_-_03_-_Married_Life_gvQB7tMB-jI_1_incfac.mp3",
     },
     {
-      image: "https://res.cloudinary.com/duwenv0yr/image/upload/v1696524511/tron_vmjgsj.jpg",
+      image:
+        "https://res.cloudinary.com/duwenv0yr/image/upload/v1696524511/tron_vmjgsj.jpg",
       audio: "",
     },
     {
-      image: "https://res.cloudinary.com/duwenv0yr/image/upload/v1696524116/Cars_Soundtrack_sxvqep.jpg",
+      image:
+        "https://res.cloudinary.com/duwenv0yr/image/upload/v1696524116/Cars_Soundtrack_sxvqep.jpg",
       audio: "",
     },
     {
@@ -200,6 +225,11 @@ export default function Carousel() {
     // Agrega más objetos para cada tarjeta de imagen y canción aquí
   ];
 
+  //! rojo
+  //? pregunta
+  //* verdesito importante
+  //todo: naranja
+
   const toggleAudio = (audio) => {
     if (currentSong === audio) {
       audioRef.current.pause();
@@ -224,7 +254,7 @@ export default function Carousel() {
             nextEl: ".swiper-button-next",
           }}
         >
-        <div className="swiper-button-prev"></div>
+          <div className="swiper-button-prev"></div>
           {songs.map((song, index) => (
             <SwiperSlide key={index}>
               <img
@@ -234,7 +264,7 @@ export default function Carousel() {
               />
             </SwiperSlide>
           ))}
-        <div className="swiper-button-next"></div>
+          <div className="swiper-button-next"></div>
         </Swiper>
 
         {/* Agrega botones de navegación */}
@@ -245,5 +275,3 @@ export default function Carousel() {
     </>
   );
 }
-
-

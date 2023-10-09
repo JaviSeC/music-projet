@@ -60,6 +60,11 @@
   margin-left: -182%;
 }
 
+.busqueda:active{
+  /* background-color: blueviolet; */
+  border: 5px orangered solid;
+}
+
 @media screen and (max-width: 360px) {
   .BOX {
     width: 100%;
