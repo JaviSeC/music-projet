@@ -100,8 +100,9 @@
     align-items: center; /* Centra las cajas verticalmente */
     text-align: center; /* Centra el texto en las cajas */
     /* background-color: blueviolet; */
+    
     height: auto;
-    width: 360px;;
+    width: 360px;
   }
   .div-contactos {
     display: flex;

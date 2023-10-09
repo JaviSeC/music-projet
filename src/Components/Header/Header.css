@@ -62,7 +62,7 @@
 
 .busqueda:active{
   /* background-color: blueviolet; */
-  /* border: 5px orangered solid; */
+  border: 5px orangered solid;
 }
 
 @media screen and (max-width: 360px) {
@@ -88,12 +88,12 @@
     width: auto;
     height: auto;
     font-size: 30px;
-    margin-left: 15%;
-    margin-top: -3%;
+    margin-left: 25%;
+    margin-top: -5%;
   }
 
   .search-box {
-    margin-top: 30%;
+    margin-top: 10%;
   }
   .Search {
     width: 50%;

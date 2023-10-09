@@ -9,6 +9,7 @@ import PageAdmin from "./Views/PageAdmin/PageAdmin";
 import PageSound from "./Views/SoundTracks/SoundView";
 import Animadas from "./Views/MusicaAnimada/MusicaAnimada";
 import "./index.css";
+import PageBodyTerror from "./Views/TerrorView/TerrorView";
 
 ReactDOM.createRoot(document.getElementById("root")!).render(
   <>
@@ -21,7 +22,7 @@ ReactDOM.createRoot(document.getElementById("root")!).render(
         <Route path="/ClassicView" element={<PageBodyClassic />}/> 
         <Route path="/SoundTracksView" element={<PageSound/>}/> 
         <Route path="/PeliculasAnimadasView" element={<Animadas/>}/> 
-
+        <Route path="/TerrorView" element={<PageBodyTerror/>}/> 
       </Routes>
 
       <Footer />
