@@ -1,183 +1,78 @@
-//____________________________________________________________________________________________________
-
-// import Headerunico from "../Headerunico/Headerunico";
-// import "./Admin.css"
-// import React, { ChangeEvent } from "react";
-
-// interface State {
-//   favoriteSongs: string[];
-//   userList: string[];
-//   newUser: string;
-// }
-
-// class Admin extends React.Component<{}, State> {
-//   constructor(props: {}) {
-//     super(props);
-//     this.state = {
-//       favoriteSongs: [],
-//       userList: [],
-//       newUser: ""
-//     };
-//   }
-
-//   addFavoriteSong = (song: string) => {
-//     this.setState(prevState => ({
-//       favoriteSongs: [...prevState.favoriteSongs, song]
-//     }));
-//   };
-
-//   addUser = () => {
-//     this.setState(prevState => ({
-//       userList: [...prevState.userList, this.state.newUser],
-//       newUser: ""
-//     }));
-//   };
-
-//   handleUserChange = (event: ChangeEvent<HTMLInputElement>) => {
-//     this.setState({ newUser: event.target.value });
-//   };
-
-//   render() { 
-  
-
-
-//     return ( 
-//        <>
-//          <Headerunico/>
-
-//       <div className="adminbody">
-//         <div className="left-box">
-//           <h2>Canciones favoritas</h2>
-//           <ul>
-//             {this.state.favoriteSongs.map((song, index) => (
-//               <li key={index}>{song}</li>
-//             ))}
-//           </ul>
-//           <input type="text" onChange={this.handleSongChange} />
-//           <button onClick={() => this.addFavoriteSong(this.state.newSong)}>
-//             Agregar canción
-//           </button>
-//         </div>
-//         <div className="right-box">
-//           <h2>Lista de usuarios</h2>
-//           <ul>
-//             {this.state.userList.map((user, index) => (
-//               <li key={index}>{user}</li>
-//             ))}
-//           </ul>
-//           <input type="text" onChange={this.handleUserChange} />
-//           <button onClick={this.addUser}>Agregar usuario</button>
-//         </div>
-//       </div>
-//     </>
-//     );
-//   }
-// }
-
-// export default Admin;
-
-//__________________________________________________________________
-import React, { ChangeEvent } from "react";
+import { useEffect, useState } from "react";
+import axios from "axios";
 import Headerunico from "../Headerunico/Headerunico";
 import "./Admin.css";
-import { Link } from "react-router-dom";
 
-
-interface State {
-  favoriteSongs: string[];
-  userList: string[];
-  newUser: string;
-  newSong: string;
+interface User {
+  id: number;
+  firstName: string;
+  lastName: string;
+  userName: string;
+  email: string;
+  password: string;
+  // Otras propiedades de usuario
 }
 
-class Admin extends React.Component<{}, State> {
-  constructor(props: {}) {
-    super(props);
-    this.state = {
-      favoriteSongs: [],
-      userList: [],
-      newUser: "",
-      newSong: ""
-    };
-  }
+function Admin() {
+  const [users, setUsers] = useState<User[]>([]); // Usa el tipo User
 
-  addFavoriteSong = (song: string) => {
-    this.setState(prevState => ({
-      favoriteSongs: [...prevState.favoriteSongs, song]
-    }));
+  useEffect(() => {
+    axios
+      .get("https://localhost:7110/UsersControllers/GetUsers")
+      .then((response) => {
+        setUsers(response.data);
+      })
+      .catch((error) => {
+        console.error("Error al obtener la lista de usuarios", error);
+      });
+  }, []); // Dependencia vacía para que se ejecute al cargar la página
+
+  const handleDeleteUser = (userId: string) => {
+    axios
+      .delete(
+        `https://localhost:7110/UsersControllers/DeleteUser?UserName=${userId}`
+      )
+      .then(() => {
+        // Eliminación exitosa, puedes actualizar la lista de usuarios
+        // o recargar la página si lo deseas
+        // Por ejemplo, puedes hacer una nueva solicitud GET para obtener la lista actualizada de usuarios.
+      })
+      .catch((error) => {
+        console.error(
+          `Error al eliminar el usuario con UserName ${userId}`,
+          error
+        );
+      });
   };
 
-  addUser = () => {
-    this.setState(prevState => ({
-      userList: [...prevState.userList, this.state.newUser],
-      newUser: ""
-    }));
-  };
-
-  handleUserChange = (event: ChangeEvent<HTMLInputElement>) => {
-    this.setState({ newUser: event.target.value });
-  };
-
-  handleSongChange = (event: ChangeEvent<HTMLInputElement>) => {
-    this.setState({ newSong: event.target.value });
-  };
-
-  render() {
-    return (
-      <>
-        <Headerunico />
-            
-        <div className="adminbody">
-        <div>
-              <Link to="/">
-                <button className="Home">
-                  <img
-                    className="casa"
-                    src="https://res.cloudinary.com/da7ffijqs/image/upload/v1695323366/images-removebg-preview_1_xuayhf.png"
-                    alt=""
-                  />
-                </button>
-              </Link>
-            </div>
-          <div className="box-1">
-            <h2>Lista de usuarios</h2>
-            <ul>
-              {this.state.userList.map((user, index) => (
-                <li key={index}>{user}</li>
-              ))}
-            </ul>
-            <input type="text" onChange={this.handleUserChange} />
-            <button onClick={this.addUser}>Agregar usuario</button>
-          </div>
-          <div className="box-2">
-            <h2>Lista de canciones</h2>
-            {/* Aquí puedes agregar la lista de canciones por categoría */}
-            <ul>
-              {/* Categoría: Soundtracks */}
-              <li>Canción 1</li>
-              <li>Canción 2</li>
-              {/* Categoría: Música clásica */}
-              <li>Canción 3</li>
-              <li>Canción 4</li>
-              {/* Agrega más canciones en otras categorías */}
-            </ul>
-            <input type="text" onChange={this.handleSongChange} />
-            <button onClick={() => this.addFavoriteSong(this.state.newSong)}>
-              Agregar canción
-            </button>
-          </div>
-          <div className="box-3">
-            <h2>Lista de favoritos</h2>
-            <ul>
-              {this.state.favoriteSongs.map((song, index) => (
-                <li key={index}>{song}</li>
-              ))}
-            </ul>
-          </div>
-        </div>
-      </>
-    );
-  }
+  return (
+    <>
+      <Headerunico />
+      <h1>Usuarios</h1>
+      <div className="UsersList">
+        <ul className="All">
+          {users.map((user) => (
+            <li key={user.id} className="ListUser">
+              <span className="user-info">
+                <strong>Nombre:</strong> {user.firstName}&nbsp;&nbsp;
+                <strong>Apellido:</strong> {user.lastName}&nbsp;&nbsp;
+                <strong>Usuario:</strong> {user.userName}&nbsp;&nbsp;
+                <strong>Email:</strong> {user.email}&nbsp;&nbsp;
+                <strong>Contraseña:</strong> {user.password}&nbsp;&nbsp;
+                {/* Mostrar otras propiedades según sea necesario */}
+              </span>
+              <button
+                className="Admidelete"
+                onClick={() => handleDeleteUser(user.userName)}
+              >
+                Eliminar
+              </button>
+            </li>
+          ))}
+        </ul>
+      </div>
+    </>
+  );
 }
 
 export default Admin;
