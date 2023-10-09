@@ -1,5 +1,6 @@
 import React, { useState, useRef } from 'react';
 import './BodyStyle.css';
+const songsPerPage = 5;
 const songs = [
   {
     id: 1,
@@ -51,13 +52,56 @@ const songs = [
     albumCover: 'https://hips.hearstapps.com/hmg-prod/images/apocalypse-now-donald-trump-1534867844.jpg',
     audioSource: 'https://res.cloudinary.com/dhme3c8ll/video/upload/v1695801970/BSO_-_Apocalipsys_Now_3VywjmyNYDs_q69djb.mp3',
   },
+  {
+    id: 7,
+    artist: 'Miguel Asins Arbó',
+    title: 'La Vaquilla',
+    duration: '2:37',
+    albumCover:
+      'https://caixaforum.org/documents/311930/9160687/vaquilla+berlanga+webCXF+spa220170101225+-+18204jpg/83fc543e-f1a6-17f4-0b1e-8c4b1a7948ff?version=1.0&t=1565690877227',
+    audioSource: 'URL_DEL_AUDIO'
+  },
+  {
+    id: 8,
+    artist: 'Maurice Jarre',
+    title: 'Doctor Zivago',
+    duration: '3:11',
+    albumCover:
+      'https://www.elindependiente.com/wp-content/uploads/2020/02/doctor-zhivago.jpg',
+    audioSource: 'URL_DEL_AUDIO'
+  },
+  {
+    id: 9,
+    artist: 'Los Chichos',
+    title: 'Yo, el Vaquilla',
+    duration: '2:51',
+    albumCover:
+      'https://www.abc.es/media/peliculas/000/005/139/yo-el-vaquilla-2.jpg',
+    audioSource: 'URL_DEL_AUDIO'
+  },
+  {
+    id: 10,
+    artist: 'Los Chunguitos',
+    title: 'Perros callejeros',
+    duration: '3:42',
+    albumCover:
+      'https://www.alohacriticon.com/wp-content/uploads/2017/01/perros-callejeros-foto-critica.jpg',
+    audioSource: 'URL_DEL_AUDIO'
+  },
+
 ];
 const BodyClassic: React.FC = () => {
+  const [currentPage, setCurrentPage] = useState(1);
   const [currentSongIndex, setCurrentSongIndex] = useState(0);
   const [currentSong, setCurrentSong] = useState(songs[0]);
   const [isPlaying, setIsPlaying] = useState(false);
   const [likedSongs, setLikedSongs] = useState<Set<number>>(new Set<number>());
   const audioRef = useRef<HTMLAudioElement | null>(null);
+  const startIndex = (currentPage - 1) * songsPerPage;
+  const endIndex = startIndex + songsPerPage;
+  const songsToShow = songs.slice(startIndex, endIndex);
+  // const totalPages = Math.ceil(songs.length / songsPerPage);
+  // const songsToShow = songs.slice(startIndex, endIndex);
   const togglePlayPause = () => {
     if (audioRef.current) {
       if (isPlaying) {
@@ -91,6 +135,7 @@ const BodyClassic: React.FC = () => {
     }
     setIsPlaying(!isPlaying);
   };
+
   return (
     <div className="body-container">
       <div className="playlist-header">
@@ -99,26 +144,26 @@ const BodyClassic: React.FC = () => {
           src="https://hips.hearstapps.com/es.h-cdn.co/fotoes/images/cinefilia/peliculas-clasicas-que-hay-que-ver/peliculas_clasicas_que_hay_que_ver_cantando_bajo_la_lluvia/138151151-1-esl-ES/peliculas_clasicas_que_hay_que_ver_cantando_bajo_la_lluvia.jpg?resize=980:*"
           alt="Portada de la playlist"
         />
-                  <div className="title-container">
-            <h1>Cine Clásico</h1>
-            <p>Colección de las películas más míticas del cine</p>
-            <div className="buttons-container">
-              <button className="play-all-button" onClick={playAllSongs}>
-                {isPlaying ? 'Pausar' : 'Play all'}
-              </button>
-              <button className="add-to-collection-button">
-                <span role="img" aria-label="Corazón">❤️</span> Add to collection
-              </button>
-            </div>
+        <div className="title-container">
+          <h1>Cine Clásico</h1>
+          <p>Colección de las películas más míticas del cine</p>
+          <div className="buttons-container">
+            <button className="play-all-button" onClick={playAllSongs}>
+              {isPlaying ? 'Pausar' : 'Play all'}
+            </button>
+            <button className="add-to-collection-button">
+              <span role="img" aria-label="Corazón">❤️</span> Add to collection
+            </button>
           </div>
+        </div>
       </div>
       <div className="song-list">
         <ul>
-          {songs.map((song) => (
+          {songsToShow.map((song) => (
             <li key={song.id}>
               <img src={song.albumCover} alt={song.title} />
               <button onClick={() => changeSong(song)}>
-              {song.title} - {song.artist} - {song.duration}
+                {song.title} - {song.artist} - {song.duration}
               </button>
               <button id='like-button' onClick={() => toggleLike(song.id)} className={likedSongs.has(song.id) ? 'liked' : ''}>
                 {likedSongs.has(song.id) ? '💜' : '🤍'}
@@ -126,6 +171,26 @@ const BodyClassic: React.FC = () => {
             </li>
           ))}
         </ul>
+        <div className="pagination">
+          <div className="page-button">
+            <button
+              onClick={() => setCurrentPage(1)}
+              disabled={currentPage === 1}
+            >
+              1
+            </button>
+          </div>
+          <div className="page-button">
+            <button
+              onClick={() => setCurrentPage(2)}
+              disabled={endIndex >= songs.length}
+            >
+              2
+            </button>
+          </div>
+        </div>
+
+
       </div>
       <div className="music-player">
         <div className="album-cover">
