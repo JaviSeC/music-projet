@@ -8,7 +8,6 @@ import CssBaseline from "@mui/material/CssBaseline";
 import TextField from "@mui/material/TextField";
 import FormControlLabel from "@mui/material/FormControlLabel";
 import Checkbox from "@mui/material/Checkbox";
-import Links from "@mui/material/Link";
 import Grid from "@mui/material/Grid";
 import Box from "@mui/material/Box";
 import LockOutlinedIcon from "@mui/icons-material/LockOutlined";
@@ -61,11 +60,6 @@ export const SignUp = () => {
       Swal.fire("Error", "La contraseña solo puede contener números.", "error");
       return;
     }
-
-    // if (Password.length < 8) {
-    //   Swal.fire("Error", "La contraseña debe tener al menos 8 caracteres.", "error");
-    //   return;
-    // }
 
     // Validar el correo electrónico
     if (!isEmailValid(Email)) {
@@ -279,7 +273,7 @@ export const SignUp = () => {
                     control={
                       <Checkbox value="allowExtraEmails" color="primary" />
                     }
-                    label="I want to receive inspiration, marketing promotions and updates via email."
+                    label="Acepto que me envien notificaciones por email."
                   />
                 </Grid>
               </Grid>
@@ -294,9 +288,9 @@ export const SignUp = () => {
               </Button>
               <Grid container justifyContent="flex-end">
                 <Grid item>
-                  <Links href="#" variant="body2">
-                    Already have an account? Sign in
-                  </Links>
+                  <Link to = "/PageLogin" className="LOGINS">
+                    Already have an account? Login
+                  </Link>
                 </Grid>
               </Grid>
             </Box>
