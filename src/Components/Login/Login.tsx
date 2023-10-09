@@ -61,6 +61,7 @@ export const Login = () => {
       if (response.ok) {
         const responseData = await response.json();
         const userRole = responseData.role;
+        
         if (userRole === 1) {
           navigate("/PageAdmin");
         } else if (userRole === 2) {
