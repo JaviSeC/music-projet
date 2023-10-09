@@ -1,4 +1,5 @@
 import "./SingUp.css";
+import { useNavigate } from "react-router-dom";
 import { useState } from "react";
 import Swal from "sweetalert2";
 import { Link } from "react-router-dom";
@@ -48,6 +49,8 @@ export const SignUp = () => {
     const containsNumber = /\d/.test(UserName);
     return containsLetter && containsNumber;
   };
+
+  const navigate = useNavigate();
 
   const handleSignUp = async () => {
     event.preventDefault();
@@ -116,6 +119,8 @@ export const SignUp = () => {
       if (response.ok) {
         console.log("Registro exitoso");
         Swal.fire("Cuenta creada exitosamente", "", "success");
+        localStorage.setItem("userRole", "2");
+        navigate("/");
       } else if (response.status === 400) {
         // Error de solicitud inválida
         console.error("Error en la solicitud:", response);

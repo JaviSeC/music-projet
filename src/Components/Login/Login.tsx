@@ -63,8 +63,10 @@ export const Login = () => {
         const userRole = responseData.role;
         
         if (userRole === 1) {
+          localStorage.setItem("userRole", "1");
           navigate("/PageAdmin");
         } else if (userRole === 2) {
+          localStorage.setItem("userRole", "2");
           navigate("/");
         } 
       } else {

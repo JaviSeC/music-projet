@@ -19,10 +19,11 @@ button:hover {
 }
 
 .home {
-  width: 65%;
+  width: 80%;
 }
 .categorie {
-  width: 100%;
+  width: 110%;
+  margin-left: -3%;
 }
 
 .loginbutton {
