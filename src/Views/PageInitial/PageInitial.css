@@ -2,10 +2,18 @@ body{
     background-color: rgba(175, 183, 187, 1);
 }
 
-.home{
+.homes{
     display: flex;
     justify-content: space-around;
     align-items: center;
     /* margin-top: 0px; */
     width: 100%;
+}
+
+@media (max-width: 360px) {
+    .homes {
+        flex-direction: column; /* Cambia la dirección del flex container a columna */
+        align-items: flex-start; /* Alinea los elementos al inicio del contenedor */
+        padding: 15px; /* Agrega espacio entre los elementos */
+    }
 }

@@ -20,6 +20,16 @@
   width: 80%;
   height: 110%;
 }
+.Admi{
+  width: 20%;
+  height: 35px;
+  background-color: black;
+}
+.AdmiHome{
+  width: 130%;
+  margin-left: -10%;
+  margin-top: -10%;
+}
 
 .titulo-box {
   width: 1400px;
