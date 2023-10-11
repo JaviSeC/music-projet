@@ -2,6 +2,7 @@ import React, { useState, useRef } from "react";
 import "./MusicaAnimada.css"; // Asegúrate de que el nombre del archivo CSS sea correcto y coincide con tu proyecto
 import { Link } from "react-router-dom";
 
+const songsPerPage = 5;
 const songs = [
   {
     id: 1,
@@ -134,24 +135,42 @@ const songs = [
 
 ];
 
-const PeliculasAnimadas: React.FC = () => {
-  const [currentSongIndex, setCurrentSongIndex] = useState(0);
-  const [isPlaying, setIsPlaying] = useState(false);
-  const audioRef = useRef<HTMLAudioElement | null>(null);
 
+const PeliculasAnimadas: React.FC = () => {
+  const [currentPage, setCurrentPage] = useState(1);
+  const [currentSongIndex, setCurrentSongIndex] = useState(0);
+  const [currentSong, setCurrentSong] = useState(songs[0]);
+  const [isPlaying, setIsPlaying] = useState(false);
+  const [likedSongs, setLikedSongs] = useState<Set<number>>(new Set<number>());
+  const audioRef = useRef<HTMLAudioElement | null>(null);
+  const startIndex = (currentPage - 1) * songsPerPage;
+  const endIndex = startIndex + songsPerPage;
+  const songsToShow = songs.slice(startIndex, endIndex);
+  // const totalPages = Math.ceil(songs.length / songsPerPage);
+  // const songsToShow = songs.slice(startIndex, endIndex);
   const togglePlayPause = () => {
     if (audioRef.current) {
       if (isPlaying) {
         audioRef.current.pause();
       } else {
-        audioRef.current.play().then(() => {
-          setCurrentSongIndex((prevIndex) => (prevIndex + 1) % songs.length);
-        });
+        audioRef.current.play();
       }
       setIsPlaying(!isPlaying);
     }
   };
-
+  const changeSong = (song: any) => {
+    setCurrentSong(song);
+    setIsPlaying(true);
+  };
+  const toggleLike = (songId: number) => {
+    const updatedLikedSongs = new Set<number>(likedSongs); // Asegura que el tipo sea Set<number>
+    if (likedSongs.has(songId)) {
+      updatedLikedSongs.delete(songId);
+    } else {
+      updatedLikedSongs.add(songId);
+    }
+    setLikedSongs(updatedLikedSongs);
+  };
   const playAllSongs = () => {
     if (isPlaying) {
       audioRef.current?.pause();
@@ -162,24 +181,17 @@ const PeliculasAnimadas: React.FC = () => {
     }
     setIsPlaying(!isPlaying);
   };
-
-  const changeSong = (song: any) => {
-    setCurrentSongIndex(songs.findIndex((s) => s.id === song.id));
-    setIsPlaying(true);
-  };
-
   return (
-    <div className="animada-container">
-      <div className="playlist-header">
+    <div className="body-container">
+      <div className="playlist-header-animadas">
         <img
-          id="playlist-cover"
+          id="playlist-cover-animadas"
           src="https://res.cloudinary.com/dq2tfglqq/image/upload/v1696332726/images_eoyvuy.jpg"
           alt="Portada de la playlist"
-          className="image-left image-moved-right"
         />
-        <div className="title-container">
-          <h1>Peliculas Animada</h1>
-          <p>Colección de Peliculas Animadas</p>
+        <div className="title-container-animadas">
+          <h1>Cine De Terror!!</h1>
+          <p>Colección de las películas más Tenebrosas del cine</p>
           <div className="buttons-container">
             <button className="play-all-button" onClick={playAllSongs}>
               {isPlaying ? "Pausar" : "Play all"}
@@ -193,40 +205,64 @@ const PeliculasAnimadas: React.FC = () => {
           </div>
         </div>
       </div>
-
       <div className="song-list">
         <ul>
-          {songs.map((song) => (
+          {songsToShow.map((song) => (
             <li key={song.id}>
               <img src={song.albumCover} alt={song.title} />
               <button onClick={() => changeSong(song)}>
-                <div>{song.title}</div> - <div>{song.artist}</div> -{" "}
-                <div>{song.duration}</div>
+                {song.title} - {song.artist} - {song.duration}
+              </button>
+              <button
+                id="like-button"
+                onClick={() => toggleLike(song.id)}
+                className={likedSongs.has(song.id) ? "liked" : ""}
+              >
+                {likedSongs.has(song.id) ? "💜" : "🤍"}
               </button>
             </li>
           ))}
         </ul>
+      
+        <div className="pagination">
+          
+          <div className="page-button">
+            <button
+              onClick={() => setCurrentPage(1)}
+              disabled={currentPage === 1}
+            >
+              1
+            </button>
+          </div>
+          
+          <div className="page-button">
+            <button
+              onClick={() => setCurrentPage(2)}
+              disabled={endIndex >= songs.length}
+            >
+              2
+            </button>
+          </div>
+        </div>
+
       </div>
 
-      <div className="music-player">
-        <div className="album-cover">
-          <img
-            src={songs[currentSongIndex].albumCover}
-            alt="Portada del álbum"
-          />
+      <div className="music-player-animadas">
+        <div className="album-cover-animadas">
+          <img src={currentSong.albumCover} alt="Portada del álbum" />
         </div>
         <div className="song-info">
-          <p className="artist">{songs[currentSongIndex].artist}</p>
-          <p className="song-title">{songs[currentSongIndex].title}</p>
+          <p className="artist">{currentSong.artist}</p>
+          <p className="song-title">{currentSong.title}</p>
         </div>
         <audio
           id="audio"
           controls
           ref={audioRef}
-          key={songs[currentSongIndex].id}
-          src={songs[currentSongIndex].audioSource}
-          onEnded={togglePlayPause}
-        />
+          key={currentSong.id} // Esto fuerza la recarga del elemento audio
+        >
+          <source src={currentSong.audioSource} type="audio/mpeg" />
+        </audio>
         <button onClick={togglePlayPause}>
           {isPlaying ? "Pausar" : "Reproducir"}
         </button>
@@ -234,5 +270,5 @@ const PeliculasAnimadas: React.FC = () => {
     </div>
   );
 };
-
 export default PeliculasAnimadas;
+

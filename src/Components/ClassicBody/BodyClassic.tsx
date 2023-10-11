@@ -91,6 +91,7 @@ const songs = [
     audioSource: 'URL_DEL_AUDIO'
   },
 ];
+
 const BodyClassic: React.FC = () => {
   const [currentPage, setCurrentPage] = useState(1);
   const [currentSongIndex, setCurrentSongIndex] = useState(0);
