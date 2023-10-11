@@ -283,7 +283,7 @@ margin-top: 5px;
 #like-button {
 width: auto; /* Ancho automático para mantener la posición */
 margin-left: 10px; /* Espacio entre el botón "Like" y los demás botones */
-display: none;
+display: flex;
 }
 #like-button.liked {
 color: purple;

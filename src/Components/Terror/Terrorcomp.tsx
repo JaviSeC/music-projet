@@ -8,9 +8,9 @@ const songs = [
     artist: "terror",
     title: "terror",
     duration: "2:42",
-    albumCover: "https://img2.rtve.es/i/?w=1600&i=1667821299474.jpg",
+    albumCover: "https://res.cloudinary.com/dq2tfglqq/image/upload/v1697012675/Freddy_Krueger__28Robert_Englund_29_x8g340.jpg",
     audioSource:
-      "https://res.cloudinary.com/dhme3c8ll/video/upload/v1695724729/El_Bueno_El_Feo_Y_El_Malo_-_II_Buono_II_Brutto_Il_Cattivo_zSDZQeIEqlM_x78lfm.mp3",
+      "https://res.cloudinary.com/dq2tfglqq/video/upload/v1697016735/Freddy_Kruegger_ikm1bx.mp3",
   },
   {
     id: 2,
@@ -18,9 +18,9 @@ const songs = [
     title: "terror",
     duration: "3:58",
     albumCover:
-      "https://lavozenoffdotnet.files.wordpress.com/2017/02/cartel.jpg",
+      "https://res.cloudinary.com/dq2tfglqq/image/upload/v1697012778/latest_eqs8bi.png",
     audioSource:
-      "https://res.cloudinary.com/dhme3c8ll/video/upload/v1695724919/El_Golpe_BSO_-_M%C3%BAsica_Scott_Joplin_en_piano_vVmfZjCwER8_qjiagf.mp3",
+      "https://res.cloudinary.com/dq2tfglqq/video/upload/v1697016692/Chucky_enxkpe.mp3",
   },
   {
     id: 3,
@@ -28,9 +28,9 @@ const songs = [
     title: "terror",
     duration: "2:43",
     albumCover:
-      "https://www.race.es/revista-autoclub/wp-content/uploads/sites/4/2022/05/el-padrino-el-clasico-de-los-clasicos-759x500.jpg",
+      "https://res.cloudinary.com/dq2tfglqq/image/upload/v1697016996/jeff-the_killer.jpeg_2140140895_nwokm7.jpg",
     audioSource:
-      "https://res.cloudinary.com/dhme3c8ll/video/upload/v1695724973/El_Padrino_Tema_Original__The_Godfather_Original_Theme__qIFQwnsotss_edoje7.mp3",
+      "https://res.cloudinary.com/dq2tfglqq/video/upload/v1697016738/Jef_the_killer_rbnyg0.mp3",
   },
   {
     id: 4,
@@ -184,7 +184,9 @@ const BodyTerror: React.FC = () => {
             </li>
           ))}
         </ul>
+      
         <div className="pagination">
+          
           <div className="page-button">
             <button
               onClick={() => setCurrentPage(1)}
@@ -193,6 +195,7 @@ const BodyTerror: React.FC = () => {
               1
             </button>
           </div>
+          
           <div className="page-button">
             <button
               onClick={() => setCurrentPage(2)}
@@ -202,7 +205,9 @@ const BodyTerror: React.FC = () => {
             </button>
           </div>
         </div>
+
       </div>
+
       <div className="music-player-terror">
         <div className="album-cover-terror">
           <img src={currentSong.albumCover} alt="Portada del álbum" />
