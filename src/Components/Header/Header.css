@@ -11,13 +11,14 @@
 }
 .img {
   /* margin-right: -10%; */
-  width: 20%;
+  /* width: 20%; */
+  margin-left: 5px;
+  width: 80%;
+  height: 110%;
 }
-
 .box2 {
   width: 90%;
 }
-
 .Name {
   color: white;
   width: 1400px;
@@ -39,7 +40,7 @@
   width: 15%;
   height: 65px;
   /* background-color: rgba(29, 33, 35, 0.648); */
-  background-color: #1d2123;
+  background-color: #1D2123;
 }
 .lupa {
   margin-left: 1%;
@@ -47,7 +48,6 @@
   transform: rotate(-40deg);
   opacity: 0.2;
 }
-
 .busqueda {
   width: 500%;
   height: 60px;
@@ -55,55 +55,49 @@
   text-align: center;
   color: rgb(251, 251, 251);
   /* background-color: rgba(0, 0, 0, 0.645); */
-  background-color: #1d2123;
-
+  background-color: #1D2123;
   margin-left: -182%;
 }
-
+.busqueda:active{
+  /* background-color: blueviolet; */
+  border: 5px orangered solid;
+}
 @media screen and (max-width: 360px) {
   .BOX {
     width: 100%;
     flex-direction: column;
   }
-
   .Logo {
     width: 25%;
     height: auto;
   }
-
   .img {
     width: 100%;
   }
-
   .box2 {
     margin-top: -15%;
   }
-
   .Name {
     width: auto;
     height: auto;
     font-size: 30px;
-    margin-left: 15%;
-    margin-top: -3%;
+    margin-left: 25%;
+    margin-top: -5%;
   }
-
   .search-box {
-    margin-top: 30%;
+    margin-top: 10%;
   }
   .Search {
     width: 50%;
   }
-
   .button-search {
     width: 35%;
     height: 110%;
   }
-
   .lupa {
     margin-left: 1%;
     width: 100%;
   }
-
   .busqueda {
     margin-left: -147%;
     height: 96%;
