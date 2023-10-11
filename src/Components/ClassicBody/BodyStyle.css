@@ -152,6 +152,19 @@
 .add-to-collection-button:hover {
   color: red; /* Cambia el color del texto a rojo al pasar el mouse */
 }
+.pagination {
+  display: flex;
+  justify-content: center;
+  gap: 10px; /* Espacio entre los botones de página */
+}
+
+.page-button {
+  display: inline; /* Para mostrar los botones en línea */
+  height: auto;
+  margin-bottom: 1%;
+  width: 3%;
+}
+
 @keyframes heartBeat {
   0% {
     transform: scale(1); /* Tamaño normal */
@@ -297,7 +310,7 @@
 #like-button {
   width: auto; /* Ancho automático para mantener la posición */
   margin-left: 10px; /* Espacio entre el botón "Like" y los demás botones */
-  display: none;
+  display: flex;
 }
 
 #like-button.liked {
@@ -339,5 +352,11 @@
 }
 .title-container{
   margin-left: -30%;
+}
+.page-button {
+  display: inline; /* Para mostrar los botones en línea */
+  height: auto;
+  margin-bottom: 1%;
+  width: 10%;
 }
 }
