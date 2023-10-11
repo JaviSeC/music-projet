@@ -59,16 +59,16 @@ const songs = [
     duration: '2:37',
     albumCover:
       'https://caixaforum.org/documents/311930/9160687/vaquilla+berlanga+webCXF+spa220170101225+-+18204jpg/83fc543e-f1a6-17f4-0b1e-8c4b1a7948ff?version=1.0&t=1565690877227',
-    audioSource: 'URL_DEL_AUDIO'
+    audioSource: 'https://res.cloudinary.com/dhme3c8ll/video/upload/v1697011387/Miguel_Asins_Arb%C3%B3__Pasodoble_de__La_vaquilla__Luis_G%C2%AA_Berlanga_1985__0pVGEhPmbZA_m0jujo.mp3'
   },
   {
     id: 8,
-    artist: 'Maurice Jarre',
-    title: 'Doctor Zivago',
-    duration: '3:11',
+    artist: 'Los Chunguitos',
+    title: 'Deprisa deprisa',
+    duration: '3:10',
     albumCover:
-      'https://www.elindependiente.com/wp-content/uploads/2020/02/doctor-zhivago.jpg',
-    audioSource: 'URL_DEL_AUDIO'
+      'https://estaticos-cdn.elperiodico.com/clip/4d6f400e-7958-402d-ae37-ae518b8ef62a_alta-libre-aspect-ratio_default_0.jpg',
+    audioSource: 'https://res.cloudinary.com/dhme3c8ll/video/upload/v1697011700/Me_quedo_contigo_-_Deprisa_deprisa_85nWERy0JdE_sgahf6.mp3'
   },
   {
     id: 9,
@@ -77,7 +77,7 @@ const songs = [
     duration: '2:51',
     albumCover:
       'https://www.abc.es/media/peliculas/000/005/139/yo-el-vaquilla-2.jpg',
-    audioSource: 'URL_DEL_AUDIO'
+    audioSource: 'https://res.cloudinary.com/dhme3c8ll/video/upload/v1697011387/El_Vaquilla_NZ-PWrXQocc_uwebzq.mp3'
   },
   {
     id: 10,
@@ -86,7 +86,7 @@ const songs = [
     duration: '3:42',
     albumCover:
       'https://www.alohacriticon.com/wp-content/uploads/2017/01/perros-callejeros-foto-critica.jpg',
-    audioSource: 'URL_DEL_AUDIO'
+    audioSource: 'https://res.cloudinary.com/dhme3c8ll/video/upload/v1697011529/los_chunguitos_soy_un_perro_callejero_4g3jSCqZxUQ_n6vsqj.mp3'
   },
 
 ];
