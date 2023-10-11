@@ -1,5 +1,5 @@
 .CineClasico{
-    background-image: url(https://wallpapercave.com/wp/wp4459073.png);
+    background-image: url(https://res.cloudinary.com/dhme3c8ll/image/upload/v1697012804/fondo_bueno_pvqr5g.jpg);
     background-size: cover;
     background-attachment: fixed;
     margin: 0;
@@ -16,7 +16,7 @@
 
 @media screen and (max-width:360px) {
     .CineClasico{
-        background-image: url(https://wallpapercave.com/wp/wp4459073.png);
+        background-image: url(https://res.cloudinary.com/dhme3c8ll/image/upload/v1697012804/fondo_bueno_pvqr5g.jpg);
         background-size: cover;
         /* background-attachment: fixed; */
         /* margin: 0; */
