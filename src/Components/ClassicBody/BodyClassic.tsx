@@ -138,13 +138,13 @@ const BodyClassic: React.FC = () => {
   };
   return (
     <div className="body-container">
-      <div className="playlist-header">
+      <div className="playlist-header-classic">
         <img
-          id="playlist-cover"
+          id="playlist-cover-classic"
           src="https://hips.hearstapps.com/es.h-cdn.co/fotoes/images/cinefilia/peliculas-clasicas-que-hay-que-ver/peliculas_clasicas_que_hay_que_ver_cantando_bajo_la_lluvia/138151151-1-esl-ES/peliculas_clasicas_que_hay_que_ver_cantando_bajo_la_lluvia.jpg?resize=980:*"
           alt="Portada de la playlist"
         />
-        <div className="title-container">
+        <div className="title-container-classic">
           <h1>Cine Clásico</h1>
           <p>Colección de las películas más míticas del cine</p>
           <div className="buttons-container">
@@ -190,8 +190,8 @@ const BodyClassic: React.FC = () => {
           </div>
         </div>
       </div>
-      <div className="music-player">
-        <div className="album-cover">
+      <div className="music-player-classic">
+        <div className="album-cover-classic">
           <img
             src={currentSong.albumCover}
             alt="Portada del álbum"
