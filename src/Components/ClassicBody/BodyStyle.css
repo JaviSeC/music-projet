@@ -75,48 +75,99 @@
 }
 .song-list ul {
   width: 85%;
-  margin-left: 8%;
-  list-style: none;
-  /* padding: 0; */
- /* Elimina el margen predeterminado de la lista */
+  margin-left: 10.2%;
+  border-radius: 10px 10px 0px 0px;
 }
-.song-list li {
-  display: flex; /* Muestra los elementos de la lista en línea */
-  /* align-items: center; */
-  margin-bottom: 1%;
-  padding: 2px; /* Espacio entre cada canción */
- /* Fondo gris oscuro */
-  color: #FFFFFF; /* Texto blanco */
+.music-player button{
+height: 30px;
+color: #fff !important;
+background-color: #13286d7c !important;
 }
-.song-list li img {
-  max-width: 62px;
-  height: auto;
-  margin-right: 10px; /* Espacio entre la imagen y el texto */
+.album-cover img {
+  max-width: 120px;
+  height: 60px;
   border-radius: 4px;
 }
-.song-list button{
-  align-items: center;
-  width: 100%;
-  height: 40px;
-  color: white;
-  background-color: #000000b0;
-  border-style: none;
+.song-info {
+  /* flex: 1; */
+  text-align: center; /* Centrar el texto */
+}
+.song-title {
+  font-size: 25px;
+  font-weight: bold;
+}
+.artist {
+  display: flex;
+  flex-direction: row;
+  font-size: 14px;
+}
+/* .playlist button {
+  background-color: #E90C0C;
+  border: none;
+  color: #E90C0C;
   cursor: pointer;
-  border-radius: 10px;
-  font-size: 18px;
+  font-size: 14px;
+  text-align: left;
+} */
+.playlist-header{
+  /* width: 75%; */
+  height: 300px;
+  display: flex;
+  margin: 2%;
+  margin-left: 15%;
+  color: white;
 }
 /* .song-list button:hover{
   background-color: #000000;
 } */
 #like-button{
-  width: 5%;
-  margin-left: 2%;
-  /* background-color:transparent; */
+width: 5%;
+margin-left: 2%;
+/* background-color:transparent; */
 }
 #like-button.liked {
-  color: purple; /* Color de texto morado */
-  transition: color 0.3s ease;
-  animation: heartBeat 0.8s ease;
+color: purple; /* Color de texto morado */
+transition: color 0.3s ease;
+animation: heartBeat 0.8s ease;
+}
+/* .title-container{
+} */
+.play-all-button {
+background-color: #333; /* Color de fondo gris */
+color: #fff; /* Texto blanco */
+border: none;
+border-radius: 4px;
+padding: 8px 16px;
+cursor: pointer;
+font-size: 14px;
+margin-right: 10px; /* Espacio entre los botones */
+}
+.play-all-button:hover {
+background-color: #555; /* Color de fondo gris más oscuro al pasar el mouse */
+}
+/* Estilo para el botón "Add to collection" */
+.add-to-collection-button {
+background-color: #333;
+color: #fff; /* Color de texto gris */
+border: none;
+border-radius: 4px;
+padding: 8px 16px;
+cursor: pointer;
+font-size: 14px;
+}
+.add-to-collection-button:hover {
+color: red; /* Cambia el color del texto a rojo al pasar el mouse */
+}
+.pagination {
+display: flex;
+justify-content: center;
+gap: 10px; /* Espacio entre los botones de página */
+}
+.page-button {
+display: inline; /* Para mostrar los botones en línea */
+height: auto;
+margin-bottom: 1%;
+width: 3%;
 }
 
 /* .title-container{
@@ -166,21 +217,21 @@
 }
 
 @keyframes heartBeat {
-  0% {
-    transform: scale(1); /* Tamaño normal */
-  }
-  25% {
-    transform: scale(1.3); /* Aumentar tamaño al 25% de la animación */
-  }
-  50% {
-    transform: scale(1); /* Volver al tamaño normal al 50% de la animación */
-  }
-  75% {
-    transform: scale(1.3); /* Aumentar tamaño al 75% de la animación */
-  }
-  100% {
-    transform: scale(1); /* Volver al tamaño normal al final de la animación */
-  }
+0% {
+  transform: scale(1); /* Tamaño normal */
+}
+25% {
+  transform: scale(1.3); /* Aumentar tamaño al 25% de la animación */
+}
+50% {
+  transform: scale(1); /* Volver al tamaño normal al 50% de la animación */
+}
+75% {
+  transform: scale(1.3); /* Aumentar tamaño al 75% de la animación */
+}
+100% {
+  transform: scale(1); /* Volver al tamaño normal al final de la animación */
+}
 }
 @media (max-width: 360px) {
   /* Estilos generales del reproductor de música */
