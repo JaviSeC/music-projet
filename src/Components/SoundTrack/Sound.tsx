@@ -219,19 +219,24 @@ const SoundTrack: React.FC = () => {
         </ul>
       </div>
 
-      {/* Paginación numerada */}
-      <div className="paginationSound">
-        {[1, 2].map((page) => (
-          <div className="page-button1-2" key={page}>
-            <button
-              onClick={() => setCurrentPage(page)}
-              className={currentPage === page ? 'active' : ''}
-            >
-              {page}
-            </button>
-          </div>
-        ))}
-      </div>
+      <div className="paginationsound">
+  <div className="page-buttonSound">
+    <button
+      onClick={() => setCurrentPage(1)}
+      disabled={currentPage === 1}
+    >
+      1
+    </button>
+  </div>
+  <div className="page-buttonSound">
+    <button
+      onClick={() => setCurrentPage(2)}
+      disabled={endIndex >= songs.length}
+    >
+      2
+    </button>
+  </div>
+</div>
 
       <div className="music-player">
         <div className="album-cover">
@@ -256,121 +261,5 @@ const SoundTrack: React.FC = () => {
     </div>
   );
 };
-
-    // const SoundTrack: React.FC = () => {
-    //   const [currentSongIndex, setCurrentSongIndex] = useState(0);
-    //   const [isPlaying, setIsPlaying] = useState(false);
-    //   const [likedSongs, setLikedSongs] = useState<Set<number>>(new Set<number>());
-    //   const audioRef = useRef<HTMLAudioElement | null>(null);
-    
-    //   const togglePlayPause = () => {
-    //     if (audioRef.current) {
-    //       if (isPlaying) {
-    //         audioRef.current.pause();
-    //       } else {
-    //         audioRef.current.play().then(() => {
-    //           setCurrentSongIndex((prevIndex) => (prevIndex + 1) % songs.length);
-    //         });
-    //       }
-    //       setIsPlaying(!isPlaying);
-    //     }
-    //   };
-    
-    //   const playAllSongs = () => {
-    //     if (isPlaying) {
-    //       audioRef.current?.pause();
-    //     } else {
-    //       audioRef.current?.play().then(() => {
-    //         setCurrentSongIndex(0);
-    //       });
-    //     }
-    //     setIsPlaying(!isPlaying);
-    //   };
-    
-    //   const changeSong = (song: any) => {
-    //     setCurrentSongIndex(songs.findIndex((s) => s.id === song.id));
-    //     setIsPlaying(true);
-    //   };
-    
-    //   const toggleLike = (songId: number) => {
-    //     const updatedLikedSongs = new Set<number>(likedSongs);
-    //     if (likedSongs.has(songId)) {
-    //       updatedLikedSongs.delete(songId);
-    //     } else {
-    //       updatedLikedSongs.add(songId);
-    //     }
-    //     setLikedSongs(updatedLikedSongs);
-    //   };
-    
-    //   return (
-    //     <div className="body-container"> {/* Asegúrate de que la clase sea "body-container" */}
-    //       <div className="playlist-header">
-    //         <img
-    //           id="playlist-cover"
-    //           src="https://res.cloudinary.com/doft9ylq1/image/upload/v1696403613/2002.i123.004_film_stripes_reels_realistic_1_o5gt6x.jpg"
-    //           alt="Portada de la playlist"
-    //           className="image-left image-moved-right"
-    //         />
-    
-    //         <div className="title-container">
-    //           <h1>Soundtracks</h1>
-    //           <p>Colección de los SoundTracks ganadores de Oscar</p>
-    //           <div className="buttons-container">
-    //             <button className="play-all-button" onClick={playAllSongs}>
-    //               {isPlaying ? 'Pausar' : 'Play all'}
-    //             </button>
-    //             <button className="add-to-collection-button">
-    //               <span role="img" aria-label="Corazón">❤️</span> Add to collection
-    //             </button>
-    //           </div>
-    //         </div>
-    //       </div>
-    
-    //       <div className="song-list">
-    //         <ul>
-    //           {songs.map((song) => (
-    //             <li key={song.id}>
-    //               <img src={song.albumCover} alt={song.title} />
-    //               <button onClick={() => changeSong(song)}>
-    //                 {song.title} - {song.artist} - {song.duration}
-    //               </button>
-    //               <div className="like-container">
-    //                 <button
-    //                   className={`like-button ${likedSongs.has(song.id) ? 'liked' : ''}`}
-    //                   onClick={() => toggleLike(song.id)}
-    //                 >
-    //                   {likedSongs.has(song.id) ? '❤️' : '🤍'}
-    //                 </button>
-    //               </div>
-    //             </li>
-    //           ))}
-    //         </ul>
-    //       </div>
-    
-    //       <div className="music-player">
-    //         <div className="album-cover">
-    //           <img src={songs[currentSongIndex].albumCover} alt="Portada del álbum" />
-    //         </div>
-    //         <div className="song-info">
-    //           <p className="artist">{songs[currentSongIndex].artist}</p>
-    //           <p className="song-title">{songs[currentSongIndex].title}</p>
-    //         </div>
-    //         <audio
-    //           id="audio"
-    //           controls
-    //           ref={audioRef}
-    //           key={songs[currentSongIndex].id}
-    //           src={songs[currentSongIndex].audioSource}
-    //           onEnded={togglePlayPause}
-    //         />
-    //         <button onClick={togglePlayPause}>
-    //           {isPlaying ? 'Pausar' : 'Reproducir'}
-    //         </button>
-    //       </div>
-    //     </div>
-    //   );
-    // };
-    
-
-   
+ 
     export default SoundTrack;
