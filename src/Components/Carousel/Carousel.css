@@ -4,20 +4,53 @@
 
 .swiper {
   /* margin-top: 10%; */
-  width: 90rem; 
+  width: 90rem;
   height: 200px;
   overflow: hidden; /* Oculta el desbordamiento del carrusel */
 }
+
+/* .swiper-slide {
+  width: 90rem;
+  text-align: center;
+  font-size: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 25px;
+  box-shadow: 1px 1px 10px 1px rgba(0, 0, 0, 0.2);
+  
+  transition: transform 0.2s ease-in-out, box-shadow 0.1s ease-in-out; 
+  
+} */
 
 .swiper-slide {
   width: 90rem;
   text-align: center;
   font-size: 15px;
-  /* background: #0075B4; */
   display: flex;
   justify-content: center;
   align-items: center;
   border-radius: 25px;
+  box-shadow: 1px 1px 10px 1px rgba(0, 0, 0, 0.2);
+  transition: transform 0.2s ease-in-out, box-shadow 0.1s ease-in-out,
+    opacity 0.2s ease-in-out;
+  animation: floatAnimation 1.5s ease-in-out infinite alternate;
+}
+
+/* Definición de la animación de flotación */
+@keyframes floatAnimation {
+  transform: scale(0.9);
+  0% {
+    transform: translateY(0); /* Posición inicial */
+  }
+  100% {
+    transform: translateY(-10px); /* Posición final (flotar hacia arriba) */
+  }
+}
+
+.swiper-slide:hover {
+  box-shadow: 1px 8px 12px 10px rgba(0, 0, 0, 0.2);
+  opacity: 1; /* Aumenta la opacidad en hover */
 }
 
 .swiper-slide img {
@@ -28,24 +61,10 @@
   border-radius: 25px;
 }
 
-/* .audioplayer{
-
-
-} */
-
 .audioboton {
   width: 100%;
   margin-top: 15px;
-  /* height: 100px; */
 }
-/* 
-@media screen and (max-width: 360px) {
-  .mySwiper {
-    width: 360px;
-    
-  }
-} */
-
 
 @media screen and (max-width: 360px) {
   .mySwiper {
@@ -53,7 +72,7 @@
   }
 
   .swiper-slide {
-    min-width: 360px;
+    min-width: 200px;
     flex: 0 0 auto; /* Evita que las tarjetas cambien de tamaño */
   }
 }
