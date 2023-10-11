@@ -1,19 +1,19 @@
-
+import PeliculasAnimadas from "../../Components/MusicaAnimada/MusicaAnimada";
 import Header from "../../Components/Header/Header";
 import Menu from "../../Components/Menu/Menu";
-import PeliculasAnimadas from "../../Components/MusicaAnimada/MusicaAnimada";
-import "./MusicaAnimada.css";
+import "./MusicaAnimadaview.css";
 
-export default function MusicaAnimada() {
+export default function Animadas() {
   return (
     <>
-    {/* <div className="SoundTracks"> */}
+<div className="animadaview">
     <Header/>
-    {/* <div className="homeSoundTracks"> */}
-      <Menu />
-      {/* </div> */}
-    <PeliculasAnimadas/>
-    {/* </div> */}
+<div className="menuview">
+      {/* <Menu />  */}
+      <PeliculasAnimadas/>
+      </div>
+   
+    </div>
     </>
   );
 }
