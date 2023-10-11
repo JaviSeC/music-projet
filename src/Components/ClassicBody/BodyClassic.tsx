@@ -67,7 +67,7 @@ const songs = [
     title: 'Deprisa deprisa',
     duration: '3:10',
     albumCover:
-      'https://estaticos-cdn.elperiodico.com/clip/4d6f400e-7958-402d-ae37-ae518b8ef62a_alta-libre-aspect-ratio_default_0.jpg',
+      'https://res.cloudinary.com/dhme3c8ll/image/upload/v1697017137/4d6f400e-7958-402d-ae37-ae518b8ef62a_alta-libre-aspect-ratio_default_0_gtykcl.jpg',
     audioSource: 'https://res.cloudinary.com/dhme3c8ll/video/upload/v1697011700/Me_quedo_contigo_-_Deprisa_deprisa_85nWERy0JdE_sgahf6.mp3'
   },
   {
