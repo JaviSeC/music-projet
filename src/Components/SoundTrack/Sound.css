@@ -169,6 +169,21 @@ color: red; /* Cambia el color del texto a rojo al pasar el mouse */
   opacity: 1; /* Aumentar la opacidad al pasar el cursor */
 }
 
+.like-button.liked {
+  animation: like-pulse 0.5s; /* Aplica la animación "like-pulse" durante 0.5 segundos */
+}
+
+@keyframes like-pulse {
+  0% {
+    transform: scale(2); /* Tamaño original */
+  }
+  50% {
+    transform: scale(1.4); /* Tamaño aumentado al 120% a la mitad de la animación */
+  }
+  100% {
+    transform: scale(1); /* Tamaño original al final de la animación */
+  }
+}
 
 
 @media (max-width: 360px) {
