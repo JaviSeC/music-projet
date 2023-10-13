@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 // import ReactDOM from "react-dom/client"
 // import { NextUIProvider } from "@nextui-org/react";
 // import Header from "./Components/Header/Header";
@@ -26,8 +25,6 @@
 //________________________________________________________________________________________________________
 
 import "./index.css";
-=======
->>>>>>> origin/Javier
 import ReactDOM from "react-dom/client";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Footer from "./Components/Footer/Footer";
