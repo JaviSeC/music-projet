@@ -25,15 +25,16 @@ export default function Menu() {
           <img
             className="categorie"
             src="https://res.cloudinary.com/da7ffijqs/image/upload/v1695367319/musica-removebg-preview_scp9yc.png"
-            alt=""
+            alt="categories"
           />
         </button>
         {isDropdownOpen && (
           <div className="dropdown-content">
-            <a href="/SoundTracksView">Ganadores Oscar🏆</a>
+            <a href="/SoundTracksView">Oscar´s🏆</a>
             <a href="/PeliculasAnimadasView">Animadas🧸</a>
             <a href="/ClassicView">Clasicas📀</a>
             <a href="/TerrorView">Terror👻</a>
+            <a href="/Games">Games🎮</a>
           </div>
         )}
       </div>
