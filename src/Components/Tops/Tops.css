@@ -4,12 +4,6 @@
     margin-right: 10px;
 }
 
-.Cards-top{
-/* margin: 20px 20px; */
-/* text-decoration: none; */ 
-
-}
-
 
 .topssongs{
     /* justify-content: center; */
@@ -19,3 +13,28 @@
     font-size: 25px;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
+
+/* Estilos para pantallas con un ancho máximo de 360px */
+@media (max-width: 360px) {
+    .topssongs {
+      font-size: 18px; /* Reduzca el tamaño de fuente del título */
+      text-align: center; /* Centre el texto horizontalmente */
+      margin-bottom: 10px; /* Agregue espacio inferior entre el título y las tarjetas */
+    }
+  
+    .Cards-top {
+      display: flex;
+      flex-wrap: wrap; /* Permite que las tarjetas se ajusten en filas */
+      justify-content: center; /* Centra las tarjetas horizontalmente */
+    }
+  
+    .Card-top {
+      width: 90%; /* Establezca el ancho de las tarjetas al 90% del contenedor */
+      margin: 10px; /* Agregue espacio entre las tarjetas */
+    }
+  
+    .Card-top .MuiCard-root {
+      width: 100%; /* Asegúrese de que el contenido de la tarjeta se ajuste al 100% del ancho de la tarjeta */
+    }
+  }
+  

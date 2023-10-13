@@ -33,7 +33,7 @@ export default function Menu() {
             <a href="/SoundTracksView">Ganadores Oscar🏆</a>
             <a href="/PeliculasAnimadasView">Animadas🧸</a>
             <a href="/ClassicView">Clasicas📀</a>
-            <a href="#">Terror👻</a>
+            <a href="/TerrorView">Terror👻</a>
           </div>
         )}
       </div>
