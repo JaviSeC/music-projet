@@ -32,8 +32,8 @@ export default function Menu() {
           <div className="dropdown-content">
             <a href="/SoundTracksView">Ganadores Oscar🏆</a>
             <a href="/PeliculasAnimadasView">Animadas🧸</a>
-            <a href="/ClassicView">Clasicas📀</a>
-            <a href="#">Terror👻</a>
+            <a href="/ClassicView">Cine Clasico📀</a>
+            <a href="#">Cine de Terror👻</a>
           </div>
         )}
       </div>
