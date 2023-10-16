@@ -1,7 +1,6 @@
-import { useState } from "react";
-import axios from "axios";
+import { useEffect, useState } from "react";
 import Swal from "sweetalert2";
-import Headerunico from "../Headerunico/Headerunico";
+import axios from "axios";
 import "./Admin.css";
 
 interface User {
@@ -14,16 +13,20 @@ interface User {
   // Otras propiedades de usuario
 }
 
-function Admin() {
+interface Category {
+  id: number;
+  Name_Categories: string;
+}
+
+export const Admin = () => {
   const [users, setUsers] = useState<User[]>([]);
   const [searchTerm, setSearchTerm] = useState("");
-  const [showAddProductForm, setShowAddProductForm] = useState(false);
-  const [NewProduct, setNewProduct] = useState({
+  const [songData, setSongData] = useState({
     Imagen: "",
     SongName: "",
     FilmName: "",
     Audio: "",
-    Id_Categories: "",
+    Id_Categories: 0,
   });
 
   const [errorMessages, setErrorMessages] = useState({
@@ -34,216 +37,234 @@ function Admin() {
     Id_Categories: "",
   });
 
-  const handleAddProduct = async () => {
-    event.preventDefault();
-    console.log("Entrando en handleSignUp");
+  const [categories, setCategories] = useState<Category[]>([]);
 
-    const { Imagen, SongName, FilmName, Audio, Id_Categories } = NewProduct;
+  useEffect(() => {
+    // Obtener la lista de categorías desde el servidor
+    axios
+      .get("https://localhost:7110/SongsControllers/GetCategorias")
+      .then((response) => {
+        setCategories(response.data);
+      });
+  }, []);
+
+  const [showForm, setShowForm] = useState(false);
+
+  const handleAddSong = async () => {
+    event.preventDefault();
+
+    const { Imagen, SongName, FilmName, Audio, Id_Categories } = songData;
 
     const newErrorMessages = {
-      Imagen: !Imagen ? "Imagen is required" : "",
-      SongName: !SongName ? "SongName is required" : "",
-      FilmName: !FilmName ? "FilmName is required" : "",
-      Audio: !Audio ? "Audio is required" : "",
-      Id_Categories: !Id_Categories ? "Name_Categories" : "",
+      Imagen: !Imagen ? "Imagen URL is required" : "",
+      SongName: !SongName ? "Title is required" : "",
+      FilmName: !FilmName ? "Artist is required" : "",
+      Audio: !Audio ? "Audio URL is required" : "",
+      Id_Categories: Id_Categories === 0 ? "Category is required" : "",
     };
 
-    if (!Imagen || !SongName || !FilmName || !Audio || !Id_Categories) {
+    if (!Imagen || !SongName || !FilmName || !Audio || Id_Categories === 0) {
       setErrorMessages(newErrorMessages);
       return;
     }
 
-    const newProduct = {
-      // Id_Products : '',
-      Imagen: NewProduct.Imagen,
-      SongName: NewProduct.SongName,
-      FilmName: NewProduct.FilmName,
-      Audio: NewProduct.Audio,
-      Id_Categories: NewProduct.Id_Categories,
-    };
-
-    console.log("Datos que se envían:", newProduct);
+    const formData = new FormData();
+    formData.append("Imagen", Imagen);
+    formData.append("SongName", SongName);
+    formData.append("FilmName", FilmName);
+    formData.append("Audio", Audio);
 
     try {
-      const url = "https://localhost:7110/ProductsControllers/Post";
+      const url = "https://localhost:7110/SongsControllers/Post";
       const response = await fetch(url, {
         method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({
-          Imagen,
-          SongName,
-          FilmName,
-          Audio,
-          Id_Categories: "",
-        }),
+        body: formData,
       });
 
       if (response.ok) {
-        console.log("Registro exitoso");
-        Swal.fire("Producto añadido", "", "success");
+        console.log("Canción agregada exitosamente");
+        // Restablecer el formulario
+        setSongData({
+          Imagen: "",
+          SongName: "",
+          FilmName: "",
+          Audio: "",
+          Id_Categories: 0,
+        });
+        setErrorMessages({
+          Imagen: "",
+          SongName: "",
+          FilmName: "",
+          Audio: "",
+          Id_Categories: "",
+        });
       } else {
         console.error("Error en la solicitud:", response);
-        Swal.fire("Error", "No se pudo añadir el producto", "error");
+        Swal.fire("Error", "No se pudo agregar la canción", "error");
       }
     } catch (error) {
       console.error("Error en la solicitud:", error);
       Swal.fire("Error", "Ha ocurrido un error en el servidor", "error");
     }
+  };
 
-    // Reinicia el formulario
-    setNewProduct({
-      Imagen: "",
-      SongName: "",
-      FilmName: "",
-      Audio: "",
-      Id_Categories: "",
-    });
-
-    setErrorMessages({
-      Imagen: "",
-      SongName: "",
-      FilmName: "",
-      Audio: "",
-      Id_Categories: "",
+  const handleInputChange = (e) => {
+    const { name, value } = e.target;
+    setSongData({
+      ...songData,
+      [name]: value,
     });
   };
 
-  const getUsers = () => {
+  const handleCategoryChange = (e) => {
+    const Id_Categories = parseInt(e.target.value, 10);
+    setSongData({
+      ...songData,
+      Id_Categories: Id_Categories,
+    });
+  };
+
+  const toggleForm = () => {
+    setShowForm(!showForm); // Cambia el estado para mostrar/ocultar el formulario
+  };
+
+  useEffect(() => {
     axios
       .get("https://localhost:7110/UsersControllers/GetUsers")
       .then((response) => {
         setUsers(response.data);
       })
       .catch((error) => {
-        console.error("Error al obtener la lista de usuarios:", error);
+        console.error("Error al obtener la lista de usuarios", error);
+      });
+  }, []);
+
+  const handleDeleteUser = (userId: string) => {
+    axios
+      .delete(
+        `https://localhost:7110/UsersControllers/DeleteUser?UserName=${userId}`
+      )
+      .then(() => {
+        // Eliminación exitosa, ahora obtén la lista actualizada de usuarios
+        axios
+          .get("https://localhost:7110/UsersControllers/GetUsers")
+          .then((response) => {
+            setUsers(response.data); // Actualiza la lista de usuarios con la nueva data
+          })
+          .catch((error) => {
+            console.error("Error al obtener la lista de usuarios", error);
+          });
+      })
+      .catch((error) => {
+        console.error(
+          `Error al eliminar el usuario con UserName ${userId}`,
+          error
+        );
       });
   };
 
-  const handleInputChange = (e) => {
-    const { name, value } = e.target;
-    if (name === "Id_Categories") {
-      setNewProduct({
-        ...NewProduct,
-        [name]: value,
-      });
-    }
+  const filteredUsers = users.filter((user) =>
+    user.userName.toLowerCase().includes(searchTerm.toLowerCase())
+  );
 
-    const handleDeleteUser = (userId: string) => {
-      axios
-        .delete(
-          `https://localhost:7110/UsersControllers/DeleteUser?UserName=${userId}`
-        )
-        .then(() => {
-          getUsers();
-        })
-        .catch((error) => {
-          console.error(
-            `Error al eliminar el usuario con UserName ${userId}`,
-            error
-          );
-        });
-    };
+  return (
+    <>
+      <h1>Canciones</h1>
 
-    const filteredUsers = users.filter((user) =>
-      user.userName.toLowerCase().includes(searchTerm.toLowerCase())
-    );
+      <button onClick={toggleForm}>Agregar Canción</button>
 
-    return (
-      <>
-        <Headerunico />
-        <h1>Canciones</h1>
-        <button onClick={() => setShowAddProductForm(!showAddProductForm)}>
-          {showAddProductForm ? "Cancelar" : "Agregar Canciones"}
-        </button>
-
-        {showAddProductForm && (
-          <div className="AddProductForm">
-            <label htmlFor="videoSrc">Imagen URL:</label>
+      {showForm && (
+        <form onSubmit={handleAddSong}>
+          <div>
+            <label>Imagen </label>
             <input
               type="text"
-              id="Imagen"
               name="Imagen"
-              value={NewProduct.Imagen}
+              value={songData.Imagen}
               onChange={handleInputChange}
-              required
             />
-            <span className="error-message">{errorMessages.Imagen}</span>
-            <label htmlFor="videoSrc">Nombre Cancion:</label>
-            <input
-              type="text"
-              id="SongName"
-              name="SongName"
-              value={NewProduct.SongName}
-              onChange={handleInputChange}
-              required
-            />
-            <span className="error-message">{errorMessages.SongName}</span>
-            <label htmlFor="videoSrc">Autor:</label>
-            <input
-              type="text"
-              id="FilmName"
-              name="FilmName"
-              value={NewProduct.FilmName}
-              onChange={handleInputChange}
-              required
-            />
-            <span className="error-message">{errorMessages.FilmName}</span>
-            <label htmlFor="videoSrc">Audio URL:</label>
-            <input
-              type="text"
-              id="Audio"
-              name="Audio"
-              value={NewProduct.Audio}
-              onChange={handleInputChange}
-              required
-            />
-            <span className="error-message">{errorMessages.Audio}</span>
-            <label htmlFor="videoSrc">Audio URL:</label>
-            <input
-              type="text"
-              id="Id_Categories"
-              name="Id_Categories"
-              value={NewProduct.Id_Categories}
-              onChange={handleInputChange}
-              required
-            />
-            <span className="error-message">{errorMessages.Id_Categories}</span>
-            <button onClick={handleAddProduct}>Agregar Producto</button>
+            <span>{errorMessages.Imagen}</span>
           </div>
-        )}
-        <h1>Usuarios</h1>
-        <div className="UsersList">
-          <input
-            type="text"
-            placeholder="Buscar por Usuario"
-            value={searchTerm}
-            onChange={(e) => setSearchTerm(e.target.value)}
-          />
-          <ul className="All">
-            {filteredUsers.map((user) => (
-              <li key={user.id} className="ListUser">
-                <span className="user-info">
-                  <strong>Nombre:</strong> {user.firstName}&nbsp;&nbsp;
-                  <strong>Apellido:</strong> {user.lastName}&nbsp;&nbsp;
-                  <strong>Usuario:</strong> {user.userName}&nbsp;&nbsp;
-                  <strong>Email:</strong> {user.email}&nbsp;&nbsp;
-                  <strong>Contraseña:</strong> {user.password}&nbsp;&nbsp;
-                  {/* Mostrar otras propiedades según sea necesario */}
-                </span>
-                <button
-                  className="Admidelete"
-                  onClick={() => handleDeleteUser(user.userName)}
-                >
-                  Eliminar
-                </button>
-              </li>
-            ))}
-          </ul>
-        </div>
-      </>
-    );
-  };
-}
+          <div>
+            <label>SongName</label>
+            <input
+              type="text"
+              name="SongName"
+              value={songData.SongName}
+              onChange={handleInputChange}
+            />
+            <span>{errorMessages.SongName}</span>
+          </div>
+          <div>
+            <label>FilmName</label>
+            <input
+              type="text"
+              name="FilmName"
+              value={songData.FilmName}
+              onChange={handleInputChange}
+            />
+            <span>{errorMessages.FilmName}</span>
+          </div>
+          <div>
+            <label>Audio</label>
+            <input
+              type="text"
+              name="Audio"
+              value={songData.Audio}
+              onChange={handleInputChange}
+            />
+            <span>{errorMessages.Audio}</span>
+          </div>
+          <div>
+            <label>Categoría</label>
+            <select
+              name="Id_Categories"
+              value={songData.Id_Categories}
+              onChange={handleCategoryChange}
+            >
+              <option value={0}>Seleccionar Categoría</option>
+              {categories.map((category) => (
+                <option key={category.id} value={category.id}>
+                  {category.Name_Categories}{" "}
+                  {/* Mostrar el nombre de la categoría */}
+                </option>
+              ))}
+            </select>
+          </div>
+          <button type="submit">Add Song</button>
+        </form>
+      )}
+      <h1>Usuarios</h1>
+      <div className="UsersList">
+        <input
+          type="text"
+          placeholder="Buscar por Usuario"
+          value={searchTerm}
+          onChange={(e) => setSearchTerm(e.target.value)}
+        />
+        <ul className="All">
+          {filteredUsers.map((user) => (
+            <li key={user.id} className="ListUser">
+              <span className="user-info">
+                <strong>Nombre:</strong> {user.firstName}&nbsp;&nbsp;
+                <strong>Apellido:</strong> {user.lastName}&nbsp;&nbsp;
+                <strong>Usuario:</strong> {user.userName}&nbsp;&nbsp;
+                <strong>Email:</strong> {user.email}&nbsp;&nbsp;
+                <strong>Contraseña:</strong> {user.password}&nbsp;&nbsp;
+                {/* Mostrar otras propiedades según sea necesario */}
+              </span>
+              <button
+                className="Admidelete"
+                onClick={() => handleDeleteUser(user.userName)}
+              >
+                Eliminar
+              </button>
+            </li>
+          ))}
+        </ul>
+      </div>
+    </>
+  );
+};
+
 export default Admin;

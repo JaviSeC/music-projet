@@ -3,7 +3,7 @@ import Header from "../../Components/Header/Header";
 import Menu from "../../Components/Menu/Menu";
 import MenuNewUser from "../../Components/Menu/MenuNewUser";
 import PeliculasAnimadas from "../../Components/MusicaAnimada/MusicaAnimada";
-import "./MusicaAnimada.css";
+import "./MusicaAnimadaview.css";
 
 export default function MusicaAnimada() {
   const [userRole, setUserRole] = useState(0); // 0: Sin iniciar sesión, 1: Rol 1 (admin), 2: Rol 2
@@ -19,9 +19,13 @@ export default function MusicaAnimada() {
 
   return (
     <>
+    <div className=".animadaview">
     <Header/>
-    {userRole === 2 ? <MenuNewUser /> : <Menu />}  
+    <div className=".menuview">
+    {userRole === 2 ? <MenuNewUser /> : <Menu />}
+    </div>  
     <PeliculasAnimadas/>
+    </div>
     </>
   );
 }
