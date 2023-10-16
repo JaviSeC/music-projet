@@ -128,9 +128,8 @@ export default function Carousel() {
         "https://res.cloudinary.com/dq2tfglqq/video/upload/v1696318835/Toy_Story_You_ve_Got_a_Friend_in_Me_Instrumental__ustrOyrmLOA_140_erte1l.mp3",
     },
     {
-      image: "",
-      audio:
-        "https://res.cloudinary.com/dq2tfglqq/video/upload/v1696318836/Le_Festin_-QuVe-hjMs0_140_ia7z9v.mp3",
+      image: "https://res.cloudinary.com/doft9ylq1/image/upload/v1697445842/z4BfDXXaXKRo9dFf84Mb4M-1200-80_cne9wg.jpg",
+      audio:"https://res.cloudinary.com/dq2tfglqq/video/upload/v1696318836/Le_Festin_-QuVe-hjMs0_140_ia7z9v.mp3",
     },
     {
       image:
@@ -139,88 +138,84 @@ export default function Carousel() {
         "https://res.cloudinary.com/doft9ylq1/video/upload/v1695886760/UP_OST_-_03_-_Married_Life_gvQB7tMB-jI_1_incfac.mp3",
     },
     {
-      image:
-        "https://res.cloudinary.com/duwenv0yr/image/upload/v1696524511/tron_vmjgsj.jpg",
+      image:"https://res.cloudinary.com/duwenv0yr/image/upload/v1696524511/tron_vmjgsj.jpg",
       audio: "",
     },
     {
-      image:
-        "https://res.cloudinary.com/duwenv0yr/image/upload/v1696524116/Cars_Soundtrack_sxvqep.jpg",
+      image:"https://res.cloudinary.com/duwenv0yr/image/upload/v1696524116/Cars_Soundtrack_sxvqep.jpg",
       audio: "",
     },
     {
-      image: "",
+      image:"https://res.cloudinary.com/duwenv0yr/image/upload/v1696523637/HP_gbbmb3.jpg",
+      audio: "https://res.cloudinary.com/dq2tfglqq/video/upload/v1696364407/Hedwig_s_Theme_wtHra9tFISY_140_wlb7q5.mp3",
+    },
+    {
+      image: "https://res.cloudinary.com/duwenv0yr/image/upload/v1696523637/Jurassicpark-1-_vfvlkn.jpg",
+      audio: "https://res.cloudinary.com/doft9ylq1/video/upload/v1695886048/The_Raptor_Attack_6kllnsihoUs_rjhav7.mp3",
+    },
+    {
+      image: "https://res.cloudinary.com/duwenv0yr/image/upload/v1696523636/apn_hw7y5j.jpg",
       audio: "",
     },
     {
-      image: "",
+      image:"https://res.cloudinary.com/duwenv0yr/image/upload/v1696524115/Mibsoundtrack_zmkc7k.jpg",
       audio: "",
     },
     {
-      image: "",
+      image:"https://res.cloudinary.com/duwenv0yr/image/upload/v1696523636/sirenita_wgpbjk.jpg",
       audio: "",
     },
     {
-      image:
-        "https://res.cloudinary.com/duwenv0yr/image/upload/v1696523637/HP_gbbmb3.jpg",
+      image: "https://res.cloudinary.com/duwenv0yr/image/upload/v1696523636/padrino_b6yhn4.jpg",
       audio: "",
     },
     {
-      image:
-        "https://res.cloudinary.com/duwenv0yr/image/upload/v1696523636/sirenita_wgpbjk.jpg",
+      image: "https://res.cloudinary.com/duwenv0yr/image/upload/v1696523636/bfm_p1jyaf.jpg",
       audio: "",
     },
     {
-      image: "",
+      image: "https://res.cloudinary.com/duwenv0yr/image/upload/v1696524115/mula_pnqm0j.jpg",
       audio: "",
     },
     {
-      image: "",
+      image: "https://res.cloudinary.com/duwenv0yr/image/upload/v1696524115/shr_zalpru.jpg",
       audio: "",
     },
     {
-      image: "",
+      image: "https://res.cloudinary.com/duwenv0yr/image/upload/v1696524116/esla_t2yfoo.jpg",
       audio: "",
     },
     {
-      image: "",
+      image: "https://res.cloudinary.com/duwenv0yr/image/upload/v1696524116/coco_j7kks5.jpg",
       audio: "",
     },
     {
-      image: "",
+      image: "https://res.cloudinary.com/duwenv0yr/image/upload/v1696524116/la_grn_d2xiw9.jpg",
       audio: "",
     },
     {
-      image: "",
+      image: "https://res.cloudinary.com/duwenv0yr/image/upload/v1696524116/pir_j1gorb.jpg",
       audio: "",
     },
     {
-      image: "",
+      image: "https://res.cloudinary.com/duwenv0yr/image/upload/v1696524511/ap_kpygcf.jpg",
       audio: "",
     },
     {
-      image: "",
+      image: "https://res.cloudinary.com/duwenv0yr/image/upload/v1696524511/pant_etoy4r.png",
       audio: "",
     },
     {
-      image: "",
+      image: "https://res.cloudinary.com/duwenv0yr/image/upload/v1696524511/orig_ylsaod.jpg",
       audio: "",
     },
     {
-      image: "",
-      audio: "",
+      image: "https://res.cloudinary.com/doft9ylq1/image/upload/v1696796754/thesocialnetwork-film_sffmv4.webp",
+      audio: "https://res.cloudinary.com/doft9ylq1/video/upload/v1696796379/In_Motion_-_Trent_Reznor_and_Atticus_Ross_The_Social_Network__Yczul_609Gg_lwuiwb.mp3",
     },
     {
-      image: "",
-      audio: "",
-    },
-    {
-      image: "",
-      audio: "",
-    },
-    {
-      image: "",
-      audio: "",
+      image: "https://res.cloudinary.com/doft9ylq1/image/upload/v1696798648/1200x1200bf-60_o4ayfc.jpg",
+      audio: "https://res.cloudinary.com/doft9ylq1/video/upload/v1696798363/Joker_Official_Soundtrack___Defeated_Clown_-_Hildur_Gu%C3%B0nad%C3%B3ttir___WaterTower_DlQ-XU2PV7s_uw6g4w.mp3",
     },
     // Agrega más objetos para cada tarjeta de imagen y canción aquí
   ];
@@ -230,48 +225,88 @@ export default function Carousel() {
   //* verdesito importante
   //todo: naranja
 
-  const toggleAudio = (audio) => {
-    if (currentSong === audio) {
-      audioRef.current.pause();
-      setCurrentSong(null);
-    } else {
-      audioRef.current.src = audio;
-      audioRef.current.play();
-      setCurrentSong(audio);
-    }
-  };
+//   const toggleAudio = (audio) => {
+//     if (currentSong === audio) {
+//       audioRef.current.pause();
+//       setCurrentSong(null);
+//     } else {
+//       audioRef.current.src = audio;
+//       audioRef.current.play();
+//       setCurrentSong(audio);
+//     }
+//   };
 
-  return (
-    <>
-      <div className="audioplayer">
-        <Swiper
-          className="mySwiper"
-          slidesPerView={7}
-          spaceBetween={20}
-          navigation={{
-            // Opciones de navegación
-            prevEl: ".swiper-button-prev",
-            nextEl: ".swiper-button-next",
-          }}
-        >
-          <div className="swiper-button-prev"></div>
-          {songs.map((song, index) => (
-            <SwiperSlide key={index}>
-              <img
-                src={song.image}
-                alt={`Tarjeta ${index + 1}`}
-                onClick={() => toggleAudio(song.audio)}
-              />
-            </SwiperSlide>
-          ))}
-          <div className="swiper-button-next"></div>
-        </Swiper>
+//   return (
+//     <>
+//       <div className="audioplayer">
+//         <Swiper
+//           className="mySwiper"
+//           slidesPerView={7}
+//           spaceBetween={20}
+//           navigation={{
+//             // Opciones de navegación
+//             prevEl: ".swiper-button-prev",
+//             nextEl: ".swiper-button-next",
+//           }}
+//         >
+//           <div className="swiper-button-prev"></div>
+//           {songs.map((song, index) => (
+//             <SwiperSlide key={index}>
+//               <img
+//                 src={song.image}
+//                 alt={`Tarjeta ${index + 1}`}
+//                 onClick={() => toggleAudio(song.audio)}
+//               />
+//             </SwiperSlide>
+//           ))}
+//           <div className="swiper-button-next"></div>
+//         </Swiper>
 
-        {/* Agrega botones de navegación */}
+//         {/* Agrega botones de navegación */}
 
-        {/* Agrega un elemento de audio */}
-        <audio className="audioboton" ref={audioRef} controls></audio>
-      </div>
-    </>
-  );
+//         {/* Agrega un elemento de audio */}
+//         <audio className="audioboton" ref={audioRef} controls></audio>
+//       </div>
+//     </>
+//   );
+// }
+const toggleAudio = (audio) => {
+  if (currentSong === audio) {
+    audioRef.current.pause();
+    setCurrentSong(null);
+  } else {
+    audioRef.current.src = audio;
+    audioRef.current.play();
+    setCurrentSong(audio);
+  }
+};
+
+return (
+  <div className="audioplayer">
+    <Swiper
+      className="mySwiper"
+      slidesPerView={7}
+      spaceBetween={20}
+      navigation={{
+        prevEl: ".swiper-button-prev",
+        nextEl: ".swiper-button-next",
+      }}
+      loop={true} // Habilita la navegación infinita
+    >
+      <div className="swiper-button-prev"></div>
+      {songs.map((song, index) => (
+        <SwiperSlide key={index}>
+          <img
+            src={song.image}
+            alt={`Tarjeta ${index + 1}`}
+            onClick={() => toggleAudio(song.audio)}
+          />
+        </SwiperSlide>
+      ))}
+      <div className="swiper-button-next"></div>
+    </Swiper>
+
+    <audio className="audioboton" ref={audioRef} controls></audio>
+  </div>
+);
 }

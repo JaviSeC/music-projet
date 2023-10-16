@@ -41,11 +41,11 @@ export default function Menu() {
               <a href="/PeliculasAnimadasView">Animadas🧸</a>
               <a href="/ClassicView">Clasicas📀</a>
               <a href="/TerrorView">Terror👻</a>
-              <a href="/Games">Games🎮</a>
-
+               <a href="/Games">Games🎮</a>
             </div>
           )}
         </button>
+    
       </div>
       <div className="boxuser">
         <Link to="/PageLogin">

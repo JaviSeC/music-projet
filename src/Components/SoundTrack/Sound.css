@@ -180,6 +180,41 @@ color: red; /* Cambia el color del texto a rojo al pasar el mouse */
   opacity: 1; /* Aumentar la opacidad al pasar el cursor */
 }
 
+.like-button.liked {
+  animation: like-pulse 0.5s; /* Aplica la animación "like-pulse" durante 0.5 segundos */
+}
+
+.add-to-collection-button:active {
+  animation: move-button 0.3s; /* Aplica la animación "move-button" durante 0.3 segundos al hacer clic */
+}
+
+@keyframes move-button {
+  0% {
+    transform: translateX(0); /* Sin desplazamiento horizontal */
+  }
+  50% {
+    transform: translateX(10px); /* Desplazamiento horizontal de 10px a la mitad de la animación */
+  }
+  100% {
+    transform: translateX(0); /* Vuelve al estado original al final de la animación */
+  }
+}
+
+
+
+
+
+@keyframes like-pulse {
+  0% {
+    transform: scale(2); /* Tamaño original */
+  }
+  50% {
+    transform: scale(1.4); 
+  }
+  100% {
+    transform: scale(1); 
+  }
+}
 
 
 @media (max-width: 360px) {
