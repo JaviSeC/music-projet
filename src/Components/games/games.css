@@ -67,6 +67,7 @@
     width: 25%;
     border-radius: 15px;
     margin-top: 2%;
+    box-shadow: 0 0 10px 8px rgba(255, 255, 255, 0.6);
   }
   .playlist-header-games h1 {
     margin-left: 6.5%;
@@ -262,7 +263,7 @@
       color: white;
       /* border: 1px #FFFFFF solid; */
       margin-left: 0;
-      margin-bottom: 20%;
+      margin-bottom: 180px;
     }
   
     .buttons-container {
@@ -271,10 +272,11 @@
     }
   
     #playlist-cover-games {
-      width: 90%; /* Utiliza todo el ancho disponible */
+      width: 65%; /* Utiliza todo el ancho disponible */
       margin-left: 5%;
       margin-right: 5%;
-      margin-top: 25px;
+      margin-top: 45px;
+      margin-bottom: 10px;
       height: auto; /* Ajusta la altura automáticamente */
       border-radius: 10; /* Elimina el redondeo de las esquinas */
     }
