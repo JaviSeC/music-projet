@@ -9,9 +9,7 @@ export default function PageBodyGames() {
     <>
       <div className="Games">
         <Header />
-        <div className="games">
           {/* <Menu /> */}
-        </div>
         <BodyGames />
       </div>
     </>

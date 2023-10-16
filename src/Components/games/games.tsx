@@ -8,9 +8,9 @@ const songs = [
     artist: "terror",
     title: "terror",
     duration: "2:42",
-    albumCover: "https://res.cloudinary.com/dq2tfglqq/image/upload/v1697012675/Freddy_Krueger__28Robert_Englund_29_x8g340.jpg",
+    albumCover: "https://res.cloudinary.com/duwenv0yr/image/upload/v1695888871/StarLord_omsbw0.jpg",
     audioSource:
-      "https://res.cloudinary.com/dq2tfglqq/video/upload/v1697016735/Freddy_Kruegger_ikm1bx.mp3",
+      "https://res.cloudinary.com/dhme3c8ll/video/upload/v1697445518/Zero_to_Hero_Music_from_[…]xy__Original_Video_Game_Soundtrack___UC9RjhWW8GQ_foxd7d.mp3",
   },
   {
     id: 2,
@@ -148,7 +148,7 @@ const BodyGames: React.FC = () => {
       <div className="playlist-header-games">
         <img
           id="playlist-cover-games"
-          src=""
+          src="https://res.cloudinary.com/duwenv0yr/image/upload/v1695888871/guardian_iobu69.jpg"
           alt="Portada de la playlist"
         />
         <div className="title-container-games">
