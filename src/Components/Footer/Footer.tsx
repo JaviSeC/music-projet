@@ -10,7 +10,7 @@ export default function Footer() {
               src="https://res.cloudinary.com/dhme3c8ll/image/upload/v1693214972/llamada_pkntz4.png"
               alt="Whatsapp"
             />
-            <p>€€€ €€ €€ €€</p>
+            <p>681 93 62 80</p>
           </div>
           <div className="contactos">
             <img
@@ -21,11 +21,13 @@ export default function Footer() {
             <p>SoundTrackMagic@magicsound.es</p>
           </div>
         </div>
+
         <div className="div-titulo">
           <p className="titulo">
             <strong>Sound Tracks Magic</strong>
           </p>
         </div>
+
         <div className="div-redes-sociales">
           <img
             className="icon"

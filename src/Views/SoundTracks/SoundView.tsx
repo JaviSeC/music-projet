@@ -8,9 +8,9 @@ export default function PageSound() {
     <>
     <div className="SoundTracks">
     <Header/>
-     {/* <div className="homeSoundTracks"> 
-     <Menu /> 
-     </div>  */}
+     <div className="homeSoundTracks"> 
+       <Menu /> 
+       </div> 
     <Sound />
     </div>
     </>

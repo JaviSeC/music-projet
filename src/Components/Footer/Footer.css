@@ -82,7 +82,7 @@
   background-color: rgba(0, 0, 0, 0.7); /* Fondo semi-transparente */
   color: white; /* Color del texto */
   padding: 5px 10px; /* Espaciado interno */
-  border-radius: 5px; /* Bordes redondeados */
+  border-radius: 5px;
   font-size: 12px; /* Tamaño de fuente */
   white-space: nowrap; /* Evita el desbordamiento de texto */
   opacity: 0; /* Inicialmente oculto */
@@ -96,29 +96,40 @@
 
 @media screen and (max-width: 360px) {
   .div-footer {
-    flex-direction: column; /* Coloca las cajas una debajo de la otra */
+    flex-direction: column;
     align-items: center; /* Centra las cajas verticalmente */
     text-align: center; /* Centra el texto en las cajas */
     /* background-color: blueviolet; */
-    
+    margin-bottom: 15px;
     height: auto;
     width: 360px;
+    /* padding-top: 1px;
+    padding-bottom: 10px; */
   }
-  .div-contactos {
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    /* margin-top: 25%; */
+
+  .div-contactos {   
+     flex-direction:column;
+     align-items: center;
+     /* display: flex; */
+       /* margin-top: 25%; */
     /* padding-top: 5px; */
     /* Elimina el margen izquierdo */
   }
+
   .contactos {
+    margin-top: -15px;
     margin-left: 0; /* Elimina el margen izquierdo */
   }
+
   .div-titulo {
+    margin-top: -25px;
     margin-left: 0; /* Elimina el margen izquierdo */
   }
+
   .div-redes-sociales{
-    margin-bottom: 5px;
+    margin-top: -10px;
+
+    /* margin-bottom: 12px; */
   }
+  
 }
