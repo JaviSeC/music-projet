@@ -40,12 +40,12 @@ export default function Menu() {
               <a href="/SoundTracksView">Ganadores Oscar🏆</a>
               <a href="/PeliculasAnimadasView">Animadas🧸</a>
               <a href="/ClassicView">Clasicas📀</a>
-              <a href="#">Terror👻</a>
-              <a href="/Games">Games🎮</a>
-
+              <a href="/TerrorView">Terror👻</a>
+               <a href="/Games">Games🎮</a>
             </div>
           )}
         </button>
+    
       </div>
       <div className="boxuser">
         <Link to="/PageLogin">
