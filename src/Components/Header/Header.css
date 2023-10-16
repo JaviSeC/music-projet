@@ -23,15 +23,17 @@
 
 .Name {
   color: white;
-  width: 1400px;
-  height: 60px;
+  width: 1200px;
+  height: 55px;
   text-align: center;
   font-size: xx-large;
+ 
 }
 .search-box {
   margin-top: -0.5%;
   display: flex;
   justify-content: left;
+  
 }
 .Search {
   width: 1200px;
@@ -40,9 +42,10 @@
 }
 .button-search {
   width: 15%;
-  height: 65px;
+  height: 64px;
   /* background-color: rgba(29, 33, 35, 0.648); */
   background-color: #1d2123;
+  
 }
 .lupa {
   margin-left: 1%;
