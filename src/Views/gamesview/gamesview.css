@@ -1,5 +1,6 @@
-.CineClasico{
-    background-image: url(https://res.cloudinary.com/dhme3c8ll/image/upload/v1697012804/fondo_bueno_pvqr5g.jpg);
+.Games{
+    /* background-image: url(https://res.cloudinary.com/dq2tfglqq/image/upload/v1696334219/creacion_15508833_1085079_1706x960_q71t3p.jpg); */
+    background-color: darkred;
     background-size: cover;
     background-attachment: fixed;
     margin: 0;
@@ -7,7 +8,7 @@
     width: 100%;
     
 }
-.homeClassic{
+.games{
     height: 2px;
     margin-top: 18%;
     width: 100%;
@@ -15,8 +16,9 @@
 
 
 @media screen and (max-width:360px) {
-    .CineClasico{
-        background-image: url(https://img.freepik.com/foto-gratis/gramofono-antiguo-hace-girar-banda-sonora-antigua-club-nocturno-generado-ia_188544-37147.jpg?size=626&ext=jpg&ga=GA1.2.239001381.1695985032&semt=sph);
+
+    .Games{
+        background-image: url(https://res.cloudinary.com/dq2tfglqq/image/upload/v1696334323/picture_fgksqd.webp);
         background-size: cover;
         /* background-attachment: fixed; */
         /* margin: 0; */

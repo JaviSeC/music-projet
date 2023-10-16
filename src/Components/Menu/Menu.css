@@ -4,12 +4,15 @@
   margin-top: -250px;
   /* margin-left: 20px; */
 }
+<<<<<<< HEAD
 
 button:hover {
+=======
+button:hover{
+>>>>>>> origin/Javier
   background: rgb(49, 136, 228);
   border-radius: 50px 50px 50px 50px;
 }
-
 .boxSong {
   background-color: rgba(26, 30, 31, 1);
   border-radius: 50px;
@@ -17,7 +20,6 @@ button:hover {
   height: 150px;
   margin-top: 8%;
 }
-
 .home {
   width: 80%;
 }
@@ -25,7 +27,6 @@ button:hover {
   width: 110%;
   margin-left: -3%;
 }
-
 .loginbutton {
   width: 100%;
   height: 40%;
@@ -62,7 +63,7 @@ button:hover {
   cursor: pointer;
 }
 .dropdown-content {
-  width: 135%;
+  width: 160%;
   background-color: rgba(26, 30, 31, 1);
   margin-left: 105%;
   margin-top: -110%;
@@ -70,6 +71,10 @@ button:hover {
   display: flex;
   flex-direction: column;
   align-items: center;
+<<<<<<< HEAD
+=======
+  /* border-right: 20px whitesmoke; */
+>>>>>>> origin/Javier
 }
 
 .dropdown-content a {
@@ -78,13 +83,20 @@ button:hover {
   text-align: center;
   margin: 3%;
   font-size: 15px;
+  padding: 2px;
 }
+<<<<<<< HEAD
 
 .dropdown-content a:hover {
   background: rgb(49, 136, 228);
   border-radius: 15px;
+=======
+.dropdown-content a:hover{
+  background: rgb(154, 157, 160);
+  border-radius: 15px;
+  padding: 4px;
+>>>>>>> origin/Javier
 }
-
 @media screen and (max-width: 360px) {
   .Container {
     border: 3px red solid;
@@ -95,7 +107,6 @@ button:hover {
     margin-top: 10px;
     /* height: auto; */
   }
-
   .boxSong {
     width: 100%;
     margin-top: 5%;
@@ -109,14 +120,12 @@ button:hover {
   .registro {
     width: 200%;
   }
-
   .loginbutton,
   .registrobutton {
     width: 100%;
     margin-top: 10%;
     position: relative;
   }
-
   .loginbutton .dropdown-content,
   .registrobutton .dropdown-content {
     display: none;
@@ -127,12 +136,10 @@ button:hover {
     background-color: rgba(26, 30, 31, 1);
     border-radius: 10px;
   }
-
   .loginbutton:hover .dropdown-content,
   .registrobutton:hover .dropdown-content {
     display: block;
   }
-
   .dropdown-content a {
     color: white;
     text-decoration: none;

@@ -1,4 +1,4 @@
-.music-player-sound {
+.music-player-terror {
   background-color: #000000be;
   color: #ffffff;
   display: flex;
@@ -14,20 +14,20 @@
   margin-right: 10%;
   border-radius: 10px 10px 0px 0px;
 }
-.music-player-sound button {
+.music-player-terror button {
   height: 30px;
   color: #fff !important;
   background-color: #13286d7c !important;
 }
 
-.title-container-sound {
+.title-container-terror {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-evenly;
 }
 
-.album-cover-sound img {
+.album-cover-terror img {
   max-width: 120px;
   height: 60px;
   border-radius: 4px;
@@ -53,7 +53,7 @@
     font-size: 14px;
     text-align: left;
   } */
-.playlist-header-sound {
+.playlist-header-terror {
   /* width: 75%; */
   height: 300px;
   display: flex;
@@ -61,14 +61,14 @@
   margin-left: 15%;
   color: white;
 }
-#playlist-cover-sound {
+#playlist-cover-terror {
   margin-right: 50px;
   max-height: 100%;
   width: 30%;
   border-radius: 15px;
   margin-top: 2%;
 }
-.playlist-header-sound h1 {
+.playlist-header-terror h1 {
   margin-left: 6.5%;
   margin-top: 3%;
 }
@@ -193,7 +193,7 @@
     height: 100%;
   }
 
-  .music-player-sound {
+  .music-player-terror {
     margin-top: 15px;
     background-color: #000000be;
     color: #ffffff;
@@ -210,7 +210,7 @@
   }
 
   /* Estilos para botones en pantallas pequeñas */
-  .music-player-sound button {
+  .music-player-terror button {
     height: 30px;
     margin-top: 5px; /* Espacio entre los botones */
   }
@@ -253,7 +253,7 @@
   }
 
   /* Estilos para el encabezado de la lista de reproducción (playlist-header) */
-  .playlist-header-sound {
+  .playlist-header-terror {
     width: 100%; /* Ancho completo en pantallas pequeñas */
     display: flex;
     text-align: center;
@@ -270,8 +270,8 @@
     flex-direction: row;
   }
 
-  #playlist-cover-sound {
-    width: 60%; /* Utiliza todo el ancho disponible */
+  #playlist-cover-terror {
+    width: 90%; /* Utiliza todo el ancho disponible */
     margin-left: 5%;
     margin-right: 5%;
     margin-top: 25px;
@@ -279,7 +279,7 @@
     border-radius: 10; /* Elimina el redondeo de las esquinas */
   }
 
-  .playlist-header-sound h1 {
+  .playlist-header-terror h1 {
     font-size: 33px; /* Reduzca el tamaño del título */
     text-align: center;
     margin-top: 17px; /* Espacio entre el título y la imagen */
