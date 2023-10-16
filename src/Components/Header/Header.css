@@ -11,7 +11,10 @@
 }
 .img {
   /* margin-right: -10%; */
-  width: 20%;
+  /* width: 20%; */
+  margin-left: 5px;
+  width: 80%;
+  height: 110%;
 }
 
 .box2 {
@@ -58,6 +61,11 @@
   background-color: #1d2123;
 
   margin-left: -182%;
+}
+
+.busqueda:active{
+  /* background-color: blueviolet; */
+  border: 5px orangered solid;
 }
 
 @media screen and (max-width: 360px) {

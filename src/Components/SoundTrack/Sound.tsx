@@ -1,16 +1,8 @@
 import React, { useState, useRef } from "react";
 import "./Sound.css"; // Asegúrate de que el nombre del archivo CSS sea correcto y coincide con tu proyecto
-import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
 
-interface Song {
-  id: number;
-  title: string;
-  artist: string;
-  duration: string;
-  albumCover: string;
-  audioSource: string;
-}
-
+const songsPerPage = 5;
 const songs = [
   {
     id: 1,
@@ -42,7 +34,6 @@ const songs = [
     audioSource:
       "https://res.cloudinary.com/doft9ylq1/video/upload/v1695886048/The_Raptor_Attack_6kllnsihoUs_rjhav7.mp3",
   },
-
   {
     id: 4,
     artist: " Michael Giacchino",
@@ -103,7 +94,6 @@ const songs = [
     audioSource:
       "https://res.cloudinary.com/doft9ylq1/video/upload/v1696795752/The_Artist_-_01_-_The_Artist_Ouverture_skvwSqNI6BE_wjpzni.mp3",
   },
-
   {
     id: 10,
     artist: "Trent Reznor, Atticus Ross",
@@ -114,7 +104,6 @@ const songs = [
     audioSource:
       "https://res.cloudinary.com/doft9ylq1/video/upload/v1696796379/In_Motion_-_Trent_Reznor_and_Atticus_Ross_The_Social_Network__Yczul_609Gg_lwuiwb.mp3",
   },
-
   {
     id: 11,
     artist: "Howard Shore",
@@ -125,7 +114,6 @@ const songs = [
     audioSource:
       "https://res.cloudinary.com/dhme3c8ll/video/upload/v1695801970/BSO_-_Apocalipsys_Now_3VywjmyNYDs_q69djb.mp3https://res.cloudinary.com/doft9ylq1/video/upload/v1696797582/The_Lord_of_the_Rings__The_Return_of_the_King_CR_-_01._Roots_and_Beginnings_MFsO9weqLLE_tdrn9c.mp3",
   },
-
   {
     id: 12,
     artist: "Elliot Goldenthal",
@@ -137,35 +125,41 @@ const songs = [
       "https://res.cloudinary.com/doft9ylq1/video/upload/v1697010281/The_Floating_Bed_MR7hrCFiwBA_ymveb4.mp3",
   },
 ];
-
-const songsPerPage = 7; // Número de canciones por página
-
 const SoundTrack: React.FC = () => {
-  const [currentPage, setCurrentPage] = useState(1); // Página actual
+  const [currentPage, setCurrentPage] = useState(1);
   const [currentSongIndex, setCurrentSongIndex] = useState(0);
+  const [currentSong, setCurrentSong] = useState(songs[0]);
   const [isPlaying, setIsPlaying] = useState(false);
   const [likedSongs, setLikedSongs] = useState<Set<number>>(new Set<number>());
   const audioRef = useRef<HTMLAudioElement | null>(null);
-
   const startIndex = (currentPage - 1) * songsPerPage;
   const endIndex = startIndex + songsPerPage;
   const songsToShow = songs.slice(startIndex, endIndex);
-
-  const totalPages = Math.ceil(songs.length / songsPerPage);
-
+  // const totalPages = Math.ceil(songs.length / songsPerPage);
+  // const songsToShow = songs.slice(startIndex, endIndex);
   const togglePlayPause = () => {
     if (audioRef.current) {
       if (isPlaying) {
         audioRef.current.pause();
       } else {
-        audioRef.current.play().then(() => {
-          setCurrentSongIndex((prevIndex) => (prevIndex + 1) % songs.length);
-        });
+        audioRef.current.play();
       }
       setIsPlaying(!isPlaying);
     }
   };
-
+  const changeSong = (song: any) => {
+    setCurrentSong(song);
+    setIsPlaying(true);
+  };
+  const toggleLike = (songId: number) => {
+    const updatedLikedSongs = new Set<number>(likedSongs); // Asegura que el tipo sea Set<number>
+    if (likedSongs.has(songId)) {
+      updatedLikedSongs.delete(songId);
+    } else {
+      updatedLikedSongs.add(songId);
+    }
+    setLikedSongs(updatedLikedSongs);
+  };
   const playAllSongs = () => {
     if (isPlaying) {
       audioRef.current?.pause();
@@ -176,35 +170,17 @@ const SoundTrack: React.FC = () => {
     }
     setIsPlaying(!isPlaying);
   };
-
-  const changeSong = (song: Song) => {
-    setCurrentSongIndex(songs.findIndex((s) => s.id === song.id));
-    setIsPlaying(true);
-  };
-
-  const toggleLike = (songId: number) => {
-    const updatedLikedSongs = new Set<number>(likedSongs);
-    if (likedSongs.has(songId)) {
-      updatedLikedSongs.delete(songId);
-    } else {
-      updatedLikedSongs.add(songId);
-    }
-    setLikedSongs(updatedLikedSongs);
-  };
-
   return (
-    <div className="sound-container">
-      <div className="playlist-header">
+    <div className="body-container">
+      <div className="playlist-header-sound">
         <img
-          id="playlist-cover"
+          id="playlist-cover-sound"
           src="https://res.cloudinary.com/doft9ylq1/image/upload/v1696403613/2002.i123.004_film_stripes_reels_realistic_1_o5gt6x.jpg"
           alt="Portada de la playlist"
-          className="image-left image-moved-right"
         />
-
-        <div className="title-container">
-          <h1>Soundtracks</h1>
-          <p>Colección de los SoundTracks ganadores de Oscar</p>
+        <div className="title-container-sound">
+          <h1>SoundTracks</h1>
+          <p>Colección de SoundTracks Ganadores Oscars!!!</p>
           <div className="buttons-container">
             <button className="play-all-button" onClick={playAllSongs}>
               {isPlaying ? "Pausar" : "Play all"}
@@ -218,7 +194,6 @@ const SoundTrack: React.FC = () => {
           </div>
         </div>
       </div>
-
       <div className="song-list">
         <ul>
           {songsToShow.map((song) => (
@@ -227,59 +202,65 @@ const SoundTrack: React.FC = () => {
               <button onClick={() => changeSong(song)}>
                 {song.title} - {song.artist} - {song.duration}
               </button>
-              <div className="like-container">
-                <button
-                  className={`like-button ${
-                    likedSongs.has(song.id) ? "liked" : ""
-                  }`}
-                  onClick={() => toggleLike(song.id)}
-                >
-                  {likedSongs.has(song.id) ? "❤️" : "🤍"}
-                </button>
-              </div>
+              <button
+                id="like-button"
+                onClick={() => toggleLike(song.id)}
+                className={likedSongs.has(song.id) ? "liked" : ""}
+              >
+                {likedSongs.has(song.id) ? "💜" : "🤍"}
+              </button>
             </li>
           ))}
         </ul>
+      
+        <div className="pagination">
+          
+          <div className="page-button">
+            <button
+              onClick={() => setCurrentPage(1)}
+              disabled={currentPage === 1}
+            >
+              1
+            </button>
+          </div>
+          
+          <div className="page-button">
+            <button
+              onClick={() => setCurrentPage(2)}
+              disabled={endIndex >= songs.length}
+            >
+              2
+            </button>
+          </div>
+
+          <div className="page-button">
+            <button
+              onClick={() => setCurrentPage(3)}
+              disabled={endIndex >= songs.length}
+            >
+              3
+            </button>
+          </div>
+        </div>
+
       </div>
 
-      <div className="paginationsound">
-        <div className="page-buttonSound">
-          <button
-            onClick={() => setCurrentPage(1)}
-            disabled={currentPage === 1}
-          >
-            1
-          </button>
-        </div>
-        <div className="page-buttonSound">
-          <button
-            onClick={() => setCurrentPage(2)}
-            disabled={endIndex >= songs.length}
-          >
-            2
-          </button>
-        </div>
-      </div>
-
-      <div className="music-player">
-        <div className="album-cover">
-          <img
-            src={songs[currentSongIndex].albumCover}
-            alt="Portada del álbum"
-          />
+      <div className="music-player-sound">
+        <div className="album-cover-sound">
+          <img src={currentSong.albumCover} alt="Portada del álbum" />
         </div>
         <div className="song-info">
-          <p className="artist">{songs[currentSongIndex].artist}</p>
-          <p className="song-title">{songs[currentSongIndex].title}</p>
+          <p className="artist">{currentSong.artist}</p>
+          <p className="song-title">{currentSong.title}</p>
         </div>
         <audio
           id="audio"
           controls
           ref={audioRef}
-          key={songs[currentSongIndex].id}
-          src={songs[currentSongIndex].audioSource}
-          onEnded={togglePlayPause}
-        />
+          key={currentSong.id} // Esto fuerza la recarga del elemento audio
+        >
+          <source src={currentSong.audioSource} type="audio/mpeg" />
+        </audio>
         <button onClick={togglePlayPause}>
           {isPlaying ? "Pausar" : "Reproducir"}
         </button>
@@ -287,5 +268,4 @@ const SoundTrack: React.FC = () => {
     </div>
   );
 };
-
 export default SoundTrack;

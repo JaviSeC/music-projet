@@ -1,6 +1,7 @@
 body{
     background-color: rgba(175, 183, 187, 1);
-}
+    /* background-image:linear-gradient(to bottom right, #FFF7FB, #EFE7F2, #DBD8EA, #BFC9E2, #98B9D9, #6AA8CF, #4096C0, #28a4c0,  #aceee3, #aceee3);
+} */}
 
 .home{
     display: flex;

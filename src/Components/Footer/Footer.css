@@ -46,10 +46,10 @@
   /* margin-left: 10px; */
 }
 
-/* .div-redes-sociales{
-  border-bottom: 1px rgb(73, 134, 134) solid;
+.div-redes-sociales{
+  display: flex;
 
-} */
+}
 
 .icon {
   background-color: white;
@@ -94,17 +94,16 @@
 }
 
 
-/* Media query para pantallas con un ancho máximo de 360px (responsive) */
 @media screen and (max-width: 360px) {
   .div-footer {
     flex-direction: column; /* Coloca las cajas una debajo de la otra */
     align-items: center; /* Centra las cajas verticalmente */
     text-align: center; /* Centra el texto en las cajas */
     /* background-color: blueviolet; */
+    
     height: auto;
-    width: 360px;;
+    width: 360px;
   }
-
   .div-contactos {
     display: flex;
     align-items: center;
@@ -113,15 +112,12 @@
     /* padding-top: 5px; */
     /* Elimina el margen izquierdo */
   }
-
   .contactos {
     margin-left: 0; /* Elimina el margen izquierdo */
   }
-
   .div-titulo {
     margin-left: 0; /* Elimina el margen izquierdo */
   }
-
   .div-redes-sociales{
     margin-bottom: 5px;
   }
