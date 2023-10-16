@@ -5,96 +5,96 @@ const songsPerPage = 5;
 const songs = [
   {
     id: 1,
-    artist: "terror",
-    title: "terror",
-    duration: "2:42",
+    artist: "Star Lord Band",
+    title: "Zero to Hero",
+    duration: "3:20",
     albumCover: "https://res.cloudinary.com/duwenv0yr/image/upload/v1695888871/StarLord_omsbw0.jpg",
     audioSource:
-      "https://res.cloudinary.com/dhme3c8ll/video/upload/v1697445518/Zero_to_Hero_Music_from_[…]xy__Original_Video_Game_Soundtrack___UC9RjhWW8GQ_foxd7d.mp3",
+      "https://res.cloudinary.com/duwenv0yr/video/upload/v1697446035/Zero_to_hero_dbtojf.mp3",
   },
   {
     id: 2,
-    artist: "terror",
-    title: "terror",
-    duration: "3:58",
+    artist: "Star Lord Band",
+    title: "Space Riders with No Names",
+    duration: "3:54",
     albumCover:
-      "https://res.cloudinary.com/dq2tfglqq/image/upload/v1697012778/latest_eqs8bi.png",
+      "https://res.cloudinary.com/duwenv0yr/image/upload/v1695888871/StarLord_omsbw0.jpg",
     audioSource:
-      "https://res.cloudinary.com/dq2tfglqq/video/upload/v1697016692/Chucky_enxkpe.mp3",
+      "https://res.cloudinary.com/duwenv0yr/video/upload/v1697448057/Space_Riders_with_No_Names_jh4sfu.mp3",
   },
   {
     id: 3,
-    artist: "terror",
-    title: "terror",
-    duration: "2:43",
+    artist: "Star Lord Band",
+    title: "Bit of Good",
+    duration: "5:25",
     albumCover:
-      "https://res.cloudinary.com/dq2tfglqq/image/upload/v1697016996/jeff-the_killer.jpeg_2140140895_nwokm7.jpg",
+      "https://res.cloudinary.com/duwenv0yr/image/upload/v1695888871/StarLord_omsbw0.jpg",
     audioSource:
-      "https://res.cloudinary.com/dq2tfglqq/video/upload/v1697016738/Jef_the_killer_rbnyg0.mp3",
+      "https://res.cloudinary.com/duwenv0yr/video/upload/v1697448139/Bit_of_Good_itmcf5.mp3",
   },
   {
     id: 4,
-    artist: "terror",
-    title: "terror",
-    duration: "3:20",
-    albumCover: "https://img2.rtve.es/i/?w=1600&i=1673619861549.jpg",
+    artist: "Rick Astley",
+    title: "Never Gonna Give You Up",
+    duration: "3:33",
+    albumCover: "https://res.cloudinary.com/duwenv0yr/image/upload/v1697448385/RickA_blprou.jpg",
     audioSource:
-      "https://res.cloudinary.com/dhme3c8ll/video/upload/v1695801278/Carros_de_Fuego_-_B.S.O._MkS1SBPHN44_pcrwyp.mp3",
+      "https://res.cloudinary.com/duwenv0yr/video/upload/v1697448386/Never_Gonna_Give_You_Up_ttipvy.mp3",
   },
   {
     id: 5,
-    artist: "terror",
-    title: "terror",
-    duration: "2:20",
-    albumCover: "https://cdn.mos.cms.futurecdn.net/QfpYiWt35GZfU2Gd7pztQ8.png",
+    artist: "Bonnie Tyler",
+    title: "Holding Out for a Hero",
+    duration: "4:21",
+    albumCover: "https://res.cloudinary.com/duwenv0yr/image/upload/v1697449024/Holding_uuol2x.jpg",
     audioSource:
-      "https://res.cloudinary.com/dhme3c8ll/video/upload/v1695801629/Main_Title_John_Williams_Jaws_From_The__Jaws__Soundtrack__BePfzCOMRZQ_cqnbb1.mp3",
+      "https://res.cloudinary.com/duwenv0yr/video/upload/v1697449025/Holding_Out_for_a_Hero_i45amq.mp3",
   },
   {
     id: 6,
-    artist: "terror",
-    title: "terror",
-    duration: "4:44",
+    artist: "Wham!",
+    title: "Wake Me Up Before You Go-Go",
+    duration: "3:51",
     albumCover:
-      "https://hips.hearstapps.com/hmg-prod/images/apocalypse-now-donald-trump-1534867844.jpg",
+      "https://res.cloudinary.com/duwenv0yr/image/upload/v1697449212/Wham_b6b30n.jpg",
     audioSource:
-      "https://res.cloudinary.com/dhme3c8ll/video/upload/v1695801970/BSO_-_Apocalipsys_Now_3VywjmyNYDs_q69djb.mp3",
+      "https://res.cloudinary.com/duwenv0yr/video/upload/v1697449213/Wake_Me_Up_Before_You_Go-Go_aqjydm.mp3",
   },
   {
     id: 7,
-    artist: "terror",
-    title: "terror",
-    duration: "2:37",
+    artist: "Europe",
+    title: "The Final Countdown",
+    duration: "5:10",
     albumCover:
-      "https://caixaforum.org/documents/311930/9160687/vaquilla+berlanga+webCXF+spa220170101225+-+18204jpg/83fc543e-f1a6-17f4-0b1e-8c4b1a7948ff?version=1.0&t=1565690877227",
-    audioSource: "URL_DEL_AUDIO",
+      "https://res.cloudinary.com/duwenv0yr/image/upload/v1697449397/Europe_kolbwl.jpg",
+    audioSource: "https://res.cloudinary.com/duwenv0yr/video/upload/v1697449398/The_Final_Countdown_bbxs5e.mp3",
   },
   {
     id: 8,
-    artist: "terror",
-    title: "terror",
-    duration: "3:11",
+    artist: "Blondie",
+    title: "Call Me",
+    duration: "8:06",
     albumCover:
-      "https://www.elindependiente.com/wp-content/uploads/2020/02/doctor-zhivago.jpg",
-    audioSource: "URL_DEL_AUDIO",
+      "https://res.cloudinary.com/duwenv0yr/image/upload/v1697449749/Call_Me_mktsgj.jpg",
+    audioSource: "https://res.cloudinary.com/duwenv0yr/video/upload/v1697449751/Call_Me_npkfxr.mp3",
   },
   {
     id: 9,
-    artist: "terror",
-    title: "terror",
-    duration: "2:51",
+    artist: "a-ha",
+    title: "Take on me",
+    duration: "3:45",
     albumCover:
-      "https://www.abc.es/media/peliculas/000/005/139/yo-el-vaquilla-2.jpg",
-    audioSource: "URL_DEL_AUDIO",
+      "https://res.cloudinary.com/duwenv0yr/image/upload/v1697449884/Take_on_lzzukl.jpg",
+    audioSource: "https://res.cloudinary.com/duwenv0yr/video/upload/v1697449885/Take_on_brtzuv.mp3",
   },
   {
     id: 10,
-    artist: "terror",
-    title: "terror",
-    duration: "3:42",
+    artist: "Tears for Fears",
+    title: "Everybody Wants To Rule The World",
+    duration: "4:11",
     albumCover:
-      "https://www.alohacriticon.com/wp-content/uploads/2017/01/perros-callejeros-foto-critica.jpg",
-    audioSource: "URL_DEL_AUDIO",
+      "https://res.cloudinary.com/duwenv0yr/image/upload/v1697450086/Tears_cwrrrd.jpg",
+    audioSource: "https://res.cloudinary.com/duwenv0yr/video/upload/v1697450087/Everybody_Wants_To_Rule_The_World_u0ab8z.mp3",
   },
 ];
 
@@ -152,8 +152,8 @@ const BodyGames: React.FC = () => {
           alt="Portada de la playlist"
         />
         <div className="title-container-games">
-          <h1>Canciones De Videojuegos Frikis</h1>
-          <p>Colección de los Soundtracks mas emblematicos de videojuegos de miguel!😜</p>
+          <h1>Soundstracks Games</h1>
+          <p>¡Colección de los Soundtracks más emblematicos de videojuegos!</p>
           <div className="buttons-container">
             <button className="play-all-button" onClick={playAllSongs}>
               {isPlaying ? "Pausar" : "Play all"}
