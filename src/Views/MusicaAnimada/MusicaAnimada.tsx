@@ -8,10 +8,10 @@ export default function Animadas() {
     <>
 <div className="animadaview">
     <Header/>
-<div className="menuview">
+{/* <div className="menuview"> */}
       {/* <Menu />  */}
       <PeliculasAnimadas/>
-      </div>
+      {/* </div> */}
    
     </div>
     </>

@@ -64,10 +64,10 @@ const songs = [
   {
     id: 8,
     artist: 'Los Chunguitos',
-    title: 'Deprisa deprisa',
-    duration: '3:10',
+    title: 'Deprisa Deprisa',
+    duration: '3:11',
     albumCover:
-      'https://estaticos-cdn.elperiodico.com/clip/4d6f400e-7958-402d-ae37-ae518b8ef62a_alta-libre-aspect-ratio_default_0.jpg',
+      'https://res.cloudinary.com/dhme3c8ll/image/upload/v1697017137/4d6f400e-7958-402d-ae37-ae518b8ef62a_alta-libre-aspect-ratio_default_0_gtykcl.jpg',
     audioSource: 'https://res.cloudinary.com/dhme3c8ll/video/upload/v1697011700/Me_quedo_contigo_-_Deprisa_deprisa_85nWERy0JdE_sgahf6.mp3'
   },
   {
@@ -90,6 +90,7 @@ const songs = [
   },
 
 ];
+
 const BodyClassic: React.FC = () => {
   const [currentPage, setCurrentPage] = useState(1);
   const [currentSongIndex, setCurrentSongIndex] = useState(0);
@@ -138,13 +139,13 @@ const BodyClassic: React.FC = () => {
 
   return (
     <div className="body-container">
-      <div className="playlist-header">
+      <div className="playlist-header-classic">
         <img
-          id="playlist-cover"
+          id="playlist-cover-classic"
           src="https://hips.hearstapps.com/es.h-cdn.co/fotoes/images/cinefilia/peliculas-clasicas-que-hay-que-ver/peliculas_clasicas_que_hay_que_ver_cantando_bajo_la_lluvia/138151151-1-esl-ES/peliculas_clasicas_que_hay_que_ver_cantando_bajo_la_lluvia.jpg?resize=980:*"
           alt="Portada de la playlist"
         />
-        <div className="title-container">
+        <div className="title-container-classic">
           <h1>Cine Clásico</h1>
           <p>Colección de las películas más míticas del cine</p>
           <div className="buttons-container">
@@ -192,8 +193,8 @@ const BodyClassic: React.FC = () => {
 
 
       </div>
-      <div className="music-player">
-        <div className="album-cover">
+      <div className="music-player-classic">
+        <div className="album-cover-classic">
           <img
             src={currentSong.albumCover}
             alt="Portada del álbum"
