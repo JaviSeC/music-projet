@@ -68,7 +68,7 @@
 
 .busqueda:active{
   /* background-color: blueviolet; */
-  border: 5px orangered solid;
+  border: 5px rgb(111, 110, 110) solid;
 }
 
 @media screen and (max-width: 360px) {
