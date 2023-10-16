@@ -68,6 +68,8 @@ export default function Body() {
             p: 0,
             position: 'relative',
             borderRadius: '20px',
+            boxShadow: '0 0 10px 8px rgba(0, 0, 0, 0.5)',
+
           }}
         >
           <AspectRatio ratio="4/3">
@@ -89,7 +91,8 @@ export default function Body() {
                   left: '35%',
                   transform: 'translate(-50%, -50%)',
                   textAlign: 'center',
-                  background: 'rgba(0, 0, 0, 0.5)',
+                  background: 'rgba(0, 0, 0, 0.3)',
+                  borderRadius: '10px',
                   padding: '16px',
                   color: 'white',
                   fontSize: '14px',
