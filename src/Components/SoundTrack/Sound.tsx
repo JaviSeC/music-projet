@@ -179,8 +179,8 @@ const SoundTrack: React.FC = () => {
           alt="Portada de la playlist"
         />
         <div className="title-container-sound">
-          <h1>Cine De Terror!!</h1>
-          <p>Colección de las películas más Tenebrosas del cine</p>
+          <h1>SoundTracks</h1>
+          <p>Colección de SoundTracks Ganadores Oscars!!!</p>
           <div className="buttons-container">
             <button className="play-all-button" onClick={playAllSongs}>
               {isPlaying ? "Pausar" : "Play all"}
