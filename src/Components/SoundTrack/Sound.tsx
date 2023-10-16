@@ -227,7 +227,7 @@ const SoundTrack: React.FC = () => {
           <div className="page-button">
             <button
               onClick={() => setCurrentPage(2)}
-              disabled={endIndex >= songs.length}
+              disabled={currentPage === 2}
             >
               2
             </button>
