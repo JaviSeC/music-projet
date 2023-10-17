@@ -21,6 +21,7 @@ const SearchBox: React.FC<SearchBoxProps> = ({ onSearch }) => {
             alt="lupa"
           />
         </button>
+        
       </div>
       <div>
         <input
@@ -45,11 +46,13 @@ export default function Header() {
     <>
       <header className="BOX">
         <div className="Logo">
-          <img
-            className="img"
-            src="https://res.cloudinary.com/da7ffijqs/image/upload/v1695227385/_c78f550a-1c6e-4dd5-b961-d4c0d793168a-removebg-preview_oah4us.png"
-            alt="logo"
-          />
+          <a href="/"> {/* Agregar un enlace a la página principal */}
+            <img
+              className="img"
+              src="https://res.cloudinary.com/da7ffijqs/image/upload/v1695227385/_c78f550a-1c6e-4dd5-b961-d4c0d793168a-removebg-preview_oah4us.png"
+              alt="logo"
+            />
+          </a>
         </div>
         <div className="box2">
           <div className="Name">SoundTracks Magic</div>

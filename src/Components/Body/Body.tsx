@@ -5,6 +5,8 @@ import Card from '@mui/joy/Card';
 import CardCover from '@mui/joy/CardCover';
 import AvatarGroup from '@mui/joy/AvatarGroup';
 import Link from '@mui/joy/Link';
+// import { Link } from 'react-router-dom';
+
 import Favorite from '@mui/icons-material/Favorite';
 import Visibility from '@mui/icons-material/Visibility';
 import './Body.css';
@@ -47,6 +49,7 @@ export default function Body() {
   const cardStyle = isSmallScreen ? { display: 'none' } : {};
 
   return (
+   <a href='/Games'>
     <div
       style={{
         ...cardStyle,
@@ -65,6 +68,8 @@ export default function Body() {
             p: 0,
             position: 'relative',
             borderRadius: '20px',
+            boxShadow: '0 0 10px 8px rgba(0, 0, 0, 0.5)',
+
           }}
         >
           <AspectRatio ratio="4/3">
@@ -86,7 +91,8 @@ export default function Body() {
                   left: '35%',
                   transform: 'translate(-50%, -50%)',
                   textAlign: 'center',
-                  background: 'rgba(0, 0, 0, 0.5)',
+                  background: 'rgba(0, 0, 0, 0.3)',
+                  borderRadius: '10px',
                   padding: '16px',
                   color: 'white',
                   fontSize: '14px',
@@ -109,10 +115,13 @@ export default function Body() {
               >
                 <div style={{ display: 'flex', alignItems: 'center', gap: '10px', flex: 1 }}>
                   <AvatarGroup>
-                    <Avatar alt="Remy Sharp" src="https://res.cloudinary.com/duwenv0yr/image/upload/v1695228608/pexels-patrick-case-3682820_x2c5ng.jpg" />
-                    <Avatar alt="Travis Howard" src="https://res.cloudinary.com/duwenv0yr/image/upload/v1695228607/pexels-kaique-rocha-555345_dsi7hh.jpg" />
-                    <Avatar alt="Cindy Baker" src="https://res.cloudinary.com/duwenv0yr/image/upload/v1695228606/pexels-domineves-anthony-12495575_w6fpq4.jpg" />
-                    <Avatar>+3</Avatar>
+                    <Avatar alt="Remy Sharp" src="https://res.cloudinary.com/dq2tfglqq/image/upload/v1697016996/jeff-the_killer.jpeg_2140140895_nwokm7.jpg" />
+                    <Avatar alt="Remy Sharp" src="https://res.cloudinary.com/dq2tfglqq/image/upload/v1697451117/image_720_jmnyzf.png" />
+                    <Avatar alt="Remy Sharp" src="https://res.cloudinary.com/dq2tfglqq/image/upload/v1697449843/profile-pic_6_enulfi.png" />
+                    <Avatar alt="Remy Sharp" src="https://res.cloudinary.com/dq2tfglqq/image/upload/v1697449738/profile-pic__2__480_drjnkh.png" />
+                    <Avatar alt="Travis Howard" src="https://res.cloudinary.com/dq2tfglqq/image/upload/v1697449618/perfil_360_dalewx.png" />
+                    <Avatar alt="Cindy Baker" src="https://res.cloudinary.com/dq2tfglqq/image/upload/v1697449574/54e77de3-4286-42e3-b180-77c999bd7ba2_480_fkrv6d.png" />
+                    <Avatar>+1</Avatar>
                   </AvatarGroup>
                   <Link
                     href="#dribbble-shot"
@@ -128,7 +137,9 @@ export default function Body() {
                     33K Likes
                   </Link>
                   <Link
-                    href="#dribbble-shot"
+                    // href=""
+                    href="/Games"
+                    // to="/Views/MusicaAnimada/MusicaAnimada/Animadas"
                     level="body-xs"
                     underline="none"
                     startDecorator={<Visibility />}
@@ -147,5 +158,7 @@ export default function Body() {
         </Card>
       </div>
     </div>
+   </a>
+    
   );
 }

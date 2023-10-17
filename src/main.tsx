@@ -40,14 +40,20 @@ import PageBodyGames from "./Views/gamesview/gamesview";
 import PageUser from "./Views/PageUser/PageUser";
 
 
+
+// import User from "./Components/user/user";
+
+
 ReactDOM.createRoot(document.getElementById("root")!).render(
   <>
     <BrowserRouter>
-      <Routes>
+      <Routes> 
         <Route path="/" element={<PageInitial />} />
         <Route path="/PageLogin" element={<PageLogin />} />
         <Route path="/PageSingUp" element={<PageSingUp />} />
-        <Route path="/PageAdmin" element={<PageAdmin />} />
+       <Route path="/PageAdmin" element={<PageAdmin />} />
+        
+          {/* <User />  */}
         <Route path="/ClassicView" element={<PageBodyClassic />}/> 
         <Route path="/SoundTracksView" element={<PageSound/>}/> 
         <Route path="/PeliculasAnimadasView" element={<MusicaAnimada />}/> 
@@ -60,3 +66,5 @@ ReactDOM.createRoot(document.getElementById("root")!).render(
     </BrowserRouter>
   </>
 );
+
+

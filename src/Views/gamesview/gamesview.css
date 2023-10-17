@@ -1,8 +1,14 @@
 .Games{
     /* background-image: url(https://res.cloudinary.com/dq2tfglqq/image/upload/v1696334219/creacion_15508833_1085079_1706x960_q71t3p.jpg); */
-    background-color: darkred;
+    /* background-color: darkred;
     background-size: cover;
-    background-attachment: fixed;
+    background-attachment: fixed; */
+
+    background-image: linear-gradient(rgba(0, 0, 0, 0.4), darkred, rgba(0, 0, 0, 0.3)), url('https://res.cloudinary.com/dq2tfglqq/image/upload/v1697453411/marvel-avengers-wallpaper_vgampn.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
     margin: 0;
     min-height: 100vh;
     width: 100%;
@@ -18,8 +24,10 @@
 @media screen and (max-width:360px) {
 
     .Games{
-        background-image: url(https://res.cloudinary.com/dq2tfglqq/image/upload/v1696334323/picture_fgksqd.webp);
+        background-image: linear-gradient(rgba(0, 0, 0, 0.4), darkred, rgba(0, 0, 0, 0.3)), url('https://res.cloudinary.com/dq2tfglqq/image/upload/v1697453531/f685bf1efe5157b0a32b806f171d9b17_u9mons.jpg');
         background-size: cover;
+        /* background-position:top; */
+        background-repeat: no-repeat;
         /* background-attachment: fixed; */
         /* margin: 0; */
         /* min-height: 100vh; */

@@ -2,15 +2,10 @@
   width: 4%;
   height: 300px;
   margin-top: -250px;
-  /* margin-left: 20px; */
 }
-<<<<<<< HEAD
-
-button:hover {
-=======
 button:hover{
->>>>>>> origin/Javier
   background: rgb(49, 136, 228);
+  background: rgb(154, 157, 160);
   border-radius: 50px 50px 50px 50px;
 }
 .boxSong {
@@ -63,7 +58,7 @@ button:hover{
   cursor: pointer;
 }
 .dropdown-content {
-  width: 160%;
+  width: 200%;
   background-color: rgba(26, 30, 31, 1);
   margin-left: 105%;
   margin-top: -110%;
@@ -71,27 +66,25 @@ button:hover{
   display: flex;
   flex-direction: column;
   align-items: center;
-  /* border-right: 20px whitesmoke; */
-}
+  margin-left: 120%;
 
+}
 .dropdown-content a {
   color: white;
   text-decoration: none;
   text-align: center;
-  margin: 3%;
-  font-size: 15px;
+  margin: 5%;
+  font-size: 13px;
   padding: 2px;
 }
-<<<<<<< HEAD
-
 .dropdown-content a:hover {
   background: rgb(49, 136, 228);
-=======
+}
 .dropdown-content a:hover{
   background: rgb(154, 157, 160);
->>>>>>> origin/Javier
   border-radius: 15px;
   padding: 4px;
+  
 }
 @media screen and (max-width: 360px) {
   .Container {
@@ -101,7 +94,6 @@ button:hover{
     height: 5%;
     width: 15%;
     margin-top: 10px;
-    /* height: auto; */
   }
   .boxSong {
     width: 100%;
@@ -136,6 +128,11 @@ button:hover{
   .registrobutton:hover .dropdown-content {
     display: block;
   }
+
+.dropdown-content{
+  
+}
+
   .dropdown-content a {
     color: white;
     text-decoration: none;
