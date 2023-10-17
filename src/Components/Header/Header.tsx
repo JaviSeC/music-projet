@@ -21,6 +21,7 @@ const SearchBox: React.FC<SearchBoxProps> = ({ onSearch }) => {
             alt="lupa"
           />
         </button>
+        
       </div>
       <div>
         <input

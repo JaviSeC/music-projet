@@ -115,7 +115,7 @@ export default function Body() {
               >
                 <div style={{ display: 'flex', alignItems: 'center', gap: '10px', flex: 1 }}>
                   <AvatarGroup>
-                    <Avatar alt="Remy Sharp" src="https://res.cloudinary.com/duwenv0yr/image/upload/v1695228608/pexels-patrick-case-3682820_x2c5ng.jpg" />
+                    <Avatar alt="Remy Sharp" src="https://res.cloudinary.com/dq2tfglqq/image/upload/v1697016996/jeff-the_killer.jpeg_2140140895_nwokm7.jpg" />
                     <Avatar alt="Remy Sharp" src="https://res.cloudinary.com/dq2tfglqq/image/upload/v1697451117/image_720_jmnyzf.png" />
                     <Avatar alt="Remy Sharp" src="https://res.cloudinary.com/dq2tfglqq/image/upload/v1697449843/profile-pic_6_enulfi.png" />
                     <Avatar alt="Remy Sharp" src="https://res.cloudinary.com/dq2tfglqq/image/upload/v1697449738/profile-pic__2__480_drjnkh.png" />
