@@ -3,90 +3,95 @@ import './BodyStyle.css';
 const songsPerPage = 5;
 const songs = [
   {
-    id: 1,
-    artist: 'Enio Morricone',
-    title: 'El bueno, el feo y el malo',
-    duration: '2:42',
-    albumCover:
+//     Id_Songs
+// Imagen
+// SongName
+// FilmName
+// Audio
+  Id_Songs: 1,
+  SongName: 'Enio Morricone',
+  FilmName: 'El bueno, el feo y el malo',
+  // duration: '2:42',
+  Imagen:
       'https://img2.rtve.es/i/?w=1600&i=1667821299474.jpg',
-    audioSource: 'https://res.cloudinary.com/dhme3c8ll/video/upload/v1695724729/El_Bueno_El_Feo_Y_El_Malo_-_II_Buono_II_Brutto_Il_Cattivo_zSDZQeIEqlM_x78lfm.mp3',
+  Audio: 'https://res.cloudinary.com/dhme3c8ll/video/upload/v1695724729/El_Bueno_El_Feo_Y_El_Malo_-_II_Buono_II_Brutto_Il_Cattivo_zSDZQeIEqlM_x78lfm.mp3',
   },
   {
-    id: 2,
-    artist: 'Marvin Hamlisch',
-    title: 'El golpe',
-    duration: '3:58',
-    albumCover:
+    Id_Songs: 2,
+    SongName: 'Marvin Hamlisch',
+    FilmName: 'El golpe',
+    // duration: '3:58',
+    Imagen:
       'https://lavozenoffdotnet.files.wordpress.com/2017/02/cartel.jpg',
-    audioSource: 'https://res.cloudinary.com/dhme3c8ll/video/upload/v1695724919/El_Golpe_BSO_-_M%C3%BAsica_Scott_Joplin_en_piano_vVmfZjCwER8_qjiagf.mp3',
+    Audio: 'https://res.cloudinary.com/dhme3c8ll/video/upload/v1695724919/El_Golpe_BSO_-_M%C3%BAsica_Scott_Joplin_en_piano_vVmfZjCwER8_qjiagf.mp3',
   },
   {
-    id: 3,
-    artist: 'Nino Rota',
-    title: 'El Padrino',
-    duration: '2:43',
-    albumCover: 'https://www.race.es/revista-autoclub/wp-content/uploads/sites/4/2022/05/el-padrino-el-clasico-de-los-clasicos-759x500.jpg',
-    audioSource: 'https://res.cloudinary.com/dhme3c8ll/video/upload/v1695724973/El_Padrino_Tema_Original__The_Godfather_Original_Theme__qIFQwnsotss_edoje7.mp3',
+    Id_Songs: 3,
+    SongName: 'Nino Rota',
+    FilmName: 'El Padrino',
+    // duration: '2:43',
+    Imagen: 'https://www.race.es/revista-autoclub/wp-content/uploads/sites/4/2022/05/el-padrino-el-clasico-de-los-clasicos-759x500.jpg',
+    Audio: 'https://res.cloudinary.com/dhme3c8ll/video/upload/v1695724973/El_Padrino_Tema_Original__The_Godfather_Original_Theme__qIFQwnsotss_edoje7.mp3',
   },
   {
-    id: 4,
-    artist: 'Vangelis',
-    title: 'Carros de fuego',
-    duration: '3:20',
-    albumCover: 'https://img2.rtve.es/i/?w=1600&i=1673619861549.jpg',
-    audioSource: 'https://res.cloudinary.com/dhme3c8ll/video/upload/v1695801278/Carros_de_Fuego_-_B.S.O._MkS1SBPHN44_pcrwyp.mp3',
+    Id_Songs: 4,
+    SongName: 'Vangelis',
+    FilmName: 'Carros de fuego',
+    // duration: '3:20',
+    Imagen: 'https://img2.rtve.es/i/?w=1600&i=1673619861549.jpg',
+    Audio: 'https://res.cloudinary.com/dhme3c8ll/video/upload/v1695801278/Carros_de_Fuego_-_B.S.O._MkS1SBPHN44_pcrwyp.mp3',
   },
   {
-    id: 5,
-    artist: 'John Williams',
-    title: 'Tiburón',
-    duration: '2:20',
-    albumCover: 'https://cdn.mos.cms.futurecdn.net/QfpYiWt35GZfU2Gd7pztQ8.png',
-    audioSource: 'https://res.cloudinary.com/dhme3c8ll/video/upload/v1695801629/Main_Title_John_Williams_Jaws_From_The__Jaws__Soundtrack__BePfzCOMRZQ_cqnbb1.mp3',
+    Id_Songs: 5,
+    SongName: 'John Williams',
+    FilmName: 'Tiburón',
+    // duration: '2:20',
+    Imagen: 'https://cdn.mos.cms.futurecdn.net/QfpYiWt35GZfU2Gd7pztQ8.png',
+    Audio: 'https://res.cloudinary.com/dhme3c8ll/video/upload/v1695801629/Main_Title_John_Williams_Jaws_From_The__Jaws__Soundtrack__BePfzCOMRZQ_cqnbb1.mp3',
   },
   {
-    id: 6,
-    artist: 'Carmine Coppola',
-    title: 'Apocalypse Now',
-    duration: '4:44',
-    albumCover: 'https://hips.hearstapps.com/hmg-prod/images/apocalypse-now-donald-trump-1534867844.jpg',
-    audioSource: 'https://res.cloudinary.com/dhme3c8ll/video/upload/v1695801970/BSO_-_Apocalipsys_Now_3VywjmyNYDs_q69djb.mp3',
+    Id_Songs: 6,
+    SongName: 'Carmine Coppola',
+    FilmName: 'Apocalypse Now',
+    // duration: '4:44',
+    Imagen: 'https://hips.hearstapps.com/hmg-prod/images/apocalypse-now-donald-trump-1534867844.jpg',
+    Audio: 'https://res.cloudinary.com/dhme3c8ll/video/upload/v1695801970/BSO_-_Apocalipsys_Now_3VywjmyNYDs_q69djb.mp3',
   },
   {
-    id: 7,
-    artist: 'Miguel Asins Arbó',
-    title: 'La Vaquilla',
-    duration: '2:37',
-    albumCover:
+    Id_Songs: 7,
+    SongName: 'Miguel Asins Arbó',
+    FilmName: 'La Vaquilla',
+    // duration: '2:37',
+    Imagen:
       'https://caixaforum.org/documents/311930/9160687/vaquilla+berlanga+webCXF+spa220170101225+-+18204jpg/83fc543e-f1a6-17f4-0b1e-8c4b1a7948ff?version=1.0&t=1565690877227',
-    audioSource: 'https://res.cloudinary.com/dhme3c8ll/video/upload/v1697011387/Miguel_Asins_Arb%C3%B3__Pasodoble_de__La_vaquilla__Luis_G%C2%AA_Berlanga_1985__0pVGEhPmbZA_m0jujo.mp3'
+    Audio: 'https://res.cloudinary.com/dhme3c8ll/video/upload/v1697011387/Miguel_Asins_Arb%C3%B3__Pasodoble_de__La_vaquilla__Luis_G%C2%AA_Berlanga_1985__0pVGEhPmbZA_m0jujo.mp3'
   },
   {
-    id: 8,
-    artist: 'Los Chunguitos',
-    title: 'Deprisa Deprisa',
-    duration: '3:11',
-    albumCover:
+    Id_Songs: 8,
+    SongName: 'Los Chunguitos',
+    FilmName: 'Deprisa Deprisa',
+    // duration: '3:11',
+    Imagen:
       'https://res.cloudinary.com/dhme3c8ll/image/upload/v1697017137/4d6f400e-7958-402d-ae37-ae518b8ef62a_alta-libre-aspect-ratio_default_0_gtykcl.jpg',
-    audioSource: 'https://res.cloudinary.com/dhme3c8ll/video/upload/v1697011700/Me_quedo_contigo_-_Deprisa_deprisa_85nWERy0JdE_sgahf6.mp3'
+    Audio: 'https://res.cloudinary.com/dhme3c8ll/video/upload/v1697011700/Me_quedo_contigo_-_Deprisa_deprisa_85nWERy0JdE_sgahf6.mp3'
   },
   {
-    id: 9,
-    artist: 'Los Chichos',
-    title: 'Yo, el Vaquilla',
-    duration: '2:51',
-    albumCover:
+    Id_Songs: 9,
+    SongName: 'Los Chichos',
+    FilmName: 'Yo, el Vaquilla',
+    // duration: '2:51',
+    Imagen:
       'https://www.abc.es/media/peliculas/000/005/139/yo-el-vaquilla-2.jpg',
-    audioSource: 'https://res.cloudinary.com/dhme3c8ll/video/upload/v1697011387/El_Vaquilla_NZ-PWrXQocc_uwebzq.mp3'
+    Audio: 'https://res.cloudinary.com/dhme3c8ll/video/upload/v1697011387/El_Vaquilla_NZ-PWrXQocc_uwebzq.mp3'
   },
   {
-    id: 10,
-    artist: 'Los Chunguitos',
-    title: 'Perros callejeros',
-    duration: '3:42',
-    albumCover:
+    Id_Songs: 10,
+    SongName: 'Los Chunguitos',
+    FilmName: 'Perros callejeros',
+    // duration: '3:42',
+    Imagen:
       'https://www.alohacriticon.com/wp-content/uploads/2017/01/perros-callejeros-foto-critica.jpg',
-    audioSource: 'https://res.cloudinary.com/dhme3c8ll/video/upload/v1697011529/los_chunguitos_soy_un_perro_callejero_4g3jSCqZxUQ_n6vsqj.mp3'
+    Audio: 'https://res.cloudinary.com/dhme3c8ll/video/upload/v1697011529/los_chunguitos_soy_un_perro_callejero_4g3jSCqZxUQ_n6vsqj.mp3'
   },
 
 ];
@@ -161,13 +166,13 @@ const BodyClassic: React.FC = () => {
       <div className="song-list">
         <ul>
           {songsToShow.map((song) => (
-            <li key={song.id}>
-              <img src={song.albumCover} alt={song.title} />
+            <li key={song.Id_Songs}>
+              <img src={song.Imagen} alt={song.FilmName} />
               <button onClick={() => changeSong(song)}>
-                {song.title} - {song.artist} - {song.duration}
+                {song.FilmName} - {song.SongName}
               </button>
-              <button id='like-button' onClick={() => toggleLike(song.id)} className={likedSongs.has(song.id) ? 'liked' : ''}>
-                {likedSongs.has(song.id) ? '💜' : '🤍'}
+              <button id='like-button' onClick={() => toggleLike(song.Id_Songs)} className={likedSongs.has(song.Id_Songs) ? 'liked' : ''}>
+                {likedSongs.has(song.Id_Songs) ? '💜' : '🤍'}
               </button>
             </li>
           ))}
@@ -196,22 +201,22 @@ const BodyClassic: React.FC = () => {
       <div className="music-player-classic">
         <div className="album-cover-classic">
           <img
-            src={currentSong.albumCover}
+            src={currentSong.Imagen}
             alt="Portada del álbum"
           />
         </div>
         <div className="song-info">
-          <p className="artist">{currentSong.artist}</p>
-          <p className="song-title">{currentSong.title}</p>
+          <p className="artist">{currentSong.SongName}</p>
+          <p className="song-title">{currentSong.FilmName}</p>
         </div>
         <audio
           id="audio"
           controls
           ref={audioRef}
-          key={currentSong.id} // Esto fuerza la recarga del elemento audio
+          key={currentSong.Id_Songs} // Esto fuerza la recarga del elemento audio
         >
           <source
-            src={currentSong.audioSource}
+            src={currentSong.Audio}
             type="audio/mpeg"
           />
         </audio>
