@@ -117,8 +117,9 @@
     width: 100%;
   }
   .busqueda {
-    margin-left: -147%;
+    /* margin-left: -147%; */
     height: 96%;
-    font-size: large;
+    /* font-size: large; */
+    width: 600%;
   }
 }
