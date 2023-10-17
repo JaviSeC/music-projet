@@ -1,4 +1,4 @@
-.animadaview{
+.Userview{
     background-image: url('https://res.cloudinary.com/dq2tfglqq/image/upload/v1696321499/Pixar_Animation_Studios_Toy_Story_A_Bug_s_Life_Toy_Story_2_Monsters_Inc_Ratatouille_WALL_E_Up_movie-1357895_rrzmhy.png'); 
     background-size: cover;
     background-attachment: fixed;
@@ -7,7 +7,6 @@
     min-height: 100vh;
     width: 100%;
 }
-
 .menuview{
     /* height: 2px; */
     display: flex;

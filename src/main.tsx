@@ -37,6 +37,7 @@ import PageSound from "./Views/SoundTracks/SoundView";
 import PageBodyTerror from "./Views/TerrorView/TerrorView";
 import MusicaAnimada from "./Views/MusicaAnimada/MusicaAnimada";
 import PageBodyGames from "./Views/gamesview/gamesview";
+import PageUser from "./Views/PageUser/PageUser";
 
 
 ReactDOM.createRoot(document.getElementById("root")!).render(
@@ -51,7 +52,8 @@ ReactDOM.createRoot(document.getElementById("root")!).render(
         <Route path="/SoundTracksView" element={<PageSound/>}/> 
         <Route path="/PeliculasAnimadasView" element={<MusicaAnimada />}/> 
         <Route path="/TerrorView" element={<PageBodyTerror/>}/> 
-        <Route path="/Games" element={<PageBodyGames/>}/>
+        <Route path="/Games" element={<PageBodyGames/>}/> 
+        <Route path="/PageUser" element={<PageUser/>}/>
       </Routes>
 
       <Footer />

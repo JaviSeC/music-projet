@@ -120,6 +120,7 @@ export const SignUp = () => {
         console.log("Registro exitoso");
         Swal.fire("Cuenta creada exitosamente", "", "success");
         localStorage.setItem("userRole", "2");
+        localStorage.setItem('username', UserName)
         navigate("/");
       } else if (response.status === 400) {
         // Error de solicitud inválida

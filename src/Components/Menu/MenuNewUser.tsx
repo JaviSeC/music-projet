@@ -48,7 +48,7 @@ export default function MenuNewUser() {
         )}
       </div>
       <div className="boxuser">
-        <Link to="/PageUsers">
+        <Link to="/PageUser">
           <button className="loginbutton">
             <img
               className="Usuario"

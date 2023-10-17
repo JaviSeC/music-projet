@@ -138,7 +138,7 @@ const BodyClassic: React.FC = () => {
     setIsPlaying(!isPlaying);
   };
   return (
-    <div className="body-container">
+    <div className="body-container" >
       <div className="playlist-header-classic">
         <img
           id="playlist-cover-classic"

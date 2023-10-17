@@ -13,11 +13,6 @@ interface User {
   // Otras propiedades de usuario
 }
 
-interface Category {
-  id: number;
-  Name_Categories: string;
-}
-
 export const Admin = () => {
   const [users, setUsers] = useState<User[]>([]);
   const [searchTerm, setSearchTerm] = useState("");
@@ -26,7 +21,7 @@ export const Admin = () => {
     SongName: "",
     FilmName: "",
     Audio: "",
-    Id_Categories: 0,
+    Name_Categories: 0,
   });
 
   const [errorMessages, setErrorMessages] = useState({
@@ -34,78 +29,86 @@ export const Admin = () => {
     SongName: "",
     FilmName: "",
     Audio: "",
-    Id_Categories: "",
+    Name_Categories: "",
   });
-
-  const [categories, setCategories] = useState<Category[]>([]);
-
-  useEffect(() => {
-    // Obtener la lista de categorías desde el servidor
-    axios
-      .get("https://localhost:7110/SongsControllers/GetCategorias")
-      .then((response) => {
-        setCategories(response.data);
-      });
-  }, []);
 
   const [showForm, setShowForm] = useState(false);
 
   const handleAddSong = async () => {
     event.preventDefault();
-
-    const { Imagen, SongName, FilmName, Audio, Id_Categories } = songData;
+    console.log("Entrando en handleSignUp"); // Verifica si esta función se ejecuta
+    // Verificar si los campos están vacíos
+    const { Imagen, SongName, FilmName, Audio, Name_Categories } = songData;
 
     const newErrorMessages = {
-      Imagen: !Imagen ? "Imagen URL is required" : "",
-      SongName: !SongName ? "Title is required" : "",
-      FilmName: !FilmName ? "Artist is required" : "",
-      Audio: !Audio ? "Audio URL is required" : "",
-      Id_Categories: Id_Categories === 0 ? "Category is required" : "",
+      Imagen: !Imagen ? "Imagen Url is required" : "",
+      SongName: !SongName ? "SongName is required" : "",
+      FilmName: !FilmName ? "FilmName is required" : "",
+      Audio: !Audio ? "Audio Url is required" : "",
+      Name_Categories: !Name_Categories ? "Name_Categories is required" : "",
     };
-
-    if (!Imagen || !SongName || !FilmName || !Audio || Id_Categories === 0) {
+    // Si algún campo está vacío, no procedemos con el registro
+    if (!Imagen || !SongName || !FilmName || !Audio || !Name_Categories) {
       setErrorMessages(newErrorMessages);
       return;
     }
-
-    const formData = new FormData();
-    formData.append("Imagen", Imagen);
-    formData.append("SongName", SongName);
-    formData.append("FilmName", FilmName);
-    formData.append("Audio", Audio);
-
+    // Crear un nuevo usuario con los datos ingresados
+    const newSong = {
+      // Id_Users : '',
+      Imagen: songData.Imagen,
+      SongName: songData.SongName,
+      FilmName: songData.FilmName,
+      Audio: songData.Audio,
+      Name_Categories: songData.Name_Categories,
+      // Id_rol: ''
+    };
+    // Simular el envío de datos a la "API" falsa (en este caso, al archivo register.json)
+    console.log("Datos que se envían:", newSong);
     try {
       const url = "https://localhost:7110/SongsControllers/Post";
       const response = await fetch(url, {
         method: "POST",
-        body: formData,
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          Imagen,
+          SongName,
+          FilmName,
+          Audio,
+          Name_Categories,
+        }),
       });
 
       if (response.ok) {
-        console.log("Canción agregada exitosamente");
-        // Restablecer el formulario
-        setSongData({
-          Imagen: "",
-          SongName: "",
-          FilmName: "",
-          Audio: "",
-          Id_Categories: 0,
-        });
-        setErrorMessages({
-          Imagen: "",
-          SongName: "",
-          FilmName: "",
-          Audio: "",
-          Id_Categories: "",
-        });
+        console.log("Registro exitoso");
+        Swal.fire("Cuenta creada exitosamente", "", "success");
       } else {
         console.error("Error en la solicitud:", response);
-        Swal.fire("Error", "No se pudo agregar la canción", "error");
+        Swal.fire("Error", "No se pudo crear la cuenta", "error");
       }
     } catch (error) {
       console.error("Error en la solicitud:", error);
       Swal.fire("Error", "Ha ocurrido un error en el servidor", "error");
     }
+
+    // Limpiar los campos después de registrar al usuario y restablecer los mensajes de error
+
+    setSongData({
+      Imagen: "",
+      SongName: "",
+      FilmName: "",
+      Audio: "",
+      Name_Categories: 0,
+    });
+
+    setErrorMessages({
+      Imagen: "",
+      SongName: "",
+      FilmName: "",
+      Audio: "",
+      Name_Categories: "",
+    });
   };
 
   const handleInputChange = (e) => {
@@ -113,14 +116,6 @@ export const Admin = () => {
     setSongData({
       ...songData,
       [name]: value,
-    });
-  };
-
-  const handleCategoryChange = (e) => {
-    const Id_Categories = parseInt(e.target.value, 10);
-    setSongData({
-      ...songData,
-      Id_Categories: Id_Categories,
     });
   };
 
@@ -218,18 +213,17 @@ export const Admin = () => {
           <div>
             <label>Categoría</label>
             <select
-              name="Id_Categories"
-              value={songData.Id_Categories}
-              onChange={handleCategoryChange}
+              name="Name_Categories"
+              value={songData.Name_Categories}
             >
-              <option value={0}>Seleccionar Categoría</option>
-              {categories.map((category) => (
-                <option key={category.id} value={category.id}>
-                  {category.Name_Categories}{" "}
-                  {/* Mostrar el nombre de la categoría */}
-                </option>
-              ))}
+              <option value="0">Selecciona una categoría</option>
+              <option value="1">Oscar's</option>
+              <option value="2">Animadas</option>
+              <option value="3">Clásicas</option>
+              <option value="4">Terror</option>
+              <option value="5">Games</option>
             </select>
+            <span>{errorMessages.Name_Categories}</span>
           </div>
           <button type="submit">Add Song</button>
         </form>
