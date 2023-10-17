@@ -4,97 +4,97 @@ import "./Terrorcss.css";
 const songsPerPage = 5;
 const songs = [
   {
-    id: 1,
-    artist: "Freddy Krueger",
-    title: "1,2,3,4.",
-    duration: "2:42",
-    albumCover: "https://res.cloudinary.com/dq2tfglqq/image/upload/v1697012675/Freddy_Krueger__28Robert_Englund_29_x8g340.jpg",
-    audioSource:
+    Id_Songs: 1,
+    SongName:"1,2,3,4.",
+    FilmName: "Freddy Krueger",
+    // duration: "2:42",
+    Imagen: "https://res.cloudinary.com/dq2tfglqq/image/upload/v1697012675/Freddy_Krueger__28Robert_Englund_29_x8g340.jpg",
+    Audio:
       "https://res.cloudinary.com/dq2tfglqq/video/upload/v1697016735/Freddy_Kruegger_ikm1bx.mp3",
   },
   {
-    id: 2,
-    artist: "El Chucky",
-    title: "terror",
-    duration: "3:58",
-    albumCover:
+    Id_Songs: 2,
+    SongName: "terror",
+    FilmName:"El Chucky",
+    // duration: "3:58",
+    Imagen:
       "https://res.cloudinary.com/dq2tfglqq/image/upload/v1697012778/latest_eqs8bi.png",
-    audioSource:
+    Audio:
       "https://res.cloudinary.com/dq2tfglqq/video/upload/v1697016692/Chucky_enxkpe.mp3",
   },
   {
-    id: 3,
-    artist: "Jeff The Killer",
-    title: "terror",
-    duration: "2:43",
-    albumCover:
+    Id_Songs: 3,
+    SongName:"terror",
+    FilmName: "Jeff The Killer",
+    // duration: "2:43",
+    Imagen:
       "https://res.cloudinary.com/dq2tfglqq/image/upload/v1697016996/jeff-the_killer.jpeg_2140140895_nwokm7.jpg",
-    audioSource:
+    Audio:
       "https://res.cloudinary.com/dq2tfglqq/video/upload/v1697016738/Jef_the_killer_rbnyg0.mp3",
   },
   {
-    id: 4,
-    artist: "Gregorian",
-    title: "Satani",
-    duration: "3:20",
-    albumCover: "",
-    audioSource:
+    Id_Songs: 4,
+    SongName: "Gregorian",
+    FilmName: "Satani",
+    // duration: "3:20",
+    Imagen: "",
+    Audio:
       "https://res.cloudinary.com/dq2tfglqq/video/upload/v1697016733/Gregorian_ave_satani_jlkox2.mp3",
   },
   {
-    id: 5,
-    artist: "terror",
-    title: "Creepy",
-    duration: "2:20",
-    albumCover: "",
-    audioSource:
+    Id_Songs: 5,
+    SongName: "terror",
+    FilmName: "Creepy",
+    // duration: "2:20",
+    Imagen: "",
+    Audio:
       "https://res.cloudinary.com/dq2tfglqq/video/upload/v1697016732/Creepy_Horror_Song_ehw08m.mp3",
   },
   {
-    id: 6,
-    artist: "terror",
-    title: "Soundtrack",
-    duration: "4:44",
-    albumCover:
+    Id_Songs: 6,
+    SongName: "terror",
+    FilmName: "Soundtrack",
+    // duration: "4:44",
+    Imagen:
       "",
-    audioSource:
+    Audio:
       "https://res.cloudinary.com/dq2tfglqq/video/upload/v1697016728/Soundtrack_narlr8.mp3",
   },
   {
-    id: 7,
-    artist: "terror",
-    title: "The terror main",
-    duration: "2:37",
-    albumCover:
+    Id_Songs: 7,
+    songName: "terror",
+    FilmName: "The terror main",
+    // duration: "2:37",
+    Imagen:
       "",
-    audioSource: "https://res.cloudinary.com/dq2tfglqq/video/upload/v1697016677/The_terror_main_vnh4tq.mp3",
+    Audio: "https://res.cloudinary.com/dq2tfglqq/video/upload/v1697016677/The_terror_main_vnh4tq.mp3",
   },
   {
-    id: 8,
-    artist: "Expediente X",
-    title: "terror",
-    duration: "3:11",
-    albumCover:
+    Id_Songs: 8,
+    SongName:"terror",
+    FilmName:"Expediente X",
+    // duration: "3:11",
+    Imagen:
       "",
-    audioSource: "https://res.cloudinary.com/dq2tfglqq/video/upload/v1697016675/Expediente_X_ea4ugi.mp3",
+    Audio: "https://res.cloudinary.com/dq2tfglqq/video/upload/v1697016675/Expediente_X_ea4ugi.mp3",
   },
   {
-    id: 9,
-    artist: "terror",
-    title: "Silent Hill",
-    duration: "2:51",
-    albumCover:
+    Id_Songs: 9,
+    SongName: "terror",
+    FilmName: "Silent Hill",
+    // duration: "2:51",
+    Imagen:
       "",
-    audioSource: "https://res.cloudinary.com/dq2tfglqq/video/upload/v1697016672/Silent_Hill_fhsrml.mp3",
+    Audio: "https://res.cloudinary.com/dq2tfglqq/video/upload/v1697016672/Silent_Hill_fhsrml.mp3",
   },
   {
-    id: 10,
-    artist: "terror",
-    title: "Tiny Tim",
-    duration: "3:42",
-    albumCover:
+    Id_Songs: 10,
+    SongName: "terror",
+    FilmName: "Tiny Tim",
+    // duration: "3:42",
+    Imagen:
       "",
-    audioSource: "https://res.cloudinary.com/dq2tfglqq/video/upload/v1697016671/Tiny_Tim_w5k3rk.mp3",
+    Audio: "https://res.cloudinary.com/dq2tfglqq/video/upload/v1697016671/Tiny_Tim_w5k3rk.mp3",
   },
 ];
 
@@ -170,17 +170,17 @@ const BodyTerror: React.FC = () => {
       <div className="song-list">
         <ul>
           {songsToShow.map((song) => (
-            <li key={song.id}>
-              <img src={song.albumCover} alt={song.title} />
+            <li key={song.Id_Songs}>
+              <img src={song.Imagen} alt={song.FilmName} />
               <button onClick={() => changeSong(song)}>
-                {song.title} - {song.artist} - {song.duration}
+                {song.FilmName} - {song.SongName}
               </button>
               <button
                 id="like-button"
-                onClick={() => toggleLike(song.id)}
-                className={likedSongs.has(song.id) ? "liked" : ""}
+                onClick={() => toggleLike(song.Id_Songs)}
+                className={likedSongs.has(song.Id_Songs) ? "liked" : ""}
               >
-                {likedSongs.has(song.id) ? "💜" : "🤍"}
+                {likedSongs.has(song.Id_Songs) ? "💜" : "🤍"}
               </button>
             </li>
           ))}
@@ -211,19 +211,19 @@ const BodyTerror: React.FC = () => {
 
       <div className="music-player-terror">
         <div className="album-cover-terror">
-          <img src={currentSong.albumCover} alt="Portada del álbum" />
+          <img src={currentSong.Imagen} alt="Portada del álbum" />
         </div>
         <div className="song-info">
-          <p className="artist">{currentSong.artist}</p>
-          <p className="song-title">{currentSong.title}</p>
+          <p className="artist">{currentSong.SongName}</p>
+          <p className="song-title">{currentSong.FilmName}</p>
         </div>
         <audio
           id="audio"
           controls
           ref={audioRef}
-          key={currentSong.id} // Esto fuerza la recarga del elemento audio
+          key={currentSong.Id_Songs} // Esto fuerza la recarga del elemento audio
         >
-          <source src={currentSong.audioSource} type="audio/mpeg" />
+          <source src={currentSong.Audio} type="audio/mpeg" />
         </audio>
         <button onClick={togglePlayPause}>
           {isPlaying ? "Pausar" : "Reproducir"}
