@@ -4,97 +4,97 @@ import React, { useState, useRef } from "react";
 const songsPerPage = 5;
 const songs = [
   {
-    id: 1,
-    artist: "Star Lord Band",
-    title: "Zero to Hero",
-    duration: "3:20",
-    albumCover: "https://res.cloudinary.com/duwenv0yr/image/upload/v1695888871/StarLord_omsbw0.jpg",
-    audioSource:
+    Id_Songs: 1,
+    SongName: "Star Lord Band",
+    FilmName: "Zero to Hero",
+    // duration: "3:20",
+    Imagen: "https://res.cloudinary.com/duwenv0yr/image/upload/v1695888871/StarLord_omsbw0.jpg",
+    Audio:
       "https://res.cloudinary.com/duwenv0yr/video/upload/v1697446035/Zero_to_hero_dbtojf.mp3",
   },
   {
-    id: 2,
-    artist: "Star Lord Band",
-    title: "Space Riders with No Names",
-    duration: "3:54",
-    albumCover:
+    Id_Songs: 2,
+    SongName: "Star Lord Band",
+    FilmName: "Space Riders with No Names",
+    // duration: "3:54",
+    Imagen:
       "https://res.cloudinary.com/duwenv0yr/image/upload/v1695888871/StarLord_omsbw0.jpg",
-    audioSource:
+    Audio:
       "https://res.cloudinary.com/duwenv0yr/video/upload/v1697448057/Space_Riders_with_No_Names_jh4sfu.mp3",
   },
   {
-    id: 3,
-    artist: "Star Lord Band",
-    title: "Bit of Good",
-    duration: "5:25",
-    albumCover:
+    Id_Songs: 3,
+    SongName: "Star Lord Band",
+    FilmName: "Bit of Good",
+    // duration: "5:25",
+    Imagen:
       "https://res.cloudinary.com/duwenv0yr/image/upload/v1695888871/StarLord_omsbw0.jpg",
-    audioSource:
+    Audio:
       "https://res.cloudinary.com/duwenv0yr/video/upload/v1697448139/Bit_of_Good_itmcf5.mp3",
   },
   {
-    id: 4,
-    artist: "Rick Astley",
-    title: "Never Gonna Give You Up",
-    duration: "3:33",
-    albumCover: "https://res.cloudinary.com/duwenv0yr/image/upload/v1697448385/RickA_blprou.jpg",
-    audioSource:
+    Id_Songs: 4,
+    SongName: "Rick Astley",
+    FilmName: "Never Gonna Give You Up",
+    // duration: "3:33",
+    Imagen: "https://res.cloudinary.com/duwenv0yr/image/upload/v1697448385/RickA_blprou.jpg",
+    Audio:
       "https://res.cloudinary.com/duwenv0yr/video/upload/v1697448386/Never_Gonna_Give_You_Up_ttipvy.mp3",
   },
   {
-    id: 5,
-    artist: "Bonnie Tyler",
-    title: "Holding Out for a Hero",
-    duration: "4:21",
-    albumCover: "https://res.cloudinary.com/duwenv0yr/image/upload/v1697449024/Holding_uuol2x.jpg",
-    audioSource:
+    Id_Songs: 5,
+    SongName: "Bonnie Tyler",
+    FilmName: "Holding Out for a Hero",
+    // duration: "4:21",
+    Imagen: "https://res.cloudinary.com/duwenv0yr/image/upload/v1697449024/Holding_uuol2x.jpg",
+    Audio:
       "https://res.cloudinary.com/duwenv0yr/video/upload/v1697449025/Holding_Out_for_a_Hero_i45amq.mp3",
   },
   {
-    id: 6,
-    artist: "Wham!",
-    title: "Wake Me Up Before You Go-Go",
-    duration: "3:51",
-    albumCover:
+    Id_Songs: 6,
+    SongName: "Wham!",
+    FilmName: "Wake Me Up Before You Go-Go",
+    // duration: "3:51",
+    Imagen:
       "https://res.cloudinary.com/duwenv0yr/image/upload/v1697449212/Wham_b6b30n.jpg",
-    audioSource:
+    Audio:
       "https://res.cloudinary.com/duwenv0yr/video/upload/v1697449213/Wake_Me_Up_Before_You_Go-Go_aqjydm.mp3",
   },
   {
-    id: 7,
-    artist: "Europe",
-    title: "The Final Countdown",
-    duration: "5:10",
-    albumCover:
+    Id_Songs: 7,
+    SongName: "Europe",
+    FilmName: "The Final Countdown",
+    // duration: "5:10",
+    Imagen:
       "https://res.cloudinary.com/duwenv0yr/image/upload/v1697449397/Europe_kolbwl.jpg",
-    audioSource: "https://res.cloudinary.com/duwenv0yr/video/upload/v1697449398/The_Final_Countdown_bbxs5e.mp3",
+    Audio: "https://res.cloudinary.com/duwenv0yr/video/upload/v1697449398/The_Final_Countdown_bbxs5e.mp3",
   },
   {
-    id: 8,
-    artist: "Blondie",
-    title: "Call Me",
-    duration: "8:06",
-    albumCover:
+    Id_Songs: 8,
+    SongName: "Blondie",
+    FilmName: "Call Me",
+    // duration: "8:06",
+    Imagen:
       "https://res.cloudinary.com/duwenv0yr/image/upload/v1697449749/Call_Me_mktsgj.jpg",
-    audioSource: "https://res.cloudinary.com/duwenv0yr/video/upload/v1697449751/Call_Me_npkfxr.mp3",
+    Audio: "https://res.cloudinary.com/duwenv0yr/video/upload/v1697449751/Call_Me_npkfxr.mp3",
   },
   {
-    id: 9,
-    artist: "a-ha",
-    title: "Take on me",
-    duration: "3:45",
-    albumCover:
+    Id_Songs: 9,
+    SongName: "a-ha",
+    FIlmName: "Take on me",
+    // duration: "3:45",
+    Imagen:
       "https://res.cloudinary.com/duwenv0yr/image/upload/v1697449884/Take_on_lzzukl.jpg",
-    audioSource: "https://res.cloudinary.com/duwenv0yr/video/upload/v1697449885/Take_on_brtzuv.mp3",
+    Audio: "https://res.cloudinary.com/duwenv0yr/video/upload/v1697449885/Take_on_brtzuv.mp3",
   },
   {
-    id: 10,
-    artist: "Tears for Fears",
-    title: "Everybody Wants To Rule The World",
-    duration: "4:11",
-    albumCover:
+    Id_Songs: 10,
+    SongName: "Tears for Fears",
+    FilmName: "Everybody Wants To Rule The World",
+    // duration: "4:11",
+    Imagen:
       "https://res.cloudinary.com/duwenv0yr/image/upload/v1697450086/Tears_cwrrrd.jpg",
-    audioSource: "https://res.cloudinary.com/duwenv0yr/video/upload/v1697450087/Everybody_Wants_To_Rule_The_World_u0ab8z.mp3",
+    Audio: "https://res.cloudinary.com/duwenv0yr/video/upload/v1697450087/Everybody_Wants_To_Rule_The_World_u0ab8z.mp3",
   },
 ];
 
@@ -170,17 +170,17 @@ const BodyGames: React.FC = () => {
       <div className="song-list">
         <ul>
           {songsToShow.map((song) => (
-            <li key={song.id}>
-              <img src={song.albumCover} alt={song.title} />
+            <li key={song.Id_Songs}>
+              <img src={song.Imagen} alt={song.FilmName} />
               <button onClick={() => changeSong(song)}>
-                {song.title} - {song.artist} - {song.duration}
+                {song.FilmName} - {song.SongName}
               </button>
               <button
                 id="like-button"
-                onClick={() => toggleLike(song.id)}
-                className={likedSongs.has(song.id) ? "liked" : ""}
+                onClick={() => toggleLike(song.Id_Songs)}
+                className={likedSongs.has(song.Id_Songs) ? "liked" : ""}
               >
-                {likedSongs.has(song.id) ? "💜" : "🤍"}
+                {likedSongs.has(song.Id_Songs) ? "💜" : "🤍"}
               </button>
             </li>
           ))}
@@ -211,19 +211,19 @@ const BodyGames: React.FC = () => {
 
       <div className="music-player-games">
         <div className="album-cover-games">
-          <img src={currentSong.albumCover} alt="Portada del álbum" />
+          <img src={currentSong.Imagen} alt="Portada del álbum" />
         </div>
         <div className="song-info">
-          <p className="artist">{currentSong.artist}</p>
-          <p className="song-title">{currentSong.title}</p>
+          <p className="artist">{currentSong.SongName}</p>
+          <p className="song-title">{currentSong.SongName}</p>
         </div>
         <audio
           id="audio"
           controls
           ref={audioRef}
-          key={currentSong.id} // Esto fuerza la recarga del elemento audio
+          key={currentSong.Id_Songs} // Esto fuerza la recarga del elemento audio
         >
-          <source src={currentSong.audioSource} type="audio/mpeg" />
+          <source src={currentSong.Audio} type="audio/mpeg" />
         </audio>
         <button onClick={togglePlayPause}>
           {isPlaying ? "Pausar" : "Reproducir"}
