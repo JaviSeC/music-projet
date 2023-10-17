@@ -5,8 +5,8 @@ const songsPerPage = 5;
 const songs = [
   {
     id: 1,
-    artist: "terror",
-    title: "terror",
+    artist: "Freddy Krueger",
+    title: "1,2,3,4.",
     duration: "2:42",
     albumCover: "https://res.cloudinary.com/dq2tfglqq/image/upload/v1697012675/Freddy_Krueger__28Robert_Englund_29_x8g340.jpg",
     audioSource:
@@ -14,7 +14,7 @@ const songs = [
   },
   {
     id: 2,
-    artist: "terror",
+    artist: "El Chucky",
     title: "terror",
     duration: "3:58",
     albumCover:
@@ -24,7 +24,7 @@ const songs = [
   },
   {
     id: 3,
-    artist: "terror",
+    artist: "Jeff The Killer",
     title: "terror",
     duration: "2:43",
     albumCover:
@@ -34,67 +34,67 @@ const songs = [
   },
   {
     id: 4,
-    artist: "terror",
-    title: "terror",
+    artist: "Gregorian",
+    title: "Satani",
     duration: "3:20",
-    albumCover: "https://img2.rtve.es/i/?w=1600&i=1673619861549.jpg",
+    albumCover: "",
     audioSource:
-      "https://res.cloudinary.com/dhme3c8ll/video/upload/v1695801278/Carros_de_Fuego_-_B.S.O._MkS1SBPHN44_pcrwyp.mp3",
+      "https://res.cloudinary.com/dq2tfglqq/video/upload/v1697016733/Gregorian_ave_satani_jlkox2.mp3",
   },
   {
     id: 5,
     artist: "terror",
-    title: "terror",
+    title: "Creepy",
     duration: "2:20",
-    albumCover: "https://cdn.mos.cms.futurecdn.net/QfpYiWt35GZfU2Gd7pztQ8.png",
+    albumCover: "",
     audioSource:
-      "https://res.cloudinary.com/dhme3c8ll/video/upload/v1695801629/Main_Title_John_Williams_Jaws_From_The__Jaws__Soundtrack__BePfzCOMRZQ_cqnbb1.mp3",
+      "https://res.cloudinary.com/dq2tfglqq/video/upload/v1697016732/Creepy_Horror_Song_ehw08m.mp3",
   },
   {
     id: 6,
     artist: "terror",
-    title: "terror",
+    title: "Soundtrack",
     duration: "4:44",
     albumCover:
-      "https://hips.hearstapps.com/hmg-prod/images/apocalypse-now-donald-trump-1534867844.jpg",
+      "",
     audioSource:
-      "https://res.cloudinary.com/dhme3c8ll/video/upload/v1695801970/BSO_-_Apocalipsys_Now_3VywjmyNYDs_q69djb.mp3",
+      "https://res.cloudinary.com/dq2tfglqq/video/upload/v1697016728/Soundtrack_narlr8.mp3",
   },
   {
     id: 7,
     artist: "terror",
-    title: "terror",
+    title: "The terror main",
     duration: "2:37",
     albumCover:
-      "https://caixaforum.org/documents/311930/9160687/vaquilla+berlanga+webCXF+spa220170101225+-+18204jpg/83fc543e-f1a6-17f4-0b1e-8c4b1a7948ff?version=1.0&t=1565690877227",
-    audioSource: "URL_DEL_AUDIO",
+      "",
+    audioSource: "https://res.cloudinary.com/dq2tfglqq/video/upload/v1697016677/The_terror_main_vnh4tq.mp3",
   },
   {
     id: 8,
-    artist: "terror",
+    artist: "Expediente X",
     title: "terror",
     duration: "3:11",
     albumCover:
-      "https://www.elindependiente.com/wp-content/uploads/2020/02/doctor-zhivago.jpg",
-    audioSource: "URL_DEL_AUDIO",
+      "",
+    audioSource: "https://res.cloudinary.com/dq2tfglqq/video/upload/v1697016675/Expediente_X_ea4ugi.mp3",
   },
   {
     id: 9,
     artist: "terror",
-    title: "terror",
+    title: "Silent Hill",
     duration: "2:51",
     albumCover:
-      "https://www.abc.es/media/peliculas/000/005/139/yo-el-vaquilla-2.jpg",
-    audioSource: "URL_DEL_AUDIO",
+      "",
+    audioSource: "https://res.cloudinary.com/dq2tfglqq/video/upload/v1697016672/Silent_Hill_fhsrml.mp3",
   },
   {
     id: 10,
     artist: "terror",
-    title: "terror",
+    title: "Tiny Tim",
     duration: "3:42",
     albumCover:
-      "https://www.alohacriticon.com/wp-content/uploads/2017/01/perros-callejeros-foto-critica.jpg",
-    audioSource: "URL_DEL_AUDIO",
+      "",
+    audioSource: "https://res.cloudinary.com/dq2tfglqq/video/upload/v1697016671/Tiny_Tim_w5k3rk.mp3",
   },
 ];
 
