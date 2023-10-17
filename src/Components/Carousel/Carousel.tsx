@@ -139,11 +139,11 @@ export default function Carousel() {
     },
     {
       image:"https://res.cloudinary.com/duwenv0yr/image/upload/v1696524511/tron_vmjgsj.jpg",
-      audio: "",
+      audio: "https://res.cloudinary.com/doft9ylq1/video/upload/v1695888427/The_Son_of_Flynn_From__TRON__Legacy__Score__mqgEYRtWMJU_ntm5g4.mp3",
     },
     {
       image:"https://res.cloudinary.com/duwenv0yr/image/upload/v1696524116/Cars_Soundtrack_sxvqep.jpg",
-      audio: "",
+      audio: "https://res.cloudinary.com/doft9ylq1/video/upload/v1697527202/Chuck_Berry_-_Route_66_-_pelicula_cars.flv_P_OmM_VewMY_ijn63q.mp3",
     },
     {
       image:"https://res.cloudinary.com/duwenv0yr/image/upload/v1696523637/HP_gbbmb3.jpg",
@@ -155,59 +155,59 @@ export default function Carousel() {
     },
     {
       image: "https://res.cloudinary.com/duwenv0yr/image/upload/v1696523636/apn_hw7y5j.jpg",
-      audio: "",
+      audio: "https://res.cloudinary.com/dhme3c8ll/video/upload/v1695801970/BSO_-_Apocalipsys_Now_3VywjmyNYDs_q69djb.mp3",
     },
     {
       image:"https://res.cloudinary.com/duwenv0yr/image/upload/v1696524115/Mibsoundtrack_zmkc7k.jpg",
-      audio: "",
+      audio: "https://res.cloudinary.com/doft9ylq1/video/upload/v1697527442/Men_In_Black_1997_Main_Theme_Soundtrack_OST__2rxQQDKoO2w_skoklj.mp3",
     },
     {
       image:"https://res.cloudinary.com/duwenv0yr/image/upload/v1696523636/sirenita_wgpbjk.jpg",
-      audio: "",
+      audio: "https://res.cloudinary.com/dq2tfglqq/video/upload/v1696318836/Bajo_el_Mar_De_La_Sirenita_Versi%C3%B3n_Instrumental_con_Orq_InBWYeqec_w_140_k6mjyh.mp3",
     },
     {
       image: "https://res.cloudinary.com/duwenv0yr/image/upload/v1696523636/padrino_b6yhn4.jpg",
-      audio: "",
+      audio: "https://res.cloudinary.com/dhme3c8ll/video/upload/v1695724973/El_Padrino_Tema_Original__The_Godfather_Original_Theme__qIFQwnsotss_edoje7.mp3",
     },
     {
       image: "https://res.cloudinary.com/duwenv0yr/image/upload/v1696523636/bfm_p1jyaf.jpg",
-      audio: "",
+      audio: "https://res.cloudinary.com/dhme3c8ll/video/upload/v1695724729/El_Bueno_El_Feo_Y_El_Malo_-_II_Buono_II_Brutto_Il_Cattivo_zSDZQeIEqlM_x78lfm.mp3",
     },
     {
       image: "https://res.cloudinary.com/duwenv0yr/image/upload/v1696524115/mula_pnqm0j.jpg",
-      audio: "",
+      audio: "https://res.cloudinary.com/doft9ylq1/video/upload/v1697527827/01._Attack_At_The_Wall_-_Mulan_OST_PINxYSI7R1Q_ckhqt9.mp3",
     },
     {
-      image: "https://res.cloudinary.com/duwenv0yr/image/upload/v1696524115/shr_zalpru.jpg",
-      audio: "",
+      image: "https://res.cloudinary.com/doft9ylq1/image/upload/v1697529390/Shrekban_jlckdv.webp",
+      audio: "https://res.cloudinary.com/doft9ylq1/video/upload/v1697527957/Shrek_Soundtrack_1._Self_-_Stay_Home_uEWmmHdKPT4_fvdlir.mp3",
     },
     {
       image: "https://res.cloudinary.com/duwenv0yr/image/upload/v1696524116/esla_t2yfoo.jpg",
-      audio: "",
+      audio: "https://res.cloudinary.com/doft9ylq1/video/upload/v1696797582/The_Lord_of_the_Rings__The_Return_of_the_King_CR_-_01._Roots_and_Beginnings_MFsO9weqLLE_tdrn9c.mp3",
     },
     {
       image: "https://res.cloudinary.com/duwenv0yr/image/upload/v1696524116/coco_j7kks5.jpg",
-      audio: "",
+      audio: "https://res.cloudinary.com/dq2tfglqq/video/upload/v1696318835/Coco_Un_Poco_Loco_Official_Instrumental__QyVbtGttYQw_140_rul4rj.mp3",
     },
     {
       image: "https://res.cloudinary.com/duwenv0yr/image/upload/v1696524116/la_grn_d2xiw9.jpg",
-      audio: "",
+      audio: "https://res.cloudinary.com/doft9ylq1/video/upload/v1697528351/The_Great_Escape_Theme_MbsuAbTTsV8_cbfzfs.mp3",
     },
     {
       image: "https://res.cloudinary.com/duwenv0yr/image/upload/v1696524116/pir_j1gorb.jpg",
-      audio: "",
+      audio: "https://res.cloudinary.com/doft9ylq1/video/upload/v1697528517/He_s_a_Pirate_BuYf0taXoNw_akxnsz.mp3",
     },
     {
       image: "https://res.cloudinary.com/duwenv0yr/image/upload/v1696524511/ap_kpygcf.jpg",
-      audio: "",
+      audio: "https://res.cloudinary.com/doft9ylq1/video/upload/v1695885293/01_-_Main_Title_-_James_Horner_-_Apollo_13_WTSmtKDvnWQ_cpaipp.mp3",
     },
     {
       image: "https://res.cloudinary.com/duwenv0yr/image/upload/v1696524511/pant_etoy4r.png",
-      audio: "",
+      audio: "https://res.cloudinary.com/dq2tfglqq/video/upload/v1696318835/la_cancion_originanal_de_la_pantera_rosa_0O57fMcHzh8_140_og8vfn.mp3",
     },
     {
       image: "https://res.cloudinary.com/duwenv0yr/image/upload/v1696524511/orig_ylsaod.jpg",
-      audio: "",
+      audio: "https://res.cloudinary.com/doft9ylq1/video/upload/v1695887972/Hans_Zimmer_-_Time_Inception__RxabLA7UQ9k_ycrlah.mp3",
     },
     {
       image: "https://res.cloudinary.com/doft9ylq1/image/upload/v1696796754/thesocialnetwork-film_sffmv4.webp",
