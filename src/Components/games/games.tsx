@@ -8,7 +8,7 @@ const songs = [
     SongName: "Star Lord Band",
     FilmName: "Zero to Hero",
     // duration: "3:20",
-    Imagen: "https://res.cloudinary.com/duwenv0yr/image/upload/v1695888871/StarLord_omsbw0.jpg",
+    Imagen: "https://as02.epimg.net/meristation/imagenes/2021/06/13/videos/1623615563_534787_1623615766_noticia_normal.jpg",
     Audio:
       "https://res.cloudinary.com/duwenv0yr/video/upload/v1697446035/Zero_to_hero_dbtojf.mp3",
   },
@@ -18,7 +18,7 @@ const songs = [
     FilmName: "Space Riders with No Names",
     // duration: "3:54",
     Imagen:
-      "https://res.cloudinary.com/duwenv0yr/image/upload/v1695888871/StarLord_omsbw0.jpg",
+      "https://res.cloudinary.com/dhme3c8ll/image/upload/v1697641683/guardianesvg_vl6ysm.jpg",
     Audio:
       "https://res.cloudinary.com/duwenv0yr/video/upload/v1697448057/Space_Riders_with_No_Names_jh4sfu.mp3",
   },
@@ -28,7 +28,7 @@ const songs = [
     FilmName: "Bit of Good",
     // duration: "5:25",
     Imagen:
-      "https://res.cloudinary.com/duwenv0yr/image/upload/v1695888871/StarLord_omsbw0.jpg",
+      "https://res.cloudinary.com/dhme3c8ll/image/upload/v1697641683/guardianesvg_vl6ysm.jpg",
     Audio:
       "https://res.cloudinary.com/duwenv0yr/video/upload/v1697448139/Bit_of_Good_itmcf5.mp3",
   },
@@ -37,7 +37,7 @@ const songs = [
     SongName: "Rick Astley",
     FilmName: "Never Gonna Give You Up",
     // duration: "3:33",
-    Imagen: "https://res.cloudinary.com/duwenv0yr/image/upload/v1697448385/RickA_blprou.jpg",
+    Imagen: "https://image.europafm.com/clipping/cmsimages01/2021/07/30/BA39B86D-9BC0-4359-BD76-4D1642928CE4/98.jpg?crop=1900,1069,x0,y0&width=1900&height=1069&optimize=low&format=webply",
     Audio:
       "https://res.cloudinary.com/duwenv0yr/video/upload/v1697448386/Never_Gonna_Give_You_Up_ttipvy.mp3",
   },
@@ -46,7 +46,7 @@ const songs = [
     SongName: "Bonnie Tyler",
     FilmName: "Holding Out for a Hero",
     // duration: "4:21",
-    Imagen: "https://res.cloudinary.com/duwenv0yr/image/upload/v1697449024/Holding_uuol2x.jpg",
+    Imagen: "https://res.cloudinary.com/dhme3c8ll/image/upload/v1697641682/bonytayler_jkwynm.jpg",
     Audio:
       "https://res.cloudinary.com/duwenv0yr/video/upload/v1697449025/Holding_Out_for_a_Hero_i45amq.mp3",
   },
@@ -56,7 +56,7 @@ const songs = [
     FilmName: "Wake Me Up Before You Go-Go",
     // duration: "3:51",
     Imagen:
-      "https://res.cloudinary.com/duwenv0yr/image/upload/v1697449212/Wham_b6b30n.jpg",
+      "https://res.cloudinary.com/dhme3c8ll/image/upload/v1697641682/wham_v1gbpl.jpg",
     Audio:
       "https://res.cloudinary.com/duwenv0yr/video/upload/v1697449213/Wake_Me_Up_Before_You_Go-Go_aqjydm.mp3",
   },
@@ -66,7 +66,7 @@ const songs = [
     FilmName: "The Final Countdown",
     // duration: "5:10",
     Imagen:
-      "https://res.cloudinary.com/duwenv0yr/image/upload/v1697449397/Europe_kolbwl.jpg",
+      "https://res.cloudinary.com/dhme3c8ll/image/upload/v1697641682/europe_cxjcri.jpg",
     Audio: "https://res.cloudinary.com/duwenv0yr/video/upload/v1697449398/The_Final_Countdown_bbxs5e.mp3",
   },
   {
@@ -75,7 +75,7 @@ const songs = [
     FilmName: "Call Me",
     // duration: "8:06",
     Imagen:
-      "https://res.cloudinary.com/duwenv0yr/image/upload/v1697449749/Call_Me_mktsgj.jpg",
+      "https://res.cloudinary.com/dhme3c8ll/image/upload/v1697641682/calme_blondie_nz41to.jpg",
     Audio: "https://res.cloudinary.com/duwenv0yr/video/upload/v1697449751/Call_Me_npkfxr.mp3",
   },
   {
@@ -84,16 +84,16 @@ const songs = [
     FIlmName: "Take on me",
     // duration: "3:45",
     Imagen:
-      "https://res.cloudinary.com/duwenv0yr/image/upload/v1697449884/Take_on_lzzukl.jpg",
+      "https://res.cloudinary.com/dhme3c8ll/image/upload/v1697641682/aha_rw42ju.jpg",
     Audio: "https://res.cloudinary.com/duwenv0yr/video/upload/v1697449885/Take_on_brtzuv.mp3",
   },
   {
     Id_Songs: 10,
     SongName: "Tears for Fears",
-    FilmName: "Everybody Wants To Rule The World",
+    FilmName: "Everybody Wants To Rule",
     // duration: "4:11",
     Imagen:
-      "https://res.cloudinary.com/duwenv0yr/image/upload/v1697450086/Tears_cwrrrd.jpg",
+      "https://res.cloudinary.com/dhme3c8ll/image/upload/v1697641877/tears_v6w3pc.jpg",
     Audio: "https://res.cloudinary.com/duwenv0yr/video/upload/v1697450087/Everybody_Wants_To_Rule_The_World_u0ab8z.mp3",
   },
 ];

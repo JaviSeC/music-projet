@@ -9,7 +9,7 @@
   width: 92rem;
   height: 200px;
   cursor: all-scroll;
-  overflow: visible;
+  /* overflow: visible; */
 }
 
 /* .swiper-slide {

@@ -30,7 +30,7 @@ const songs = [
     FilmName: "Jurassic Park",
     // duration: "2:49",
     Imagen:
-      "https://res.cloudinary.com/doft9ylq1/image/upload/v1695889328/JurassicParkCollection_oikiw7.jpg",
+      "https://res.cloudinary.com/dhme3c8ll/image/upload/v1697642099/Jurassic_park_w1oey5.jpg",
     Audio:
       "https://res.cloudinary.com/doft9ylq1/video/upload/v1695886048/The_Raptor_Attack_6kllnsihoUs_rjhav7.mp3",
   },
@@ -38,9 +38,9 @@ const songs = [
     Id_Songs: 4,
     SongName: " Michael Giacchino",
     FilmName: "Up",
-    duration: "4:10",
+    // duration: "4:10",
     Imagen:
-      "https://res.cloudinary.com/dq2tfglqq/image/upload/v1697642523/credito-twitter-luisllanomacedo-6_ktx2uv.jpg",
+      "https://res.cloudinary.com/dhme3c8ll/image/upload/v1697642099/up_yc2k1l.jpg",
     audioSource:
       "https://res.cloudinary.com/doft9ylq1/video/upload/v1695886760/UP_OST_-_03_-_Married_Life_gvQB7tMB-jI_1_incfac.mp3",
   },
@@ -70,7 +70,7 @@ const songs = [
     FilmName: "Lion King",
     // duration: "3:13",
     Imagen:
-      "https://res.cloudinary.com/doft9ylq1/image/upload/v1696799589/lionkinds_vzub3q.webp",
+      "https://res.cloudinary.com/dhme3c8ll/image/upload/v1697642099/reyleon_dtqacm.webp",
     Audio:
       "https://res.cloudinary.com/doft9ylq1/video/upload/v1696799413/Hans_Zimmer_-_Remember_From__The_Lion_King__Audio_Only__RakhywpkY-k_fcbhfa.mp3",
   },
@@ -80,7 +80,7 @@ const songs = [
     FilmName: "Joker",
     // duration: "2:39",
     Imagen:
-      "https://res.cloudinary.com/doft9ylq1/image/upload/v1696798648/1200x1200bf-60_o4ayfc.jpg",
+      "https://res.cloudinary.com/dhme3c8ll/image/upload/v1697642099/javi_recien_levantado_q19vgz.webp",
     Audio:
       "https://res.cloudinary.com/doft9ylq1/video/upload/v1696798363/Joker_Official_Soundtrack___Defeated_Clown_-_Hildur_Gu%C3%B0nad%C3%B3ttir___WaterTower_DlQ-XU2PV7s_uw6g4w.mp3",
   },
@@ -120,7 +120,7 @@ const songs = [
     FilmName: "Frida",
     // duration: "1:29",
     Imagen:
-      "https://res.cloudinary.com/doft9ylq1/image/upload/v1697010556/Frida-BSO_front_lyrwkl.jpg",
+      "https://res.cloudinary.com/dhme3c8ll/image/upload/v1697642099/Javi_marico_qaplap.jpg",
     Audio:
       "https://res.cloudinary.com/doft9ylq1/video/upload/v1697010281/The_Floating_Bed_MR7hrCFiwBA_ymveb4.mp3",
   },
