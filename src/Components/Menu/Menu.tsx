@@ -2,7 +2,6 @@ import "./Menu.css";
 import { useState } from "react";
 import { Link } from "react-router-dom";
 // import React, { useState } from 'react';
-import { FaBars } from 'react-icons/fa'; // Importa el ícono de hamburguesa
 
 
 

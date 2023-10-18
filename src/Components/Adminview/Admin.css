@@ -24,7 +24,7 @@
 }
 
 .ListUser {
-  margin-bottom: 20px; /* Agrega espacio entre cada elemento de la lista */
+  margin-bottom: 30px; /* Agrega espacio entre cada elemento de la lista */
 }
 
 .user-info {
@@ -32,14 +32,19 @@
   margin-right: 10px; /* Agrega espacio entre los elementos en línea si es necesario */
 }
 
-.Admidelete {
-  background-color: #007bff; /* Color de fondo del botón */
-  color: #fff; /* Color del texto del botón */
-  border: none; /* Quita el borde del botón */
-  padding: 5px 10px; /* Añade espacio interno al botón */
-  cursor: pointer; /* Cambia el cursor al pasar por encima del botón */
+.user-info strong {
+  font-weight: bold;
+  margin-right: 5px;
 }
 
-.Admidelete:hover {
-  background-color: #0056b3; /* Color de fondo del botón al pasar por encima */
+.Admidelete {
+  background-color: #ff0000;
+  color: #fff;
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
+}
+
+.imgs{
+  width: 10%;
 }

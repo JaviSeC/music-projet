@@ -13,8 +13,17 @@ interface User {
   // Otras propiedades de usuario
 }
 
+interface Song {
+  id: number;
+  imagen: string;
+  songName: string;
+  filmName: string;
+  audio: string;
+}
+
 export const Admin = () => {
   const [users, setUsers] = useState<User[]>([]);
+  const [songs, setSongs] = useState<Song[]>([]);
   const [searchTerm, setSearchTerm] = useState("");
   const [songData, setSongData] = useState({
     Imagen: "",
@@ -38,7 +47,13 @@ export const Admin = () => {
     event.preventDefault();
     console.log("Entrando en handleSignUp"); // Verifica si esta función se ejecuta
     // Verificar si los campos están vacíos
-    const { Imagen, SongName, FilmName, Audio, Id_Categories: Id_Categories } = songData;
+    const {
+      Imagen,
+      SongName,
+      FilmName,
+      Audio,
+      Id_Categories: Id_Categories,
+    } = songData;
 
     const newErrorMessages = {
       Imagen: !Imagen ? "Imagen Url is required" : "",
@@ -99,7 +114,7 @@ export const Admin = () => {
       SongName: "",
       FilmName: "",
       Audio: "",
-      Id_Categories: "Selecciona una categoría", 
+      Id_Categories: "Selecciona una categoría",
     });
 
     setErrorMessages({
@@ -119,7 +134,6 @@ export const Admin = () => {
     });
   };
 
-
   const toggleForm = () => {
     setShowForm(!showForm); // Cambia el estado para mostrar/ocultar el formulario
   };
@@ -132,6 +146,17 @@ export const Admin = () => {
       })
       .catch((error) => {
         console.error("Error al obtener la lista de usuarios", error);
+      });
+  }, []);
+
+  useEffect(() => {
+    axios
+      .get("https://localhost:7110/SongsControllers/GetSongs")
+      .then((response) => {
+        setSongs(response.data);
+      })
+      .catch((error) => {
+        console.error("Error al obtener la lista de canciones", error);
       });
   }, []);
 
@@ -159,15 +184,43 @@ export const Admin = () => {
       });
   };
 
+  const handleDeleteSong = (songId: string) => {
+    axios
+      .delete(
+        `https://localhost:7110/SongsControllers/DeleteSongs?SongName=${songId}`
+      )
+      .then(() => {
+        // Eliminación exitosa, ahora obtén la lista actualizada de usuarios
+        axios
+          .get("https://localhost:7110/SongsControllers/GetSongs")
+          .then((response) => {
+            setSongs(response.data); // Actualiza la lista de usuarios con la nueva data
+          })
+          .catch((error) => {
+            console.error("Error al obtener la lista de usuarios", error);
+          });
+      })
+      .catch((error) => {
+        console.error(
+          `Error al eliminar el usuario con UserName ${songId}`,
+          error
+        );
+      });
+  };
+
   const filteredUsers = users.filter((user) =>
     user.userName.toLowerCase().includes(searchTerm.toLowerCase())
   );
 
+  const filteredSongs = songs.filter((songs) =>
+    songs.songName.toLowerCase().includes(searchTerm.toLowerCase())
+  );
+
   return (
     <>
-      <h1>Canciones</h1>
+      <h1>Agregar Canciones</h1>
 
-      <button onClick={toggleForm}>Agregar Canción</button>
+      <button  className="play-all-button" onClick={toggleForm}>Agregar Canción</button>
 
       {showForm && (
         <form onSubmit={handleAddSong}>
@@ -232,6 +285,38 @@ export const Admin = () => {
           <button type="submit">Add Song</button>
         </form>
       )}
+      <h1>Canciones</h1>
+      <div className="UsersList">
+        <input
+          type="text"
+          placeholder="Buscar por Nombre"
+          value={searchTerm}
+          onChange={(e) => setSearchTerm(e.target.value)}
+        />
+        <ul className="All">
+          {filteredSongs.map((songs) => (
+            <li key={songs.id} className="ListUser">
+              <span className="user-info">
+              <strong>Imagen:</strong>{" "}
+                <img className="imgs" src={songs.imagen} alt={songs.songName} />&nbsp;&nbsp;
+                <strong>SongName:</strong> {songs.songName}&nbsp;&nbsp;
+                <strong>FilmName:</strong> {songs.filmName}&nbsp;&nbsp;
+                <strong>Audio:</strong>{" "}
+                <audio controls>
+                  <source className="Audios" src={songs.audio} type="audio/mpeg" />
+                  Your browser does not support the audio element.
+                </audio>
+              </span>
+              <button
+                className="Admidelete"
+                onClick={() => handleDeleteSong(songs.songName)}
+              >
+                Eliminar
+              </button>
+            </li>
+          ))}
+        </ul>
+      </div>
       <h1>Usuarios</h1>
       <div className="UsersList">
         <input
