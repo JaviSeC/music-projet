@@ -8,7 +8,7 @@ const songs = [
     SongName:"1,2,3,4.",
     FilmName: "Freddy Krueger",
     // duration: "2:42",
-    Imagen: "https://res.cloudinary.com/dq2tfglqq/image/upload/v1697012675/Freddy_Krueger__28Robert_Englund_29_x8g340.jpg",
+    Imagen: "https://res.cloudinary.com/dhme3c8ll/image/upload/v1697642478/elm-street-anniverary-cover-1629985780_ajcy7j.jpg",
     Audio:
       "https://res.cloudinary.com/dq2tfglqq/video/upload/v1697016735/Freddy_Kruegger_ikm1bx.mp3",
   },
@@ -18,7 +18,7 @@ const songs = [
     FilmName:"El Chucky",
     // duration: "3:58",
     Imagen:
-      "https://res.cloudinary.com/dq2tfglqq/image/upload/v1697012778/latest_eqs8bi.png",
+      "https://res.cloudinary.com/dhme3c8ll/image/upload/v1697642478/chuky_bhj6jz.avif",
     Audio:
       "https://res.cloudinary.com/dq2tfglqq/video/upload/v1697016692/Chucky_enxkpe.mp3",
   },
@@ -37,7 +37,7 @@ const songs = [
     SongName: "Gregorian",
     FilmName: "Satani",
     // duration: "3:20",
-    Imagen: "",
+    Imagen: "https://res.cloudinary.com/dhme3c8ll/image/upload/v1697642605/_84606042_satan-promo_zspwv4.jpg",
     Audio:
       "https://res.cloudinary.com/dq2tfglqq/video/upload/v1697016733/Gregorian_ave_satani_jlkox2.mp3",
   },
@@ -46,7 +46,7 @@ const songs = [
     SongName: "terror",
     FilmName: "Creepy",
     // duration: "2:20",
-    Imagen: "",
+    Imagen: "https://res.cloudinary.com/dhme3c8ll/image/upload/v1697642605/top-12-creepy-horror-movies-that-you-shouldnt-watch-alone-8_cenvvo.webp",
     Audio:
       "https://res.cloudinary.com/dq2tfglqq/video/upload/v1697016732/Creepy_Horror_Song_ehw08m.mp3",
   },
@@ -56,7 +56,7 @@ const songs = [
     FilmName: "Soundtrack",
     // duration: "4:44",
     Imagen:
-      "",
+      "https://res.cloudinary.com/dhme3c8ll/image/upload/v1697642803/mo%C3%B1eco_dvhfld.webp",
     Audio:
       "https://res.cloudinary.com/dq2tfglqq/video/upload/v1697016728/Soundtrack_narlr8.mp3",
   },
@@ -66,7 +66,7 @@ const songs = [
     FilmName: "The terror main",
     // duration: "2:37",
     Imagen:
-      "",
+      "https://res.cloudinary.com/dhme3c8ll/image/upload/v1697642802/kkk_bzj0g4.jpg",
     Audio: "https://res.cloudinary.com/dq2tfglqq/video/upload/v1697016677/The_terror_main_vnh4tq.mp3",
   },
   {
@@ -75,7 +75,7 @@ const songs = [
     FilmName:"Expediente X",
     // duration: "3:11",
     Imagen:
-      "",
+      "https://res.cloudinary.com/dhme3c8ll/image/upload/v1697642803/expediente_x_mulder_scully_marwjf.jpg",
     Audio: "https://res.cloudinary.com/dq2tfglqq/video/upload/v1697016675/Expediente_X_ea4ugi.mp3",
   },
   {
@@ -84,7 +84,7 @@ const songs = [
     FilmName: "Silent Hill",
     // duration: "2:51",
     Imagen:
-      "",
+      "https://res.cloudinary.com/dhme3c8ll/image/upload/v1697642802/228103-silent-hill-article_cover_bd-1_vtbksb.webp",
     Audio: "https://res.cloudinary.com/dq2tfglqq/video/upload/v1697016672/Silent_Hill_fhsrml.mp3",
   },
   {
@@ -93,7 +93,7 @@ const songs = [
     FilmName: "Tiny Tim",
     // duration: "3:42",
     Imagen:
-      "",
+      "https://res.cloudinary.com/dhme3c8ll/image/upload/v1697642802/78aaffd9-98ba-4ffd-af2a-193dddfc3df9_alta-libre-aspect-ratio_default_0_rbrum3.jpg",
     Audio: "https://res.cloudinary.com/dq2tfglqq/video/upload/v1697016671/Tiny_Tim_w5k3rk.mp3",
   },
 ];
