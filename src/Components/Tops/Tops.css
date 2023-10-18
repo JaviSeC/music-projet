@@ -4,6 +4,10 @@
     margin-right: 10px;
 }
 
+.titulo-topsongs{
+  justify-content: center;
+  text-align: left;
+}
 
 .topssongs{
     /* justify-content: center; */

@@ -103,7 +103,7 @@ export default function Tops() {
   return (
     <div className="topssongs">
       {" "}
-      Top Songs
+      <div className="titulo-topsongs">Top Songs</div>
       <div className="Cards-top">
         <CardComponent
           imageUrl="https://res.cloudinary.com/dq2tfglqq/image/upload/v1696407322/c6c3520124a60f245040125401fd536e_qc1p46.gif"

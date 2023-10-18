@@ -23,7 +23,7 @@
 
 .Name {
   color: white;
-  width: 1400px;
+  width: 1190px;
   height: 60px;
   text-align: center;
   /* justify-content: ; */
@@ -71,6 +71,8 @@
   border-bottom-right-radius: 20px;
   border-top-right-radius: 20px;
   border: 1px #a5a6a7 solid;
+  /* border-right: 1px (#1d2123 solid, #a5a6a7 solid); */
+  border-right: 1px #1d2123 solid;
   border-left: none;
   margin-left: -184%;
 }
