@@ -20,6 +20,16 @@
     width: 100%;
 }
 
+.menuview{
+    /* height: 2px; */
+    display: flex;
+    justify-content: center;
+    /* text-align: center; */
+    align-items: center;
+    /* margin-top: 18%; */
+    width: 100%;
+}
+
 
 @media screen and (max-width:360px) {
 

@@ -1,5 +1,7 @@
-import * as React from "react";
 import "./SingUp.css";
+import { useNavigate } from "react-router-dom";
+import { useState } from "react";
+import Swal from "sweetalert2";
 import { Link } from "react-router-dom";
 import Avatar from "@mui/material/Avatar";
 import Button from "@mui/material/Button";
@@ -7,7 +9,6 @@ import CssBaseline from "@mui/material/CssBaseline";
 import TextField from "@mui/material/TextField";
 import FormControlLabel from "@mui/material/FormControlLabel";
 import Checkbox from "@mui/material/Checkbox";
-import Links from "@mui/material/Link";
 import Grid from "@mui/material/Grid";
 import Box from "@mui/material/Box";
 import LockOutlinedIcon from "@mui/icons-material/LockOutlined";
@@ -17,13 +18,147 @@ import { createTheme, ThemeProvider } from "@mui/material/styles";
 
 const defaultTheme = createTheme();
 
-export default function SignUp() {
-  const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
+export const SignUp = () => {
+  const [userData, setUserData] = useState({
+    FirstName: "",
+    LastName: "",
+    UserName: "",
+    Email: "",
+    Password: "",
+  });
+
+  const [errorMessages, setErrorMessages] = useState({
+    FirstName: "",
+    LastName: "",
+    UserName: "",
+    Email: "",
+    Password: "",
+  });
+
+  const isPasswordValid = (Password: string) => {
+    const regex = /^[0-9]+$/;
+    return regex.test(Password);
+  };
+
+  const isEmailValid = (Email: string) => {
+    return Email.includes("@");
+  };
+
+  const isUsernameValid = (UserName: string) => {
+    const containsLetter = /[a-zA-Z]/.test(UserName);
+    const containsNumber = /\d/.test(UserName);
+    return containsLetter && containsNumber;
+  };
+
+  const navigate = useNavigate();
+
+  const handleSignUp = async () => {
     event.preventDefault();
-    const data = new FormData(event.currentTarget);
-    console.log({
-      email: data.get("email"),
-      password: data.get("password"),
+    console.log("Entrando en handleSignUp"); // Verifica si esta función se ejecuta
+    // Verificar si los campos están vacíos
+    const { FirstName, LastName, UserName, Email, Password } = userData;
+
+    // Validar la contraseña
+    if (!isPasswordValid(Password)) {
+      Swal.fire("Error", "La contraseña solo puede contener números.", "error");
+      return;
+    }
+
+    // Validar el correo electrónico
+    if (!isEmailValid(Email)) {
+      Swal.fire("Error", "Email inválido.", "error");
+      return;
+    }
+
+    // Validar el nombre de usuario
+    if (!isUsernameValid(UserName)) {
+      Swal.fire("Error", "El nombre de usuario debe contener letras y números.", "error");
+      return;
+    }
+    
+    const newErrorMessages = {
+      FirstName: !FirstName ? "Name is required" : "",
+      LastName: !LastName ? "Last Name is required" : "",
+      UserName: !UserName ? "UserName is required" : "",
+      Email: !Email ? "Email is required" : "",
+      Password: !Password ? "Password is required" : "",
+    };
+    // Si algún campo está vacío, no procedemos con el registro
+    if (!FirstName || !LastName || !UserName || !Email || !Password) {
+      setErrorMessages(newErrorMessages);
+      return;
+    }
+    // Crear un nuevo usuario con los datos ingresados
+    const newUser = {
+      // Id_Users : '',
+      FirstName: userData.FirstName,
+      LastName: userData.LastName,
+      UserName: userData.UserName,
+      Email: userData.Email,
+      Password: userData.Password,
+      // Id_rol: ''
+    };
+    // Simular el envío de datos a la "API" falsa (en este caso, al archivo register.json)
+    console.log("Datos que se envían:", newUser);
+    try {
+      const url = "https://localhost:7110/UsersControllers/Post";
+      const response = await fetch(url, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          FirstName,
+          LastName,
+          UserName,
+          Email,
+          Password,
+        }),
+      });
+
+      if (response.ok) {
+        console.log("Registro exitoso");
+        Swal.fire("Cuenta creada exitosamente", "", "success");
+        localStorage.setItem("userRole", "2");
+        localStorage.setItem('username', UserName)
+        navigate("/");
+      } else if (response.status === 400) {
+        // Error de solicitud inválida
+        console.error("Error en la solicitud:", response);
+        Swal.fire("Error", "La contraseña debe tener al menos 8 caracteres.", "error");
+      } else {
+        console.error("Error en la solicitud:", response);
+        Swal.fire("Error", "No se pudo crear la cuenta", "error");
+      }
+    } catch (error) {
+      console.error("Error en la solicitud:", error);
+      Swal.fire("Error", "Ha ocurrido un error en el servidor", "error");
+    }
+
+    // Limpiar los campos después de registrar al usuario y restablecer los mensajes de error
+
+    setUserData({
+      FirstName: "",
+      LastName: "",
+      UserName: "",
+      Email: "",
+      Password: "",
+    });
+
+    setErrorMessages({
+      FirstName: "",
+      LastName: "",
+      UserName: "",
+      Email: "",
+      Password: "",
+    });
+  };
+
+  const handleInputChange = (e) => {
+    const { name, value } = e.target;
+    setUserData({
+      ...userData,
+      [name]: value,
     });
   };
 
@@ -57,35 +192,40 @@ export default function SignUp() {
             <Typography component="h1" variant="h5">
               Sign up
             </Typography>
-            <Box
-              component="form"
-              noValidate
-              onSubmit={handleSubmit}
-              sx={{ mt: 3 }}
-            >
+            <Box component="form" noValidate sx={{ mt: 3 }}>
               <Grid container spacing={2}>
                 <Grid item xs={12} sm={6}>
                   <TextField
                     autoComplete="given-name"
-                    name="firstName"
+                    name="FirstName"
                     required
                     fullWidth
-                    id="firstName"
+                    id="FirstName"
                     label="First Name"
+                    value={userData.FirstName}
+                    onChange={handleInputChange}
                     autoFocus
                     className="Boxes"
                   />
+                  <span className="error-message">
+                    {errorMessages.FirstName}
+                  </span>
                 </Grid>
                 <Grid item xs={12} sm={6}>
                   <TextField
                     required
                     fullWidth
-                    id="lastName"
+                    id="LastName"
                     label="Last Name"
-                    name="lastName"
+                    name="LastName"
+                    value={userData.LastName}
+                    onChange={handleInputChange}
                     autoComplete="family-name"
                     className="Boxes"
                   />
+                  <span className="error-message">
+                    {errorMessages.LastName}
+                  </span>
                 </Grid>
                 <Grid item xs={12}>
                   <TextField
@@ -93,40 +233,53 @@ export default function SignUp() {
                     fullWidth
                     id="UserName"
                     label="UserName"
-                    name="User"
-                    autoComplete="User"
+                    name="UserName"
+                    value={userData.UserName}
+                    onChange={handleInputChange}
+                    autoComplete="UserName"
                     className="Boxes"
                   />
+                  <span className="error-message">
+                    {errorMessages.UserName}
+                  </span>
                 </Grid>
                 <Grid item xs={12}>
                   <TextField
                     required
                     fullWidth
-                    id="email"
+                    id="Email"
                     label="Email Address"
-                    name="email"
-                    autoComplete="email"
+                    name="Email"
+                    value={userData.Email}
+                    onChange={handleInputChange}
+                    autoComplete="Email"
                     className="Boxes"
                   />
+                  <span className="error-message">{errorMessages.Email}</span>
                 </Grid>
                 <Grid item xs={12}>
                   <TextField
                     required
                     fullWidth
-                    name="password"
+                    name="Password"
                     label="Password"
-                    type="password"
-                    id="password"
+                    type="Password"
+                    id="Password"
+                    value={userData.Password}
+                    onChange={handleInputChange}
                     autoComplete="new-password"
                     className="Boxes"
                   />
+                  <span className="error-message">
+                    {errorMessages.Password}
+                  </span>
                 </Grid>
                 <Grid item xs={12}>
                   <FormControlLabel
                     control={
                       <Checkbox value="allowExtraEmails" color="primary" />
                     }
-                    label="I want to receive inspiration, marketing promotions and updates via email."
+                    label="Acepto que me envien notificaciones por email."
                   />
                 </Grid>
               </Grid>
@@ -135,14 +288,15 @@ export default function SignUp() {
                 fullWidth
                 variant="contained"
                 sx={{ mt: 3, mb: 2 }}
+                onClick={handleSignUp}
               >
                 Sign Up
               </Button>
               <Grid container justifyContent="flex-end">
                 <Grid item>
-                  <Links href="#" variant="body2">
-                    Already have an account? Sign in
-                  </Links>
+                  <Link to = "/PageLogin" className="LOGINS">
+                    Already have an account? Login
+                  </Link>
                 </Grid>
               </Grid>
             </Box>
@@ -151,4 +305,5 @@ export default function SignUp() {
       </ThemeProvider>
     </div>
   );
-}
+};
+export default SignUp;

@@ -8,8 +8,8 @@
   /* margin-top: 10%; */
   width: 92rem;
   height: 200px;
+  overflow: hidden; /* Oculta el desbordamiento del carrusel */
   cursor: all-scroll;
-  /* overflow: visible; */
 }
 
 /* .swiper-slide {

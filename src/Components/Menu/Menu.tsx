@@ -2,7 +2,6 @@ import "./Menu.css";
 import { useState } from "react";
 import { Link } from "react-router-dom";
 // import React, { useState } from 'react';
-import { FaBars } from 'react-icons/fa'; // Importa el ícono de hamburguesa
 
 
 
@@ -64,12 +63,6 @@ export default function Menu() {
               src="https://res.cloudinary.com/da7ffijqs/image/upload/v1695321417/grid_landscape-removebg-preview_smbjbe.png"
               alt=""
             />
-          </button>
-        </Link>
-
-        <Link to="/PageAdmin">
-          <button>
-            <strong> Admin </strong>
           </button>
         </Link>
       </div>
