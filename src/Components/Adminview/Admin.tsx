@@ -21,7 +21,7 @@ export const Admin = () => {
     SongName: "",
     FilmName: "",
     Audio: "",
-    Name_Categories: 0,
+    Id_Categories: "Selecciona una categoría", // Valor inicial
   });
 
   const [errorMessages, setErrorMessages] = useState({
@@ -29,7 +29,7 @@ export const Admin = () => {
     SongName: "",
     FilmName: "",
     Audio: "",
-    Name_Categories: "",
+    Id_Categories: "",
   });
 
   const [showForm, setShowForm] = useState(false);
@@ -38,17 +38,17 @@ export const Admin = () => {
     event.preventDefault();
     console.log("Entrando en handleSignUp"); // Verifica si esta función se ejecuta
     // Verificar si los campos están vacíos
-    const { Imagen, SongName, FilmName, Audio, Name_Categories } = songData;
+    const { Imagen, SongName, FilmName, Audio, Id_Categories: Id_Categories } = songData;
 
     const newErrorMessages = {
       Imagen: !Imagen ? "Imagen Url is required" : "",
       SongName: !SongName ? "SongName is required" : "",
       FilmName: !FilmName ? "FilmName is required" : "",
       Audio: !Audio ? "Audio Url is required" : "",
-      Name_Categories: !Name_Categories ? "Name_Categories is required" : "",
+      Id_Categories: !Id_Categories ? "Id_Categories is required" : "",
     };
     // Si algún campo está vacío, no procedemos con el registro
-    if (!Imagen || !SongName || !FilmName || !Audio || !Name_Categories) {
+    if (!Imagen || !SongName || !FilmName || !Audio || !Id_Categories) {
       setErrorMessages(newErrorMessages);
       return;
     }
@@ -59,7 +59,7 @@ export const Admin = () => {
       SongName: songData.SongName,
       FilmName: songData.FilmName,
       Audio: songData.Audio,
-      Name_Categories: songData.Name_Categories,
+      Id_Categories: songData.Id_Categories,
       // Id_rol: ''
     };
     // Simular el envío de datos a la "API" falsa (en este caso, al archivo register.json)
@@ -76,16 +76,16 @@ export const Admin = () => {
           SongName,
           FilmName,
           Audio,
-          Name_Categories,
+          Id_Categories,
         }),
       });
 
       if (response.ok) {
         console.log("Registro exitoso");
-        Swal.fire("Cuenta creada exitosamente", "", "success");
+        Swal.fire("Cancion añadida exitosamente", "", "success");
       } else {
         console.error("Error en la solicitud:", response);
-        Swal.fire("Error", "No se pudo crear la cuenta", "error");
+        Swal.fire("Error", "No se pudo añadir la cancion", "error");
       }
     } catch (error) {
       console.error("Error en la solicitud:", error);
@@ -99,7 +99,7 @@ export const Admin = () => {
       SongName: "",
       FilmName: "",
       Audio: "",
-      Name_Categories: 0,
+      Id_Categories: "Selecciona una categoría", 
     });
 
     setErrorMessages({
@@ -107,7 +107,7 @@ export const Admin = () => {
       SongName: "",
       FilmName: "",
       Audio: "",
-      Name_Categories: "",
+      Id_Categories: "",
     });
   };
 
@@ -118,6 +118,7 @@ export const Admin = () => {
       [name]: value,
     });
   };
+
 
   const toggleForm = () => {
     setShowForm(!showForm); // Cambia el estado para mostrar/ocultar el formulario
@@ -213,17 +214,20 @@ export const Admin = () => {
           <div>
             <label>Categoría</label>
             <select
-              name="Name_Categories"
-              value={songData.Name_Categories}
+              name="Id_Categories"
+              value={songData.Id_Categories}
+              onChange={handleInputChange}
             >
-              <option value="0">Selecciona una categoría</option>
+              <option value="Selecciona una categoría">
+                Selecciona una categoría
+              </option>
               <option value="1">Oscar's</option>
               <option value="2">Animadas</option>
               <option value="3">Clásicas</option>
               <option value="4">Terror</option>
               <option value="5">Games</option>
             </select>
-            <span>{errorMessages.Name_Categories}</span>
+            <span>{errorMessages.Id_Categories}</span>
           </div>
           <button type="submit">Add Song</button>
         </form>

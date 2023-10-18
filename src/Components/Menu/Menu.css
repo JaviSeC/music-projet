@@ -128,11 +128,6 @@ button:hover{
   .registrobutton:hover .dropdown-content {
     display: block;
   }
-
-.dropdown-content{
-  
-}
-
   .dropdown-content a {
     color: white;
     text-decoration: none;

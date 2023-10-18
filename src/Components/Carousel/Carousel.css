@@ -6,7 +6,7 @@
   /* margin-top: 10%; */
   width: 90rem;
   height: 200px;
-  overflow: visible; /* Oculta el desbordamiento del carrusel */
+  overflow: hidden; /* Oculta el desbordamiento del carrusel */
 }
 
 /* .swiper-slide {
