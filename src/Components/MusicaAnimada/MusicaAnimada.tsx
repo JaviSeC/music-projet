@@ -9,7 +9,7 @@ const songs = [
     SongName: "Bajo del Mar",
     FilmName: "La Sirenita",
     // duration: "3:18 min",
-    Imagen: 'https://res.cloudinary.com/dq2tfglqq/image/upload/v1696954760/images_oiinla.jpg',
+    Imagen: 'https://res.cloudinary.com/dhme3c8ll/image/upload/v1697643153/sirenita_txkoaq.webp',
     Audio:
       "https://res.cloudinary.com/dq2tfglqq/video/upload/v1696318836/Bajo_el_Mar_De_La_Sirenita_Versi%C3%B3n_Instrumental_con_Orq_InBWYeqec_w_140_k6mjyh.mp3",
   },
@@ -18,7 +18,7 @@ const songs = [
     SongName:"Vida",
     FilmName:  "Los Increibles",
     // duration: "1:24 min",
-    Imagen:'https://res.cloudinary.com/dq2tfglqq/image/upload/v1696936763/86ca70f47ede4696eb9bb51b52d19f7627da8728v2_hq_ivm8ae.jpg',
+    Imagen:'https://res.cloudinary.com/dhme3c8ll/image/upload/v1697643153/increibles_zxynnc.webp',
     Audio:
       "https://res.cloudinary.com/dq2tfglqq/video/upload/v1696318835/Life_s_Incredible_Again_vs4DNJxG4v4_140_txabta.mp3",
   },
@@ -38,7 +38,7 @@ const songs = [
     SongName: "Un Poco Loco",
     FilmName: "Coco",
     // duration: "1:50 min",
-    Imagen: 'https://res.cloudinary.com/dq2tfglqq/image/upload/v1696954886/artworks-000292765629-rpa3h6-t500x500_sb7mjn.jpg',
+    Imagen: 'https://res.cloudinary.com/dhme3c8ll/image/upload/v1697643153/coco_njltvz.avif',
     Audio:
       "https://res.cloudinary.com/dq2tfglqq/video/upload/v1696318835/Coco_Un_Poco_Loco_Official_Instrumental__QyVbtGttYQw_140_rul4rj.mp3",
   },
@@ -74,7 +74,7 @@ const songs = [
     SongName:"Recuerdame",
     FilmName: "Coco",
     // duration: "1:16 min",
-    Imagen: 'https://res.cloudinary.com/dq2tfglqq/image/upload/v1696936489/44731-recuerdame-cancion-de-la-pelicula-coco-para-ninos_xjknyc.jpg',
+    Imagen: 'https://res.cloudinary.com/dhme3c8ll/image/upload/v1697643154/vieja_pelleja_mzf4iw.webp',
     Audio:
       "https://res.cloudinary.com/dq2tfglqq/video/upload/v1696318836/Remember_Me_From_Coco_Karaoke_Lyrics__jX67NYsUKGo_140_ah3z2p.mp3",
   },
@@ -83,7 +83,7 @@ const songs = [
     SongName: "Acción",
     FilmName: "Los Increibles",
     // duration: "3:32 min",
-    Imagen: 'https://res.cloudinary.com/dq2tfglqq/image/upload/v1696936559/1366_2000_mkoyju.jpg',
+    Imagen: 'https://res.cloudinary.com/dhme3c8ll/image/upload/v1697643153/increibles_zxynnc.webp',
     Audio:
       "https://res.cloudinary.com/dq2tfglqq/video/upload/v1696318836/The_Glory_Days_Uaz2MPzBQps_140_mxitcu.mp3",
   },
@@ -190,7 +190,7 @@ const PeliculasAnimadas: React.FC = () => {
           alt="Portada de la playlist"
         />
         <div className="title-container-animadas">
-          <h1>Cine De Terror!!</h1>
+          <h1>Cine De Animación</h1>
           <p>Colección de las películas más Tenebrosas del cine</p>
           <div className="buttons-container">
             <button className="play-all-button" onClick={playAllSongs}>
@@ -241,6 +241,14 @@ const PeliculasAnimadas: React.FC = () => {
               disabled={endIndex >= songs.length}
             >
               2
+            </button>
+          </div>
+          <div className="page-button">
+            <button
+              onClick={() => setCurrentPage(3)}
+              disabled={endIndex >= songs.length}
+            >
+             3 
             </button>
           </div>
         </div>
