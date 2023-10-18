@@ -39,8 +39,8 @@ const songs = [
     SongName: " Michael Giacchino",
     FilmName: "Up",
     duration: "4:10",
-    albumCover:
-      "https://res.cloudinary.com/doft9ylq1/image/upload/v1695889732/up_znxm97.jpg",
+    Imagen:
+      "https://res.cloudinary.com/dq2tfglqq/image/upload/v1697642523/credito-twitter-luisllanomacedo-6_ktx2uv.jpg",
     audioSource:
       "https://res.cloudinary.com/doft9ylq1/video/upload/v1695886760/UP_OST_-_03_-_Married_Life_gvQB7tMB-jI_1_incfac.mp3",
   },
