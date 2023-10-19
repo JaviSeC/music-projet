@@ -84,8 +84,8 @@ This project aims to create a highly functional and secure audio playback web pl
 <a href="https://testing-library.com/" target="_blank"><img style="margin: 5px" src="images/Testinglibrary.png" alt="Testing Library" height="70" /></a>
 
 ## Test Screenshot ✔️
-
-<img src="images/Test.png" width="auto" height="300">
+ Once the component installations are complete, in a new terminal, run **npm test**.
+<img src="images/Testing.png" width="auto" height="300">
 
 ## Installation Process ⬆️
 
