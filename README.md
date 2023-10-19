@@ -62,7 +62,7 @@ This project aims to create a highly functional and secure audio playback web pl
 ## Tech Stack 🛠️
 <a href="https://axios-http.com/ " target="_blank"><img style="margin: 10px" src="images/Axios.png" alt="Axios" height="50" /></a>
 <a href="https://nodejs.org/" target="_blank"><img style="margin: 10px" src="images/Node.js.png" alt="Node Js" height="50" /></a>
-<a href="https://www.w3schools.com/js/js_json_server.asp" target="_blank"><img style="margin: 10px" src="images/Json.jpg" alt="Json Sever" height="50" /></a>
+<a href="https://www.w3schools.com/js/js_json_server.asp" target="_blank"><img style="margin: 10px" src="images/Json.jpg" alt="Json Sever" height="80" /></a>
 
 ## Methodology 📚
 
