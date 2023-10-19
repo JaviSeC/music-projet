@@ -9,9 +9,11 @@ This project aims to create a highly functional and secure audio playback web pl
 
 ## Screenshots Desktop 💻
 
-<img src="images/Front1.png" width="auto" height="150"><img src="images/Front2.png" width="auto" height="150"><img src="images/Front3.png" width="auto" height="150"><img src="images/Front4.png" width="auto" height="150"><img src="images/Front5.png" width="auto" height="150"><img src="images/Front6.png" width="auto" height="150"><img src="images/Front7.png" width="auto" height="150">
+<img src="images/Home.png" width="auto" height="150"><img src="images/Oscars.png" width="auto" height="150"><img src="images/Terror.png" width="auto" height="150"><img src="images/Animadas.png" width="auto" height="150"><img src="images/Classic.png" width="auto" height="150"><img src="images/Games.png" width="auto" height="150"><img src="images/Login.png" width="auto" height="150"><img src="images/SignUp.png" width="auto" height="150">
 
 ## Screenshots Responsive Mobile 📱
+
+<img src="images/ResponsiveHome.png" width="auto" height="150"><img src="images/ResponsiveOscars.png" width="auto" height="150"><img src="images/ResponsiveTerror.png" width="auto" height="150"><img src="images/ResponsiveAnimada.png" width="auto" height="150"><img src="images/ResponsiveClasic.png" width="auto" height="150"><img src="images/ResponsiveGames.png" width="auto" height="150"><img src="images/ResponsiveLogin.png" width="auto" height="150"><img src="images/ResponsiveSignUp.png" width="auto" height="150">
 
 ## Stacks 🖥️
 ● Visual Studio Code <br>
