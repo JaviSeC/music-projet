@@ -47,7 +47,7 @@ const songs = [
   {
     id: 5,
     artist: "Hans Zimmer",
-    title: "Dunen",
+    title: "Dune",
     duration: "1:55",
     albumCover:
       "https://res.cloudinary.com/doft9ylq1/image/upload/v1697010731/Dune-1_wzkfnv.webp",
