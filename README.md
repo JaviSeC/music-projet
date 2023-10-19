@@ -29,18 +29,18 @@ This project aims to create a highly functional and secure audio playback web pl
 ● Zoom
 
 ## Libraries 📚
-<a href="https://getbootstrap.com/" target="_blank"><img style="margin: 10px" src="images/Bootstrap.png" alt="React" height="50" /></a>
-<a href="https://emotion.sh/docs/introduction" target="_blank"><img style="margin: 10px" src="images/Emotion.png" alt="React" height="50" /></a>
-<a href="https://jwt.io/" target="_blank"><img style="margin: 10px" src="images/Jwt.png" alt="React" height="50" /></a>
-<a href="https://mui.com/" target="_blank"><img style="margin: 10px" src="images/MUI.png" alt="React" height="50" /></a>
-<a href="https://www.framer.com/motion/" target="_blank"><img style="margin: 10px" src="images/Motion.png" alt="React" height="50" /></a>
-<a href="https://react-hook-form.com/" target="_blank"><img style="margin: 10px" src="images/Reactho.png" alt="React" height="50" /></a>
-<a href="https://react-bootstrap.netlify.app/" target="_blank"><img style="margin: 10px" src="images/ReactBootstrap.png" alt="React" height="50" /></a>
-<a href="https://sweetalert2.github.io/" target="_blank"><img style="margin: 10px" src="images/Sweetalert.png" alt="React" height="50" /></a>
-<a href="https://swiperjs.com/" target="_blank"><img style="margin: 10px" src="images/Swiper.png" alt="React" height="50" /></a>
-<a href="https://cloudinary.com" target="_blank"><img style="margin: 10px" src="images/Cloudinary.png" alt="React" height="50" /></a>
-<a href="https://reactrouter.com/en/main" target="_blank"><img style="margin: 10px" src="images/router.png" alt="React" height="50" /></a>
-<a href="https://styled-components.com/" target="_blank"><img style="margin: 10px" src="images/styled.png" alt="React" height="50" /></a>
+<a href="https://getbootstrap.com/" target="_blank"><img style="margin: 10px" src="images/Bootstrap.png" alt="Bootstrap" height="50" /></a>
+<a href="https://emotion.sh/docs/introduction" target="_blank"><img style="margin: 10px" src="images/Emotion.png" alt="Emotion" height="50" /></a>
+<a href="https://jwt.io/" target="_blank"><img style="margin: 10px" src="images/Jwt.png" alt="JWT" height="50" /></a>
+<a href="https://mui.com/" target="_blank"><img style="margin: 10px" src="images/MUI.png" alt="MUI" height="50" /></a>
+<a href="https://www.framer.com/motion/" target="_blank"><img style="margin: 10px" src="images/Motion.png" alt="Frame Motion" height="50" /></a>
+<a href="https://react-hook-form.com/" target="_blank"><img style="margin: 10px" src="images/Reactho.png" alt="React Hook Forms" height="50" /></a>
+<a href="https://react-bootstrap.netlify.app/" target="_blank"><img style="margin: 10px" src="images/ReactBoostrap.png" alt="React Bootstrap" height="50" /></a>
+<a href="https://sweetalert2.github.io/" target="_blank"><img style="margin: 10px" src="images/Sweetalert.png" alt="Sweet Alert 2" height="50" /></a>
+<a href="https://swiperjs.com/" target="_blank"><img style="margin: 10px" src="images/Swiper.png" alt="Swiper" height="50" /></a>
+<a href="https://cloudinary.com" target="_blank"><img style="margin: 10px" src="images/cloudinary.png" alt="Cloudinary" height="50" /></a>
+<a href="https://reactrouter.com/en/main" target="_blank"><img style="margin: 10px" src="images/router.jpg" alt="React Router" height="50" /></a>
+<a href="https://styled-components.com/" target="_blank"><img style="margin: 10px" src="images/styled.png" alt="Styled Components" height="50" /></a>
 
 ## Technologies and Tools 🔨
 <div>  
