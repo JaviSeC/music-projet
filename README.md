@@ -9,7 +9,7 @@ This project aims to create a highly functional and secure audio playback web pl
 
 ## Screenshots Desktop 💻
 
-<img src="images/Home.png" width="auto" height="150"><img src="images/Oscars.png" width="auto" height="150"><img src="images/Terror.png" width="auto" height="150"><img src="images/Animadas.png" width="auto" height="150"><img src="images/Classic.png" width="auto" height="150"><img src="images/Games.png" width="auto" height="150"><img src="images/Login.png" width="auto" height="150"><img src="images/SignUp.png" width="auto" height="150">
+<img src="images/Home.png" width="auto" height="200"><img src="images/Oscars.png" width="auto" height="200"><img src="images/Terror.png" width="auto" height="200"><img src="images/Animadas.png" width="auto" height="200"><img src="images/Classic.png" width="auto" height="200"><img src="images/Games.png" width="auto" height="200"><img src="images/Login.png" width="auto" height="200"><img src="images/SignUp.png" width="auto" height="200">
 
 ## Screenshots Responsive Mobile 📱
 
