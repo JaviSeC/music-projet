@@ -19,9 +19,9 @@ export default function MusicaAnimada() {
 
   return (
     <>
-    <div className=".animadaview">
+    <div className="animadaview">
     <Header/>
-    <div className=".menuview">
+    <div className="menuview">
     {userRole === 2 ? <MenuNewUser /> : <Menu />}
     </div>  
     <PeliculasAnimadas/>

@@ -41,13 +41,13 @@ const songs = [
     // duration: "4:10",
     Imagen:
       "https://res.cloudinary.com/dhme3c8ll/image/upload/v1697642099/up_yc2k1l.jpg",
-    audioSource:
+   Audio:
       "https://res.cloudinary.com/doft9ylq1/video/upload/v1695886760/UP_OST_-_03_-_Married_Life_gvQB7tMB-jI_1_incfac.mp3",
   },
   {
     Id_Songs: 5,
     SongName: "Hans Zimmer",
-    FilmName: "Dunen",
+    FilmName: "Dune",
     // duration: "1:55",
     Imagen:
       "https://res.cloudinary.com/doft9ylq1/image/upload/v1697010731/Dune-1_wzkfnv.webp",
@@ -111,8 +111,8 @@ const songs = [
     // duration: "6:34",
     Imagen:
       "https://res.cloudinary.com/doft9ylq1/image/upload/v1696797822/el-senor-de-los-anillos-el-retorno-del-rey-67427_SPA-47_tjytje.jpg",
-    Audio:
-      "https://res.cloudinary.com/dhme3c8ll/video/upload/v1695801970/BSO_-_Apocalipsys_Now_3VywjmyNYDs_q69djb.mp3https://res.cloudinary.com/doft9ylq1/video/upload/v1696797582/The_Lord_of_the_Rings__The_Return_of_the_King_CR_-_01._Roots_and_Beginnings_MFsO9weqLLE_tdrn9c.mp3",
+    audioSource:
+      "https://res.cloudinary.com/doft9ylq1/video/upload/v1696797582/The_Lord_of_the_Rings__The_Return_of_the_King_CR_-_01._Roots_and_Beginnings_MFsO9weqLLE_tdrn9c.mp3",
   },
   {
     Id_Songs: 12,
@@ -227,7 +227,7 @@ const SoundTrack: React.FC = () => {
           <div className="page-button">
             <button
               onClick={() => setCurrentPage(2)}
-              disabled={endIndex >= songs.length}
+              disabled={currentPage === 2}
             >
               2
             </button>
