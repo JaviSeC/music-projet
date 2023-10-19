@@ -4,8 +4,7 @@
   display: flex;
   justify-content: space-around;
   align-items: center;
-  /* padding: 10px; */
-  /* Fijar el reproductor en la parte inferior */
+
   bottom: 0;
   left: 0;
   right: 0;
@@ -45,14 +44,7 @@
   flex-direction: row;
   font-size: 14px;
 }
-/* .playlist button {
-    background-color: #E90C0C;
-    border: none;
-    color: #E90C0C;
-    cursor: pointer;
-    font-size: 14px;
-    text-align: left;
-  } */
+
 .playlist-header-classic {
   /* width: 75%; */
   height: 300px;

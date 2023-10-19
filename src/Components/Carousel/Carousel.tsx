@@ -220,56 +220,7 @@ export default function Carousel() {
     // Agrega más objetos para cada tarjeta de imagen y canción aquí
   ];
 
-  //! rojo
-  //? pregunta
-  //* verdesito importante
-  //todo: naranja
 
-//   const toggleAudio = (audio) => {
-//     if (currentSong === audio) {
-//       audioRef.current.pause();
-//       setCurrentSong(null);
-//     } else {
-//       audioRef.current.src = audio;
-//       audioRef.current.play();
-//       setCurrentSong(audio);
-//     }
-//   };
-
-//   return (
-//     <>
-//       <div className="audioplayer">
-//         <Swiper
-//           className="mySwiper"
-//           slidesPerView={7}
-//           spaceBetween={20}
-//           navigation={{
-//             // Opciones de navegación
-//             prevEl: ".swiper-button-prev",
-//             nextEl: ".swiper-button-next",
-//           }}
-//         >
-//           <div className="swiper-button-prev"></div>
-//           {songs.map((song, index) => (
-//             <SwiperSlide key={index}>
-//               <img
-//                 src={song.image}
-//                 alt={`Tarjeta ${index + 1}`}
-//                 onClick={() => toggleAudio(song.audio)}
-//               />
-//             </SwiperSlide>
-//           ))}
-//           <div className="swiper-button-next"></div>
-//         </Swiper>
-
-//         {/* Agrega botones de navegación */}
-
-//         {/* Agrega un elemento de audio */}
-//         <audio className="audioboton" ref={audioRef} controls></audio>
-//       </div>
-//     </>
-//   );
-// }
 const toggleAudio = (audio) => {
   if (currentSong === audio) {
     audioRef.current.pause();

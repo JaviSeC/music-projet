@@ -135,8 +135,7 @@ const SoundTrack: React.FC = () => {
   const startIndex = (currentPage - 1) * songsPerPage;
   const endIndex = startIndex + songsPerPage;
   const songsToShow = songs.slice(startIndex, endIndex);
-  // const totalPages = Math.ceil(songs.length / songsPerPage);
-  // const songsToShow = songs.slice(startIndex, endIndex);
+
   const togglePlayPause = () => {
     if (audioRef.current) {
       if (isPlaying) {
