@@ -4,97 +4,97 @@ import "./Terrorcss.css";
 const songsPerPage = 5;
 const songs = [
   {
-    id: 1,
-    artist: "terror",
-    title: "terror",
-    duration: "2:42",
-    albumCover: "https://res.cloudinary.com/dq2tfglqq/image/upload/v1697012675/Freddy_Krueger__28Robert_Englund_29_x8g340.jpg",
-    audioSource:
+    Id_Songs: 1,
+    SongName:"1,2,3,4.",
+    FilmName: "Freddy Krueger",
+    // duration: "2:42",
+    Imagen: "https://res.cloudinary.com/dhme3c8ll/image/upload/v1697642478/elm-street-anniverary-cover-1629985780_ajcy7j.jpg",
+    Audio:
       "https://res.cloudinary.com/dq2tfglqq/video/upload/v1697016735/Freddy_Kruegger_ikm1bx.mp3",
   },
   {
-    id: 2,
-    artist: "terror",
-    title: "terror",
-    duration: "3:58",
-    albumCover:
-      "https://res.cloudinary.com/dq2tfglqq/image/upload/v1697012778/latest_eqs8bi.png",
-    audioSource:
+    Id_Songs: 2,
+    SongName: "terror",
+    FilmName:"El Chucky",
+    // duration: "3:58",
+    Imagen:
+      "https://res.cloudinary.com/dhme3c8ll/image/upload/v1697642478/chuky_bhj6jz.avif",
+    Audio:
       "https://res.cloudinary.com/dq2tfglqq/video/upload/v1697016692/Chucky_enxkpe.mp3",
   },
   {
-    id: 3,
-    artist: "terror",
-    title: "terror",
-    duration: "2:43",
-    albumCover:
+    Id_Songs: 3,
+    SongName:"terror",
+    FilmName: "Jeff The Killer",
+    // duration: "2:43",
+    Imagen:
       "https://res.cloudinary.com/dq2tfglqq/image/upload/v1697016996/jeff-the_killer.jpeg_2140140895_nwokm7.jpg",
-    audioSource:
+    Audio:
       "https://res.cloudinary.com/dq2tfglqq/video/upload/v1697016738/Jef_the_killer_rbnyg0.mp3",
   },
   {
-    id: 4,
-    artist: "terror",
-    title: "terror",
-    duration: "3:20",
-    albumCover: "https://img2.rtve.es/i/?w=1600&i=1673619861549.jpg",
-    audioSource:
-      "https://res.cloudinary.com/dhme3c8ll/video/upload/v1695801278/Carros_de_Fuego_-_B.S.O._MkS1SBPHN44_pcrwyp.mp3",
+    Id_Songs: 4,
+    SongName: "Gregorian",
+    FilmName: "Satani",
+    // duration: "3:20",
+    Imagen: "https://res.cloudinary.com/dhme3c8ll/image/upload/v1697642605/_84606042_satan-promo_zspwv4.jpg",
+    Audio:
+      "https://res.cloudinary.com/dq2tfglqq/video/upload/v1697016733/Gregorian_ave_satani_jlkox2.mp3",
   },
   {
-    id: 5,
-    artist: "terror",
-    title: "terror",
-    duration: "2:20",
-    albumCover: "https://cdn.mos.cms.futurecdn.net/QfpYiWt35GZfU2Gd7pztQ8.png",
-    audioSource:
-      "https://res.cloudinary.com/dhme3c8ll/video/upload/v1695801629/Main_Title_John_Williams_Jaws_From_The__Jaws__Soundtrack__BePfzCOMRZQ_cqnbb1.mp3",
+    Id_Songs: 5,
+    SongName: "terror",
+    FilmName: "Creepy",
+    // duration: "2:20",
+    Imagen: "https://res.cloudinary.com/dhme3c8ll/image/upload/v1697642605/top-12-creepy-horror-movies-that-you-shouldnt-watch-alone-8_cenvvo.webp",
+    Audio:
+      "https://res.cloudinary.com/dq2tfglqq/video/upload/v1697016732/Creepy_Horror_Song_ehw08m.mp3",
   },
   {
-    id: 6,
-    artist: "terror",
-    title: "terror",
-    duration: "4:44",
-    albumCover:
-      "https://hips.hearstapps.com/hmg-prod/images/apocalypse-now-donald-trump-1534867844.jpg",
-    audioSource:
-      "https://res.cloudinary.com/dhme3c8ll/video/upload/v1695801970/BSO_-_Apocalipsys_Now_3VywjmyNYDs_q69djb.mp3",
+    Id_Songs: 6,
+    SongName: "terror",
+    FilmName: "Soundtrack",
+    // duration: "4:44",
+    Imagen:
+      "https://res.cloudinary.com/dhme3c8ll/image/upload/v1697642803/mo%C3%B1eco_dvhfld.webp",
+    Audio:
+      "https://res.cloudinary.com/dq2tfglqq/video/upload/v1697016728/Soundtrack_narlr8.mp3",
   },
   {
-    id: 7,
-    artist: "terror",
-    title: "terror",
-    duration: "2:37",
-    albumCover:
-      "https://caixaforum.org/documents/311930/9160687/vaquilla+berlanga+webCXF+spa220170101225+-+18204jpg/83fc543e-f1a6-17f4-0b1e-8c4b1a7948ff?version=1.0&t=1565690877227",
-    audioSource: "URL_DEL_AUDIO",
+    Id_Songs: 7,
+    songName: "terror",
+    FilmName: "The terror main",
+    // duration: "2:37",
+    Imagen:
+      "https://res.cloudinary.com/dhme3c8ll/image/upload/v1697642802/kkk_bzj0g4.jpg",
+    Audio: "https://res.cloudinary.com/dq2tfglqq/video/upload/v1697016677/The_terror_main_vnh4tq.mp3",
   },
   {
-    id: 8,
-    artist: "terror",
-    title: "terror",
-    duration: "3:11",
-    albumCover:
-      "https://www.elindependiente.com/wp-content/uploads/2020/02/doctor-zhivago.jpg",
-    audioSource: "URL_DEL_AUDIO",
+    Id_Songs: 8,
+    SongName:"terror",
+    FilmName:"Expediente X",
+    // duration: "3:11",
+    Imagen:
+      "https://res.cloudinary.com/dhme3c8ll/image/upload/v1697642803/expediente_x_mulder_scully_marwjf.jpg",
+    Audio: "https://res.cloudinary.com/dq2tfglqq/video/upload/v1697016675/Expediente_X_ea4ugi.mp3",
   },
   {
-    id: 9,
-    artist: "terror",
-    title: "terror",
-    duration: "2:51",
-    albumCover:
-      "https://www.abc.es/media/peliculas/000/005/139/yo-el-vaquilla-2.jpg",
-    audioSource: "URL_DEL_AUDIO",
+    Id_Songs: 9,
+    SongName: "terror",
+    FilmName: "Silent Hill",
+    // duration: "2:51",
+    Imagen:
+      "https://res.cloudinary.com/dhme3c8ll/image/upload/v1697642802/228103-silent-hill-article_cover_bd-1_vtbksb.webp",
+    Audio: "https://res.cloudinary.com/dq2tfglqq/video/upload/v1697016672/Silent_Hill_fhsrml.mp3",
   },
   {
-    id: 10,
-    artist: "terror",
-    title: "terror",
-    duration: "3:42",
-    albumCover:
-      "https://www.alohacriticon.com/wp-content/uploads/2017/01/perros-callejeros-foto-critica.jpg",
-    audioSource: "URL_DEL_AUDIO",
+    Id_Songs: 10,
+    SongName: "terror",
+    FilmName: "Tiny Tim",
+    // duration: "3:42",
+    Imagen:
+      "https://res.cloudinary.com/dhme3c8ll/image/upload/v1697642802/78aaffd9-98ba-4ffd-af2a-193dddfc3df9_alta-libre-aspect-ratio_default_0_rbrum3.jpg",
+    Audio: "https://res.cloudinary.com/dq2tfglqq/video/upload/v1697016671/Tiny_Tim_w5k3rk.mp3",
   },
 ];
 
@@ -170,17 +170,17 @@ const BodyTerror: React.FC = () => {
       <div className="song-list">
         <ul>
           {songsToShow.map((song) => (
-            <li key={song.id}>
-              <img src={song.albumCover} alt={song.title} />
+            <li key={song.Id_Songs}>
+              <img src={song.Imagen} alt={song.FilmName} />
               <button onClick={() => changeSong(song)}>
-                {song.title} - {song.artist} - {song.duration}
+                {song.FilmName} - {song.SongName}
               </button>
               <button
                 id="like-button"
-                onClick={() => toggleLike(song.id)}
-                className={likedSongs.has(song.id) ? "liked" : ""}
+                onClick={() => toggleLike(song.Id_Songs)}
+                className={likedSongs.has(song.Id_Songs) ? "liked" : ""}
               >
-                {likedSongs.has(song.id) ? "💜" : "🤍"}
+                {likedSongs.has(song.Id_Songs) ? "💜" : "🤍"}
               </button>
             </li>
           ))}
@@ -211,19 +211,19 @@ const BodyTerror: React.FC = () => {
 
       <div className="music-player-terror">
         <div className="album-cover-terror">
-          <img src={currentSong.albumCover} alt="Portada del álbum" />
+          <img src={currentSong.Imagen} alt="Portada del álbum" />
         </div>
         <div className="song-info">
-          <p className="artist">{currentSong.artist}</p>
-          <p className="song-title">{currentSong.title}</p>
+          <p className="artist">{currentSong.SongName}</p>
+          <p className="song-title">{currentSong.FilmName}</p>
         </div>
         <audio
           id="audio"
           controls
           ref={audioRef}
-          key={currentSong.id} // Esto fuerza la recarga del elemento audio
+          key={currentSong.Id_Songs} // Esto fuerza la recarga del elemento audio
         >
-          <source src={currentSong.audioSource} type="audio/mpeg" />
+          <source src={currentSong.Audio} type="audio/mpeg" />
         </audio>
         <button onClick={togglePlayPause}>
           {isPlaying ? "Pausar" : "Reproducir"}

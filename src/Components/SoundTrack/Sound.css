@@ -59,6 +59,7 @@
   display: flex;
   margin: 2%;
   margin-left: 15%;
+  margin-top: 20px;
   color: white;
 }
 #playlist-cover-sound {
@@ -67,6 +68,7 @@
   width: 30%;
   border-radius: 15px;
   margin-top: 2%;
+  box-shadow: 0 0 10px 5px #f2e08e;
 }
 .playlist-header-sound h1 {
   margin-left: 6.5%;

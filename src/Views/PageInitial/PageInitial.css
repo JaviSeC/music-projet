@@ -1,7 +1,13 @@
 body{
-    background-color: rgba(175, 183, 187, 1);
-    /* background-image:linear-gradient(to bottom right, #FFF7FB, #EFE7F2, #DBD8EA, #BFC9E2, #98B9D9, #6AA8CF, #4096C0, #28a4c0,  #aceee3, #aceee3);
-} */}
+    margin: 0;
+    /* background-color: rgba(175, 183, 187, 1); */
+     background-image:linear-gradient(to bottom right, #FFF7FB, #EFE7F2, #DBD8EA, #BFC9E2, #98B9D9, #6AA8CF, #4096C0, #28a4c0,  #aceee3, #aceee3);
+   
+     background-size: cover;
+     background-position: center;
+     background-repeat: initial;
+     /* height: 1130px; */
+    } 
 
 .home{
     display: flex;

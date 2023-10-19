@@ -1,13 +1,15 @@
-import * as React from 'react';
-import AspectRatio from '@mui/joy/AspectRatio';
-import Card from '@mui/joy/Card';
-import CardContent from '@mui/joy/CardContent';
-import CardOverflow from '@mui/joy/CardOverflow';
-import Divider from '@mui/joy/Divider';
-import Typography from '@mui/joy/Typography';
-import IconButton from '@mui/joy/IconButton';
-import Link from '@mui/joy/Link';
-import Favorite from '@mui/icons-material/Favorite';
+//____________________________________________________________
+
+import * as React from "react";
+import AspectRatio from "@mui/joy/AspectRatio";
+import Card from "@mui/joy/Card";
+import CardContent from "@mui/joy/CardContent";
+import CardOverflow from "@mui/joy/CardOverflow";
+import Divider from "@mui/joy/Divider";
+import Typography from "@mui/joy/Typography";
+import IconButton from "@mui/joy/IconButton";
+import Link from "@mui/joy/Link";
+import Favorite from "@mui/icons-material/Favorite";
 import "./Tops.css";
 
 interface CardProps {
@@ -23,82 +25,102 @@ function CardComponent(props: CardProps) {
   const handleLikeClick = () => {
     setLiked(!liked); // Cambia el estado al hacer clic en el botón
   };
-  return (
 
-    <div className='Card-top'>
-<Card variant="outlined" sx={{ width: 320, backgroundColor: '#1A1E1F'}}>
-      <CardOverflow>
-        <AspectRatio ratio="2">
-          <img
-            src={imageUrl}
-            srcSet={imageUrl}
-            loading="lazy"
-            alt=""
-            style={{ height: '165%' }}
-          />
-        </AspectRatio>
-        <IconButton
-          aria-label={`Like ${artist}`}
-          size="md"
-          variant="solid"
-          color={liked ? "primary" : "danger"}
-          sx={{
-            position: 'absolute',
-            zIndex: 2,
-            borderRadius: '50%',
-            right: '1rem',
-            bottom: 0,
-            transform: 'translateY(50%)',
-          }}
-          onClick={handleLikeClick}
-        >
-          <Favorite />
-        </IconButton>
-      </CardOverflow>
-      <CardContent>
-        <Typography level="title-md">
-          <Link href="#multiple-actions" overlay underline="none">
-            {title}
-          </Link>
-        </Typography>
-        <Typography level="body-sm">
-          <Link href="#multiple-actions">{artist}</Link>
-        </Typography>
-      </CardContent>
-      <CardOverflow variant="soft" sx={{ backgroundColor: '#1A1E1F'}}>
-        <Divider inset="context" />
-        <CardContent orientation="horizontal">
-          <Typography level="body-xs">{views}</Typography>
-          <Divider orientation="vertical" />
-          <Typography level="body-xs">{duration}</Typography> {/* Muestra la duración de la canción */}
+  const [isPlaying, setIsPlaying] = React.useState(false);
+  const audioRef = React.useRef<HTMLAudioElement | null>(null);
+
+  const handlePlayClick = () => {
+    if (audioRef.current) {
+      if (isPlaying) {
+        audioRef.current.pause();
+      } else {
+        audioRef.current.play();
+      }
+      setIsPlaying(!isPlaying);
+    }
+  };
+
+  return (
+    <div className="Card-top">
+      <Card variant="outlined" sx={{ width: 320, backgroundColor: "#1A1E1F" }}>
+        <CardOverflow>
+          <AspectRatio ratio="2">
+            <img
+              src={imageUrl}
+              srcSet={imageUrl}
+              loading="lazy"
+              alt=""
+              style={{ height: "165%" }}
+            />
+          </AspectRatio>
+         
+          <IconButton
+            aria-label={`Like ${artist}`}
+            size="md"
+            variant="solid"
+            color={liked ? "primary" : "danger"}
+            sx={{
+              position: "absolute",
+              zIndex: 2,
+              borderRadius: "50%",
+              right: "1rem",
+              bottom: 0,
+              transform: "translateY(50%)",
+            }}
+            onClick={handleLikeClick}
+          >
+            <Favorite />
+          </IconButton>
+
+        </CardOverflow>
+                
+        <CardContent>
+        
+          <Typography level="title-md">
+            <Link href="#multiple-actions" overlay underline="none">
+              {title}
+            </Link>
+          </Typography>
+          <Typography level="body-sm">
+            <Link href="#multiple-actions">{artist}</Link>
+          </Typography>
         </CardContent>
-      </CardOverflow>
-    </Card>
+        <CardOverflow variant="soft" sx={{ backgroundColor: "#1A1E1F" }}>
+          <Divider inset="context" />
+          <CardContent orientation="horizontal">
+            <Typography level="body-xs">{views}</Typography>
+            <Divider orientation="vertical" />
+            <Typography level="body-xs">{duration}</Typography>{" "}
+            {/* Muestra la duración de la canción */}
+          </CardContent>
+        </CardOverflow>
+      </Card>
     </div>
   );
 }
+
 export default function Tops() {
   return (
+    <div className="topssongs">
+      {" "}
+      <div className="titulo-topsongs">Top Songs</div>
+      <div className="Cards-top">
+        <CardComponent
+          imageUrl="https://res.cloudinary.com/dq2tfglqq/image/upload/v1696407322/c6c3520124a60f245040125401fd536e_qc1p46.gif"
+          title="Zero to Hero"
+          artist="Star-Lord Band, Steve Szczepkowski, Yohann Boudreault"
+          views="Views: 23K"
+          duration="3:45 min"
+        />
 
-    <div className="topssongs"> Top Songs
-    <div className='Cards-top'>
-      <CardComponent
-        imageUrl="https://res.cloudinary.com/dq2tfglqq/image/upload/v1696407322/c6c3520124a60f245040125401fd536e_qc1p46.gif"
-        title="Zero to Hero"
-        artist="Star-Lord Band, Steve Szczepkowski, Yohann Boudreault"
-        views="Views: 23K"
-        duration="3:45 min"
-      />
-     
-        <CardComponent 
+        <CardComponent
           imageUrl="https://res.cloudinary.com/duwenv0yr/image/upload/v1695893709/exorci.png"
           title="Tubular Bells"
           artist="Mike Oldfield"
           views="Views: 145K"
           duration="6:02 min"
         />
-         
-        </div>
-        </div>
+      </div>
+    </div>
   );
 }

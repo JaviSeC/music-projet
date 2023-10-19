@@ -1,20 +1,17 @@
 .div-footer {
-  /* background-color: rgb(120, 121, 121,); */
-  /* background: linear-gradient(rgba(120, 121, 121, 0.7), rgba(255, 255, 255, 0)); Cambia los valores de rgba según tus preferencias */
-  /* background: linear-gradient(to top, rgba(120, 121, 121, 1), rgba(120, 121, 121, 0)); */
+  background-image:linear-gradient(to right, #DBD8EA, #BFC9E2, #98B9D9, #90aaba, #728690, #75c7d9,  #b4e1da, #b5bcbb);
   display: flex;
   font-size: 90%;
   justify-content: space-around;
-  margin-top: 10px;
+  /* margin-top: 10px; */
+  /* margin-top: ; */
+  margin: 0;
   color: antiquewhite;
-  height: 30px;
+  height: 35px;
   align-items: center;
   /* border-radius: 20px; */
   border-left: 1px rgb(255, 255, 255) solid;
   border-right: 1px rgb(255, 255, 255) solid;
-
-
-
 }
 
 .div-contactos {
@@ -23,8 +20,6 @@
   /* padding: 10px 20px; */
   display: flex;
   margin-left: -30px;
-
-
   /* justify-content:space-around; */
   /* align-items: center; */
   /* text-align: center; */
@@ -100,8 +95,12 @@
     align-items: center; /* Centra las cajas verticalmente */
     text-align: center; /* Centra el texto en las cajas */
     /* background-color: blueviolet; */
-    margin-bottom: 15px;
+    margin-bottom: 0px;
+    
+    /* height: 150px; */
     height: auto;
+    padding-top: 12px;
+    padding-bottom: 7px;
     width: 360px;
     /* padding-top: 1px;
     padding-bottom: 10px; */

@@ -80,6 +80,7 @@ button:hover{
   background: rgb(154, 157, 160);
   border-radius: 15px;
   padding: 4px;
+  
 }
 @media screen and (max-width: 360px) {
   .Container {
@@ -119,6 +120,11 @@ button:hover{
   .registrobutton:hover .dropdown-content {
     display: block;
   }
+
+.dropdown-content{
+  
+}
+
   .dropdown-content a {
     color: white;
     text-decoration: none;
