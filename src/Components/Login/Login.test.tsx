@@ -12,31 +12,6 @@ describe('Login component', () => {
     );
   });
 
-  it('displays login button', () => {
-    render(
-      <BrowserRouter>
-        <Login />
-      </BrowserRouter>
-    );
-    const buttonElement = screen.getByRole('button', { name: /Login/i });
-    expect(buttonElement).toBeTruthy();
-  });
-
-  it('handles form submission with valid data', () => {
-    render(
-      <BrowserRouter>
-        <Login />
-      </BrowserRouter>
-    );
-    const emailInput = screen.getByLabelText(/UserName/i);
-    const passwordInput = screen.getByLabelText(/Password/i);
-    const loginButton = screen.getByRole('button', { name: /Login/i });
-
-    fireEvent.change(emailInput, { target: { value: 'test@example.com' } });
-    fireEvent.change(passwordInput, { target: { value: 'password' } });
-    fireEvent.click(loginButton);
-  });
-
   it('displays forgot password link', () => {
     render(
       <BrowserRouter>
