@@ -1,4 +1,4 @@
-import React, { useState, useRef } from 'react';
+import React, { useState, useRef, useEffect  } from 'react';
 import './BodyStyle.css';
 
 
@@ -93,17 +93,56 @@ const songs = [
 ];
 
 const BodyClassic: React.FC = () => {
+  // const [currentPage, setCurrentPage] = useState(1);
+  // const [currentSongIndex, setCurrentSongIndex] = useState(0);
+  // const [currentSong, setCurrentSong] = useState(songs[0]);
+  // const [currentCategory, setCurrentCategory] = useState(3);
+  // const [songs, setSongs] = useState(songs);
+  // const [isPlaying, setIsPlaying] = useState(false);
+  // const [likedSongs, setLikedSongs] = useState<Set<number>>(new Set<number>());
+  // const audioRef = useRef<HTMLAudioElement | null>(null);
   const [currentPage, setCurrentPage] = useState(1);
   const [currentSongIndex, setCurrentSongIndex] = useState(0);
-  const [currentSong, setCurrentSong] = useState(songs[0]);
   const [isPlaying, setIsPlaying] = useState(false);
   const [likedSongs, setLikedSongs] = useState<Set<number>>(new Set<number>());
   const audioRef = useRef<HTMLAudioElement | null>(null);
+  const [songsx, setSongsx] = useState(null);
+
+  const [currentSong, setCurrentSong] = useState({
+    Id_Songs: '',
+    SongName: '',
+    FilmName: '',
+    Imagen: '',
+    Audio: '',
+  });   
+
   const startIndex = (currentPage - 1) * songsPerPage;
   const endIndex = startIndex + songsPerPage;
   const songsToShow = songs.slice(startIndex, endIndex);
   // const totalPages = Math.ceil(songs.length / songsPerPage);
   // const songsToShow = songs.slice(startIndex, endIndex);
+
+  // Realiza la solicitud al backend para obtener las canciones de la categoría 3
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const Id_Categories = 3;
+        const response = await fetch(`https://localhost:7110/SongsControllers/GetSongsByCategory/GetSongsByCategory/${Id_Categories}`);
+        if (response.ok) {
+          const data = await response.json();
+          console.log('Datos del backend:', data);
+          setSongsx(data);
+        } else {
+          console.error('Error al obtener las canciones del backend');
+        }
+      } catch (error) {
+        console.error('Error en la solicitud:', error);
+      }
+    };
+  
+    fetchData();
+  }, []);
+
   const togglePlayPause = () => {
     if (audioRef.current) {
       if (isPlaying) {
@@ -137,6 +176,8 @@ const BodyClassic: React.FC = () => {
     }
     setIsPlaying(!isPlaying);
   };
+
+
   return (
     <div className="body-container" >
       <div className="playlist-header-classic">
@@ -158,7 +199,7 @@ const BodyClassic: React.FC = () => {
           </div>
         </div>
       </div>
-      <div className="song-list">
+      {/* <div className="song-list">
         <ul>
           {songsToShow.map((song) => (
             <li key={song.Id_Songs}>
@@ -190,7 +231,30 @@ const BodyClassic: React.FC = () => {
             </button>
           </div>
         </div>
-      </div>
+      </div> */}
+      {songsx && (
+  <div className="song-list">
+    <ul>
+    {songsx.map(song => (
+      <li key={song.Id_Songs}>
+        <img src={song.Imagen} alt={song.FilmName} />
+        <button onClick={() => changeSong(song)}>
+          {song.FilmName} - {song.SongName}
+        </button>
+        <button
+          id='like-button'
+          onClick={() => toggleLike(song.Id_Songs)}
+          className={likedSongs.has(song.Id_Songs) ? 'liked' : ''}
+        >
+          {likedSongs.has(song.Id_Songs) ? '💜' : '🤍'}
+        </button>
+      </li>
+    ))}
+    </ul>
+  </div>
+)}
+
+
       <div className="music-player-classic">
         <div className="album-cover-classic">
           <img

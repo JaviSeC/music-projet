@@ -98,6 +98,14 @@ export const Admin = () => {
       if (response.ok) {
         console.log("Registro exitoso");
         Swal.fire("Cancion añadida exitosamente", "", "success");
+        axios
+        .get("https://localhost:7110/SongsControllers/GetSongs")
+        .then((response) => {
+          setSongs(response.data);
+        })
+        .catch((error) => {
+          console.error("Error al obtener la lista de canciones", error);
+        });
       } else {
         console.error("Error en la solicitud:", response);
         Swal.fire("Error", "No se pudo añadir la cancion", "error");
