@@ -26,7 +26,6 @@ const songs = [
     Id_Songs: 3,
     SongName: 'Nino Rota',
     FilmName: 'El Padrino',
-    // duration: '2:43',
     Imagen: 'https://www.race.es/revista-autoclub/wp-content/uploads/sites/4/2022/05/el-padrino-el-clasico-de-los-clasicos-759x500.jpg',
     Audio: 'https://res.cloudinary.com/dhme3c8ll/video/upload/v1695724973/El_Padrino_Tema_Original__The_Godfather_Original_Theme__qIFQwnsotss_edoje7.mp3',
   },
