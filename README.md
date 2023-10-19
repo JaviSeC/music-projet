@@ -97,7 +97,7 @@ SoundTracks Magics is a highly functional and secure audio playback web platform
 
 
 ## Next Steps 🔜
-Coming soon, we will continue developing the Full Stack project with the repository https://github.com/isabellozano37/MusicProject-BackEnd. The goal is to be able to work with both this Front-end repository and the Back-end repository, thus creating a fully functional audio playback web platform where we will combine both the visual and the database aspects.
+Once linked to the Back-End project (https://github.com/isabellozano37/MusicProject-BackEnd), we will continue to improve both the functional part of the database and the visual part in the Front-End with the aim of providing a greater and better user experience. In our Front-End repository, we will continue to add new music categories where users can enjoy more musical content, expanding beyond the usual Soundtracks already included in the current repository, extending to other fields such as TV series, musicals, etc. Similarly, in the current categories, we will continue to include a greater number of Soundtracks, in order to complete this website as much as possible.
 
 ## Authors 👨‍💻👩‍💻
 
