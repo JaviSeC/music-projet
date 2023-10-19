@@ -28,6 +28,10 @@ This project aims to create a highly functional and secure audio playback web pl
 ● Slack <br>
 ● Zoom
 
+## Libraries 📚
+
+<img src="images/ReactBoostrap.png" width="100" height="auto"><img src="images/Formik.png" width="100" height="30"><img src="images/PrimeReact.png" width="100" height="auto"><img src="images/React Hook Form.png" width="100" height="25"><img src="images/React Router.png" width="100" height="25"><img src="images/Sweet Alert.png" width="100" height="30"><img src="images/Swiper.png" width="100" height="auto"><img src="images/YUP.png" width="100" height="30"><img src="images/Cloudinary.png" width="100" height="auto">
+
 ## Technologies and Tools 🔨
 <div>  
 <a href="https://reactjs.org/" target="_blank"><img style="margin: 10px" src="https://profilinator.rishav.dev/skills-assets/react-original-wordmark.svg" alt="React" height="50" /></a>  
@@ -41,6 +45,10 @@ This project aims to create a highly functional and secure audio playback web pl
 <a href="https://www.jestjs.io/" target="_blank"><img style="margin: 10px" src="https://profilinator.rishav.dev/skills-assets/jest.svg" alt="Jest" height="50" /></a>  
 </div>
 
+## Tech Stack 🛠️
+
+<img src="images/Axios.png" width="100" height="auto"><img src="images/JSON Server.png" width="100" height="auto"><img src="images/Node.js.png" width="100" height="auto">
+
 ## Methodology 📚
 
 ● Mob, pair and solo programming <br>
@@ -52,6 +60,14 @@ This project aims to create a highly functional and secure audio playback web pl
 - Independents: These are different branches where each team member develops their code according to assigned tasks for later merging into the Dev branch. It's an independent and/or testing branch. <br>
 + The branch methodology allows us to work collaboratively and maintain an organized and efficient workflow. Furthermore, working in branches allows us to work freely without conflicting with the work of other team members. Additionally, it provides us with greater control and a record or history of the various changes being made. On the other hand, for added security when merging codes from different branches, we have implemented security rules on GitHub where it is necessary to create a pull request prior to the merge.
 
+
+## Tests ☑️
+
+<img src="images/Jestt.png" width="100" height="auto"><img src="images/Testing Library.png" width="90" height="30"><img src="images/Vitest.png" width="80" height="30">
+
+## Test Screenshot ✔️
+
+<img src="images/Test.png" width="auto" height="300">
 
 ## Installation Process ⬆️
 
