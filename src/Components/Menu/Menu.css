@@ -4,6 +4,7 @@
   margin-top: -250px;
 }
 button:hover{
+  background: rgb(49, 136, 228);
   background: rgb(154, 157, 160);
   border-radius: 50px 50px 50px 50px;
 }
@@ -15,10 +16,11 @@ button:hover{
   margin-top: 8%;
 }
 .home {
-  width: 65%;
+  width: 80%;
 }
 .categorie {
-  width: 100%;
+  width: 110%;
+  margin-left: -3%;
 }
 .loginbutton {
   width: 100%;
@@ -67,7 +69,6 @@ button:hover{
   margin-left: 120%;
 
 }
-
 .dropdown-content a {
   color: white;
   text-decoration: none;
@@ -75,6 +76,9 @@ button:hover{
   margin: 5%;
   font-size: 13px;
   padding: 2px;
+}
+.dropdown-content a:hover {
+  background: rgb(49, 136, 228);
 }
 .dropdown-content a:hover{
   background: rgb(154, 157, 160);
@@ -84,6 +88,9 @@ button:hover{
 }
 @media screen and (max-width: 360px) {
   .Container {
+    display: flex;
+    /* display: flex; */
+    height: 5%;
     width: 15%;
     margin-top: 10px;
   }
@@ -120,11 +127,6 @@ button:hover{
   .registrobutton:hover .dropdown-content {
     display: block;
   }
-
-.dropdown-content{
-  
-}
-
   .dropdown-content a {
     color: white;
     text-decoration: none;

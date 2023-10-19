@@ -1,6 +1,6 @@
 import React, { useState, useRef } from "react";
 import "./MusicaAnimada.css"; // Asegúrate de que el nombre del archivo CSS sea correcto y coincide con tu proyecto
-import { Link } from "react-router-dom";
+
 
 const songsPerPage = 5;
 const songs = [

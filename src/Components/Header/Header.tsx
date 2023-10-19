@@ -5,6 +5,7 @@ interface SearchBoxProps {
   onSearch: (query: string) => void;
 }
 
+
 const SearchBox: React.FC<SearchBoxProps> = ({ onSearch }) => {
   const handleSearch = (event: React.ChangeEvent<HTMLInputElement>) => {
     const query = event.target.value;

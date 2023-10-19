@@ -1,5 +1,5 @@
-// import React, { useState } from "react";
 import "./Headerunico.css";
+import { Link } from "react-router-dom";
 
 export default function Headerunico(){
   
@@ -15,6 +15,17 @@ export default function Headerunico(){
         </div>
         <div className="titulo-box">
           <h1 className="titulo">Sound Tracks Magic</h1>
+        </div>
+        <div>
+        <Link to="/">
+          <button className="Admi">
+            <img
+              className="AdmiHome"
+              src="https://res.cloudinary.com/da7ffijqs/image/upload/v1695323366/images-removebg-preview_1_xuayhf.png"
+              alt=""
+            />
+          </button>
+        </Link>
         </div>
       </header>
     </>

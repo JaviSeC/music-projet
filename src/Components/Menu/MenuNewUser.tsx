@@ -1,19 +1,22 @@
-import "./Menu.css";
-import { useState } from "react";
+import "./MenuNewUser.css"
 import { Link } from "react-router-dom";
-// import React, { useState } from 'react';
+import { useState } from "react";
 
-
-
-export default function Menu() {
+export default function MenuNewUser() {
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
 
-  const handleMouseEnter = () => {
-    setIsDropdownOpen(true);
+
+  const toggleDropdown = () => {
+    setIsDropdownOpen(!isDropdownOpen);
   };
 
-  const handleMouseLeave = () => {
-    setIsDropdownOpen(false);
+  const handleLogout = () => {
+    // Aquí puedes realizar las tareas de cierre de sesión, como limpiar el almacenamiento local, etc.
+    // Por ejemplo, para eliminar el rol del usuario del almacenamiento local:
+    localStorage.removeItem("userRole");
+    
+    // Luego, redirige al usuario a la página de inicio de sesión o a donde prefieras.
+    window.location.reload();
   };
 
   return (
@@ -28,13 +31,14 @@ export default function Menu() {
             />
           </button>
         </Link>
-        <button className="registrobutton" onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
+        <button className="registrobutton" onClick={toggleDropdown}>
           <img
             className="categorie"
             src="https://res.cloudinary.com/da7ffijqs/image/upload/v1695367319/musica-removebg-preview_scp9yc.png"
-            alt="categories"
+            alt=""
           />
-          {isDropdownOpen && (
+        </button>
+        {isDropdownOpen && (
             <div className="dropdown-content">
               <a href="/SoundTracksView">Ganadores Oscar🏆</a>
               <a href="/PeliculasAnimadasView">Animadas🧸</a>
@@ -43,25 +47,23 @@ export default function Menu() {
                <a href="/Games">Games🎮</a>
             </div>
           )}
-        </button>
-    
       </div>
       <div className="boxuser">
-        <Link to="/PageLogin">
+        <Link to="/PageUser">
           <button className="loginbutton">
             <img
-              className="login"
-              src="https://res.cloudinary.com/da7ffijqs/image/upload/v1695319832/_8aeb1ec2-ba3a-4b6d-a850-a142ccb46b8a-removebg-preview_cfwx19.png"
-              alt=""
+              className="Usuario"
+              src="https://res.cloudinary.com/da7ffijqs/image/upload/v1696870066/_89a10961-f024-4f1a-8773-19ebe77677f9-removebg-preview_qgqop8.png"
+              alt="Mi Usuario"
             />
           </button>
         </Link>
-        <Link to="/PageSingUp">
-          <button className="registrobutton">
+        <Link to="/">
+          <button className="registrobutton" onClick={handleLogout}>
             <img
-              className="registro"
-              src="https://res.cloudinary.com/da7ffijqs/image/upload/v1695321417/grid_landscape-removebg-preview_smbjbe.png"
-              alt=""
+              className="CerrarSesion"
+              src="https://res.cloudinary.com/da7ffijqs/image/upload/v1696869249/_8bfc1014-b566-40f0-a412-0ff913c51437-removebg-preview_tpa0mw.png"
+              alt="Cerrar sesion"
             />
           </button>
         </Link>
