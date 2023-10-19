@@ -1,10 +1,5 @@
 .Games{
-    /* background-image: url(https://res.cloudinary.com/dq2tfglqq/image/upload/v1696334219/creacion_15508833_1085079_1706x960_q71t3p.jpg); */
-    /* background-color: darkred;
-    background-size: cover;
-    background-attachment: fixed; */
-
-    background-image: linear-gradient(rgba(0, 0, 0, 0.4), darkred, rgba(0, 0, 0, 0.3)), url('https://res.cloudinary.com/dq2tfglqq/image/upload/v1697453411/marvel-avengers-wallpaper_vgampn.jpg');
+     background-image: linear-gradient(rgba(0, 0, 0, 0.4), darkred, rgba(0, 0, 0, 0.3)), url('https://res.cloudinary.com/dq2tfglqq/image/upload/v1697453411/marvel-avengers-wallpaper_vgampn.jpg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -17,19 +12,9 @@
 .games{
     height: 2px;
     margin-top: 18%;
+    margin-left: 3%;
     width: 100%;
 }
-
-.menuview{
-    /* height: 2px; */
-    display: flex;
-    justify-content: center;
-    /* text-align: center; */
-    align-items: center;
-    /* margin-top: 18%; */
-    width: 100%;
-}
-
 
 @media screen and (max-width:360px) {
 
@@ -45,4 +30,15 @@
 
 
     }
+
+    .games {
+        width: 360px;
+        margin-top: 180px;
+        margin-bottom: 80px;
+        margin-left: -135px;
+        flex-direction: column; /* Cambia la dirección del flex container a columna */
+        align-items: flex-start; /* Alinea los elementos al inicio del contenedor */
+        /* padding: 15px; */
+    }
+
 }

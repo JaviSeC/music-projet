@@ -20,7 +20,7 @@ export default function PageBodyGames() {
     <>
       <div className="Games">
         <Header />
-        <div className=".menuview">
+        <div className="games">
           {userRole === 2 ? <MenuNewUser /> : <Menu />}
         </div>
         <BodyGames />

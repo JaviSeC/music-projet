@@ -9,11 +9,20 @@
 }
 
 .menuview{
-    /* height: 2px; */
-    display: flex;
-    justify-content: center;
-    /* text-align: center; */
-    align-items: center;
-    /* margin-top: 18%; */
+    height: 2px;
+    margin-top: 18%;
+    margin-left: 3%;
     width: 100%;
+}
+
+@media (max-width: 360px) {
+    .menuview {
+        width: 360px;
+        margin-top: 180px;
+        margin-bottom: 80px;
+        margin-left: -130px;
+        flex-direction: column; /* Cambia la dirección del flex container a columna */
+        align-items: flex-start; /* Alinea los elementos al inicio del contenedor */
+        
+    }
 }

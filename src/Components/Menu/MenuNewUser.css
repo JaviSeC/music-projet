@@ -6,7 +6,7 @@
   }
   
   button:hover {
-    background: rgb(49, 136, 228);
+    /* background: rgb(49, 136, 228); */
     border-radius: 50px 50px 50px 50px;
   }
   
@@ -165,7 +165,7 @@
       display: block;
     }
   
-    .dropdown-content a {
+    .dropdown-content {
       color: white;
       text-decoration: none;
       text-align: center;
