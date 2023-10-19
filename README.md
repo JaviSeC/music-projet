@@ -5,7 +5,7 @@
 
 ## Project Description 🚀
 
-This project aims to create a highly functional and secure audio playback web platform. We employ the Agile methodology to ensure agile adaptation to the project's changing needs. This platform will enable users to access and enjoy a wide variety of audio content, including music, movie soundtracks, series, and more, with a focus on security and user experience.
+SoundTracks Magics is a highly functional and secure audio playback web platform. We employ the Agile methodology to ensure swift adaptation to the project's changing needs. This platform will allow users to access and enjoy a wide variety of audio content, including music, movie soundtracks, series, and more, with a focus on security and user experience.
 
 ## Screenshots Desktop 💻
 
