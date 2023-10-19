@@ -52,9 +52,7 @@ This project aims to create a highly functional and secure audio playback web pl
 <a href="https://nodejs.org/" target="_blank"><img style="margin: 10px" src="https://profilinator.rishav.dev/skills-assets/nodejs-original-wordmark.svg" alt="Node.js" height="50" /></a>  
 <a href="https://github.com/" target="_blank"><img style="margin: 10px" src="https://profilinator.rishav.dev/skills-assets/git-scm-icon.svg" alt="Git" height="50" /></a>  
 <a href="https://www.figma.com/" target="_blank"><img style="margin: 10px" src="https://profilinator.rishav.dev/skills-assets/figma-icon.svg" alt="Figma" height="50" /></a>  
-<a href="https://www.jestjs.io/" target="_blank"><img style="margin: 10px" src="https://profilinator.rishav.dev/skills-assets/jest.svg" alt="Jest" height="50" /></a>  
-<a href="https://mui.com/" target="_blank"><img style="margin: 10px" src="https://profilinator.rishav.dev/skills-assets/mui.png" alt="Material UI" height="50" /></a>  
-<a href="https://styled-components.com/" target="_blank"><img style="margin: 10px" src="https://profilinator.rishav.dev/skills-assets/styled-components.png" alt="Styled Components" height="50" /></a>  
+<a href="https://www.jestjs.io/" target="_blank"><img style="margin: 10px" src="https://profilinator.rishav.dev/skills-assets/jest.svg" alt="Jest" height="50" /></a>   
 <a href="https://eslint.org/" target="_blank"><img style="margin: 5px" src="images/Eslint.png" alt="Eslint" height="50" /></a>
 </div>
 
@@ -78,7 +76,9 @@ This project aims to create a highly functional and secure audio playback web pl
 
 ## Tests ☑️
 
-<img src="images/Jestt.png" width="100" height="auto"><img src="images/Testing Library.png" width="90" height="30"><img src="images/Vitest.png" width="80" height="30">
+<a href="https://vitest.dev/" target="_blank"><img style="margin: 10px" src="images/vitest.png" alt="Vitest" height="50" /></a>
+<a href="https://jestjs.io/" target="_blank"><img style="margin: 10px" src="images/Jest.jpg" alt="Jest" height="50" /></a>
+<a href="https://testing-library.com/" target="_blank"><img style="margin: 5px" src="images/Testinglibrary.png" alt="Testing Library" height="70" /></a>
 
 ## Test Screenshot ✔️
 
