@@ -39,13 +39,14 @@ export default function MenuNewUser() {
           />
         </button>
         {isDropdownOpen && (
-          <div className="dropdown-content">
-            <a href="/SoundTracksView">Ganadores Oscar🏆</a>
-            <a href="/PeliculasAnimadasView">Animadas🧸</a>
-            <a href="/ClassicView">Clasicas📀</a>
-            <a href="#">Terror👻</a>
-          </div>
-        )}
+            <div className="dropdown-content">
+              <a href="/SoundTracksView">Ganadores Oscar🏆</a>
+              <a href="/PeliculasAnimadasView">Animadas🧸</a>
+              <a href="/ClassicView">Clasicas📀</a>
+              <a href="/TerrorView">Terror👻</a>
+               <a href="/Games">Games🎮</a>
+            </div>
+          )}
       </div>
       <div className="boxuser">
         <Link to="/PageUser">
