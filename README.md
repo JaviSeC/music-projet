@@ -56,7 +56,7 @@ This project aims to create a highly functional and secure audio playback web pl
 <a href="https://mui.com/" target="_blank"><img style="margin: 10px" src="https://profilinator.rishav.dev/skills-assets/mui.png" alt="Material UI" height="50" /></a>  
 <a href="https://styled-components.com/" target="_blank"><img style="margin: 10px" src="https://profilinator.rishav.dev/skills-assets/styled-components.png" alt="Styled Components" height="50" /></a>  
 </div>
-<a href="https://eslint.org/" target="_blank"><img style="margin: 10px" src="images/Eslint.png" alt="React" height="50" /></a>
+<a href="https://eslint.org/" target="_blank"><img style="margin: 5px" src="images/Eslint.png" alt="Eslint" height="50" /></a>
 
 
 ## Tech Stack 🛠️
