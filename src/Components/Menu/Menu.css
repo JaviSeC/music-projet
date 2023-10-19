@@ -4,7 +4,7 @@
   margin-top: -250px;
 }
 button:hover{
-  background: rgb(49, 136, 228);
+  /* background: rgb(49, 136, 228); */
   background: rgb(154, 157, 160);
   border-radius: 50px 50px 50px 50px;
 }
@@ -58,7 +58,7 @@ button:hover{
   cursor: pointer;
 }
 .dropdown-content {
-  width: 200%;
+  width: 200px;
   background-color: rgba(26, 30, 31, 1);
   margin-left: 105%;
   margin-top: -110%;
@@ -77,9 +77,9 @@ button:hover{
   font-size: 13px;
   padding: 2px;
 }
-.dropdown-content a:hover {
+/* .dropdown-content a:hover {
   background: rgb(49, 136, 228);
-}
+} */
 .dropdown-content a:hover{
   background: rgb(154, 157, 160);
   border-radius: 15px;
@@ -119,14 +119,23 @@ button:hover{
     position: absolute;
     top: 100%;
     left: 0;
+    /* height: 10px; */
+    height: auto;
     width: 100%;
     background-color: rgba(26, 30, 31, 1);
     border-radius: 10px;
   }
+
   .loginbutton:hover .dropdown-content,
   .registrobutton:hover .dropdown-content {
     display: block;
+    flex-direction: column;
+    margin-left: -171px;
+    margin-top: 70px;
+    width: 300px;
+    /* height: 100px; */
   }
+
   .dropdown-content a {
     color: white;
     text-decoration: none;

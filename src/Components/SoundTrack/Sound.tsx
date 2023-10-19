@@ -41,13 +41,13 @@ const songs = [
     // duration: "4:10",
     Imagen:
       "https://res.cloudinary.com/dhme3c8ll/image/upload/v1697642099/up_yc2k1l.jpg",
-    audioSource:
+   Audio:
       "https://res.cloudinary.com/doft9ylq1/video/upload/v1695886760/UP_OST_-_03_-_Married_Life_gvQB7tMB-jI_1_incfac.mp3",
   },
   {
     Id_Songs: 5,
     SongName: "Hans Zimmer",
-    FilmName: "Dunen",
+    FilmName: "Dune",
     // duration: "1:55",
     Imagen:
       "https://res.cloudinary.com/doft9ylq1/image/upload/v1697010731/Dune-1_wzkfnv.webp",
