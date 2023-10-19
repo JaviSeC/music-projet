@@ -7,10 +7,11 @@
 
 This project aims to create a highly functional and secure audio playback web platform. We employ the Agile methodology to ensure agile adaptation to the project's changing needs. This platform will enable users to access and enjoy a wide variety of audio content, including music, movie soundtracks, series, and more, with a focus on security and user experience.
 
-## Screenshots 📷
+## Screenshots Desktop 💻
 
 <img src="images/Front1.png" width="auto" height="150"><img src="images/Front2.png" width="auto" height="150"><img src="images/Front3.png" width="auto" height="150"><img src="images/Front4.png" width="auto" height="150"><img src="images/Front5.png" width="auto" height="150"><img src="images/Front6.png" width="auto" height="150"><img src="images/Front7.png" width="auto" height="150">
 
+## Screenshots Responsive Mobile 📱
 
 ## Stacks 🖥️
 ● Visual Studio Code <br>
