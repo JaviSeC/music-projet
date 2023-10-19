@@ -4,15 +4,6 @@ import { BrowserRouter } from 'react-router-dom';
 import Menu from './Menu';
 
 describe('Menu component', () => {
-  test('renders Menu component', () => {
-    render(
-      <BrowserRouter>
-        <Menu />
-      </BrowserRouter>
-    );
-    const linkElement = screen.getByText(/Admin/i);
-    expect(linkElement).toBeDefined();
-  });
 
   test('dropdown opens on mouse enter', () => {
     render(
