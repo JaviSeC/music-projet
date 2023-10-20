@@ -4,8 +4,6 @@
   display: flex;
   justify-content: space-around;
   align-items: center;
-  /* padding: 10px; */
-  /* Fijar el reproductor en la parte inferior */
   bottom: 0;
   left: 0;
   right: 0;
@@ -33,7 +31,6 @@
   border-radius: 4px;
 }
 .song-info {
-  /* flex: 1; */
   text-align: center; /* Centrar el texto */
 }
 .song-title {
@@ -45,16 +42,8 @@
   flex-direction: row;
   font-size: 14px;
 }
-/* .playlist button {
-    background-color: #E90C0C;
-    border: none;
-    color: #E90C0C;
-    cursor: pointer;
-    font-size: 14px;
-    text-align: left;
-  } */
+
 .playlist-header-terror {
-  /* width: 75%; */
   height: 300px;
   display: flex;
   margin: 2%;
@@ -73,8 +62,7 @@
   margin-left: 6.5%;
   margin-top: 3%;
 }
-/* ... (otros estilos) */
-/* Estilos para la lista de canciones */
+
 .song-list {
   width: 100%; /* Ocupa todo el ancho de la pantalla */
   overflow-x: hidden; /* Oculta la barra de desplazamiento horizontal si es necesario */
@@ -84,15 +72,12 @@
   width: 85%;
   margin-left: 8%;
   list-style: none;
-  /* padding: 0; */
-  /* Elimina el margen predeterminado de la lista */
+/
 }
 .song-list li {
   display: flex; /* Muestra los elementos de la lista en línea */
-  /* align-items: center; */
   margin-bottom: 1%;
   padding: 2px; /* Espacio entre cada canción */
-  /* Fondo gris oscuro */
   color: #ffffff; /* Texto blanco */
 }
 .song-list li img {
@@ -112,21 +97,18 @@
   border-radius: 10px;
   font-size: 18px;
 }
-/* .song-list button:hover{
-  background-color: #000000;
-  } */
+
 #like-button {
   width: 5%;
   margin-left: 2%;
-  /* background-color:transparent; */
 }
+
 #like-button.liked {
   color: purple; /* Color de texto morado */
   transition: color 0.3s ease;
   animation: heartBeat 0.8s ease;
 }
-/* .title-container{
-  } */
+
 .play-all-button {
   background-color: #333; /* Color de fondo gris */
   color: #fff; /* Texto blanco */
@@ -201,8 +183,6 @@
     display: flex;
     flex-direction: column; /* Cambia a columna en pantallas pequeñas */
     align-items: center;
-    /* padding: 10px; */
-    /* height: 195px; */
     padding-top: 2%;
     width: 90%;
     margin-left: 5%;
@@ -261,7 +241,6 @@
     flex-direction: column; /* Cambia a columna en pantallas pequeñas */
     align-items: center; /* Centra los elementos horizontalmente */
     color: white;
-    /* border: 1px #FFFFFF solid; */
     margin-left: 0;
     margin-bottom: 20%;
   }

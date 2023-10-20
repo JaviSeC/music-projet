@@ -10,7 +10,6 @@ interface User {
   userName: string;
   email: string;
   password: string;
-  // Otras propiedades de usuario
 }
 
 interface Song {
@@ -30,7 +29,7 @@ export const Admin = () => {
     SongName: "",
     FilmName: "",
     Audio: "",
-    Id_Categories: "Selecciona una categoría", // Valor inicial
+    Id_Categories: "Selecciona una categoría",
   });
 
   const [errorMessages, setErrorMessages] = useState({
@@ -67,9 +66,9 @@ export const Admin = () => {
       setErrorMessages(newErrorMessages);
       return;
     }
-    // Crear un nuevo usuario con los datos ingresados
+    // Crear una nueva cancion con los datos ingresados
     const newSong = {
-      // Id_Users : '',
+      // Id_Songs : '',
       Imagen: songData.Imagen,
       SongName: songData.SongName,
       FilmName: songData.FilmName,
@@ -98,6 +97,14 @@ export const Admin = () => {
       if (response.ok) {
         console.log("Registro exitoso");
         Swal.fire("Cancion añadida exitosamente", "", "success");
+        axios
+        .get("https://localhost:7110/SongsControllers/GetSongs")
+        .then((response) => {
+          setSongs(response.data);
+        })
+        .catch((error) => {
+          console.error("Error al obtener la lista de canciones", error);
+        });
       } else {
         console.error("Error en la solicitud:", response);
         Swal.fire("Error", "No se pudo añadir la cancion", "error");
@@ -334,7 +341,6 @@ export const Admin = () => {
                 <strong>Usuario:</strong> {user.userName}&nbsp;&nbsp;
                 <strong>Email:</strong> {user.email}&nbsp;&nbsp;
                 <strong>Contraseña:</strong> {user.password}&nbsp;&nbsp;
-                {/* Mostrar otras propiedades según sea necesario */}
               </span>
               <button
                 className="Admidelete"

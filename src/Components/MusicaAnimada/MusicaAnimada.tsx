@@ -8,7 +8,6 @@ const songs = [
     Id_Songs: 1,
     SongName: "Bajo del Mar",
     FilmName: "La Sirenita",
-    // duration: "3:18 min",
     Imagen: 'https://res.cloudinary.com/dhme3c8ll/image/upload/v1697643153/sirenita_txkoaq.webp',
     Audio:
       "https://res.cloudinary.com/dq2tfglqq/video/upload/v1696318836/Bajo_el_Mar_De_La_Sirenita_Versi%C3%B3n_Instrumental_con_Orq_InBWYeqec_w_140_k6mjyh.mp3",
@@ -17,7 +16,6 @@ const songs = [
     Id_Songs: 2,
     SongName:"Vida",
     FilmName:  "Los Increibles",
-    // duration: "1:24 min",
     Imagen:'https://res.cloudinary.com/dhme3c8ll/image/upload/v1697643153/increibles_zxynnc.webp',
     Audio:
       "https://res.cloudinary.com/dq2tfglqq/video/upload/v1696318835/Life_s_Incredible_Again_vs4DNJxG4v4_140_txabta.mp3",
@@ -27,7 +25,6 @@ const songs = [
     Id_Songs: 3,
     SongName: " Michael Giacchino",
     FilmName: "Up",
-    // duration: "4:10 min",
     Imagen:
       "https://res.cloudinary.com/doft9ylq1/image/upload/v1695889732/up_znxm97.jpg",
     Audio:
@@ -37,7 +34,6 @@ const songs = [
     Id_Songs: 4,
     SongName: "Un Poco Loco",
     FilmName: "Coco",
-    // duration: "1:50 min",
     Imagen: 'https://res.cloudinary.com/dhme3c8ll/image/upload/v1697643153/coco_njltvz.avif',
     Audio:
       "https://res.cloudinary.com/dq2tfglqq/video/upload/v1696318835/Coco_Un_Poco_Loco_Official_Instrumental__QyVbtGttYQw_140_rul4rj.mp3",
@@ -46,7 +42,6 @@ const songs = [
     Id_Songs: 5,
     SongName: "Pantera Rosa",
     FilmName: "La Pantera Rosa",
-    // duration: "3:05 min",
     Imagen: 'https://faros.hsjdbcn.org/sites/default/files/styles/ficha-contenido/public/la-pantera-rosa.png?itok=DYyKopHS',
     Audio:
       "https://res.cloudinary.com/dq2tfglqq/video/upload/v1696318835/la_cancion_originanal_de_la_pantera_rosa_0O57fMcHzh8_140_og8vfn.mp3",
@@ -55,7 +50,6 @@ const songs = [
     Id_Songs: 6,
     SongName: "Yo Soy tu amigo Fiel - Ricardo Murguía",
     FilmName: "Toy Story",
-    // duration: "2:06 min",
     Imagen: 'https://res.cloudinary.com/dq2tfglqq/image/upload/v1696955001/toy-story-4-lider-taquilla-norteamericana-cifra-_xtlg9v.jpg',
     Audio:
       "https://res.cloudinary.com/dq2tfglqq/video/upload/v1696318835/Toy_Story_You_ve_Got_a_Friend_in_Me_Instrumental__ustrOyrmLOA_140_erte1l.mp3",
@@ -64,7 +58,6 @@ const songs = [
     Id_Songs: 7,
     SongName: "Le festin - Michael Giacchino, Camille ",
     FilmName: "Ratatouille",
-    // duration: "2:50 min",
     Imagen: 'https://res.cloudinary.com/dq2tfglqq/image/upload/v1696955133/Por-que-Ratatouille-nos-sigue-enamorando-10-anos-despues.jpg_l6fufp.jpg',
     Audio:
       "https://res.cloudinary.com/dq2tfglqq/video/upload/v1696318836/Le_Festin_-QuVe-hjMs0_140_ia7z9v.mp3",
@@ -73,7 +66,6 @@ const songs = [
     Id_Songs: 8,
     SongName:"Recuerdame",
     FilmName: "Coco",
-    // duration: "1:16 min",
     Imagen: 'https://res.cloudinary.com/dhme3c8ll/image/upload/v1697643154/vieja_pelleja_mzf4iw.webp',
     Audio:
       "https://res.cloudinary.com/dq2tfglqq/video/upload/v1696318836/Remember_Me_From_Coco_Karaoke_Lyrics__jX67NYsUKGo_140_ah3z2p.mp3",
@@ -82,7 +74,6 @@ const songs = [
     Id_Songs: 9,
     SongName: "Acción",
     FilmName: "Los Increibles",
-    // duration: "3:32 min",
     Imagen: 'https://res.cloudinary.com/dhme3c8ll/image/upload/v1697643153/increibles_zxynnc.webp',
     Audio:
       "https://res.cloudinary.com/dq2tfglqq/video/upload/v1696318836/The_Glory_Days_Uaz2MPzBQps_140_mxitcu.mp3",
@@ -91,7 +82,6 @@ const songs = [
     Id_Songs: 10,
     SongName: "Vivia en pehuajop",
     FilmName:"La tortuga Manuelita",
-    // duration: "1:35 min",
     Imagen: 'https://res.cloudinary.com/dq2tfglqq/image/upload/v1696936601/sddefault_gpon1v.jpg',
     Audio:
       "https://res.cloudinary.com/dq2tfglqq/video/upload/v1696318837/La_Tortuga_Manuelita_Manuelita_viv%C3%ADa_en_Peuahop_1080P_C_wMkawwtEHpY_140_lyojdh.mp3",
@@ -100,7 +90,6 @@ const songs = [
     Id_Songs: 11,
     SongName: "Intro",
     FilmName:"Los Increibles",
-    // duration: "7:21 min",
     Imagen: 'https://res.cloudinary.com/dq2tfglqq/image/upload/v1696936697/los-increibles-2-trailer_kkznsp.png',
     Audio:
       "https://res.cloudinary.com/dq2tfglqq/video/upload/v1696318837/The_Incredits_voLQroAnoLI_140_f7r7ck.mp3",
@@ -109,7 +98,6 @@ const songs = [
     Id_Songs: 12,
     SongName:"Un Mundo Ideal",
     FilmName: "Aladdín",
-    // duration: "2:42 min",
     Imagen: 'https://res.cloudinary.com/dq2tfglqq/image/upload/v1696936772/maxresdefault_he13lu.jpg',
     Audio:
       "https://res.cloudinary.com/dq2tfglqq/video/upload/v1696318837/Un_Mundo_Ideal_De_Aladdin_Versi%C3%B3n_Instrumental_con_Orqu_uV-V_kynygA_140_bovyti.mp3",
@@ -118,7 +106,6 @@ const songs = [
     Id_Songs: 13,
     SongName: "Frozen",
     FilmName: "Let it go",
-    // duration: "3:44 min",
     Imagen: 'https://res.cloudinary.com/dq2tfglqq/image/upload/v1696936850/frozen-let-it-go_trans_NvBQzQNjv4BqMkNVuEiQYtpaGCtNshjkEAXxjsBCpuvhlIqapQDi2Do_d2rrcz.jpg',
     Audio:
       "https://res.cloudinary.com/dq2tfglqq/video/upload/v1696318837/Let_It_Go_De_Frozen_Versi%C3%B3n_Instrumental_con_Orquesta_F_57l1zfFXuOg_140_gbmvvu.mp3",
@@ -127,7 +114,6 @@ const songs = [
     Id_Songs: 14,
     SongName:"Farewell",
     FilmName: "Pocahontas",
-    // duration: "4:48 min",
     Imagen: 'https://res.cloudinary.com/dq2tfglqq/image/upload/v1696936858/d2b5b36e5b49aeedf663cf65f9a761e0_ttwcbh.jpg',
     Audio:
       "https://res.cloudinary.com/dq2tfglqq/video/upload/v1696318837/Pocahontas_soundtrack_Farewell_Instrumental___EHCOJ8g_9Q_140_g5wits.mp3",
@@ -146,8 +132,7 @@ const PeliculasAnimadas: React.FC = () => {
   const startIndex = (currentPage - 1) * songsPerPage;
   const endIndex = startIndex + songsPerPage;
   const songsToShow = songs.slice(startIndex, endIndex);
-  // const totalPages = Math.ceil(songs.length / songsPerPage);
-  // const songsToShow = songs.slice(startIndex, endIndex);
+  
   const togglePlayPause = () => {
     if (audioRef.current) {
       if (isPlaying) {

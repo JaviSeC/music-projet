@@ -44,31 +44,28 @@
 @media screen and (max-width: 360px) {
   .headerunico {
     width: 100%;
-    /* flex-direction: column;  */
   }
 
   .logo-box {
-    width: 30%;
+    width: 40%;
     height: auto;
   }
 
-  /* .img { 
-        width: 100%; 
-    } */
+  .Admi{
+    width: 30%;
+    background-color: black;
+    margin-left: 40%;
+  }
+
+  .AdmiHome{ 
+    margin-top: -3%;
+  }
 
   .titulo-box {
-    /* display: flex; */
-    /* justify-content: center; */
     text-align: center;
-    /* align-items: center; */
     width: auto;
     height: auto;
-    font-size: larger;
+    font-size: small;
     margin-left: 10%;
-    /* margin-top: -3%; */
   }
-
-  /* .titulo{
-        margin-top: -15%;
-    } */
 }

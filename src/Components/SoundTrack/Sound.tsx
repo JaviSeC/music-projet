@@ -28,7 +28,6 @@ const songs = [
     Id_Songs: 3,
     SongName: "John Williams",
     FilmName: "Jurassic Park",
-    // duration: "2:49",
     Imagen:
       "https://res.cloudinary.com/dhme3c8ll/image/upload/v1697642099/Jurassic_park_w1oey5.jpg",
     Audio:
@@ -38,7 +37,6 @@ const songs = [
     Id_Songs: 4,
     SongName: " Michael Giacchino",
     FilmName: "Up",
-    // duration: "4:10",
     Imagen:
       "https://res.cloudinary.com/dhme3c8ll/image/upload/v1697642099/up_yc2k1l.jpg",
    Audio:
@@ -48,7 +46,6 @@ const songs = [
     Id_Songs: 5,
     SongName: "Hans Zimmer",
     FilmName: "Dune",
-    // duration: "1:55",
     Imagen:
       "https://res.cloudinary.com/doft9ylq1/image/upload/v1697010731/Dune-1_wzkfnv.webp",
     Audio:
@@ -58,7 +55,6 @@ const songs = [
     Id_Songs: 6,
     SongName: "Gustavo Santaolalla",
     FilmName: "Brokeback Mountain",
-    // duration: "2:32",
     Imagen:
       "https://res.cloudinary.com/doft9ylq1/image/upload/v1697009861/Brokeback_Mountain_En_terreno_vedado-316887988-large_t9puhq.jpg",
     Audio:
@@ -68,7 +64,6 @@ const songs = [
     Id_Songs: 7,
     SongName: "Hans Zimmer",
     FilmName: "Lion King",
-    // duration: "3:13",
     Imagen:
       "https://res.cloudinary.com/dhme3c8ll/image/upload/v1697642099/reyleon_dtqacm.webp",
     Audio:
@@ -78,7 +73,6 @@ const songs = [
     Id_Songs: 8,
     SongName: "Hildur Guðnadóttir",
     FilmName: "Joker",
-    // duration: "2:39",
     Imagen:
       "https://res.cloudinary.com/dhme3c8ll/image/upload/v1697642099/javi_recien_levantado_q19vgz.webp",
     Audio:
@@ -88,7 +82,6 @@ const songs = [
     Id_Songs: 9,
     SongName: "Ludovic Bource",
     FilmName: "The Artist",
-    // duration: "3:35",
     Imagen:
       "https://res.cloudinary.com/doft9ylq1/image/upload/v1696796172/the-artist_aa5fif.webp",
     Audio:
@@ -98,7 +91,6 @@ const songs = [
     Id_Songs: 10,
     SongName: "Trent Reznor, Atticus Ross",
     FilmName: "The social network",
-    // duration: "5:00",
     Imagen:
       "https://res.cloudinary.com/doft9ylq1/image/upload/v1696796754/thesocialnetwork-film_sffmv4.webp",
     Audio:
@@ -108,17 +100,15 @@ const songs = [
     Id_Songs: 11,
     SongName: "Howard Shore",
     FilmName: "The Lord of the Rings: The Return of the King CR",
-    // duration: "6:34",
     Imagen:
       "https://res.cloudinary.com/doft9ylq1/image/upload/v1696797822/el-senor-de-los-anillos-el-retorno-del-rey-67427_SPA-47_tjytje.jpg",
-    Audio:
-      "https://res.cloudinary.com/dhme3c8ll/video/upload/v1695801970/BSO_-_Apocalipsys_Now_3VywjmyNYDs_q69djb.mp3https://res.cloudinary.com/doft9ylq1/video/upload/v1696797582/The_Lord_of_the_Rings__The_Return_of_the_King_CR_-_01._Roots_and_Beginnings_MFsO9weqLLE_tdrn9c.mp3",
+    audioSource:
+      "https://res.cloudinary.com/doft9ylq1/video/upload/v1696797582/The_Lord_of_the_Rings__The_Return_of_the_King_CR_-_01._Roots_and_Beginnings_MFsO9weqLLE_tdrn9c.mp3",
   },
   {
     Id_Songs: 12,
     SongName: "Elliot Goldenthal",
     FilmName: "Frida",
-    // duration: "1:29",
     Imagen:
       "https://res.cloudinary.com/dhme3c8ll/image/upload/v1697642099/Javi_marico_qaplap.jpg",
     Audio:
@@ -135,8 +125,7 @@ const SoundTrack: React.FC = () => {
   const startIndex = (currentPage - 1) * songsPerPage;
   const endIndex = startIndex + songsPerPage;
   const songsToShow = songs.slice(startIndex, endIndex);
-  // const totalPages = Math.ceil(songs.length / songsPerPage);
-  // const songsToShow = songs.slice(startIndex, endIndex);
+  
   const togglePlayPause = () => {
     if (audioRef.current) {
       if (isPlaying) {
@@ -227,7 +216,7 @@ const SoundTrack: React.FC = () => {
           <div className="page-button">
             <button
               onClick={() => setCurrentPage(2)}
-              disabled={endIndex >= songs.length}
+              disabled={currentPage === 2}
             >
               2
             </button>

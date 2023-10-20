@@ -23,17 +23,18 @@
 
 .Name {
   color: white;
-  width: 1190px;
-  height: 60px;
+  width: 1200px;
+  height: 55px;
   text-align: center;
   /* justify-content: ; */
   font-size: xx-large;
-  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+ 
 }
 .search-box {
   margin-top: -0.5%;
   display: flex;
   justify-content: left;
+  
 }
 .Search {
   width: 1200px;
@@ -45,11 +46,10 @@
   align-items: center;
   text-align: center;
   width: 15%;
-  height: 55px;
+  height: 64px;
   /* background-color: rgba(29, 33, 35, 0.648); */
   background-color: #1d2123;
-  border-bottom-left-radius: 20px;
-  border-top-left-radius: 20px;
+  
 }
 .lupa {
    margin-left: 1%;
@@ -79,7 +79,7 @@
 
 .busqueda:active {
   /* background-color: blueviolet; */
-  border: 5px orangered solid;
+  border: 5px rgb(111, 110, 110) solid;
 }
 
 @media screen and (max-width: 360px) {

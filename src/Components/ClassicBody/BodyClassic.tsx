@@ -1,6 +1,5 @@
-import React, { useState, useRef } from 'react';
+import React, { useState, useRef, useEffect  } from 'react';
 import './BodyStyle.css';
-
 
 const songsPerPage = 5;
 const songs = [
@@ -91,36 +90,75 @@ const songs = [
     Audio: 'https://res.cloudinary.com/dhme3c8ll/video/upload/v1697011529/los_chunguitos_soy_un_perro_callejero_4g3jSCqZxUQ_n6vsqj.mp3'
   },
 ];
-
 const BodyClassic: React.FC = () => {
-
-  const [currentPage, setCurrentPage] = useState(1);
   const [currentSongIndex, setCurrentSongIndex] = useState(0);
-  const [currentSong, setCurrentSong] = useState(songs[0]);
+  // const [isPlaying2, setIsPlaying2] = useState(false);
+  // const audioRef = useRef<HTMLAudioElement | null>(null);
+  const [currentPage, setCurrentPage] = useState(1);
+  // const [currentSongIndex2, setCurrentSongIndex2] = useState(0);
   const [isPlaying, setIsPlaying] = useState(false);
   const [likedSongs, setLikedSongs] = useState<Set<number>>(new Set<number>());
-  const audioRef = useRef<HTMLAudioElement | null>(null);
+  const audioRef2 = useRef<HTMLAudioElement | null>(null);
+  const [songsx, setSongsx] =  useState([]);
+  // const [currentSong, setCurrentSong] = useState({
+  //   Id_Songs: '',
+  //   SongName: '',
+  //   FilmName: '',
+  //   Imagen: '',
+  //   Audio: '',
+  // });
   const startIndex = (currentPage - 1) * songsPerPage;
   const endIndex = startIndex + songsPerPage;
-  const songsToShow = songs.slice(startIndex, endIndex);
-
+  const songsToShow = songsx.slice(startIndex, endIndex);
   // const totalPages = Math.ceil(songs.length / songsPerPage);
   // const songsToShow = songs.slice(startIndex, endIndex);
-  
-  const togglePlayPause = () => {
-    if (audioRef.current) {
-      if (isPlaying) {
-        audioRef.current.pause();
-      } else {
-        audioRef.current.play();
+  // Realiza la solicitud al backend para obtener las canciones de la categoría 3
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const Id_Categories = 3;
+        const response = await fetch(`https://localhost:7110/SongsControllers/GetSongsByCategory/GetSongsByCategory/${Id_Categories}`);
+        if (response.ok) {
+          const data = await response.json();
+          console.log('Datos del backend:', data);
+          setSongsx(data);
+        } else {
+          console.error('Error al obtener las canciones del backend');
+        }
+      } catch (error) {
+        console.error('Error en la solicitud:', error);
       }
-      setIsPlaying(!isPlaying);
-    }
-  };
-  const changeSong = (song: any) => {
-    setCurrentSong(song);
-    setIsPlaying(true);
-  };
+    };
+    fetchData();
+  }, []);
+  // const togglePlayPause = () => {
+  //   if (audioRef.current) {
+  //     if (isPlaying) {
+  //       audioRef.current.pause();
+  //     } else {
+  //       audioRef.current.play();
+  //     }
+  //     setIsPlaying(!isPlaying);
+  //   }
+  // };
+  // const togglePlayPause2 = () => {
+  //   if (audioRef2.current) {
+  //     if (isPlaying2) {
+  //       audioRef2.current.pause();
+  //     } else {
+  //       audioRef2.current.play();
+  //     }
+  //     setIsPlaying2(!isPlaying2);
+  //   }
+  // };
+  // const changeSong = (song: any) => {
+  //   setCurrentSong(song);
+  //   setIsPlaying(true);
+  // };
+  // const changeSongs = (songx: any) => {
+  //   setSongsx(songx);
+  //   setIsPlaying2(true);
+  // };
   const toggleLike = (songId: number) => {
     const updatedLikedSongs = new Set<number>(likedSongs); // Asegura que el tipo sea Set<number>
     if (likedSongs.has(songId)) {
@@ -161,7 +199,7 @@ const BodyClassic: React.FC = () => {
           </div>
         </div>
       </div>
-      <div className="song-list">
+      {/* <div className="song-list">
         <ul>
           {songsToShow.map((song) => (
             <li key={song.Id_Songs}>
@@ -170,11 +208,26 @@ const BodyClassic: React.FC = () => {
                 {song.FilmName} - {song.SongName}
               </button>
               <button id='like-button' onClick={() => toggleLike(song.Id_Songs)} className={likedSongs.has(song.Id_Songs) ? 'liked' : ''}>
-                {likedSongs.has(song.Id_Songs) ? '💜' : '🤍'}
+                {likedSongs.has(song.Id_Songs) ? ':corazón_púrpura:' : ':corazón_blanco:'}
               </button>
             </li>
           ))}
         </ul>
+      </div> */}
+      <div className="song-list">
+        <ul>
+          {songsToShow.map((songx) => (
+            <li key={songx.id_Songs}>
+              <img src={songx.imagen} alt={songx.filmName} />
+              <button onClick={() => setCurrentSongIndex(songx)}>
+                {songx.filmName} - {songx.songName}
+              </button>
+              <button id='like-button' onClick={() => toggleLike(songx.id_Songs)} className={likedSongs.has(songx.id_Songs) ? 'liked' : ''}>
+                {likedSongs.has(songx.id_Songs) ? '💜' : '🤍'}
+              </button>
+            </li>
+          ))}
+       </ul>
         <div className="pagination">
           <div className="page-button">
             <button
@@ -194,7 +247,7 @@ const BodyClassic: React.FC = () => {
           </div>
         </div>
       </div>
-      <div className="music-player-classic">
+      {/* <div className="music-player-classic">
         <div className="album-cover-classic">
           <img
             src={currentSong.Imagen}
@@ -219,8 +272,35 @@ const BodyClassic: React.FC = () => {
         <button onClick={togglePlayPause}>
           {isPlaying ? 'Pausar' : 'Reproducir'}
         </button>
+      </div> */}
+      //-----------------------------------------------------------------------
+      <div className="music-player-classic">
+        <div className="album-cover-classic">
+          <img
+            src={currentSongIndex.imagen}
+            alt="Portada del álbum"
+          />
+        </div>
+        <div className="song-info">
+          <p className="artist">{currentSongIndex.songName}</p>
+          <p className="song-title">{currentSongIndex.filmName}</p>
+        </div>
+        <audio
+          id="audio"
+          controls
+          ref={audioRef2}
+          key={currentSongIndex.id_Songs} // Esto fuerza la recarga del elemento audio
+        >
+          <source
+            src={currentSongIndex.audio}
+            type="audio/mpeg"
+          />
+        </audio>
+        {/* <button onClick={togglePlayPause2}>
+          {isPlaying2 ? 'Pausar' : 'Reproducir'}
+        </button> */}
       </div>
-    </div>
+     </div>
   );
 };
 export default BodyClassic;

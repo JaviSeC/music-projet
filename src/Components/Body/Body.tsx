@@ -113,7 +113,7 @@ export default function Body() {
                   background: 'rgba(0, 0, 0, 0.5)',
                 }}
               >
-                <div style={{ display: 'flex', alignItems: 'center', gap: '10px', flex: 1 }}>
+                <div data-testid="avatar-group" style={{ display: 'flex', alignItems: 'center', gap: '10px', flex: 1 }}>
                   <AvatarGroup>
                     <Avatar alt="Remy Sharp" src="https://res.cloudinary.com/dq2tfglqq/image/upload/v1697016996/jeff-the_killer.jpeg_2140140895_nwokm7.jpg" />
                     <Avatar alt="Remy Sharp" src="https://res.cloudinary.com/dq2tfglqq/image/upload/v1697451117/image_720_jmnyzf.png" />
