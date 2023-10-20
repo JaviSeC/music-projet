@@ -1,5 +1,5 @@
 import Header from "../../Components/Header/Header";
-// import Menu from "../../Components/Menu/Menu";
+import Menu from "../../Components/Menu/Menu";
 import BodyTerror from "../../Components/Terror/Terrorcomp";
 import "./TerrorView.css";
 

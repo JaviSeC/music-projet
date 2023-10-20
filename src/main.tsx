@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/Isabel
 // import ReactDOM from "react-dom/client"
 // import { NextUIProvider } from "@nextui-org/react";
 // import Header from "./Components/Header/Header";

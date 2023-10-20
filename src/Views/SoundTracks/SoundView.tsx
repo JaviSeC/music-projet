@@ -21,21 +21,9 @@ export default function PageSound() {
     <>
     <div className="SoundTracks">
     <Header/>
-<<<<<<< HEAD
-
     <div className="homeSoundTracks">
       {userRole === 2 ? <MenuNewUser /> : <Menu />}
       </div>
-
-     {/* <div className="homeSoundTracks"> 
-     <Menu /> 
-     </div>  */}
-
-=======
-    <div className="homeSoundTracks">
-      {userRole === 2 ? <MenuNewUser /> : <Menu />}
-      </div>
->>>>>>> origin/Isabel
     <Sound />
     </div>
     </>
