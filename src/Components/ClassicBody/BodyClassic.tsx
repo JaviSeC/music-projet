@@ -1,5 +1,6 @@
 import React, { useState, useRef, useEffect  } from 'react';
 import './BodyStyle.css';
+
 const songsPerPage = 5;
 const songs = [
   {
@@ -90,11 +91,11 @@ const songs = [
   },
 ];
 const BodyClassic: React.FC = () => {
-  // const [currentSongIndex, setCurrentSongIndex] = useState(0);
+  const [currentSongIndex, setCurrentSongIndex] = useState(0);
   // const [isPlaying2, setIsPlaying2] = useState(false);
   // const audioRef = useRef<HTMLAudioElement | null>(null);
   const [currentPage, setCurrentPage] = useState(1);
-  const [currentSongIndex2, setCurrentSongIndex2] = useState(0);
+  // const [currentSongIndex2, setCurrentSongIndex2] = useState(0);
   const [isPlaying, setIsPlaying] = useState(false);
   const [likedSongs, setLikedSongs] = useState<Set<number>>(new Set<number>());
   const audioRef2 = useRef<HTMLAudioElement | null>(null);
@@ -108,7 +109,7 @@ const BodyClassic: React.FC = () => {
   // });
   const startIndex = (currentPage - 1) * songsPerPage;
   const endIndex = startIndex + songsPerPage;
-  const songsToShow = songs.slice(startIndex, endIndex);
+  const songsToShow = songsx.slice(startIndex, endIndex);
   // const totalPages = Math.ceil(songs.length / songsPerPage);
   // const songsToShow = songs.slice(startIndex, endIndex);
   // Realiza la solicitud al backend para obtener las canciones de la categoría 3
@@ -193,7 +194,7 @@ const BodyClassic: React.FC = () => {
               {isPlaying ? 'Pausar' : 'Play all'}
             </button>
             <button className="add-to-collection-button">
-              <span role="img" aria-label="Corazón">:corazón:</span> Add to collection
+              <span role="img" aria-label="Corazón">❤️</span> Add to collection
             </button>
           </div>
         </div>
@@ -215,14 +216,14 @@ const BodyClassic: React.FC = () => {
       </div> */}
       <div className="song-list">
         <ul>
-          {songsx.map((songx) => (
+          {songsToShow.map((songx) => (
             <li key={songx.id_Songs}>
               <img src={songx.imagen} alt={songx.filmName} />
-              <button onClick={() => setCurrentSongIndex2(songx)}>
+              <button onClick={() => setCurrentSongIndex(songx)}>
                 {songx.filmName} - {songx.songName}
               </button>
               <button id='like-button' onClick={() => toggleLike(songx.id_Songs)} className={likedSongs.has(songx.id_Songs) ? 'liked' : ''}>
-                {likedSongs.has(songx.id_Songs) ? ':corazón_púrpura:' : ':corazón_blanco:'}
+                {likedSongs.has(songx.id_Songs) ? '💜' : '🤍'}
               </button>
             </li>
           ))}
@@ -276,22 +277,22 @@ const BodyClassic: React.FC = () => {
       <div className="music-player-classic">
         <div className="album-cover-classic">
           <img
-            src={currentSongIndex2.imagen}
+            src={currentSongIndex.imagen}
             alt="Portada del álbum"
           />
         </div>
         <div className="song-info">
-          <p className="artist">{currentSongIndex2.songName}</p>
-          <p className="song-title">{currentSongIndex2.filmName}</p>
+          <p className="artist">{currentSongIndex.songName}</p>
+          <p className="song-title">{currentSongIndex.filmName}</p>
         </div>
         <audio
           id="audio"
           controls
           ref={audioRef2}
-          key={currentSongIndex2.id_Songs} // Esto fuerza la recarga del elemento audio
+          key={currentSongIndex.id_Songs} // Esto fuerza la recarga del elemento audio
         >
           <source
-            src={currentSongIndex2.audio}
+            src={currentSongIndex.audio}
             type="audio/mpeg"
           />
         </audio>
