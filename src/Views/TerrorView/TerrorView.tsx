@@ -9,7 +9,7 @@ export default function PageBodyTerror() {
       <div className="CineTerror">
         <Header />
         <div className="HomeTerror">
-          {/* <Menu /> */}
+          <Menu />
         </div>
         <BodyTerror />
       </div>

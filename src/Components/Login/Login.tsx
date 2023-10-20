@@ -61,12 +61,15 @@ export const Login = () => {
       if (response.ok) {
         const responseData = await response.json();
         const userRole = responseData.role;
+        const userId = responseData.userId;
         
         if (userRole === 1) {
           localStorage.setItem("userRole", "1");
           navigate("/PageAdmin");
         } else if (userRole === 2) {
           localStorage.setItem("userRole", "2");
+          localStorage.setItem("userId", userId);
+          localStorage.setItem('username', UserName);
           navigate("/");
         } 
       } else {

@@ -5,8 +5,6 @@ import Menu from "../../Components/Menu/Menu";
 import "./ClassicView.css";
 import MenuNewUser from "../../Components/Menu/MenuNewUser";
 
-
-
 export default function PageBodyClassic() {
   const [userRole, setUserRole] = useState(0); // 0: Sin iniciar sesión, 1: Rol 1 (admin), 2: Rol 2
    // Puedes obtener el rol del usuario desde el almacenamiento local o desde tu sistema de autenticación

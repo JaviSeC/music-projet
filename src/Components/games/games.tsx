@@ -4,97 +4,97 @@ import React, { useState, useRef } from "react";
 const songsPerPage = 5;
 const songs = [
   {
-    id: 1,
-    artist: "terror",
-    title: "terror",
-    duration: "2:42",
-    albumCover: "https://res.cloudinary.com/dq2tfglqq/image/upload/v1697012675/Freddy_Krueger__28Robert_Englund_29_x8g340.jpg",
-    audioSource:
-      "https://res.cloudinary.com/dq2tfglqq/video/upload/v1697016735/Freddy_Kruegger_ikm1bx.mp3",
+    Id_Songs: 1,
+    SongName: "Star Lord Band",
+    FilmName: "Zero to Hero",
+    // duration: "3:20",
+    Imagen: "https://as02.epimg.net/meristation/imagenes/2021/06/13/videos/1623615563_534787_1623615766_noticia_normal.jpg",
+    Audio:
+      "https://res.cloudinary.com/duwenv0yr/video/upload/v1697446035/Zero_to_hero_dbtojf.mp3",
   },
   {
-    id: 2,
-    artist: "terror",
-    title: "terror",
-    duration: "3:58",
-    albumCover:
-      "https://res.cloudinary.com/dq2tfglqq/image/upload/v1697012778/latest_eqs8bi.png",
-    audioSource:
-      "https://res.cloudinary.com/dq2tfglqq/video/upload/v1697016692/Chucky_enxkpe.mp3",
+    Id_Songs: 2,
+    SongName: "Star Lord Band",
+    FilmName: "Space Riders with No Names",
+    // duration: "3:54",
+    Imagen:
+      "https://res.cloudinary.com/dhme3c8ll/image/upload/v1697641683/guardianesvg_vl6ysm.jpg",
+    Audio:
+      "https://res.cloudinary.com/duwenv0yr/video/upload/v1697448057/Space_Riders_with_No_Names_jh4sfu.mp3",
   },
   {
-    id: 3,
-    artist: "terror",
-    title: "terror",
-    duration: "2:43",
-    albumCover:
-      "https://res.cloudinary.com/dq2tfglqq/image/upload/v1697016996/jeff-the_killer.jpeg_2140140895_nwokm7.jpg",
-    audioSource:
-      "https://res.cloudinary.com/dq2tfglqq/video/upload/v1697016738/Jef_the_killer_rbnyg0.mp3",
+    Id_Songs: 3,
+    SongName: "Star Lord Band",
+    FilmName: "Bit of Good",
+    // duration: "5:25",
+    Imagen:
+      "https://res.cloudinary.com/dhme3c8ll/image/upload/v1697641683/guardianesvg_vl6ysm.jpg",
+    Audio:
+      "https://res.cloudinary.com/duwenv0yr/video/upload/v1697448139/Bit_of_Good_itmcf5.mp3",
   },
   {
-    id: 4,
-    artist: "terror",
-    title: "terror",
-    duration: "3:20",
-    albumCover: "https://img2.rtve.es/i/?w=1600&i=1673619861549.jpg",
-    audioSource:
-      "https://res.cloudinary.com/dhme3c8ll/video/upload/v1695801278/Carros_de_Fuego_-_B.S.O._MkS1SBPHN44_pcrwyp.mp3",
+    Id_Songs: 4,
+    SongName: "Rick Astley",
+    FilmName: "Never Gonna Give You Up",
+    // duration: "3:33",
+    Imagen: "https://image.europafm.com/clipping/cmsimages01/2021/07/30/BA39B86D-9BC0-4359-BD76-4D1642928CE4/98.jpg?crop=1900,1069,x0,y0&width=1900&height=1069&optimize=low&format=webply",
+    Audio:
+      "https://res.cloudinary.com/duwenv0yr/video/upload/v1697448386/Never_Gonna_Give_You_Up_ttipvy.mp3",
   },
   {
-    id: 5,
-    artist: "terror",
-    title: "terror",
-    duration: "2:20",
-    albumCover: "https://cdn.mos.cms.futurecdn.net/QfpYiWt35GZfU2Gd7pztQ8.png",
-    audioSource:
-      "https://res.cloudinary.com/dhme3c8ll/video/upload/v1695801629/Main_Title_John_Williams_Jaws_From_The__Jaws__Soundtrack__BePfzCOMRZQ_cqnbb1.mp3",
+    Id_Songs: 5,
+    SongName: "Bonnie Tyler",
+    FilmName: "Holding Out for a Hero",
+    // duration: "4:21",
+    Imagen: "https://res.cloudinary.com/dhme3c8ll/image/upload/v1697641682/bonytayler_jkwynm.jpg",
+    Audio:
+      "https://res.cloudinary.com/duwenv0yr/video/upload/v1697449025/Holding_Out_for_a_Hero_i45amq.mp3",
   },
   {
-    id: 6,
-    artist: "terror",
-    title: "terror",
-    duration: "4:44",
-    albumCover:
-      "https://hips.hearstapps.com/hmg-prod/images/apocalypse-now-donald-trump-1534867844.jpg",
-    audioSource:
-      "https://res.cloudinary.com/dhme3c8ll/video/upload/v1695801970/BSO_-_Apocalipsys_Now_3VywjmyNYDs_q69djb.mp3",
+    Id_Songs: 6,
+    SongName: "Wham!",
+    FilmName: "Wake Me Up Before You Go-Go",
+    // duration: "3:51",
+    Imagen:
+      "https://res.cloudinary.com/dhme3c8ll/image/upload/v1697641682/wham_v1gbpl.jpg",
+    Audio:
+      "https://res.cloudinary.com/duwenv0yr/video/upload/v1697449213/Wake_Me_Up_Before_You_Go-Go_aqjydm.mp3",
   },
   {
-    id: 7,
-    artist: "terror",
-    title: "terror",
-    duration: "2:37",
-    albumCover:
-      "https://caixaforum.org/documents/311930/9160687/vaquilla+berlanga+webCXF+spa220170101225+-+18204jpg/83fc543e-f1a6-17f4-0b1e-8c4b1a7948ff?version=1.0&t=1565690877227",
-    audioSource: "URL_DEL_AUDIO",
+    Id_Songs: 7,
+    SongName: "Europe",
+    FilmName: "The Final Countdown",
+    // duration: "5:10",
+    Imagen:
+      "https://res.cloudinary.com/dhme3c8ll/image/upload/v1697641682/europe_cxjcri.jpg",
+    Audio: "https://res.cloudinary.com/duwenv0yr/video/upload/v1697449398/The_Final_Countdown_bbxs5e.mp3",
   },
   {
-    id: 8,
-    artist: "terror",
-    title: "terror",
-    duration: "3:11",
-    albumCover:
-      "https://www.elindependiente.com/wp-content/uploads/2020/02/doctor-zhivago.jpg",
-    audioSource: "URL_DEL_AUDIO",
+    Id_Songs: 8,
+    SongName: "Blondie",
+    FilmName: "Call Me",
+    // duration: "8:06",
+    Imagen:
+      "https://res.cloudinary.com/dhme3c8ll/image/upload/v1697641682/calme_blondie_nz41to.jpg",
+    Audio: "https://res.cloudinary.com/duwenv0yr/video/upload/v1697449751/Call_Me_npkfxr.mp3",
   },
   {
-    id: 9,
-    artist: "terror",
-    title: "terror",
-    duration: "2:51",
-    albumCover:
-      "https://www.abc.es/media/peliculas/000/005/139/yo-el-vaquilla-2.jpg",
-    audioSource: "URL_DEL_AUDIO",
+    Id_Songs: 9,
+    SongName: "a-ha",
+    FIlmName: "Take on me",
+    // duration: "3:45",
+    Imagen:
+      "https://res.cloudinary.com/dhme3c8ll/image/upload/v1697641682/aha_rw42ju.jpg",
+    Audio: "https://res.cloudinary.com/duwenv0yr/video/upload/v1697449885/Take_on_brtzuv.mp3",
   },
   {
-    id: 10,
-    artist: "terror",
-    title: "terror",
-    duration: "3:42",
-    albumCover:
-      "https://www.alohacriticon.com/wp-content/uploads/2017/01/perros-callejeros-foto-critica.jpg",
-    audioSource: "URL_DEL_AUDIO",
+    Id_Songs: 10,
+    SongName: "Tears for Fears",
+    FilmName: "Everybody Wants To Rule",
+    // duration: "4:11",
+    Imagen:
+      "https://res.cloudinary.com/dhme3c8ll/image/upload/v1697641877/tears_v6w3pc.jpg",
+    Audio: "https://res.cloudinary.com/duwenv0yr/video/upload/v1697450087/Everybody_Wants_To_Rule_The_World_u0ab8z.mp3",
   },
 ];
 
@@ -108,8 +108,7 @@ const BodyGames: React.FC = () => {
   const startIndex = (currentPage - 1) * songsPerPage;
   const endIndex = startIndex + songsPerPage;
   const songsToShow = songs.slice(startIndex, endIndex);
-  // const totalPages = Math.ceil(songs.length / songsPerPage);
-  // const songsToShow = songs.slice(startIndex, endIndex);
+  
   const togglePlayPause = () => {
     if (audioRef.current) {
       if (isPlaying) {
@@ -148,12 +147,12 @@ const BodyGames: React.FC = () => {
       <div className="playlist-header-games">
         <img
           id="playlist-cover-games"
-          src=""
+          src="https://res.cloudinary.com/duwenv0yr/image/upload/v1695888871/guardian_iobu69.jpg"
           alt="Portada de la playlist"
         />
         <div className="title-container-games">
-          <h1>Canciones De Videojuegos Frikis</h1>
-          <p>Colección de los Soundtracks mas emblematicos de videojuegos de miguel!😜</p>
+          <h1>Soundstracks Games</h1>
+          <p>¡Colección de los Soundtracks más emblematicos de videojuegos!</p>
           <div className="buttons-container">
             <button className="play-all-button" onClick={playAllSongs}>
               {isPlaying ? "Pausar" : "Play all"}
@@ -170,17 +169,17 @@ const BodyGames: React.FC = () => {
       <div className="song-list">
         <ul>
           {songsToShow.map((song) => (
-            <li key={song.id}>
-              <img src={song.albumCover} alt={song.title} />
+            <li key={song.Id_Songs}>
+              <img src={song.Imagen} alt={song.FilmName} />
               <button onClick={() => changeSong(song)}>
-                {song.title} - {song.artist} - {song.duration}
+                {song.FilmName} - {song.SongName}
               </button>
               <button
                 id="like-button"
-                onClick={() => toggleLike(song.id)}
-                className={likedSongs.has(song.id) ? "liked" : ""}
+                onClick={() => toggleLike(song.Id_Songs)}
+                className={likedSongs.has(song.Id_Songs) ? "liked" : ""}
               >
-                {likedSongs.has(song.id) ? "💜" : "🤍"}
+                {likedSongs.has(song.Id_Songs) ? "💜" : "🤍"}
               </button>
             </li>
           ))}
@@ -211,19 +210,19 @@ const BodyGames: React.FC = () => {
 
       <div className="music-player-games">
         <div className="album-cover-games">
-          <img src={currentSong.albumCover} alt="Portada del álbum" />
+          <img src={currentSong.Imagen} alt="Portada del álbum" />
         </div>
         <div className="song-info">
-          <p className="artist">{currentSong.artist}</p>
-          <p className="song-title">{currentSong.title}</p>
+          <p className="artist">{currentSong.SongName}</p>
+          <p className="song-title">{currentSong.SongName}</p>
         </div>
         <audio
           id="audio"
           controls
           ref={audioRef}
-          key={currentSong.id} // Esto fuerza la recarga del elemento audio
+          key={currentSong.Id_Songs} // Esto fuerza la recarga del elemento audio
         >
-          <source src={currentSong.audioSource} type="audio/mpeg" />
+          <source src={currentSong.Audio} type="audio/mpeg" />
         </audio>
         <button onClick={togglePlayPause}>
           {isPlaying ? "Pausar" : "Reproducir"}

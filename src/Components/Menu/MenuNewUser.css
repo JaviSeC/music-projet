@@ -6,7 +6,7 @@
   }
   
   button:hover {
-    background: rgb(49, 136, 228);
+    /* background: rgb(49, 136, 228); */
     border-radius: 50px 50px 50px 50px;
   }
   
@@ -97,12 +97,13 @@
   
   @media screen and (max-width: 360px) {
     .Container {
-      border: 3px red solid;
       display: flex;
-      /* display: flex; */
-      height: 5%;
+      flex-direction: column;
+      transform: rotate(-90deg);
+      height: 0%;
       width: 15%;
-      margin-top: 10px;
+      margin-top: -30%;
+      margin-left: 36.5%;
       /* height: auto; */
     }
   
@@ -110,15 +111,32 @@
       width: 100%;
       margin-top: 5%;
     }
-    .home,
-    .categorie,
-    .login,
-    .boxuser,
+    
+    .boxuser {
+      width: 100%;
+    }
+
     .Usuario,
-    .CerrarSesion {
+    .CerrarSesion{
+      width: 100%;
+      transform: rotate(90deg);
+    }
+
+    .home,
+    .categorie{
+      width: 100%;
+      transform: rotate(90deg);
+    }
+
+    .login{
+      margin-top: 60%;
+      transform: rotate(90deg);
       width: 100%;
     }
     .registro {
+      margin-left: -35%;
+      margin-top: 90%;
+      transform: rotate(90deg);
       width: 200%;
     }
   
@@ -133,9 +151,11 @@
     .registrobutton .dropdown-content {
       display: none;
       position: absolute;
-      top: 100%;
+      transform: rotate(90deg);
+      top: 0.5px;
+      margin-left: -220%;
       left: 0;
-      width: 100%;
+      width: 200%;
       background-color: rgba(26, 30, 31, 1);
       border-radius: 10px;
     }
@@ -145,11 +165,12 @@
       display: block;
     }
   
-    .dropdown-content a {
+    .dropdown-content {
       color: white;
       text-decoration: none;
       text-align: center;
       margin: 3%;
+      
     }
   }
   

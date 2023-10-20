@@ -1,123 +1,164 @@
-import React, { useState, useRef } from 'react';
+import React, { useState, useRef, useEffect  } from 'react';
 import './BodyStyle.css';
-
 
 const songsPerPage = 5;
 const songs = [
   {
-    id: 1,
-    artist: 'Enio Morricone',
-    title: 'El bueno, el feo y el malo',
-    duration: '2:42',
-    albumCover:
+    Id_Songs: 1,
+    SongName: 'Enio Morricone',
+    FilmName: 'El bueno, el feo y el malo',
+    // duration: '2:42',
+    Imagen:
       'https://img2.rtve.es/i/?w=1600&i=1667821299474.jpg',
-    audioSource: 'https://res.cloudinary.com/dhme3c8ll/video/upload/v1695724729/El_Bueno_El_Feo_Y_El_Malo_-_II_Buono_II_Brutto_Il_Cattivo_zSDZQeIEqlM_x78lfm.mp3',
+    Audio: 'https://res.cloudinary.com/dhme3c8ll/video/upload/v1695724729/El_Bueno_El_Feo_Y_El_Malo_-_II_Buono_II_Brutto_Il_Cattivo_zSDZQeIEqlM_x78lfm.mp3',
   },
   {
-    id: 2,
-    artist: 'Marvin Hamlisch',
-    title: 'El golpe',
-    duration: '3:58',
-    albumCover:
+    Id_Songs: 2,
+    SongName: 'Marvin Hamlisch',
+    FilmName: 'El golpe',
+    // duration: '3:58',
+    Imagen:
       'https://lavozenoffdotnet.files.wordpress.com/2017/02/cartel.jpg',
-    audioSource: 'https://res.cloudinary.com/dhme3c8ll/video/upload/v1695724919/El_Golpe_BSO_-_M%C3%BAsica_Scott_Joplin_en_piano_vVmfZjCwER8_qjiagf.mp3',
+    Audio: 'https://res.cloudinary.com/dhme3c8ll/video/upload/v1695724919/El_Golpe_BSO_-_M%C3%BAsica_Scott_Joplin_en_piano_vVmfZjCwER8_qjiagf.mp3',
   },
   {
-    id: 3,
-    artist: 'Nino Rota',
-    title: 'El Padrino',
-    duration: '2:43',
-    albumCover: 'https://www.race.es/revista-autoclub/wp-content/uploads/sites/4/2022/05/el-padrino-el-clasico-de-los-clasicos-759x500.jpg',
-    audioSource: 'https://res.cloudinary.com/dhme3c8ll/video/upload/v1695724973/El_Padrino_Tema_Original__The_Godfather_Original_Theme__qIFQwnsotss_edoje7.mp3',
+    Id_Songs: 3,
+    SongName: 'Nino Rota',
+    FilmName: 'El Padrino',
+    // duration: '2:43',
+    Imagen: 'https://www.race.es/revista-autoclub/wp-content/uploads/sites/4/2022/05/el-padrino-el-clasico-de-los-clasicos-759x500.jpg',
+    Audio: 'https://res.cloudinary.com/dhme3c8ll/video/upload/v1695724973/El_Padrino_Tema_Original__The_Godfather_Original_Theme__qIFQwnsotss_edoje7.mp3',
   },
   {
-    id: 4,
-    artist: 'Vangelis',
-    title: 'Carros de fuego',
-    duration: '3:20',
-    albumCover: 'https://img2.rtve.es/i/?w=1600&i=1673619861549.jpg',
-    audioSource: 'https://res.cloudinary.com/dhme3c8ll/video/upload/v1695801278/Carros_de_Fuego_-_B.S.O._MkS1SBPHN44_pcrwyp.mp3',
+    Id_Songs: 4,
+    SongName: 'Vangelis',
+    FilmName: 'Carros de fuego',
+    // duration: '3:20',
+    Imagen: 'https://img2.rtve.es/i/?w=1600&i=1673619861549.jpg',
+    Audio: 'https://res.cloudinary.com/dhme3c8ll/video/upload/v1695801278/Carros_de_Fuego_-_B.S.O._MkS1SBPHN44_pcrwyp.mp3',
   },
   {
-    id: 5,
-    artist: 'John Williams',
-    title: 'Tiburón',
-    duration: '2:20',
-    albumCover: 'https://cdn.mos.cms.futurecdn.net/QfpYiWt35GZfU2Gd7pztQ8.png',
-    audioSource: 'https://res.cloudinary.com/dhme3c8ll/video/upload/v1695801629/Main_Title_John_Williams_Jaws_From_The__Jaws__Soundtrack__BePfzCOMRZQ_cqnbb1.mp3',
+    Id_Songs: 5,
+    SongName: 'John Williams',
+    FilmName: 'Tiburón',
+    // duration: '2:20',
+    Imagen: 'https://cdn.mos.cms.futurecdn.net/QfpYiWt35GZfU2Gd7pztQ8.png',
+    Audio: 'https://res.cloudinary.com/dhme3c8ll/video/upload/v1695801629/Main_Title_John_Williams_Jaws_From_The__Jaws__Soundtrack__BePfzCOMRZQ_cqnbb1.mp3',
   },
   {
-    id: 6,
-    artist: 'Carmine Coppola',
-    title: 'Apocalypse Now',
-    duration: '4:44',
-    albumCover: 'https://hips.hearstapps.com/hmg-prod/images/apocalypse-now-donald-trump-1534867844.jpg',
-    audioSource: 'https://res.cloudinary.com/dhme3c8ll/video/upload/v1695801970/BSO_-_Apocalipsys_Now_3VywjmyNYDs_q69djb.mp3',
+    Id_Songs: 6,
+    SongName: 'Carmine Coppola',
+    FilmName: 'Apocalypse Now',
+    // duration: '4:44',
+    Imagen: 'https://hips.hearstapps.com/hmg-prod/images/apocalypse-now-donald-trump-1534867844.jpg',
+    Audio: 'https://res.cloudinary.com/dhme3c8ll/video/upload/v1695801970/BSO_-_Apocalipsys_Now_3VywjmyNYDs_q69djb.mp3',
   },
   {
-    id: 7,
-    artist: 'Miguel Asins Arbó',
-    title: 'La Vaquilla',
-    duration: '2:37',
-    albumCover:
+    Id_Songs: 7,
+    SongName: 'Miguel Asins Arbó',
+    FilmName: 'La Vaquilla',
+    // duration: '2:37',
+    Imagen:
       'https://caixaforum.org/documents/311930/9160687/vaquilla+berlanga+webCXF+spa220170101225+-+18204jpg/83fc543e-f1a6-17f4-0b1e-8c4b1a7948ff?version=1.0&t=1565690877227',
-    audioSource: 'URL_DEL_AUDIO'
+    Audio: 'https://res.cloudinary.com/dhme3c8ll/video/upload/v1697011387/Miguel_Asins_Arb%C3%B3__Pasodoble_de__La_vaquilla__Luis_G%C2%AA_Berlanga_1985__0pVGEhPmbZA_m0jujo.mp3'
   },
   {
-    id: 8,
-    artist: 'Maurice Jarre',
-    title: 'Doctor Zivago',
-    duration: '3:11',
-    albumCover:
-      'https://www.elindependiente.com/wp-content/uploads/2020/02/doctor-zhivago.jpg',
-    audioSource: 'URL_DEL_AUDIO'
+    Id_Songs: 8,
+    SongName: 'Los Chunguitos',
+    FIlmName: 'Deprisa Deprisa',
+    // duration: '3:11',
+    Imagen:
+      'https://res.cloudinary.com/dhme3c8ll/image/upload/v1697017137/4d6f400e-7958-402d-ae37-ae518b8ef62a_alta-libre-aspect-ratio_default_0_gtykcl.jpg',
+    Audio: 'https://res.cloudinary.com/dhme3c8ll/video/upload/v1697011700/Me_quedo_contigo_-_Deprisa_deprisa_85nWERy0JdE_sgahf6.mp3'
   },
   {
-    id: 9,
-    artist: 'Los Chichos',
-    title: 'Yo, el Vaquilla',
-    duration: '2:51',
-    albumCover:
+    Id_Songs: 9,
+    SongName: 'Los Chichos',
+    FilmName: 'Yo, el Vaquilla',
+    // duration: '2:51',
+    Imagen:
       'https://www.abc.es/media/peliculas/000/005/139/yo-el-vaquilla-2.jpg',
-    audioSource: 'URL_DEL_AUDIO'
+    Audio: 'https://res.cloudinary.com/dhme3c8ll/video/upload/v1697011387/El_Vaquilla_NZ-PWrXQocc_uwebzq.mp3'
   },
   {
-    id: 10,
-    artist: 'Los Chunguitos',
-    title: 'Perros callejeros',
-    duration: '3:42',
-    albumCover:
+    Id_Songs: 10,
+    SongName: 'Los Chunguitos',
+    FilmName: 'Perros callejeros',
+    // duration: '3:42',
+    Imagen:
       'https://www.alohacriticon.com/wp-content/uploads/2017/01/perros-callejeros-foto-critica.jpg',
-    audioSource: 'URL_DEL_AUDIO'
+    Audio: 'https://res.cloudinary.com/dhme3c8ll/video/upload/v1697011529/los_chunguitos_soy_un_perro_callejero_4g3jSCqZxUQ_n6vsqj.mp3'
   },
 ];
-
 const BodyClassic: React.FC = () => {
-  const [currentPage, setCurrentPage] = useState(1);
   const [currentSongIndex, setCurrentSongIndex] = useState(0);
-  const [currentSong, setCurrentSong] = useState(songs[0]);
+  // const [isPlaying2, setIsPlaying2] = useState(false);
+  // const audioRef = useRef<HTMLAudioElement | null>(null);
+  const [currentPage, setCurrentPage] = useState(1);
+  // const [currentSongIndex2, setCurrentSongIndex2] = useState(0);
   const [isPlaying, setIsPlaying] = useState(false);
   const [likedSongs, setLikedSongs] = useState<Set<number>>(new Set<number>());
-  const audioRef = useRef<HTMLAudioElement | null>(null);
+  const audioRef2 = useRef<HTMLAudioElement | null>(null);
+  const [songsx, setSongsx] =  useState([]);
+  // const [currentSong, setCurrentSong] = useState({
+  //   Id_Songs: '',
+  //   SongName: '',
+  //   FilmName: '',
+  //   Imagen: '',
+  //   Audio: '',
+  // });
   const startIndex = (currentPage - 1) * songsPerPage;
   const endIndex = startIndex + songsPerPage;
-  const songsToShow = songs.slice(startIndex, endIndex);
+  const songsToShow = songsx.slice(startIndex, endIndex);
   // const totalPages = Math.ceil(songs.length / songsPerPage);
   // const songsToShow = songs.slice(startIndex, endIndex);
-  const togglePlayPause = () => {
-    if (audioRef.current) {
-      if (isPlaying) {
-        audioRef.current.pause();
-      } else {
-        audioRef.current.play();
+  // Realiza la solicitud al backend para obtener las canciones de la categoría 3
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const Id_Categories = 3;
+        const response = await fetch(`https://localhost:7110/SongsControllers/GetSongsByCategory/GetSongsByCategory/${Id_Categories}`);
+        if (response.ok) {
+          const data = await response.json();
+          console.log('Datos del backend:', data);
+          setSongsx(data);
+        } else {
+          console.error('Error al obtener las canciones del backend');
+        }
+      } catch (error) {
+        console.error('Error en la solicitud:', error);
       }
-      setIsPlaying(!isPlaying);
-    }
-  };
-  const changeSong = (song: any) => {
-    setCurrentSong(song);
-    setIsPlaying(true);
-  };
+    };
+    fetchData();
+  }, []);
+  // const togglePlayPause = () => {
+  //   if (audioRef.current) {
+  //     if (isPlaying) {
+  //       audioRef.current.pause();
+  //     } else {
+  //       audioRef.current.play();
+  //     }
+  //     setIsPlaying(!isPlaying);
+  //   }
+  // };
+  // const togglePlayPause2 = () => {
+  //   if (audioRef2.current) {
+  //     if (isPlaying2) {
+  //       audioRef2.current.pause();
+  //     } else {
+  //       audioRef2.current.play();
+  //     }
+  //     setIsPlaying2(!isPlaying2);
+  //   }
+  // };
+  // const changeSong = (song: any) => {
+  //   setCurrentSong(song);
+  //   setIsPlaying(true);
+  // };
+  // const changeSongs = (songx: any) => {
+  //   setSongsx(songx);
+  //   setIsPlaying2(true);
+  // };
   const toggleLike = (songId: number) => {
     const updatedLikedSongs = new Set<number>(likedSongs); // Asegura que el tipo sea Set<number>
     if (likedSongs.has(songId)) {
@@ -138,7 +179,7 @@ const BodyClassic: React.FC = () => {
     setIsPlaying(!isPlaying);
   };
   return (
-    <div className="body-container">
+    <div className="body-container" >
       <div className="playlist-header-classic">
         <img
           id="playlist-cover-classic"
@@ -158,20 +199,35 @@ const BodyClassic: React.FC = () => {
           </div>
         </div>
       </div>
-      <div className="song-list">
+      {/* <div className="song-list">
         <ul>
           {songsToShow.map((song) => (
-            <li key={song.id}>
-              <img src={song.albumCover} alt={song.title} />
+            <li key={song.Id_Songs}>
+              <img src={song.Imagen} alt={song.FilmName} />
               <button onClick={() => changeSong(song)}>
-                {song.title} - {song.artist} - {song.duration}
+                {song.FilmName} - {song.SongName}
               </button>
-              <button id='like-button' onClick={() => toggleLike(song.id)} className={likedSongs.has(song.id) ? 'liked' : ''}>
-                {likedSongs.has(song.id) ? '💜' : '🤍'}
+              <button id='like-button' onClick={() => toggleLike(song.Id_Songs)} className={likedSongs.has(song.Id_Songs) ? 'liked' : ''}>
+                {likedSongs.has(song.Id_Songs) ? ':corazón_púrpura:' : ':corazón_blanco:'}
               </button>
             </li>
           ))}
         </ul>
+      </div> */}
+      <div className="song-list">
+        <ul>
+          {songsToShow.map((songx) => (
+            <li key={songx.id_Songs}>
+              <img src={songx.imagen} alt={songx.filmName} />
+              <button onClick={() => setCurrentSongIndex(songx)}>
+                {songx.filmName} - {songx.songName}
+              </button>
+              <button id='like-button' onClick={() => toggleLike(songx.id_Songs)} className={likedSongs.has(songx.id_Songs) ? 'liked' : ''}>
+                {likedSongs.has(songx.id_Songs) ? '💜' : '🤍'}
+              </button>
+            </li>
+          ))}
+       </ul>
         <div className="pagination">
           <div className="page-button">
             <button
@@ -191,33 +247,60 @@ const BodyClassic: React.FC = () => {
           </div>
         </div>
       </div>
-      <div className="music-player-classic">
+      {/* <div className="music-player-classic">
         <div className="album-cover-classic">
           <img
-            src={currentSong.albumCover}
+            src={currentSong.Imagen}
             alt="Portada del álbum"
           />
         </div>
         <div className="song-info">
-          <p className="artist">{currentSong.artist}</p>
-          <p className="song-title">{currentSong.title}</p>
+          <p className="artist">{currentSong.SongName}</p>
+          <p className="song-title">{currentSong.FilmName}</p>
         </div>
         <audio
           id="audio"
           controls
           ref={audioRef}
-          key={currentSong.id} // Esto fuerza la recarga del elemento audio
+          key={currentSong.Id_Songs} // Esto fuerza la recarga del elemento audio
         >
           <source
-            src={currentSong.audioSource}
+            src={currentSong.Audio}
             type="audio/mpeg"
           />
         </audio>
         <button onClick={togglePlayPause}>
           {isPlaying ? 'Pausar' : 'Reproducir'}
         </button>
+      </div> */}
+      //-----------------------------------------------------------------------
+      <div className="music-player-classic">
+        <div className="album-cover-classic">
+          <img
+            src={currentSongIndex.imagen}
+            alt="Portada del álbum"
+          />
+        </div>
+        <div className="song-info">
+          <p className="artist">{currentSongIndex.songName}</p>
+          <p className="song-title">{currentSongIndex.filmName}</p>
+        </div>
+        <audio
+          id="audio"
+          controls
+          ref={audioRef2}
+          key={currentSongIndex.id_Songs} // Esto fuerza la recarga del elemento audio
+        >
+          <source
+            src={currentSongIndex.audio}
+            type="audio/mpeg"
+          />
+        </audio>
+        {/* <button onClick={togglePlayPause2}>
+          {isPlaying2 ? 'Pausar' : 'Reproducir'}
+        </button> */}
       </div>
-    </div>
+     </div>
   );
 };
 export default BodyClassic;

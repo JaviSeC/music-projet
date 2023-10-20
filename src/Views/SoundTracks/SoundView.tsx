@@ -21,6 +21,7 @@ export default function PageSound() {
     <>
     <div className="SoundTracks">
     <Header/>
+<<<<<<< HEAD
 
     <div className="homeSoundTracks">
       {userRole === 2 ? <MenuNewUser /> : <Menu />}
@@ -30,6 +31,11 @@ export default function PageSound() {
      <Menu /> 
      </div>  */}
 
+=======
+    <div className="homeSoundTracks">
+      {userRole === 2 ? <MenuNewUser /> : <Menu />}
+      </div>
+>>>>>>> origin/Isabel
     <Sound />
     </div>
     </>

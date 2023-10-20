@@ -5,123 +5,113 @@ import "./Sound.css"; // Asegúrate de que el nombre del archivo CSS sea correct
 const songsPerPage = 5;
 const songs = [
   {
-    id: 1,
-    artist: "Harry Potter",
-    title: "Hedwing Theme",
-    duration: "5:09 min",
-    albumCover:
+    Id_Songs: 1,
+    SongName: "Hedwing Theme",
+    FilmName: "Harry Potter",
+    // duration: "5:09 min",
+    Imagen:
       "https://res.cloudinary.com/dq2tfglqq/image/upload/v1696364637/serie-no-universo-harry-potter-pode-ser-realidade-confira-reproducao-hbo-max_nsvmxv.jpg",
-    audioSource:
+    Audio:
       "https://res.cloudinary.com/dq2tfglqq/video/upload/v1696364407/Hedwig_s_Theme_wtHra9tFISY_140_wlb7q5.mp3",
   },
   {
-    id: 2,
-    artist: "Alexandre Desplat",
-    title: "The Shape Of Water",
-    duration: "3:44",
-    albumCover:
+    Id_Songs: 2,
+    SongName: "Alexandre Desplat",
+    FilmName: "The Shape Of Water",
+    // duration: "3:44",
+    Imagen:
       "https://res.cloudinary.com/doft9ylq1/image/upload/v1696846437/2010_m9yeey.webp",
-    audioSource:
+    Audio:
       "https://res.cloudinary.com/doft9ylq1/video/upload/v1696846344/Alexandre_Desplat_-_The_Shape_Of_Water_Audio__HA8dDFFvOUw_npcypi.mp3",
   },
   {
-    id: 3,
-    artist: "John Williams",
-    title: "Jurassic Park",
-    duration: "2:49",
-    albumCover:
-      "https://res.cloudinary.com/doft9ylq1/image/upload/v1695889328/JurassicParkCollection_oikiw7.jpg",
-    audioSource:
+    Id_Songs: 3,
+    SongName: "John Williams",
+    FilmName: "Jurassic Park",
+    Imagen:
+      "https://res.cloudinary.com/dhme3c8ll/image/upload/v1697642099/Jurassic_park_w1oey5.jpg",
+    Audio:
       "https://res.cloudinary.com/doft9ylq1/video/upload/v1695886048/The_Raptor_Attack_6kllnsihoUs_rjhav7.mp3",
   },
   {
-    id: 4,
-    artist: " Michael Giacchino",
-    title: "Up",
-    duration: "4:10",
-    albumCover:
-      "https://res.cloudinary.com/doft9ylq1/image/upload/v1695889732/up_znxm97.jpg",
-    audioSource:
+    Id_Songs: 4,
+    SongName: " Michael Giacchino",
+    FilmName: "Up",
+    Imagen:
+      "https://res.cloudinary.com/dhme3c8ll/image/upload/v1697642099/up_yc2k1l.jpg",
+   Audio:
       "https://res.cloudinary.com/doft9ylq1/video/upload/v1695886760/UP_OST_-_03_-_Married_Life_gvQB7tMB-jI_1_incfac.mp3",
   },
   {
-    id: 5,
-    artist: "Hans Zimmer",
-    title: "Dunen",
-    duration: "1:55",
-    albumCover:
+    Id_Songs: 5,
+    SongName: "Hans Zimmer",
+    FilmName: "Dune",
+    Imagen:
       "https://res.cloudinary.com/doft9ylq1/image/upload/v1697010731/Dune-1_wzkfnv.webp",
-    audioSource:
+    Audio:
       "https://res.cloudinary.com/doft9ylq1/video/upload/v1697009235/Leaving_Caladan_z_ip4GUa5qg_nge7sp.mp3",
   },
   {
-    id: 6,
-    artist: "Gustavo Santaolalla",
-    title: "Brokeback Mountain",
-    duration: "2:32",
-    albumCover:
+    Id_Songs: 6,
+    SongName: "Gustavo Santaolalla",
+    FilmName: "Brokeback Mountain",
+    Imagen:
       "https://res.cloudinary.com/doft9ylq1/image/upload/v1697009861/Brokeback_Mountain_En_terreno_vedado-316887988-large_t9puhq.jpg",
-    audioSource:
+    Audio:
       "https://res.cloudinary.com/doft9ylq1/video/upload/v1697009759/Brokeback_Mountain_1_5i46KRx6FHk_oadsn1.mp3",
   },
   {
-    id: 7,
-    artist: "Hans Zimmer",
-    title: "Lion King",
-    duration: "3:13",
-    albumCover:
-      "https://res.cloudinary.com/doft9ylq1/image/upload/v1696799589/lionkinds_vzub3q.webp",
-    audioSource:
+    Id_Songs: 7,
+    SongName: "Hans Zimmer",
+    FilmName: "Lion King",
+    Imagen:
+      "https://res.cloudinary.com/dhme3c8ll/image/upload/v1697642099/reyleon_dtqacm.webp",
+    Audio:
       "https://res.cloudinary.com/doft9ylq1/video/upload/v1696799413/Hans_Zimmer_-_Remember_From__The_Lion_King__Audio_Only__RakhywpkY-k_fcbhfa.mp3",
   },
   {
-    id: 8,
-    artist: "Hildur Guðnadóttir",
-    title: "Joker",
-    duration: "2:39",
-    albumCover:
-      "https://res.cloudinary.com/doft9ylq1/image/upload/v1696798648/1200x1200bf-60_o4ayfc.jpg",
-    audioSource:
+    Id_Songs: 8,
+    SongName: "Hildur Guðnadóttir",
+    FilmName: "Joker",
+    Imagen:
+      "https://res.cloudinary.com/dhme3c8ll/image/upload/v1697642099/javi_recien_levantado_q19vgz.webp",
+    Audio:
       "https://res.cloudinary.com/doft9ylq1/video/upload/v1696798363/Joker_Official_Soundtrack___Defeated_Clown_-_Hildur_Gu%C3%B0nad%C3%B3ttir___WaterTower_DlQ-XU2PV7s_uw6g4w.mp3",
   },
   {
-    id: 9,
-    artist: "Ludovic Bource",
-    title: "The Artist",
-    duration: "3:35",
-    albumCover:
+    Id_Songs: 9,
+    SongName: "Ludovic Bource",
+    FilmName: "The Artist",
+    Imagen:
       "https://res.cloudinary.com/doft9ylq1/image/upload/v1696796172/the-artist_aa5fif.webp",
-    audioSource:
+    Audio:
       "https://res.cloudinary.com/doft9ylq1/video/upload/v1696795752/The_Artist_-_01_-_The_Artist_Ouverture_skvwSqNI6BE_wjpzni.mp3",
   },
   {
-    id: 10,
-    artist: "Trent Reznor, Atticus Ross",
-    title: "The social network",
-    duration: "5:00",
-    albumCover:
+    Id_Songs: 10,
+    SongName: "Trent Reznor, Atticus Ross",
+    FilmName: "The social network",
+    Imagen:
       "https://res.cloudinary.com/doft9ylq1/image/upload/v1696796754/thesocialnetwork-film_sffmv4.webp",
-    audioSource:
+    Audio:
       "https://res.cloudinary.com/doft9ylq1/video/upload/v1696796379/In_Motion_-_Trent_Reznor_and_Atticus_Ross_The_Social_Network__Yczul_609Gg_lwuiwb.mp3",
   },
   {
-    id: 11,
-    artist: "Howard Shore",
-    title: "The Lord of the Rings: The Return of the King CR",
-    duration: "6:34",
-    albumCover:
+    Id_Songs: 11,
+    SongName: "Howard Shore",
+    FilmName: "The Lord of the Rings: The Return of the King CR",
+    Imagen:
       "https://res.cloudinary.com/doft9ylq1/image/upload/v1696797822/el-senor-de-los-anillos-el-retorno-del-rey-67427_SPA-47_tjytje.jpg",
     audioSource:
-      "https://res.cloudinary.com/dhme3c8ll/video/upload/v1695801970/BSO_-_Apocalipsys_Now_3VywjmyNYDs_q69djb.mp3https://res.cloudinary.com/doft9ylq1/video/upload/v1696797582/The_Lord_of_the_Rings__The_Return_of_the_King_CR_-_01._Roots_and_Beginnings_MFsO9weqLLE_tdrn9c.mp3",
+      "https://res.cloudinary.com/doft9ylq1/video/upload/v1696797582/The_Lord_of_the_Rings__The_Return_of_the_King_CR_-_01._Roots_and_Beginnings_MFsO9weqLLE_tdrn9c.mp3",
   },
   {
-    id: 12,
-    artist: "Elliot Goldenthal",
-    title: "Frida",
-    duration: "1:29",
-    albumCover:
-      "https://res.cloudinary.com/doft9ylq1/image/upload/v1697010556/Frida-BSO_front_lyrwkl.jpg",
-    audioSource:
+    Id_Songs: 12,
+    SongName: "Elliot Goldenthal",
+    FilmName: "Frida",
+    Imagen:
+      "https://res.cloudinary.com/dhme3c8ll/image/upload/v1697642099/Javi_marico_qaplap.jpg",
+    Audio:
       "https://res.cloudinary.com/doft9ylq1/video/upload/v1697010281/The_Floating_Bed_MR7hrCFiwBA_ymveb4.mp3",
   },
 ];
@@ -135,8 +125,7 @@ const SoundTrack: React.FC = () => {
   const startIndex = (currentPage - 1) * songsPerPage;
   const endIndex = startIndex + songsPerPage;
   const songsToShow = songs.slice(startIndex, endIndex);
-  // const totalPages = Math.ceil(songs.length / songsPerPage);
-  // const songsToShow = songs.slice(startIndex, endIndex);
+  
   const togglePlayPause = () => {
     if (audioRef.current) {
       if (isPlaying) {
@@ -197,17 +186,17 @@ const SoundTrack: React.FC = () => {
       <div className="song-list">
         <ul>
           {songsToShow.map((song) => (
-            <li key={song.id}>
-              <img src={song.albumCover} alt={song.title} />
+            <li key={song.Id_Songs}>
+              <img src={song.Imagen} alt={song.FilmName} />
               <button onClick={() => changeSong(song)}>
-                {song.title} - {song.artist} - {song.duration}
+                {song.FilmName} - {song.SongName}
               </button>
               <button
                 id="like-button"
-                onClick={() => toggleLike(song.id)}
-                className={likedSongs.has(song.id) ? "liked" : ""}
+                onClick={() => toggleLike(song.Id_Songs)}
+                className={likedSongs.has(song.Id_Songs) ? "liked" : ""}
               >
-                {likedSongs.has(song.id) ? "💜" : "🤍"}
+                {likedSongs.has(song.Id_Songs) ? "💜" : "🤍"}
               </button>
             </li>
           ))}
@@ -227,7 +216,7 @@ const SoundTrack: React.FC = () => {
           <div className="page-button">
             <button
               onClick={() => setCurrentPage(2)}
-              disabled={endIndex >= songs.length}
+              disabled={currentPage === 2}
             >
               2
             </button>
@@ -247,19 +236,19 @@ const SoundTrack: React.FC = () => {
 
       <div className="music-player-sound">
         <div className="album-cover-sound">
-          <img src={currentSong.albumCover} alt="Portada del álbum" />
+          <img src={currentSong.Imagen} alt="Portada del álbum" />
         </div>
         <div className="song-info">
-          <p className="artist">{currentSong.artist}</p>
-          <p className="song-title">{currentSong.title}</p>
+          <p className="artist">{currentSong.SongName}</p>
+          <p className="song-title">{currentSong.FilmName}</p>
         </div>
         <audio
           id="audio"
           controls
           ref={audioRef}
-          key={currentSong.id} // Esto fuerza la recarga del elemento audio
+          key={currentSong.Id_Songs} // Esto fuerza la recarga del elemento audio
         >
-          <source src={currentSong.audioSource} type="audio/mpeg" />
+          <source src={currentSong.Audio} type="audio/mpeg" />
         </audio>
         <button onClick={togglePlayPause}>
           {isPlaying ? "Pausar" : "Reproducir"}
