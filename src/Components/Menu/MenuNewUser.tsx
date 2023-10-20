@@ -39,7 +39,7 @@ export default function MenuNewUser() {
           />
         </button>
         {isDropdownOpen && (
-            <div className="dropdown-content">
+            <div className="dropdown-content-user">
               <a href="/SoundTracksView">Ganadores Oscar🏆</a>
               <a href="/PeliculasAnimadasView">Animadas🧸</a>
               <a href="/ClassicView">Clasicas📀</a>

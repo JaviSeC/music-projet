@@ -71,8 +71,8 @@
     border-radius: 60px;
     cursor: pointer;
   }
-  .dropdown-content {
-    width: 135%;
+  .dropdown-content-user {
+    width: 150%;
     background-color: rgba(26, 30, 31, 1);
     margin-left: 105%;
     margin-top: -110%;
@@ -82,7 +82,7 @@
     align-items: center;
   }
   
-  .dropdown-content a {
+  .dropdown-content-user a {
     color: white;
     text-decoration: none;
     text-align: center;
@@ -90,9 +90,10 @@
     font-size: 15px;
   }
   
-  .dropdown-content a:hover {
+  .dropdown-content-user a:hover {
     background: rgb(49, 136, 228);
     border-radius: 15px;
+    padding: 3px;
   }
   
   @media screen and (max-width: 360px) {
@@ -146,31 +147,52 @@
       margin-top: 10%;
       position: relative;
     }
-  
-    .loginbutton .dropdown-content,
-    .registrobutton .dropdown-content {
+/*   
+    .loginbutton .dropdown-content-user,
+    .registrobutton .dropdown-content-user {
       display: none;
       position: absolute;
-      transform: rotate(90deg);
-      top: 0.5px;
-      margin-left: -220%;
+      top: 100%;
       left: 0;
-      width: 200%;
+      height: auto;
+      width: 100%;
       background-color: rgba(26, 30, 31, 1);
       border-radius: 10px;
     }
   
-    .loginbutton:hover .dropdown-content,
-    .registrobutton:hover .dropdown-content {
+     .loginbutton:hover .dropdown-content-user,
+    .registrobutton:hover .dropdown-content-user {
       display: block;
-    }
+      flex-direction: column;
+      margin-left: -171px;
+      margin-top: 70px;
+      width: 300px;
+     
+    } 
   
-    .dropdown-content {
+    .dropdown-content-user a {
       color: white;
       text-decoration: none;
       text-align: center;
       margin: 3%;
-      
+    } */
+
+    .dropdown-content-user{
+     display: flex;
+     /* justify-content: center; */
+     /* align-items: center; */
+     /* text-align: right; */
+     flex-direction: row;
+      margin-left: -176px;
+      margin-top: -15px;
+      /* margin-bottom: 140px; */
+      width: 300px;
+      height: auto;
+      transform: rotate(90deg);
+    }
+
+    .dropdown-content-user a {
+      font-size: 10px;
     }
   }
   
