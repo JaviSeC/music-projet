@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 // import ReactDOM from "react-dom/client"
 // import { NextUIProvider } from "@nextui-org/react";
 // import Header from "./Components/Header/Header";
@@ -26,8 +26,6 @@
 //________________________________________________________________________________________________________
 
 import "./index.css";
-=======
->>>>>>> origin/Javier
 import ReactDOM from "react-dom/client";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Footer from "./Components/Footer/Footer";
@@ -37,14 +35,12 @@ import PageSingUp from "./Views/PageSingUp/PageSingUp";
 import PageBodyClassic from "./Views/Classic/ClassicView";
 import PageAdmin from "./Views/PageAdmin/PageAdmin";
 import PageSound from "./Views/SoundTracks/SoundView";
-<<<<<<< HEAD
-import PeliculasAnimadas from "./Components/MusicaAnimada/MusicaAnimada";
-=======
-import Animadas from "./Views/MusicaAnimada/MusicaAnimada";
+
+// import PeliculasAnimadas from "./Components/MusicaAnimada/MusicaAnimada";
+// import Animadas from "./Views/MusicaAnimada/MusicaAnimada";
 import "./index.css";
 import PageBodyTerror from "./Views/TerrorView/TerrorView";
 import PageBodyGames from "./Views/gamesview/gamesview";
->>>>>>> origin/Javier
 
 
 ReactDOM.createRoot(document.getElementById("root")!).render(
@@ -57,7 +53,7 @@ ReactDOM.createRoot(document.getElementById("root")!).render(
         <Route path="/PageAdmin" element={<PageAdmin />} />
         <Route path="/ClassicView" element={<PageBodyClassic />}/> 
         <Route path="/SoundTracksView" element={<PageSound/>}/> 
-        <Route path="/PeliculasAnimadasView" element={<Animadas/>}/> 
+        {/* <Route path="/PeliculasAnimadasView" element={<Animadas/>}/>   */}
         <Route path="/TerrorView" element={<PageBodyTerror/>}/> 
         <Route path="/Games" element={<PageBodyGames/>}/>
       </Routes>

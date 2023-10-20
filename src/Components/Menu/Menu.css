@@ -4,12 +4,8 @@
   margin-top: -250px;
   /* margin-left: 20px; */
 }
-<<<<<<< HEAD
 
-button:hover {
-=======
 button:hover{
->>>>>>> origin/Javier
   background: rgb(49, 136, 228);
   border-radius: 50px 50px 50px 50px;
 }
@@ -71,10 +67,7 @@ button:hover{
   display: flex;
   flex-direction: column;
   align-items: center;
-<<<<<<< HEAD
-=======
   /* border-right: 20px whitesmoke; */
->>>>>>> origin/Javier
 }
 
 .dropdown-content a {
@@ -85,17 +78,13 @@ button:hover{
   font-size: 15px;
   padding: 2px;
 }
-<<<<<<< HEAD
-
 .dropdown-content a:hover {
   background: rgb(49, 136, 228);
   border-radius: 15px;
-=======
-.dropdown-content a:hover{
-  background: rgb(154, 157, 160);
+ .dropdown-content a:hover{
+  /* background: rgb(154, 157, 160); */
   border-radius: 15px;
   padding: 4px;
->>>>>>> origin/Javier
 }
 @media screen and (max-width: 360px) {
   .Container {
@@ -146,4 +135,5 @@ button:hover{
     text-align: center;
     margin: 3%;
   }
+}
 }

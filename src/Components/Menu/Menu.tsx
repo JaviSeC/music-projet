@@ -32,14 +32,11 @@ export default function Menu() {
           <div className="dropdown-content">
             <a href="/SoundTracksView">Oscar´s🏆</a>
             <a href="/PeliculasAnimadasView">Animadas🧸</a>
-<<<<<<< HEAD
             <a href="/ClassicView">Cine Clasico📀</a>
             <a href="#">Cine de Terror👻</a>
-=======
             <a href="/ClassicView">Clasicas📀</a>
             <a href="/TerrorView">Terror👻</a>
             <a href="/Games">Games🎮</a>
->>>>>>> origin/Javier
           </div>
         )}
       </div>
@@ -62,15 +59,11 @@ export default function Menu() {
             />
           </button>
         </Link>
-<<<<<<< HEAD
-=======
-
         <Link to="/PageAdmin">
           <button>
             <strong> Admin </strong>
           </button>
         </Link>
->>>>>>> origin/Javier
       </div>
     </div>
   );
