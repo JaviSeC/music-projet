@@ -11,6 +11,20 @@
 .homeSoundTracks{
     height: 2px;
     margin-top: 18%;
+    margin-left: 3%;
     width: 100%;
 }
 
+
+
+@media (max-width: 360px) {
+    .homeSoundTracks {
+        width: 360px;
+        margin-top: 180px;
+        margin-bottom: 80px;
+        margin-left: -135px;
+        flex-direction: column; /* Cambia la dirección del flex container a columna */
+        align-items: flex-start; /* Alinea los elementos al inicio del contenedor */
+        /* padding: 15px; */
+    }
+}

@@ -1,5 +1,8 @@
 import "./Login.css";
 import { Link } from "react-router-dom";
+import { useState } from "react";
+import { useNavigate } from "react-router-dom";
+import Swal from "sweetalert2";
 import Avatar from "@mui/material/Avatar";
 import Button from "@mui/material/Button";
 import CssBaseline from "@mui/material/CssBaseline";
@@ -16,13 +19,83 @@ import { createTheme, ThemeProvider } from "@mui/material/styles";
 
 const defaultTheme = createTheme();
 
-export default function Login() {
-  const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
+export const Login = () => {
+  const [userData, setUserData] = useState({
+    UserName: "",
+    Password: "",
+  });
+
+  const [errorMessages, setErrorMessages] = useState({
+    UserName: "",
+    Password: "",
+  });
+
+  const navigate = useNavigate();
+
+  const handleLoginClick = async () => {
     event.preventDefault();
-    const data = new FormData(event.currentTarget);
-    console.log({
-      email: data.get("email"),
-      password: data.get("password"),
+    console.log("Entrando en handleSignUp"); // Verifica si esta función se ejecuta
+    // Verificar si los campos están vacíos
+    const { UserName, Password } = userData;
+    
+    const newErrorMessages = {
+      UserName: !UserName ? "UserName is required" : "",
+      Password: !Password ? "Password is required" : ""
+    };
+    // Si algún campo está vacío, no procedemos con el registro
+    if (!UserName ||!Password) {
+      setErrorMessages(newErrorMessages);
+      return;
+    }
+  
+    try {
+      const url = "https://localhost:7110/UsersControllers/Login"; // Asegúrate de que esta URL sea la correcta
+      const response = await fetch(url, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({ UserName, Password }),
+      });
+
+      if (response.ok) {
+        const responseData = await response.json();
+        const userRole = responseData.role;
+        const userId = responseData.userId;
+        
+        if (userRole === 1) {
+          localStorage.setItem("userRole", "1");
+          navigate("/PageAdmin");
+        } else if (userRole === 2) {
+          localStorage.setItem("userRole", "2");
+          localStorage.setItem("userId", userId);
+          localStorage.setItem('username', UserName);
+          navigate("/");
+        } 
+      } else {
+        Swal.fire("Error", "Credenciales incorrectas", "error");
+      }
+    } catch (error) {
+      console.error("Error:", error);
+      Swal.fire("Error", "Ha ocurrido un error en el servidor", "error");
+    }
+
+    setUserData({
+      UserName: "",
+      Password: ""
+    });
+
+    setErrorMessages({
+      UserName: "",
+      Password: ""
+    });
+  };
+
+  const handleInputChange = (e) => {
+    const { name, value } = e.target;
+    setUserData({
+      ...userData,
+      [name]: value,
     });
   };
 
@@ -84,32 +157,33 @@ export default function Login() {
               <Typography component="h1" variant="h5">
                 Login
               </Typography>
-              <Box
-                component="form"
-                noValidate
-                onSubmit={handleSubmit}
-                sx={{ mt: 1 }}
-              >
+              <Box component="form" noValidate sx={{ mt: 1 }}>
                 <TextField
                   margin="normal"
                   required
                   fullWidth
-                  id="User"
+                  id="UserName"
                   label="UserName"
-                  name="User"
-                  autoComplete="User"
+                  name="UserName"
+                  value={userData.UserName}
+                  onChange={handleInputChange}
+                  autoComplete="UserName"
                   autoFocus
                 />
+                <span className="error-message">{errorMessages.UserName}</span>
                 <TextField
                   margin="normal"
                   required
                   fullWidth
-                  name="password"
+                  name="Password"
                   label="Password"
-                  type="password"
-                  id="password"
+                  type="Password"
+                  id="Password"
+                  value={userData.Password}
+                  onChange={handleInputChange}
                   autoComplete="current-password"
                 />
+                <span className="error-message">{errorMessages.Password}</span>
                 <FormControlLabel
                   control={<Checkbox value="remember" color="primary" />}
                   label="Remember me"
@@ -118,6 +192,7 @@ export default function Login() {
                   type="submit"
                   fullWidth
                   variant="contained"
+                  onClick={handleLoginClick}
                   sx={{ mt: 3, mb: 2 }}
                 >
                   Login
@@ -129,9 +204,9 @@ export default function Login() {
                     </Links>
                   </Grid>
                   <Grid item>
-                    <Links href="#" variant="body2">
+                    <Link to="/PageSingUp" className="LOGINS">
                       {"Don't have an account? Sign Up"}
-                    </Links>
+                    </Link>
                   </Grid>
                 </Grid>
               </Box>
@@ -141,4 +216,5 @@ export default function Login() {
       </ThemeProvider>
     </div>
   );
-}
+};
+export default Login;

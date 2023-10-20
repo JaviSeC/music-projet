@@ -5,8 +5,6 @@
   justify-content: center;
   align-items: center;
   color: rgb(255, 255, 255);
-  border-bottom: 1px rgb(73, 134, 134) solid;
-  border-right: 1px rgb(73, 134, 134) solid;
   background-color: #1d2123;
 }
 
@@ -18,13 +16,22 @@
 }
 
 .img-header-unico {
-  /* background-color: blueviolet; */
   margin-left: 5px;
   width: 80%;
   height: 110%;
+}
+
+.Admi{
+  width: 20%;
+  height: 35px;
+  background-color: black;
+}
+.AdmiHome{
+  width: 130%;
+  margin-left: -10%;
+  margin-top: -10%;
   /* border-right: 1px rgb(73, 134, 134) solid; */
   /* border-left: 1px rgb(73, 134, 134) solid; */
-
 }
 
 .titulo-box {
@@ -37,31 +44,28 @@
 @media screen and (max-width: 360px) {
   .headerunico {
     width: 100%;
-    /* flex-direction: column;  */
   }
 
   .logo-box {
-    width: 30%;
+    width: 40%;
     height: auto;
   }
 
-  /* .img { 
-        width: 100%; 
-    } */
+  .Admi{
+    width: 30%;
+    background-color: black;
+    margin-left: 40%;
+  }
+
+  .AdmiHome{ 
+    margin-top: -3%;
+  }
 
   .titulo-box {
-    /* display: flex; */
-    /* justify-content: center; */
     text-align: center;
-    /* align-items: center; */
     width: auto;
     height: auto;
-    font-size: larger;
+    font-size: small;
     margin-left: 10%;
-    /* margin-top: -3%; */
   }
-
-  /* .titulo{
-        margin-top: -15%;
-    } */
 }

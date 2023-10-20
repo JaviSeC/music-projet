@@ -4,8 +4,7 @@
   display: flex;
   justify-content: space-around;
   align-items: center;
-  /* padding: 10px; */
-  /* Fijar el reproductor en la parte inferior */
+
   bottom: 0;
   left: 0;
   right: 0;
@@ -45,20 +44,13 @@
   flex-direction: row;
   font-size: 14px;
 }
-/* .playlist button {
-    background-color: #E90C0C;
-    border: none;
-    color: #E90C0C;
-    cursor: pointer;
-    font-size: 14px;
-    text-align: left;
-  } */
+
 .playlist-header-sound {
-  /* width: 75%; */
   height: 300px;
   display: flex;
   margin: 2%;
   margin-left: 15%;
+  margin-top: 20px;
   color: white;
 }
 #playlist-cover-sound {
@@ -67,13 +59,13 @@
   width: 30%;
   border-radius: 15px;
   margin-top: 2%;
+  box-shadow: 0 0 10px 5px #f2e08e;
 }
 .playlist-header-sound h1 {
   margin-left: 6.5%;
   margin-top: 3%;
 }
-/* ... (otros estilos) */
-/* Estilos para la lista de canciones */
+
 .song-list {
   width: 100%; /* Ocupa todo el ancho de la pantalla */
   overflow-x: hidden; /* Oculta la barra de desplazamiento horizontal si es necesario */
@@ -83,8 +75,6 @@
   width: 85%;
   margin-left: 8%;
   list-style: none;
-  /* padding: 0; */
-  /* Elimina el margen predeterminado de la lista */
 }
 .song-list li {
   display: flex; /* Muestra los elementos de la lista en línea */
@@ -119,13 +109,7 @@
   margin-left: 2%;
   /* background-color:transparent; */
 }
-#like-button.liked {
-  color: purple; /* Color de texto morado */
-  transition: color 0.3s ease;
-  animation: heartBeat 0.8s ease;
-}
-/* .title-container{
-  } */
+
 .play-all-button {
 background-color: #333; /* Color de fondo gris */
 color: #fff; /* Texto blanco */
@@ -180,6 +164,41 @@ color: red; /* Cambia el color del texto a rojo al pasar el mouse */
   opacity: 1; /* Aumentar la opacidad al pasar el cursor */
 }
 
+.like-button.liked {
+  animation: like-pulse 0.5s; /* Aplica la animación "like-pulse" durante 0.5 segundos */
+}
+
+.add-to-collection-button:active {
+  animation: move-button 0.3s; /* Aplica la animación "move-button" durante 0.3 segundos al hacer clic */
+}
+
+@keyframes move-button {
+  0% {
+    transform: translateX(0); /* Sin desplazamiento horizontal */
+  }
+  50% {
+    transform: translateX(10px); /* Desplazamiento horizontal de 10px a la mitad de la animación */
+  }
+  100% {
+    transform: translateX(0); /* Vuelve al estado original al final de la animación */
+  }
+}
+
+
+
+
+
+@keyframes like-pulse {
+  0% {
+    transform: scale(2); /* Tamaño original */
+  }
+  50% {
+    transform: scale(1.4); 
+  }
+  100% {
+    transform: scale(1); 
+  }
+}
 
 
 @media (max-width: 360px) {
@@ -220,7 +239,7 @@ max-width: 100%; /* Ajusta el tamaño de la imagen al ancho del contenedor */
 border-radius: 0; /* Elimina el redondeo de las esquinas */
 margin-bottom: 0.90%; /* Espacio entre la imagen y el título */
 }
-/* Estilos para la información de la canción en pantallas pequeñas */
+
 .song-info {
 text-align: center; /* Centra el texto */
 }
@@ -368,8 +387,6 @@ margin-top: 5px;
     display: flex;
     flex-direction: column; /* Cambia a columna en pantallas pequeñas */
     align-items: center;
-    /* padding: 10px; */
-    /* height: 195px; */
     padding-top: 2%;
     width: 90%;
     margin-left: 5%;
@@ -377,13 +394,12 @@ margin-top: 5px;
     padding-bottom: 3%;
   }
 
-  /* Estilos para botones en pantallas pequeñas */
+
   .music-player-sound button {
     height: 30px;
     margin-top: 5px; /* Espacio entre los botones */
   }
 
-  /* Estilos para la portada del álbum en pantallas pequeñas */
   .album-cover img {
     max-width: 100%; /* Ajusta el tamaño de la imagen al ancho del contenedor */
     height: auto;
@@ -391,7 +407,7 @@ margin-top: 5px;
     margin-bottom: 10px; /* Espacio entre la imagen y el título */
   }
 
-  /* Estilos para la información de la canción en pantallas pequeñas */
+  
   .song-info {
     text-align: center; /* Centra el texto */
   }
@@ -405,7 +421,7 @@ margin-top: 5px;
     font-size: 12px !important; /* Reduzca el tamaño del texto del artista */
   }
 
-  /* Estilos para los botones de control en pantallas pequeñas */
+ 
   .controls button {
     color: #767070;
     border: none;
@@ -420,7 +436,7 @@ margin-top: 5px;
     background-color: #1e49d7;
   }
 
-  /* Estilos para el encabezado de la lista de reproducción (playlist-header) */
+ 
   .playlist-header-sound {
     width: 100%; /* Ancho completo en pantallas pequeñas */
     display: flex;
@@ -506,11 +522,6 @@ margin-top: 5px;
     display: flex;
   }
 
-  #like-button.liked {
-    color: purple;
-    transition: color 0.3s ease;
-    animation: heartBeat 0.8s ease;
-  }
 
   .play-all-button {
     width: 80px;
@@ -526,10 +537,6 @@ margin-top: 5px;
     margin-top: 10px; /* Espacio entre el botón "Reproducir todas" y la lista de canciones */
   }
 
-  .play-all-button:hover {
-    background-color: #68ff0a;
-    color: #000;
-  }
 
   .add-to-collection-button {
     width: 123px;
@@ -548,14 +555,11 @@ margin-top: 5px;
     color: red;
   }
 
-  /* .title-container {
-    margin-left: -30%;
-  } */
-
   .page-button {
     display: inline; /* Para mostrar los botones en línea */
     height: auto;
     margin-bottom: 1%;
     width: 10%;
   }
+}  
 }

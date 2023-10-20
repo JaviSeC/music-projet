@@ -1,12 +1,15 @@
 #Carousel {
   height: 100%;
+  /* overflow-block: visible; */
+  /* width: 90rem; */
 }
 
 .swiper {
   /* margin-top: 10%; */
-  width: 90rem;
+  width: 92rem;
   height: 200px;
   overflow: hidden; /* Oculta el desbordamiento del carrusel */
+  cursor: all-scroll;
 }
 
 /* .swiper-slide {

@@ -21,46 +21,62 @@
 }
 .Name {
   color: white;
-  width: 1400px;
-  height: 60px;
+  width: 1200px;
+  height: 55px;
   text-align: center;
+  /* justify-content: ; */
   font-size: xx-large;
+ 
 }
 .search-box {
   margin-top: -0.5%;
   display: flex;
   justify-content: left;
+  
 }
 .Search {
   width: 1200px;
   height: 55px;
   margin-left: 10px;
 }
-.button-search {
+.button-search {display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
   width: 15%;
-  height: 65px;
+  height: 64px;
   /* background-color: rgba(29, 33, 35, 0.648); */
-  background-color: #1D2123;
+  background-color: #1d2123;
+  
 }
 .lupa {
-  margin-left: 1%;
+   margin-left: 1%;
   width: 100%;
+  height: auto;
   transform: rotate(-40deg);
   opacity: 0.2;
 }
 .busqueda {
   width: 500%;
-  height: 60px;
+  height: 50px;
   font-size: larger;
   text-align: center;
-  color: rgb(251, 251, 251);
+  color: rgb(0, 0, 0);
   /* background-color: rgba(0, 0, 0, 0.645); */
-  background-color: #1D2123;
-  margin-left: -182%;
+  /* background-color: #1d2123; */
+  background-color: transparent;
+  border-bottom-right-radius: 20px;
+  border-top-right-radius: 20px;
+  border: 1px #a5a6a7 solid;
+  /* border-right: 1px (#1d2123 solid, #a5a6a7 solid); */
+  border-right: 1px #1d2123 solid;
+  border-left: none;
+  margin-left: -184%;
 }
-.busqueda:active{
+
+.busqueda:active {
   /* background-color: blueviolet; */
-  border: 5px orangered solid;
+  border: 5px rgb(111, 110, 110) solid;
 }
 @media screen and (max-width: 360px) {
   .BOX {
@@ -99,8 +115,9 @@
     width: 100%;
   }
   .busqueda {
-    margin-left: -147%;
+    /* margin-left: -147%; */
     height: 96%;
-    font-size: large;
+    /* font-size: large; */
+    width: 600%;
   }
 }

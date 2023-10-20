@@ -8,9 +8,9 @@ export default function PageBodyTerror() {
     <>
       <div className="CineTerror">
         <Header />
-        {/* <div className="HomeTerror">
+        <div className="HomeTerror">
           <Menu />
-        </div> */}
+        </div>
         <BodyTerror />
       </div>
     </>

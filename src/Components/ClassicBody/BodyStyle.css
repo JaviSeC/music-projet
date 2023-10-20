@@ -67,6 +67,7 @@
   width: 30%;
   border-radius: 15px;
   margin-top: 2%;
+  box-shadow: 0 0 10px 10px rgba(238, 235, 235, 0.5);
 }
 .playlist-header-classic h1 {
   margin-left: 6.5%;

@@ -1,11 +1,12 @@
-import Admin from "../../Components/Adminview/Admin";
 import Headerunico from "../../Components/Headerunico/Headerunico";
+import Users from "../../Components/Users/Users";
 
-export default function PageAdmin() {
+
+export default function PageUser() {
   return (
     <>
       <Headerunico />
-      <Admin />
+      <Users/>
     </>
   );
 }
