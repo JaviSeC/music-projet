@@ -1,0 +1,71 @@
+.headerunico {
+  width: 100%;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: rgb(255, 255, 255);
+  background-color: #1d2123;
+}
+
+.logo-box {
+  /* background-color: yellowgreen; */
+  width: 10%;
+  height: 100px;
+  /* border-right: 1px rgb(73, 134, 134) solid; */
+}
+
+.img-header-unico {
+  margin-left: 5px;
+  width: 80%;
+  height: 110%;
+}
+
+.Admi{
+  width: 20%;
+  height: 35px;
+  background-color: black;
+}
+.AdmiHome{
+  width: 130%;
+  margin-left: -10%;
+  margin-top: -10%;
+  /* border-right: 1px rgb(73, 134, 134) solid; */
+  /* border-left: 1px rgb(73, 134, 134) solid; */
+}
+
+.titulo-box {
+  width: 1400px;
+  /* height: 6px; */
+  text-align: center;
+  /* font-size: xx-large; */
+}
+
+@media screen and (max-width: 360px) {
+  .headerunico {
+    width: 100%;
+  }
+
+  .logo-box {
+    width: 40%;
+    height: auto;
+  }
+
+  .Admi{
+    width: 30%;
+    background-color: black;
+    margin-left: 40%;
+  }
+
+  .AdmiHome{ 
+    margin-top: -3%;
+  }
+
+  .titulo-box {
+    text-align: center;
+    width: auto;
+    height: auto;
+    font-size: small;
+    margin-left: 10%;
+  }
+}

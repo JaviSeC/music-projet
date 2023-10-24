@@ -1,0 +1,146 @@
+.Container {
+  width: 4%;
+  height: 300px;
+  margin-top: -250px;
+}
+button:hover{
+  /* background: rgb(49, 136, 228); */
+  background: rgb(154, 157, 160);
+  border-radius: 50px 50px 50px 50px;
+}
+.boxSong {
+  background-color: rgba(26, 30, 31, 1);
+  border-radius: 50px;
+  width: 100%;
+  height: 150px;
+  margin-top: 8%;
+}
+.home {
+  width: 80%;
+}
+.categorie {
+  width: 100%;
+  margin-left: -3%;
+}
+.loginbutton {
+  width: 100%;
+  height: 40%;
+  border: none;
+  margin-top: 10%;
+  background-color: rgba(26, 30, 31, 1);
+  border-radius: 60px;
+  cursor: pointer;
+}
+.login {
+  width: 80%;
+  cursor: pointer;
+}
+.boxuser {
+  border: 1px black solid;
+  background-color: rgba(26, 30, 31, 1);
+  border-radius: 50px;
+  width: 100%;
+  height: 170px;
+  margin-top: 15%;
+  cursor: pointer;
+}
+.registro {
+  margin-left: 10%;
+  width: 165%;
+}
+.registrobutton {
+  width: 100%;
+  height: 40%;
+  border: none;
+  margin-top: 20%;
+  background-color: rgba(26, 30, 31, 1);
+  border-radius: 60px;
+  cursor: pointer;
+}
+.dropdown-content {
+  width: 150%;
+  background-color: rgba(26, 30, 31, 1);
+  margin-left: 105%;
+  margin-top: -110%;
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-left: 120%;
+
+}
+.dropdown-content a {
+  color: white;
+  text-decoration: none;
+  text-align: center;
+  margin: 5%;
+  font-size: 13px;
+  padding: 2px;
+}
+/* .dropdown-content a:hover {
+  background: rgb(49, 136, 228);
+} */
+.dropdown-content a:hover{
+  background: rgb(154, 157, 160);
+  border-radius: 15px;
+  padding: 4px;
+  
+}
+@media screen and (max-width: 360px) {
+  .Container {
+    display: flex;
+    /* display: flex; */
+    height: 5%;
+    width: 15%;
+    margin-top: 10px;
+  }
+  
+  .boxSong {
+    width: 100%;
+    margin-top: 5%;
+  }
+  .home,
+  .categorie,
+  .login,
+  .boxuser {
+    width: 100%;
+  }
+  .registro {
+    width: 200%;
+  }
+  .loginbutton,
+  .registrobutton {
+    width: 100%;
+    margin-top: 10%;
+    position: relative;
+  }
+  
+  .loginbutton .dropdown-content,
+  .registrobutton .dropdown-content {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    height: auto;
+    width: 100%;
+    background-color: rgba(26, 30, 31, 1);
+    border-radius: 10px;
+  }
+
+  .loginbutton:hover .dropdown-content,
+  .registrobutton:hover .dropdown-content {
+    display: block;
+    flex-direction: column;
+    margin-left: -171px;
+    margin-top: 70px;
+    width: 300px;
+   
+  }
+
+  .dropdown-content a {
+    color: white;
+    text-decoration: none;
+    text-align: center;
+    margin: 3%;
+  }
+}

@@ -1,0 +1,50 @@
+
+.UsersList {
+  max-height: 400px;
+  overflow-y: auto; 
+  padding: 10px; 
+}
+
+.adminbody {
+  background-color: #1D2123;
+  display: flex;
+  flex-direction:column;
+  align-items: center;
+  width: 100%;
+  height: 700px;
+  /* border-right: 1px rgb(73, 134, 134) solid; */
+  /* border-left: 1px rgb(73, 134, 134) solid; */
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.All {
+  height: 250px;
+  list-style-type: none;
+  padding: 0; 
+}
+
+.ListUser {
+  margin-bottom: 30px; /* Agrega espacio entre cada elemento de la lista */
+}
+
+.user-info {
+  display: inline-block;
+  margin-right: 10px; /* Agrega espacio entre los elementos en línea si es necesario */
+}
+
+.user-info strong {
+  font-weight: bold;
+  margin-right: 5px;
+}
+
+.Admidelete {
+  background-color: #ff0000;
+  color: #fff;
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
+}
+
+.imgs{
+  width: 10%;
+}

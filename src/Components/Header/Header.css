@@ -1,0 +1,127 @@
+.BOX {
+  width: 100%;
+  height: 120px;
+  display: flex;
+  justify-content: flex-start;
+}
+.Logo {
+  width: 10%;
+  height: 120px;
+  text-align: center;
+}
+.img {
+  /* margin-right: -10%; */
+  /* width: 20%; */
+  margin-left: 5px;
+  width: 80%;
+  height: 110%;
+}
+
+.box2 {
+  width: 90%;
+}
+
+.Name {
+  color: white;
+  width: 1200px;
+  height: 55px;
+  text-align: center;
+  /* justify-content: ; */
+  font-size: xx-large;
+ 
+}
+.search-box {
+  margin-top: -0.5%;
+  display: flex;
+  justify-content: left;
+  
+}
+.Search {
+  width: 1200px;
+  height: 55px;
+  margin-left: 10px;
+}
+.button-search {display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 15%;
+  height: 64px;
+  /* background-color: rgba(29, 33, 35, 0.648); */
+  background-color: #1d2123;
+  
+}
+.lupa {
+   margin-left: 1%;
+  width: 100%;
+  height: auto;
+  transform: rotate(-40deg);
+  opacity: 0.2;
+}
+
+.busqueda {
+  width: 500%;
+  height: 50px;
+  font-size: larger;
+  text-align: center;
+  color: rgb(0, 0, 0);
+  /* background-color: rgba(0, 0, 0, 0.645); */
+  /* background-color: #1d2123; */
+  background-color: transparent;
+  border-bottom-right-radius: 20px;
+  border-top-right-radius: 20px;
+  border: 1px #a5a6a7 solid;
+  /* border-right: 1px (#1d2123 solid, #a5a6a7 solid); */
+  border-right: 1px #1d2123 solid;
+  border-left: none;
+  margin-left: -184%;
+}
+
+.busqueda:active {
+  /* background-color: blueviolet; */
+  border: 5px rgb(111, 110, 110) solid;
+}
+
+@media screen and (max-width: 360px) {
+  .BOX {
+    width: 100%;
+    flex-direction: column;
+  }
+  .Logo {
+    width: 25%;
+    height: auto;
+  }
+  .img {
+    width: 100%;
+  }
+  .box2 {
+    margin-top: -15%;
+  }
+  .Name {
+    width: auto;
+    height: auto;
+    font-size: 30px;
+    margin-left: 25%;
+    margin-top: -5%;
+  }
+  .search-box {
+    margin-top: 10%;
+  }
+  .Search {
+    width: 50%;
+  }
+  .button-search {
+    width: 35%;
+    height: 110%;
+  }
+  .lupa {
+    margin-left: 1%;
+    width: 100%;
+  }
+  .busqueda {
+    /* margin-left: -147%; */
+    height: 96%;
+    /* font-size: large; */
+    width: 600%;
+  }
+}
